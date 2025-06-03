@@ -1,0 +1,6 @@
+{
+  "package_name": "traj_planning_msg",
+  "non_idl_tuples": [
+    "/home/bentoaz/NSF_IRES_2025_Codebase/control/src/traj_planning_msg:msg/PathList.msg"
+  ]
+}

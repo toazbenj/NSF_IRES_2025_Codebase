@@ -1,0 +1,233 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"childIndexes" : 
+					[
+						1
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-98f22335fb82d647bf97.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15,
+						16,
+						17
+					]
+				},
+				{
+					"build" : "traj_planning_msg__py",
+					"jsonFile" : "directory-traj_planning_msg__py-fdd3553f4132156c76db.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "/home/bentoaz/NSF_IRES_2025_Codebase/control/build/traj_planning_msg/traj_planning_msg__py",
+					"targetIndexes" : 
+					[
+						4
+					]
+				}
+			],
+			"name" : "",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0,
+						1
+					],
+					"name" : "traj_planning_msg",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15,
+						16,
+						17
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "ament_cmake_python_build_traj_planning_msg_egg::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ament_cmake_python_build_traj_planning_msg_egg-470307cd440bd62e1489.json",
+					"name" : "ament_cmake_python_build_traj_planning_msg_egg",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "ament_cmake_python_copy_traj_planning_msg::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ament_cmake_python_copy_traj_planning_msg-416feda6ae5cf3d72dd2.json",
+					"name" : "ament_cmake_python_copy_traj_planning_msg",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "traj_planning_msg::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-traj_planning_msg-1079a0aeed75e650285a.json",
+					"name" : "traj_planning_msg",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "traj_planning_msg__cpp::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-traj_planning_msg__cpp-dabbdb3686b77e78ddd9.json",
+					"name" : "traj_planning_msg__cpp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "traj_planning_msg__py::@9fa78b9e5f12f9fc8de5",
+					"jsonFile" : "target-traj_planning_msg__py-53684bc58f8c55c193d1.json",
+					"name" : "traj_planning_msg__py",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "traj_planning_msg__rosidl_generator_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-traj_planning_msg__rosidl_generator_c-f7815f80d20bb2d46f91.json",
+					"name" : "traj_planning_msg__rosidl_generator_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "traj_planning_msg__rosidl_generator_py::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-traj_planning_msg__rosidl_generator_py-5460c51e827dbdafeccf.json",
+					"name" : "traj_planning_msg__rosidl_generator_py",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "traj_planning_msg__rosidl_typesupport_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-traj_planning_msg__rosidl_typesupport_c-0e62fe5727c13a0036ef.json",
+					"name" : "traj_planning_msg__rosidl_typesupport_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "traj_planning_msg__rosidl_typesupport_c__pyext::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-traj_planning_msg__rosidl_typesupport_c__pyext-fdaf7bb2e610e079acc3.json",
+					"name" : "traj_planning_msg__rosidl_typesupport_c__pyext",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "traj_planning_msg__rosidl_typesupport_cpp::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-traj_planning_msg__rosidl_typesupport_cpp-15e29635f640c3019469.json",
+					"name" : "traj_planning_msg__rosidl_typesupport_cpp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "traj_planning_msg__rosidl_typesupport_fastrtps_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-traj_planning_msg__rosidl_typesupport_fastrtps_c-e09ad18113c03e97116d.json",
+					"name" : "traj_planning_msg__rosidl_typesupport_fastrtps_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "traj_planning_msg__rosidl_typesupport_fastrtps_c__pyext::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-traj_planning_msg__rosidl_typesupport_fastrtps_c__pyext-7f67aa8e9497ccddbf46.json",
+					"name" : "traj_planning_msg__rosidl_typesupport_fastrtps_c__pyext",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "traj_planning_msg__rosidl_typesupport_fastrtps_cpp::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-traj_planning_msg__rosidl_typesupport_fastrtps_cpp-826835628a5f6b0db1cd.json",
+					"name" : "traj_planning_msg__rosidl_typesupport_fastrtps_cpp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "traj_planning_msg__rosidl_typesupport_introspection_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-traj_planning_msg__rosidl_typesupport_introspection_c-9022d2153f8ee5b2c8dd.json",
+					"name" : "traj_planning_msg__rosidl_typesupport_introspection_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "traj_planning_msg__rosidl_typesupport_introspection_c__pyext::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-traj_planning_msg__rosidl_typesupport_introspection_c__pyext-31d06be400aa357183af.json",
+					"name" : "traj_planning_msg__rosidl_typesupport_introspection_c__pyext",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "traj_planning_msg__rosidl_typesupport_introspection_cpp::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-traj_planning_msg__rosidl_typesupport_introspection_cpp-3b803e66ab631d3838d7.json",
+					"name" : "traj_planning_msg__rosidl_typesupport_introspection_cpp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "traj_planning_msg_uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-traj_planning_msg_uninstall-4c068b14dcbb84f71f19.json",
+					"name" : "traj_planning_msg_uninstall",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-uninstall-e3a53912942f33fe34e5.json",
+					"name" : "uninstall",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/bentoaz/NSF_IRES_2025_Codebase/control/build/traj_planning_msg",
+		"source" : "/home/bentoaz/NSF_IRES_2025_Codebase/control/src/traj_planning_msg"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 3
+	}
+}

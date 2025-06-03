@@ -1,0 +1,3 @@
+[console_scripts]
+traj_server = traj_planning.traj_server:main
+

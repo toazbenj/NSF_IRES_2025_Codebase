@@ -1,3 +1,4 @@
 {
-    "ros.distro": "humble"
+    "ros.distro": "humble",
+    "cmake.sourceDirectory": "/home/bentoaz/NSF_IRES_2025_Codebase/control/src/traj_planning_msg"
 }

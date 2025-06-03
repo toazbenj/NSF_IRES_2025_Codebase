@@ -1,0 +1,14 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : [],
+		"files" : [],
+		"nodes" : []
+	},
+	"installers" : [],
+	"paths" : 
+	{
+		"build" : "traj_planning_msg__py",
+		"source" : "/home/bentoaz/NSF_IRES_2025_Codebase/control/build/traj_planning_msg/traj_planning_msg__py"
+	}
+}

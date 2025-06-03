@@ -1,0 +1,4 @@
+source;share/traj_planning_msg/local_setup.bash
+source;share/traj_planning_msg/local_setup.dsv
+source;share/traj_planning_msg/local_setup.sh
+source;share/traj_planning_msg/local_setup.zsh
