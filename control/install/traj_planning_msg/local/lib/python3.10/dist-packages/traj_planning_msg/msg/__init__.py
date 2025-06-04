@@ -1,1 +1,1 @@
-from traj_planning_msg.msg._path_list import PathList  # noqa: F401
+/home/bentoaz/NSF_IRES_2025_Codebase/control/build/traj_planning_msg/rosidl_generator_py/traj_planning_msg/msg/__init__.py

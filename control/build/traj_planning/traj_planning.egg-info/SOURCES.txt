@@ -9,8 +9,13 @@ setup.py
 ../../build/traj_planning/traj_planning.egg-info/top_level.txt
 ../../build/traj_planning/traj_planning.egg-info/zip-safe
 resource/traj_planning
-test/test_copyright.py
-test/test_flake8.py
-test/test_pep257.py
 traj_planning/__init__.py
+traj_planning/traj_selecter.py
 traj_planning/traj_server.py
+traj_planning.egg-info/PKG-INFO
+traj_planning.egg-info/SOURCES.txt
+traj_planning.egg-info/dependency_links.txt
+traj_planning.egg-info/entry_points.txt
+traj_planning.egg-info/requires.txt
+traj_planning.egg-info/top_level.txt
+traj_planning.egg-info/zip-safe

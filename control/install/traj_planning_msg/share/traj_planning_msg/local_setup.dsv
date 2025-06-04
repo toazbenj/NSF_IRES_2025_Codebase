@@ -1,4 +1,1 @@
-source;share/traj_planning_msg/environment/ament_prefix_path.sh
-source;share/traj_planning_msg/environment/library_path.sh
-source;share/traj_planning_msg/environment/path.sh
-source;share/traj_planning_msg/environment/pythonpath.sh
+/home/bentoaz/NSF_IRES_2025_Codebase/control/build/traj_planning_msg/ament_cmake_environment_hooks/local_setup.dsv

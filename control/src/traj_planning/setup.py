@@ -20,7 +20,8 @@ setup(
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
-            'traj_server = traj_planning.traj_server:main'
+            'traj_server = traj_planning.traj_server:main',
+            'traj_selecter = traj_planning.traj_selecter:main',
         ],
     },
 )

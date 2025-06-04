@@ -1,13 +1,1 @@
-// generated from rosidl_adapter/resource/msg.idl.em
-// with input from traj_planning_msg/msg/PathList.msg
-// generated code does not contain a copyright notice
-
-#include "nav_msgs/msg/Path.idl"
-
-module traj_planning_msg {
-  module msg {
-    struct PathList {
-      sequence<nav_msgs::msg::Path> paths;
-    };
-  };
-};
+/home/bentoaz/NSF_IRES_2025_Codebase/control/build/traj_planning_msg/rosidl_adapter/traj_planning_msg/msg/PathList.idl

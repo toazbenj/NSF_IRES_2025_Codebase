@@ -1,1 +1,1 @@
-nav_msgs/Path[] paths
+/home/bentoaz/NSF_IRES_2025_Codebase/control/src/traj_planning_msg/msg/PathList.msg

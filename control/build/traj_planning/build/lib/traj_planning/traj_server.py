@@ -59,7 +59,7 @@ class TrajectorySampler(Node):
                 path = Path()
                 path.header = header
 
-                for i in range(self.num_points):
+                for i in range(1, self.num_points):
                     dx = i * spacing * math.cos(adjusted_yaw)
                     dy = i * spacing * math.sin(adjusted_yaw)
                     px = x + dx

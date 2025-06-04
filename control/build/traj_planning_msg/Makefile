@@ -315,17 +315,17 @@ traj_planning_msg__rosidl_typesupport_cpp/fast:
 .PHONY : traj_planning_msg__rosidl_typesupport_cpp/fast
 
 #=============================================================================
-# Target rules for targets named ament_cmake_python_copy_traj_planning_msg
+# Target rules for targets named ament_cmake_python_symlink_traj_planning_msg
 
 # Build rule for target.
-ament_cmake_python_copy_traj_planning_msg: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 ament_cmake_python_copy_traj_planning_msg
-.PHONY : ament_cmake_python_copy_traj_planning_msg
+ament_cmake_python_symlink_traj_planning_msg: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 ament_cmake_python_symlink_traj_planning_msg
+.PHONY : ament_cmake_python_symlink_traj_planning_msg
 
 # fast build rule for target.
-ament_cmake_python_copy_traj_planning_msg/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ament_cmake_python_copy_traj_planning_msg.dir/build.make CMakeFiles/ament_cmake_python_copy_traj_planning_msg.dir/build
-.PHONY : ament_cmake_python_copy_traj_planning_msg/fast
+ament_cmake_python_symlink_traj_planning_msg/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ament_cmake_python_symlink_traj_planning_msg.dir/build.make CMakeFiles/ament_cmake_python_symlink_traj_planning_msg.dir/build
+.PHONY : ament_cmake_python_symlink_traj_planning_msg/fast
 
 #=============================================================================
 # Target rules for targets named ament_cmake_python_build_traj_planning_msg_egg
@@ -683,7 +683,7 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... test"
 	@echo "... ament_cmake_python_build_traj_planning_msg_egg"
-	@echo "... ament_cmake_python_copy_traj_planning_msg"
+	@echo "... ament_cmake_python_symlink_traj_planning_msg"
 	@echo "... traj_planning_msg"
 	@echo "... traj_planning_msg__cpp"
 	@echo "... traj_planning_msg__py"
