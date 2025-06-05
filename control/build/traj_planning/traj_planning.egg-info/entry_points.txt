@@ -1,4 +1,5 @@
 [console_scripts]
 traj_selecter = traj_planning.traj_selecter:main
 traj_server = traj_planning.traj_server:main
+visualizer = traj_planning.visualizer:main
 

@@ -22,6 +22,8 @@ setup(
         'console_scripts': [
             'traj_server = traj_planning.traj_server:main',
             'traj_selecter = traj_planning.traj_selecter:main',
+            'visualizer = traj_planning.visualizer:main',
+
         ],
     },
 )

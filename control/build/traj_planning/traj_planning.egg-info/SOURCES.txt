@@ -10,8 +10,10 @@ setup.py
 ../../build/traj_planning/traj_planning.egg-info/zip-safe
 resource/traj_planning
 traj_planning/__init__.py
+traj_planning/constants.py
 traj_planning/traj_selecter.py
 traj_planning/traj_server.py
+traj_planning/visualizer.py
 traj_planning.egg-info/PKG-INFO
 traj_planning.egg-info/SOURCES.txt
 traj_planning.egg-info/dependency_links.txt
