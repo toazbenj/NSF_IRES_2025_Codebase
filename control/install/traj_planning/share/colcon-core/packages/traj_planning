@@ -1,1 +1,1 @@
-nav_msgs:traj_planning_msg
+carla_msgs:carla_waypoint_types:nav_msgs:ros_compatibility:traj_planning_msg

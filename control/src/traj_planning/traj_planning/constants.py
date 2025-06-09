@@ -54,6 +54,7 @@ LR = 1
 LF = 1
 # how close bike center points are in pixels to count as collision
 COLLISION_RADIUS = 45
+VELOCITY_LIMIT = 20
 
 # Trajectory
 # relative cost weights

@@ -7,8 +7,7 @@ setup(
     version='0.0.0',
     packages=find_packages(exclude=['test']),
     data_files=[
-        ('share/ament_index/resource_index/packages',
-            ['resource/' + package_name]),
+        ('share/ament_index/resource_index/packages',['resource/' + package_name]),
         ('share/' + package_name, ['package.xml']),
     ],
     install_requires=['setuptools'],
@@ -23,7 +22,7 @@ setup(
             'traj_server = traj_planning.traj_server:main',
             'traj_selecter = traj_planning.traj_selecter:main',
             'visualizer = traj_planning.visualizer:main',
-
+            'local_planner = traj_planning.local_planner:main',
         ],
     },
 )
