@@ -60,7 +60,9 @@ class LocalPlanner(CompatibleNode):
         self.data_lock = threading.Lock()
 
         self._current_pose = None
-        self._current_speed = None
+
+        # init value causing error in PID, orginally nontype, not updated 
+        self._current_speed = 0.0
         self._target_speed = 0.0
 
         self._buffer_size = 5

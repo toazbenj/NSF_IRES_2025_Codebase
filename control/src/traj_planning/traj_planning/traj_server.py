@@ -9,7 +9,6 @@ from traj_planning_msg.msg import PathList
 
 from tf_transformations import quaternion_from_euler
 from math import cos, sin, atan2, tan, hypot
-import numpy as np
 from traj_planning.constants import *
 from itertools import product
 
@@ -134,10 +133,9 @@ class TrajectoryServer(Node):
         traj_list = []
         action_choices = generate_combinations(ACTION_LST, MPC_HORIZON)
 
-        # assuming 0 wheel slip at the instant of planning
-        x_temp, y_temp, v_temp, phi_temp, b_temp = x, y, speed, yaw, 0
-
         for action_sequence in action_choices:
+            # assuming 0 wheel slip at the instant of planning
+            x_temp, y_temp, v_temp, phi_temp, b_temp = x, y, speed, yaw, 0
 
             header = Header()
             header.stamp = self.get_clock().now().to_msg()
@@ -165,13 +163,13 @@ class TrajectoryServer(Node):
 
                     path.poses.append(pose_stamped)
 
-                traj_list.append(path)
+            traj_list.append(path)
 
         path_list = PathList()
         path_list.paths = traj_list
 
         self.publisher.publish(path_list)
-        self.get_logger().info(f"Published {len(traj_list)} dynamics-based trajectories.")
+        self.get_logger().info(f"Published {len(traj_list)} trajectories.")
 
 
 def main(args=None):

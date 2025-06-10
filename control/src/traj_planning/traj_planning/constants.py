@@ -38,15 +38,20 @@ P2_IS_VECTOR_COST = False
 # Time step
 DT = 0.05
 # Control limits, amount of control effort per choice
-STEERING_INCREMENT = radians(1)
+STEERING_INCREMENT = radians(10)
 ACCELERATION_INCREMENT = 3
-STEER_LIMIT = radians(20)
+STEER_LIMIT = radians(45)
 # best combos: interval = 70, horizon = 1;
 # interval = 50, horizon = 2; interval = 40, mpc = 3
-ACTION_INTERVAL = 70
-MPC_HORIZON = 1
+ACTION_INTERVAL = 20
+MPC_HORIZON = 2
 # Control inputs (acceleration, steering)
-ACTION_LST = [(-1, -1), (-1, 0), (-1, 1), (0, -1), (0, 0), (0, 1), (1, -1), (1, 0), (1, 1)]
+ACTION_LST = [(-1, -1), (-1, 0), (-1, 1), 
+              (0, -1), (0, 0), (0, 1), 
+              (1, -1), (1, 0), (1, 1)]
+
+# ACTION_LST = [(1, -1), (1, 0), (1, 1)]
+
 # how large the bike appears on screen
 BIKE_SIZE = 20
 # size for calculations, radial (width) and frontal (length) axes
@@ -59,7 +64,7 @@ VELOCITY_LIMIT = 20
 # Trajectory
 # relative cost weights
 prox_weight = 0.5
-bounds_weight = 0.5
+bounds_weight = 1
 progress_weight = 1
 
 PROXIMITY_SPREAD = 40
