@@ -6,3 +6,6 @@ traj_planning_msg.egg-info/dependency_links.txt
 traj_planning_msg.egg-info/top_level.txt
 traj_planning_msg/msg/__init__.py
 traj_planning_msg/msg/_path_list.py
+traj_planning_msg/msg/_speed_path.py
+traj_planning_msg/msg/_trajectory.py
+traj_planning_msg/msg/_trajectory_list.py

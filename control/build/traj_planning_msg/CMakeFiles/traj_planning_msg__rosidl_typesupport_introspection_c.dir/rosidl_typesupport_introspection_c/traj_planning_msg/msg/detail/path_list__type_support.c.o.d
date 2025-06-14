@@ -57,6 +57,7 @@ CMakeFiles/traj_planning_msg__rosidl_typesupport_introspection_c.dir/rosidl_type
  /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
  /home/bentoaz/NSF_IRES_2025_Codebase/control/build/traj_planning_msg/rosidl_generator_c/traj_planning_msg/msg/rosidl_generator_c__visibility_control.h \
  /home/bentoaz/NSF_IRES_2025_Codebase/control/build/traj_planning_msg/rosidl_generator_c/traj_planning_msg/msg/detail/path_list__struct.h \
+ /home/bentoaz/NSF_IRES_2025_Codebase/control/build/traj_planning_msg/rosidl_generator_c/traj_planning_msg/msg/detail/speed_path__struct.h \
  /opt/ros/humble/include/nav_msgs/nav_msgs/msg/detail/path__struct.h \
  /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/header__struct.h \
  /opt/ros/humble/include/builtin_interfaces/builtin_interfaces/msg/detail/time__struct.h \
@@ -66,9 +67,8 @@ CMakeFiles/traj_planning_msg__rosidl_typesupport_introspection_c.dir/rosidl_type
  /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/pose__struct.h \
  /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/point__struct.h \
  /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/quaternion__struct.h \
- /opt/ros/humble/include/nav_msgs/nav_msgs/msg/path.h \
- /opt/ros/humble/include/nav_msgs/nav_msgs/msg/detail/path__functions.h \
- /opt/ros/humble/include/nav_msgs/nav_msgs/msg/rosidl_generator_c__visibility_control.h \
- /opt/ros/humble/include/nav_msgs/nav_msgs/msg/detail/path__type_support.h \
- /opt/ros/humble/include/nav_msgs/nav_msgs/msg/detail/path__rosidl_typesupport_introspection_c.h \
- /opt/ros/humble/include/nav_msgs/nav_msgs/msg/rosidl_typesupport_introspection_c__visibility_control.h
+ /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/float64__struct.h \
+ /home/bentoaz/NSF_IRES_2025_Codebase/control/build/traj_planning_msg/rosidl_generator_c/traj_planning_msg/msg/speed_path.h \
+ /home/bentoaz/NSF_IRES_2025_Codebase/control/build/traj_planning_msg/rosidl_generator_c/traj_planning_msg/msg/detail/speed_path__functions.h \
+ /home/bentoaz/NSF_IRES_2025_Codebase/control/build/traj_planning_msg/rosidl_generator_c/traj_planning_msg/msg/detail/speed_path__type_support.h \
+ /home/bentoaz/NSF_IRES_2025_Codebase/control/build/traj_planning_msg/rosidl_typesupport_introspection_c/traj_planning_msg/msg/detail/speed_path__rosidl_typesupport_introspection_c.h

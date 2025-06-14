@@ -69,28 +69,44 @@ include CMakeFiles/traj_planning_msg__rosidl_generator_py.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/traj_planning_msg__rosidl_generator_py.dir/flags.make
 
-CMakeFiles/traj_planning_msg__rosidl_generator_py.dir/rosidl_generator_py/traj_planning_msg/msg/_path_list_s.c.o: CMakeFiles/traj_planning_msg__rosidl_generator_py.dir/flags.make
-CMakeFiles/traj_planning_msg__rosidl_generator_py.dir/rosidl_generator_py/traj_planning_msg/msg/_path_list_s.c.o: rosidl_generator_py/traj_planning_msg/msg/_path_list_s.c
-CMakeFiles/traj_planning_msg__rosidl_generator_py.dir/rosidl_generator_py/traj_planning_msg/msg/_path_list_s.c.o: CMakeFiles/traj_planning_msg__rosidl_generator_py.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bentoaz/NSF_IRES_2025_Codebase/control/build/traj_planning_msg/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/traj_planning_msg__rosidl_generator_py.dir/rosidl_generator_py/traj_planning_msg/msg/_path_list_s.c.o"
-	/usr/lib/ccache/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/traj_planning_msg__rosidl_generator_py.dir/rosidl_generator_py/traj_planning_msg/msg/_path_list_s.c.o -MF CMakeFiles/traj_planning_msg__rosidl_generator_py.dir/rosidl_generator_py/traj_planning_msg/msg/_path_list_s.c.o.d -o CMakeFiles/traj_planning_msg__rosidl_generator_py.dir/rosidl_generator_py/traj_planning_msg/msg/_path_list_s.c.o -c /home/bentoaz/NSF_IRES_2025_Codebase/control/build/traj_planning_msg/rosidl_generator_py/traj_planning_msg/msg/_path_list_s.c
+CMakeFiles/traj_planning_msg__rosidl_generator_py.dir/rosidl_generator_py/traj_planning_msg/msg/_trajectory_list_s.c.o: CMakeFiles/traj_planning_msg__rosidl_generator_py.dir/flags.make
+CMakeFiles/traj_planning_msg__rosidl_generator_py.dir/rosidl_generator_py/traj_planning_msg/msg/_trajectory_list_s.c.o: rosidl_generator_py/traj_planning_msg/msg/_trajectory_list_s.c
+CMakeFiles/traj_planning_msg__rosidl_generator_py.dir/rosidl_generator_py/traj_planning_msg/msg/_trajectory_list_s.c.o: CMakeFiles/traj_planning_msg__rosidl_generator_py.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bentoaz/NSF_IRES_2025_Codebase/control/build/traj_planning_msg/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/traj_planning_msg__rosidl_generator_py.dir/rosidl_generator_py/traj_planning_msg/msg/_trajectory_list_s.c.o"
+	/usr/lib/ccache/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/traj_planning_msg__rosidl_generator_py.dir/rosidl_generator_py/traj_planning_msg/msg/_trajectory_list_s.c.o -MF CMakeFiles/traj_planning_msg__rosidl_generator_py.dir/rosidl_generator_py/traj_planning_msg/msg/_trajectory_list_s.c.o.d -o CMakeFiles/traj_planning_msg__rosidl_generator_py.dir/rosidl_generator_py/traj_planning_msg/msg/_trajectory_list_s.c.o -c /home/bentoaz/NSF_IRES_2025_Codebase/control/build/traj_planning_msg/rosidl_generator_py/traj_planning_msg/msg/_trajectory_list_s.c
 
-CMakeFiles/traj_planning_msg__rosidl_generator_py.dir/rosidl_generator_py/traj_planning_msg/msg/_path_list_s.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/traj_planning_msg__rosidl_generator_py.dir/rosidl_generator_py/traj_planning_msg/msg/_path_list_s.c.i"
-	/usr/lib/ccache/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/bentoaz/NSF_IRES_2025_Codebase/control/build/traj_planning_msg/rosidl_generator_py/traj_planning_msg/msg/_path_list_s.c > CMakeFiles/traj_planning_msg__rosidl_generator_py.dir/rosidl_generator_py/traj_planning_msg/msg/_path_list_s.c.i
+CMakeFiles/traj_planning_msg__rosidl_generator_py.dir/rosidl_generator_py/traj_planning_msg/msg/_trajectory_list_s.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/traj_planning_msg__rosidl_generator_py.dir/rosidl_generator_py/traj_planning_msg/msg/_trajectory_list_s.c.i"
+	/usr/lib/ccache/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/bentoaz/NSF_IRES_2025_Codebase/control/build/traj_planning_msg/rosidl_generator_py/traj_planning_msg/msg/_trajectory_list_s.c > CMakeFiles/traj_planning_msg__rosidl_generator_py.dir/rosidl_generator_py/traj_planning_msg/msg/_trajectory_list_s.c.i
 
-CMakeFiles/traj_planning_msg__rosidl_generator_py.dir/rosidl_generator_py/traj_planning_msg/msg/_path_list_s.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/traj_planning_msg__rosidl_generator_py.dir/rosidl_generator_py/traj_planning_msg/msg/_path_list_s.c.s"
-	/usr/lib/ccache/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/bentoaz/NSF_IRES_2025_Codebase/control/build/traj_planning_msg/rosidl_generator_py/traj_planning_msg/msg/_path_list_s.c -o CMakeFiles/traj_planning_msg__rosidl_generator_py.dir/rosidl_generator_py/traj_planning_msg/msg/_path_list_s.c.s
+CMakeFiles/traj_planning_msg__rosidl_generator_py.dir/rosidl_generator_py/traj_planning_msg/msg/_trajectory_list_s.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/traj_planning_msg__rosidl_generator_py.dir/rosidl_generator_py/traj_planning_msg/msg/_trajectory_list_s.c.s"
+	/usr/lib/ccache/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/bentoaz/NSF_IRES_2025_Codebase/control/build/traj_planning_msg/rosidl_generator_py/traj_planning_msg/msg/_trajectory_list_s.c -o CMakeFiles/traj_planning_msg__rosidl_generator_py.dir/rosidl_generator_py/traj_planning_msg/msg/_trajectory_list_s.c.s
+
+CMakeFiles/traj_planning_msg__rosidl_generator_py.dir/rosidl_generator_py/traj_planning_msg/msg/_trajectory_s.c.o: CMakeFiles/traj_planning_msg__rosidl_generator_py.dir/flags.make
+CMakeFiles/traj_planning_msg__rosidl_generator_py.dir/rosidl_generator_py/traj_planning_msg/msg/_trajectory_s.c.o: rosidl_generator_py/traj_planning_msg/msg/_trajectory_s.c
+CMakeFiles/traj_planning_msg__rosidl_generator_py.dir/rosidl_generator_py/traj_planning_msg/msg/_trajectory_s.c.o: CMakeFiles/traj_planning_msg__rosidl_generator_py.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bentoaz/NSF_IRES_2025_Codebase/control/build/traj_planning_msg/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/traj_planning_msg__rosidl_generator_py.dir/rosidl_generator_py/traj_planning_msg/msg/_trajectory_s.c.o"
+	/usr/lib/ccache/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/traj_planning_msg__rosidl_generator_py.dir/rosidl_generator_py/traj_planning_msg/msg/_trajectory_s.c.o -MF CMakeFiles/traj_planning_msg__rosidl_generator_py.dir/rosidl_generator_py/traj_planning_msg/msg/_trajectory_s.c.o.d -o CMakeFiles/traj_planning_msg__rosidl_generator_py.dir/rosidl_generator_py/traj_planning_msg/msg/_trajectory_s.c.o -c /home/bentoaz/NSF_IRES_2025_Codebase/control/build/traj_planning_msg/rosidl_generator_py/traj_planning_msg/msg/_trajectory_s.c
+
+CMakeFiles/traj_planning_msg__rosidl_generator_py.dir/rosidl_generator_py/traj_planning_msg/msg/_trajectory_s.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/traj_planning_msg__rosidl_generator_py.dir/rosidl_generator_py/traj_planning_msg/msg/_trajectory_s.c.i"
+	/usr/lib/ccache/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/bentoaz/NSF_IRES_2025_Codebase/control/build/traj_planning_msg/rosidl_generator_py/traj_planning_msg/msg/_trajectory_s.c > CMakeFiles/traj_planning_msg__rosidl_generator_py.dir/rosidl_generator_py/traj_planning_msg/msg/_trajectory_s.c.i
+
+CMakeFiles/traj_planning_msg__rosidl_generator_py.dir/rosidl_generator_py/traj_planning_msg/msg/_trajectory_s.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/traj_planning_msg__rosidl_generator_py.dir/rosidl_generator_py/traj_planning_msg/msg/_trajectory_s.c.s"
+	/usr/lib/ccache/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/bentoaz/NSF_IRES_2025_Codebase/control/build/traj_planning_msg/rosidl_generator_py/traj_planning_msg/msg/_trajectory_s.c -o CMakeFiles/traj_planning_msg__rosidl_generator_py.dir/rosidl_generator_py/traj_planning_msg/msg/_trajectory_s.c.s
 
 # Object files for target traj_planning_msg__rosidl_generator_py
 traj_planning_msg__rosidl_generator_py_OBJECTS = \
-"CMakeFiles/traj_planning_msg__rosidl_generator_py.dir/rosidl_generator_py/traj_planning_msg/msg/_path_list_s.c.o"
+"CMakeFiles/traj_planning_msg__rosidl_generator_py.dir/rosidl_generator_py/traj_planning_msg/msg/_trajectory_list_s.c.o" \
+"CMakeFiles/traj_planning_msg__rosidl_generator_py.dir/rosidl_generator_py/traj_planning_msg/msg/_trajectory_s.c.o"
 
 # External object files for target traj_planning_msg__rosidl_generator_py
 traj_planning_msg__rosidl_generator_py_EXTERNAL_OBJECTS =
 
-rosidl_generator_py/traj_planning_msg/libtraj_planning_msg__rosidl_generator_py.so: CMakeFiles/traj_planning_msg__rosidl_generator_py.dir/rosidl_generator_py/traj_planning_msg/msg/_path_list_s.c.o
+rosidl_generator_py/traj_planning_msg/libtraj_planning_msg__rosidl_generator_py.so: CMakeFiles/traj_planning_msg__rosidl_generator_py.dir/rosidl_generator_py/traj_planning_msg/msg/_trajectory_list_s.c.o
+rosidl_generator_py/traj_planning_msg/libtraj_planning_msg__rosidl_generator_py.so: CMakeFiles/traj_planning_msg__rosidl_generator_py.dir/rosidl_generator_py/traj_planning_msg/msg/_trajectory_s.c.o
 rosidl_generator_py/traj_planning_msg/libtraj_planning_msg__rosidl_generator_py.so: CMakeFiles/traj_planning_msg__rosidl_generator_py.dir/build.make
 rosidl_generator_py/traj_planning_msg/libtraj_planning_msg__rosidl_generator_py.so: /usr/lib/x86_64-linux-gnu/libpython3.10.so
 rosidl_generator_py/traj_planning_msg/libtraj_planning_msg__rosidl_generator_py.so: libtraj_planning_msg__rosidl_typesupport_c.so
@@ -111,7 +127,7 @@ rosidl_generator_py/traj_planning_msg/libtraj_planning_msg__rosidl_generator_py.
 rosidl_generator_py/traj_planning_msg/libtraj_planning_msg__rosidl_generator_py.so: /opt/ros/humble/lib/librosidl_runtime_c.so
 rosidl_generator_py/traj_planning_msg/libtraj_planning_msg__rosidl_generator_py.so: /opt/ros/humble/lib/librcutils.so
 rosidl_generator_py/traj_planning_msg/libtraj_planning_msg__rosidl_generator_py.so: CMakeFiles/traj_planning_msg__rosidl_generator_py.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/bentoaz/NSF_IRES_2025_Codebase/control/build/traj_planning_msg/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking C shared library rosidl_generator_py/traj_planning_msg/libtraj_planning_msg__rosidl_generator_py.so"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/bentoaz/NSF_IRES_2025_Codebase/control/build/traj_planning_msg/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking C shared library rosidl_generator_py/traj_planning_msg/libtraj_planning_msg__rosidl_generator_py.so"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/traj_planning_msg__rosidl_generator_py.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

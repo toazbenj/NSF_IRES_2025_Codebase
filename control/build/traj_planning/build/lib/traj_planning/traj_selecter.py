@@ -2,7 +2,7 @@ import rclpy
 from rclpy.node import Node
 from nav_msgs.msg import Path
 from visualization_msgs.msg import MarkerArray
-from traj_planning_msg.msg import PathList
+from traj_planning_msg.msg import TrajectoryList, TrajectoryList
 from geometry_msgs.msg import Point
 from std_msgs.msg import Float64, Header
 from rclpy.qos import QoSProfile, QoSDurabilityPolicy
@@ -15,7 +15,7 @@ class TrajectorySelecter(Node):
         super().__init__('trajectory_selecter')
 
         self.subscription = self.create_subscription(
-            PathList, '/carla/hero/traj_list', self.local_path_callback, 10)
+            TrajectoryList, '/carla/hero/traj_list', self.local_path_callback, 10)
 
         self.road_network_sub = self.create_subscription(
             Path, '/carla/hero/waypoints', self.global_path_callback, 10)
@@ -35,7 +35,7 @@ class TrajectorySelecter(Node):
             self.reference_path = msg
             self.get_logger().info(f"New reference path received")
 
-    def local_path_callback(self, msg: PathList):
+    def local_path_callback(self, msg: TrajectoryList):
         path_list = msg.paths
 
         if not self.reference_path:
@@ -44,7 +44,7 @@ class TrajectorySelecter(Node):
 
         costs = np.zeros(len(path_list))
         for idx, path in enumerate(path_list):
-            costs[idx] = self.evaluate_path(path)
+            costs[idx] = self.evaluate_path(path.path)
 
         self.get_logger().info(f"Costs: {costs}")
 
@@ -52,13 +52,10 @@ class TrajectorySelecter(Node):
         selected_traj = path_list[selected_idx]
         selected_traj.header.stamp = self.get_clock().now().to_msg()
 
-        self.path_publisher.publish(selected_traj)
-        
-        speed = Float64()
-        speed.data = self.estimate_final_speed(selected_traj)
-        self.speed_publisher.publish(speed)
+        self.path_publisher.publish(selected_traj.path)
+        self.speed_publisher.publish(selected_traj.speed)
 
-        self.get_logger().info(f"Published selected trajectory {selected_idx} at speed {speed.data} m/s")
+        self.get_logger().info(f"Published selected trajectory {selected_idx} at speed {selected_traj.speed.data} m/s")
 
     def evaluate_path(self, path: Path):
         progress_cost = self.progress_costs(path)
@@ -106,28 +103,13 @@ class TrajectorySelecter(Node):
             point = np.array([p.x, p.y, p.z])
             min_dist, _ = self.project_point_to_reference_trajectory(point)
 
-            total_deviation += min_dist
+            total_deviation +=  1 - np.exp(-(2/BOUNDS_SPREAD * min_dist) ** 2)
             valid_points += 1
 
         if valid_points == 0:
             return float('inf')
         
-        return total_deviation / valid_points
-
-
-    def estimate_final_speed(self, path: Path):
-        if len(path.poses) < 2:
-            return 0.0  # not enough data
-
-        p1 = path.poses[-2].pose.position
-        p2 = path.poses[-1].pose.position
-
-        dx = p2.x - p1.x
-        dy = p2.y - p1.y
-        dist = np.hypot(dx, dy)
-
-        speed = dist / DT  # DT from traj_planning.constants
-        return speed
+        return total_deviation
 
 
 def main(args=None):

@@ -20,12 +20,10 @@
 #include "rosidl_runtime_c/primitives_sequence_functions.h"
 
 // Nested array functions includes
-#include "nav_msgs/msg/detail/path__functions.h"
+#include "traj_planning_msg/msg/detail/speed_path__functions.h"
 // end nested array functions include
-ROSIDL_GENERATOR_C_IMPORT
-bool nav_msgs__msg__path__convert_from_py(PyObject * _pymsg, void * _ros_message);
-ROSIDL_GENERATOR_C_IMPORT
-PyObject * nav_msgs__msg__path__convert_to_py(void * raw_ros_message);
+bool traj_planning_msg__msg__speed_path__convert_from_py(PyObject * _pymsg, void * _ros_message);
+PyObject * traj_planning_msg__msg__speed_path__convert_to_py(void * raw_ros_message);
 
 ROSIDL_GENERATOR_C_EXPORT
 bool traj_planning_msg__msg__path_list__convert_from_py(PyObject * _pymsg, void * _ros_message)
@@ -76,15 +74,15 @@ bool traj_planning_msg__msg__path_list__convert_from_py(PyObject * _pymsg, void 
       Py_DECREF(field);
       return false;
     }
-    if (!nav_msgs__msg__Path__Sequence__init(&(ros_message->paths), size)) {
-      PyErr_SetString(PyExc_RuntimeError, "unable to create nav_msgs__msg__Path__Sequence ros_message");
+    if (!traj_planning_msg__msg__SpeedPath__Sequence__init(&(ros_message->paths), size)) {
+      PyErr_SetString(PyExc_RuntimeError, "unable to create traj_planning_msg__msg__SpeedPath__Sequence ros_message");
       Py_DECREF(seq_field);
       Py_DECREF(field);
       return false;
     }
-    nav_msgs__msg__Path * dest = ros_message->paths.data;
+    traj_planning_msg__msg__SpeedPath * dest = ros_message->paths.data;
     for (Py_ssize_t i = 0; i < size; ++i) {
-      if (!nav_msgs__msg__path__convert_from_py(PySequence_Fast_GET_ITEM(seq_field, i), &dest[i])) {
+      if (!traj_planning_msg__msg__speed_path__convert_from_py(PySequence_Fast_GET_ITEM(seq_field, i), &dest[i])) {
         Py_DECREF(seq_field);
         Py_DECREF(field);
         return false;
@@ -122,10 +120,10 @@ PyObject * traj_planning_msg__msg__path_list__convert_to_py(void * raw_ros_messa
     if (!field) {
       return NULL;
     }
-    nav_msgs__msg__Path * item;
+    traj_planning_msg__msg__SpeedPath * item;
     for (size_t i = 0; i < size; ++i) {
       item = &(ros_message->paths.data[i]);
-      PyObject * pyitem = nav_msgs__msg__path__convert_to_py(item);
+      PyObject * pyitem = traj_planning_msg__msg__speed_path__convert_to_py(item);
       if (!pyitem) {
         Py_DECREF(field);
         return NULL;

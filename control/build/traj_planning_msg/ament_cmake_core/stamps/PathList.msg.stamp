@@ -1,1 +1,1 @@
-nav_msgs/Path[] paths
+traj_planning_msg/SpeedPath[] paths

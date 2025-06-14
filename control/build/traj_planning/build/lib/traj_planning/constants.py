@@ -3,8 +3,6 @@ import numpy as np
 
 # Most of these arent used yet
 
-
-
 # Main
 IS_COST_DATA_CREATION_MODE = True
 
@@ -44,14 +42,11 @@ STEER_LIMIT = radians(45)
 # best combos: interval = 70, horizon = 1;
 # interval = 50, horizon = 2; interval = 40, mpc = 3
 ACTION_INTERVAL = 20
-MPC_HORIZON = 3
+MPC_HORIZON = 2
 # Control inputs (acceleration, steering)
 ACTION_LST = [(-1, -1), (-1, 0), (-1, 1), 
               (0, -1), (0, 0), (0, 1), 
               (1, -1), (1, 0), (1, 1)]
-
-# ACTION_LST = [(0, -1), (0, 0), (0, 1),
-#               (1, -1), (1, 0), (1, 1)]
 
 # how large the bike appears on screen
 BIKE_SIZE = 20
@@ -60,12 +55,12 @@ LR = 1
 LF = 1
 # how close bike center points are in pixels to count as collision
 COLLISION_RADIUS = 45
-VELOCITY_LIMIT = 20
+VELOCITY_LIMIT = 40
 
 # Trajectory
 # relative cost weights
 prox_weight = 0.5
-bounds_weight = 0
+bounds_weight = 1
 progress_weight = 1
 
 PROXIMITY_SPREAD = 40

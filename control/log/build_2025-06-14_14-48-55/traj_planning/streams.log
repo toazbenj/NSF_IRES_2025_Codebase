@@ -1,0 +1,22 @@
+[1.735s] Invoking command in '/home/bentoaz/NSF_IRES_2025_Codebase/control/build/traj_planning': PYTHONPATH=/home/bentoaz/NSF_IRES_2025_Codebase/control/build/traj_planning/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/bentoaz/NSF_IRES_2025_Codebase/control/install/traj_planning/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/bentoaz/NSF_IRES_2025_Codebase/control/build/traj_planning/build --no-deps symlink_data --force
+[2.368s] running develop
+[2.669s] running egg_info
+[2.670s] writing traj_planning.egg-info/PKG-INFO
+[2.670s] writing dependency_links to traj_planning.egg-info/dependency_links.txt
+[2.670s] writing entry points to traj_planning.egg-info/entry_points.txt
+[2.670s] writing requirements to traj_planning.egg-info/requires.txt
+[2.670s] writing top-level names to traj_planning.egg-info/top_level.txt
+[2.673s] reading manifest file 'traj_planning.egg-info/SOURCES.txt'
+[2.674s] writing manifest file 'traj_planning.egg-info/SOURCES.txt'
+[2.731s] running build_ext
+[2.732s] Creating /home/bentoaz/NSF_IRES_2025_Codebase/control/install/traj_planning/lib/python3.10/site-packages/traj-planning.egg-link (link to .)
+[2.733s] Installing local_planner script to /home/bentoaz/NSF_IRES_2025_Codebase/control/install/traj_planning/lib/traj_planning
+[2.733s] Installing traj_selecter script to /home/bentoaz/NSF_IRES_2025_Codebase/control/install/traj_planning/lib/traj_planning
+[2.733s] Installing traj_server script to /home/bentoaz/NSF_IRES_2025_Codebase/control/install/traj_planning/lib/traj_planning
+[2.733s] Installing visualizer script to /home/bentoaz/NSF_IRES_2025_Codebase/control/install/traj_planning/lib/traj_planning
+[2.733s] 
+[2.734s] Installed /home/bentoaz/NSF_IRES_2025_Codebase/control/build/traj_planning
+[2.734s] running symlink_data
+[2.734s] symbolically linking /home/bentoaz/NSF_IRES_2025_Codebase/control/build/traj_planning/resource/traj_planning -> /home/bentoaz/NSF_IRES_2025_Codebase/control/install/traj_planning/share/ament_index/resource_index/packages
+[2.734s] symbolically linking /home/bentoaz/NSF_IRES_2025_Codebase/control/build/traj_planning/package.xml -> /home/bentoaz/NSF_IRES_2025_Codebase/control/install/traj_planning/share/traj_planning
+[2.775s] Invoked command in '/home/bentoaz/NSF_IRES_2025_Codebase/control/build/traj_planning' returned '0': PYTHONPATH=/home/bentoaz/NSF_IRES_2025_Codebase/control/build/traj_planning/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/bentoaz/NSF_IRES_2025_Codebase/control/install/traj_planning/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/bentoaz/NSF_IRES_2025_Codebase/control/build/traj_planning/build --no-deps symlink_data --force

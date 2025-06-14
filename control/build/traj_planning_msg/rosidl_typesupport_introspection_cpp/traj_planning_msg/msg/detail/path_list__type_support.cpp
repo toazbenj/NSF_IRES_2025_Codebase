@@ -39,46 +39,46 @@ void PathList_fini_function(void * message_memory)
 
 size_t size_function__PathList__paths(const void * untyped_member)
 {
-  const auto * member = reinterpret_cast<const std::vector<nav_msgs::msg::Path> *>(untyped_member);
+  const auto * member = reinterpret_cast<const std::vector<traj_planning_msg::msg::SpeedPath> *>(untyped_member);
   return member->size();
 }
 
 const void * get_const_function__PathList__paths(const void * untyped_member, size_t index)
 {
   const auto & member =
-    *reinterpret_cast<const std::vector<nav_msgs::msg::Path> *>(untyped_member);
+    *reinterpret_cast<const std::vector<traj_planning_msg::msg::SpeedPath> *>(untyped_member);
   return &member[index];
 }
 
 void * get_function__PathList__paths(void * untyped_member, size_t index)
 {
   auto & member =
-    *reinterpret_cast<std::vector<nav_msgs::msg::Path> *>(untyped_member);
+    *reinterpret_cast<std::vector<traj_planning_msg::msg::SpeedPath> *>(untyped_member);
   return &member[index];
 }
 
 void fetch_function__PathList__paths(
   const void * untyped_member, size_t index, void * untyped_value)
 {
-  const auto & item = *reinterpret_cast<const nav_msgs::msg::Path *>(
+  const auto & item = *reinterpret_cast<const traj_planning_msg::msg::SpeedPath *>(
     get_const_function__PathList__paths(untyped_member, index));
-  auto & value = *reinterpret_cast<nav_msgs::msg::Path *>(untyped_value);
+  auto & value = *reinterpret_cast<traj_planning_msg::msg::SpeedPath *>(untyped_value);
   value = item;
 }
 
 void assign_function__PathList__paths(
   void * untyped_member, size_t index, const void * untyped_value)
 {
-  auto & item = *reinterpret_cast<nav_msgs::msg::Path *>(
+  auto & item = *reinterpret_cast<traj_planning_msg::msg::SpeedPath *>(
     get_function__PathList__paths(untyped_member, index));
-  const auto & value = *reinterpret_cast<const nav_msgs::msg::Path *>(untyped_value);
+  const auto & value = *reinterpret_cast<const traj_planning_msg::msg::SpeedPath *>(untyped_value);
   item = value;
 }
 
 void resize_function__PathList__paths(void * untyped_member, size_t size)
 {
   auto * member =
-    reinterpret_cast<std::vector<nav_msgs::msg::Path> *>(untyped_member);
+    reinterpret_cast<std::vector<traj_planning_msg::msg::SpeedPath> *>(untyped_member);
   member->resize(size);
 }
 
@@ -87,7 +87,7 @@ static const ::rosidl_typesupport_introspection_cpp::MessageMember PathList_mess
     "paths",  // name
     ::rosidl_typesupport_introspection_cpp::ROS_TYPE_MESSAGE,  // type
     0,  // upper bound of string
-    ::rosidl_typesupport_introspection_cpp::get_message_type_support_handle<nav_msgs::msg::Path>(),  // members of sub message
+    ::rosidl_typesupport_introspection_cpp::get_message_type_support_handle<traj_planning_msg::msg::SpeedPath>(),  // members of sub message
     true,  // is array
     0,  // array size
     false,  // is upper bound

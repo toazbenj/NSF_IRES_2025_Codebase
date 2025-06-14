@@ -4,6 +4,3 @@ source;share/traj_planning/hook/pythonpath.sh
 source;share/traj_planning/hook/ament_prefix_path.ps1
 source;share/traj_planning/hook/ament_prefix_path.dsv
 source;share/traj_planning/hook/ament_prefix_path.sh
-source;../../build/traj_planning/share/traj_planning/hook/pythonpath_develop.ps1
-source;../../build/traj_planning/share/traj_planning/hook/pythonpath_develop.dsv
-source;../../build/traj_planning/share/traj_planning/hook/pythonpath_develop.sh

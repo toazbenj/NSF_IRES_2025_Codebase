@@ -14,9 +14,9 @@
 
 // Include directives for member types
 // Member `paths`
-#include "nav_msgs/msg/path.h"
+#include "traj_planning_msg/msg/speed_path.h"
 // Member `paths`
-#include "nav_msgs/msg/detail/path__rosidl_typesupport_introspection_c.h"
+#include "traj_planning_msg/msg/detail/speed_path__rosidl_typesupport_introspection_c.h"
 
 #ifdef __cplusplus
 extern "C"
@@ -40,56 +40,56 @@ void traj_planning_msg__msg__PathList__rosidl_typesupport_introspection_c__PathL
 size_t traj_planning_msg__msg__PathList__rosidl_typesupport_introspection_c__size_function__PathList__paths(
   const void * untyped_member)
 {
-  const nav_msgs__msg__Path__Sequence * member =
-    (const nav_msgs__msg__Path__Sequence *)(untyped_member);
+  const traj_planning_msg__msg__SpeedPath__Sequence * member =
+    (const traj_planning_msg__msg__SpeedPath__Sequence *)(untyped_member);
   return member->size;
 }
 
 const void * traj_planning_msg__msg__PathList__rosidl_typesupport_introspection_c__get_const_function__PathList__paths(
   const void * untyped_member, size_t index)
 {
-  const nav_msgs__msg__Path__Sequence * member =
-    (const nav_msgs__msg__Path__Sequence *)(untyped_member);
+  const traj_planning_msg__msg__SpeedPath__Sequence * member =
+    (const traj_planning_msg__msg__SpeedPath__Sequence *)(untyped_member);
   return &member->data[index];
 }
 
 void * traj_planning_msg__msg__PathList__rosidl_typesupport_introspection_c__get_function__PathList__paths(
   void * untyped_member, size_t index)
 {
-  nav_msgs__msg__Path__Sequence * member =
-    (nav_msgs__msg__Path__Sequence *)(untyped_member);
+  traj_planning_msg__msg__SpeedPath__Sequence * member =
+    (traj_planning_msg__msg__SpeedPath__Sequence *)(untyped_member);
   return &member->data[index];
 }
 
 void traj_planning_msg__msg__PathList__rosidl_typesupport_introspection_c__fetch_function__PathList__paths(
   const void * untyped_member, size_t index, void * untyped_value)
 {
-  const nav_msgs__msg__Path * item =
-    ((const nav_msgs__msg__Path *)
+  const traj_planning_msg__msg__SpeedPath * item =
+    ((const traj_planning_msg__msg__SpeedPath *)
     traj_planning_msg__msg__PathList__rosidl_typesupport_introspection_c__get_const_function__PathList__paths(untyped_member, index));
-  nav_msgs__msg__Path * value =
-    (nav_msgs__msg__Path *)(untyped_value);
+  traj_planning_msg__msg__SpeedPath * value =
+    (traj_planning_msg__msg__SpeedPath *)(untyped_value);
   *value = *item;
 }
 
 void traj_planning_msg__msg__PathList__rosidl_typesupport_introspection_c__assign_function__PathList__paths(
   void * untyped_member, size_t index, const void * untyped_value)
 {
-  nav_msgs__msg__Path * item =
-    ((nav_msgs__msg__Path *)
+  traj_planning_msg__msg__SpeedPath * item =
+    ((traj_planning_msg__msg__SpeedPath *)
     traj_planning_msg__msg__PathList__rosidl_typesupport_introspection_c__get_function__PathList__paths(untyped_member, index));
-  const nav_msgs__msg__Path * value =
-    (const nav_msgs__msg__Path *)(untyped_value);
+  const traj_planning_msg__msg__SpeedPath * value =
+    (const traj_planning_msg__msg__SpeedPath *)(untyped_value);
   *item = *value;
 }
 
 bool traj_planning_msg__msg__PathList__rosidl_typesupport_introspection_c__resize_function__PathList__paths(
   void * untyped_member, size_t size)
 {
-  nav_msgs__msg__Path__Sequence * member =
-    (nav_msgs__msg__Path__Sequence *)(untyped_member);
-  nav_msgs__msg__Path__Sequence__fini(member);
-  return nav_msgs__msg__Path__Sequence__init(member, size);
+  traj_planning_msg__msg__SpeedPath__Sequence * member =
+    (traj_planning_msg__msg__SpeedPath__Sequence *)(untyped_member);
+  traj_planning_msg__msg__SpeedPath__Sequence__fini(member);
+  return traj_planning_msg__msg__SpeedPath__Sequence__init(member, size);
 }
 
 static rosidl_typesupport_introspection_c__MessageMember traj_planning_msg__msg__PathList__rosidl_typesupport_introspection_c__PathList_message_member_array[1] = {
@@ -134,7 +134,7 @@ ROSIDL_TYPESUPPORT_INTROSPECTION_C_EXPORT_traj_planning_msg
 const rosidl_message_type_support_t *
 ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(rosidl_typesupport_introspection_c, traj_planning_msg, msg, PathList)() {
   traj_planning_msg__msg__PathList__rosidl_typesupport_introspection_c__PathList_message_member_array[0].members_ =
-    ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(rosidl_typesupport_introspection_c, nav_msgs, msg, Path)();
+    ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(rosidl_typesupport_introspection_c, traj_planning_msg, msg, SpeedPath)();
   if (!traj_planning_msg__msg__PathList__rosidl_typesupport_introspection_c__PathList_message_type_support_handle.typesupport_identifier) {
     traj_planning_msg__msg__PathList__rosidl_typesupport_introspection_c__PathList_message_type_support_handle.typesupport_identifier =
       rosidl_typesupport_introspection_c__identifier;

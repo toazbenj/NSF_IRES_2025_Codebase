@@ -1,1 +1,2 @@
-/home/bentoaz/NSF_IRES_2025_Codebase/control/build/traj_planning_msg/rosidl_adapter/traj_planning_msg:msg/PathList.idl
+/home/bentoaz/NSF_IRES_2025_Codebase/control/build/traj_planning_msg/rosidl_adapter/traj_planning_msg:msg/TrajectoryList.idl
+/home/bentoaz/NSF_IRES_2025_Codebase/control/build/traj_planning_msg/rosidl_adapter/traj_planning_msg:msg/Trajectory.idl

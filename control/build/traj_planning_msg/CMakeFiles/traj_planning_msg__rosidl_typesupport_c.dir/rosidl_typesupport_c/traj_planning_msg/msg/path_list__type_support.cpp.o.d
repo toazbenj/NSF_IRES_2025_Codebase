@@ -25,6 +25,7 @@ CMakeFiles/traj_planning_msg__rosidl_typesupport_c.dir/rosidl_typesupport_c/traj
  /usr/include/x86_64-linux-gnu/bits/wchar.h \
  /usr/include/x86_64-linux-gnu/bits/stdint-intn.h \
  /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h \
+ /home/bentoaz/NSF_IRES_2025_Codebase/control/build/traj_planning_msg/rosidl_generator_c/traj_planning_msg/msg/detail/speed_path__struct.h \
  /opt/ros/humble/include/nav_msgs/nav_msgs/msg/detail/path__struct.h \
  /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/header__struct.h \
  /opt/ros/humble/include/builtin_interfaces/builtin_interfaces/msg/detail/time__struct.h \
@@ -34,6 +35,7 @@ CMakeFiles/traj_planning_msg__rosidl_typesupport_c.dir/rosidl_typesupport_c/traj
  /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/pose__struct.h \
  /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/point__struct.h \
  /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/quaternion__struct.h \
+ /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/float64__struct.h \
  /home/bentoaz/NSF_IRES_2025_Codebase/control/build/traj_planning_msg/rosidl_generator_c/traj_planning_msg/msg/detail/path_list__type_support.h \
  /home/bentoaz/NSF_IRES_2025_Codebase/control/build/traj_planning_msg/rosidl_generator_c/traj_planning_msg/msg/rosidl_generator_c__visibility_control.h \
  /opt/ros/humble/include/rosidl_typesupport_c/rosidl_typesupport_c/identifier.h \

@@ -66,7 +66,8 @@ include CMakeFiles/traj_planning_msg.dir/compiler_depend.make
 # Include the progress variables for this target.
 include CMakeFiles/traj_planning_msg.dir/progress.make
 
-CMakeFiles/traj_planning_msg: /home/bentoaz/NSF_IRES_2025_Codebase/control/src/traj_planning_msg/msg/PathList.msg
+CMakeFiles/traj_planning_msg: /home/bentoaz/NSF_IRES_2025_Codebase/control/src/traj_planning_msg/msg/TrajectoryList.msg
+CMakeFiles/traj_planning_msg: /home/bentoaz/NSF_IRES_2025_Codebase/control/src/traj_planning_msg/msg/Trajectory.msg
 CMakeFiles/traj_planning_msg: /opt/ros/humble/share/nav_msgs/msg/Goals.idl
 CMakeFiles/traj_planning_msg: /opt/ros/humble/share/nav_msgs/msg/GridCells.idl
 CMakeFiles/traj_planning_msg: /opt/ros/humble/share/nav_msgs/msg/MapMetaData.idl
@@ -77,6 +78,36 @@ CMakeFiles/traj_planning_msg: /opt/ros/humble/share/nav_msgs/srv/GetMap.idl
 CMakeFiles/traj_planning_msg: /opt/ros/humble/share/nav_msgs/srv/GetPlan.idl
 CMakeFiles/traj_planning_msg: /opt/ros/humble/share/nav_msgs/srv/LoadMap.idl
 CMakeFiles/traj_planning_msg: /opt/ros/humble/share/nav_msgs/srv/SetMap.idl
+CMakeFiles/traj_planning_msg: /opt/ros/humble/share/std_msgs/msg/Bool.idl
+CMakeFiles/traj_planning_msg: /opt/ros/humble/share/std_msgs/msg/Byte.idl
+CMakeFiles/traj_planning_msg: /opt/ros/humble/share/std_msgs/msg/ByteMultiArray.idl
+CMakeFiles/traj_planning_msg: /opt/ros/humble/share/std_msgs/msg/Char.idl
+CMakeFiles/traj_planning_msg: /opt/ros/humble/share/std_msgs/msg/ColorRGBA.idl
+CMakeFiles/traj_planning_msg: /opt/ros/humble/share/std_msgs/msg/Empty.idl
+CMakeFiles/traj_planning_msg: /opt/ros/humble/share/std_msgs/msg/Float32.idl
+CMakeFiles/traj_planning_msg: /opt/ros/humble/share/std_msgs/msg/Float32MultiArray.idl
+CMakeFiles/traj_planning_msg: /opt/ros/humble/share/std_msgs/msg/Float64.idl
+CMakeFiles/traj_planning_msg: /opt/ros/humble/share/std_msgs/msg/Float64MultiArray.idl
+CMakeFiles/traj_planning_msg: /opt/ros/humble/share/std_msgs/msg/Header.idl
+CMakeFiles/traj_planning_msg: /opt/ros/humble/share/std_msgs/msg/Int16.idl
+CMakeFiles/traj_planning_msg: /opt/ros/humble/share/std_msgs/msg/Int16MultiArray.idl
+CMakeFiles/traj_planning_msg: /opt/ros/humble/share/std_msgs/msg/Int32.idl
+CMakeFiles/traj_planning_msg: /opt/ros/humble/share/std_msgs/msg/Int32MultiArray.idl
+CMakeFiles/traj_planning_msg: /opt/ros/humble/share/std_msgs/msg/Int64.idl
+CMakeFiles/traj_planning_msg: /opt/ros/humble/share/std_msgs/msg/Int64MultiArray.idl
+CMakeFiles/traj_planning_msg: /opt/ros/humble/share/std_msgs/msg/Int8.idl
+CMakeFiles/traj_planning_msg: /opt/ros/humble/share/std_msgs/msg/Int8MultiArray.idl
+CMakeFiles/traj_planning_msg: /opt/ros/humble/share/std_msgs/msg/MultiArrayDimension.idl
+CMakeFiles/traj_planning_msg: /opt/ros/humble/share/std_msgs/msg/MultiArrayLayout.idl
+CMakeFiles/traj_planning_msg: /opt/ros/humble/share/std_msgs/msg/String.idl
+CMakeFiles/traj_planning_msg: /opt/ros/humble/share/std_msgs/msg/UInt16.idl
+CMakeFiles/traj_planning_msg: /opt/ros/humble/share/std_msgs/msg/UInt16MultiArray.idl
+CMakeFiles/traj_planning_msg: /opt/ros/humble/share/std_msgs/msg/UInt32.idl
+CMakeFiles/traj_planning_msg: /opt/ros/humble/share/std_msgs/msg/UInt32MultiArray.idl
+CMakeFiles/traj_planning_msg: /opt/ros/humble/share/std_msgs/msg/UInt64.idl
+CMakeFiles/traj_planning_msg: /opt/ros/humble/share/std_msgs/msg/UInt64MultiArray.idl
+CMakeFiles/traj_planning_msg: /opt/ros/humble/share/std_msgs/msg/UInt8.idl
+CMakeFiles/traj_planning_msg: /opt/ros/humble/share/std_msgs/msg/UInt8MultiArray.idl
 
 traj_planning_msg: CMakeFiles/traj_planning_msg
 traj_planning_msg: CMakeFiles/traj_planning_msg.dir/build.make

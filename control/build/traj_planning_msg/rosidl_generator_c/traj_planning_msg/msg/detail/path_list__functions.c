@@ -13,7 +13,7 @@
 
 // Include directives for member types
 // Member `paths`
-#include "nav_msgs/msg/detail/path__functions.h"
+#include "traj_planning_msg/msg/detail/speed_path__functions.h"
 
 bool
 traj_planning_msg__msg__PathList__init(traj_planning_msg__msg__PathList * msg)
@@ -22,7 +22,7 @@ traj_planning_msg__msg__PathList__init(traj_planning_msg__msg__PathList * msg)
     return false;
   }
   // paths
-  if (!nav_msgs__msg__Path__Sequence__init(&msg->paths, 0)) {
+  if (!traj_planning_msg__msg__SpeedPath__Sequence__init(&msg->paths, 0)) {
     traj_planning_msg__msg__PathList__fini(msg);
     return false;
   }
@@ -36,7 +36,7 @@ traj_planning_msg__msg__PathList__fini(traj_planning_msg__msg__PathList * msg)
     return;
   }
   // paths
-  nav_msgs__msg__Path__Sequence__fini(&msg->paths);
+  traj_planning_msg__msg__SpeedPath__Sequence__fini(&msg->paths);
 }
 
 bool
@@ -46,7 +46,7 @@ traj_planning_msg__msg__PathList__are_equal(const traj_planning_msg__msg__PathLi
     return false;
   }
   // paths
-  if (!nav_msgs__msg__Path__Sequence__are_equal(
+  if (!traj_planning_msg__msg__SpeedPath__Sequence__are_equal(
       &(lhs->paths), &(rhs->paths)))
   {
     return false;
@@ -63,7 +63,7 @@ traj_planning_msg__msg__PathList__copy(
     return false;
   }
   // paths
-  if (!nav_msgs__msg__Path__Sequence__copy(
+  if (!traj_planning_msg__msg__SpeedPath__Sequence__copy(
       &(input->paths), &(output->paths)))
   {
     return false;

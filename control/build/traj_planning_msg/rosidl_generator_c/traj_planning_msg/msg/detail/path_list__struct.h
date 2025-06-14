@@ -19,12 +19,12 @@ extern "C"
 
 // Include directives for member types
 // Member 'paths'
-#include "nav_msgs/msg/detail/path__struct.h"
+#include "traj_planning_msg/msg/detail/speed_path__struct.h"
 
 /// Struct defined in msg/PathList in the package traj_planning_msg.
 typedef struct traj_planning_msg__msg__PathList
 {
-  nav_msgs__msg__Path__Sequence paths;
+  traj_planning_msg__msg__SpeedPath__Sequence paths;
 } traj_planning_msg__msg__PathList;
 
 // Struct for a sequence of traj_planning_msg__msg__PathList.

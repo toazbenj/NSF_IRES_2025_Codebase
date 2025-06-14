@@ -1,0 +1,18 @@
+running develop
+running egg_info
+writing traj_planning.egg-info/PKG-INFO
+writing dependency_links to traj_planning.egg-info/dependency_links.txt
+writing entry points to traj_planning.egg-info/entry_points.txt
+writing requirements to traj_planning.egg-info/requires.txt
+writing top-level names to traj_planning.egg-info/top_level.txt
+reading manifest file 'traj_planning.egg-info/SOURCES.txt'
+writing manifest file 'traj_planning.egg-info/SOURCES.txt'
+running build_ext
+Creating /home/bentoaz/NSF_IRES_2025_Codebase/control/install/traj_planning/lib/python3.10/site-packages/traj-planning.egg-link (link to .)
+Installing local_planner script to /home/bentoaz/NSF_IRES_2025_Codebase/control/install/traj_planning/lib/traj_planning
+Installing traj_selecter script to /home/bentoaz/NSF_IRES_2025_Codebase/control/install/traj_planning/lib/traj_planning
+Installing traj_server script to /home/bentoaz/NSF_IRES_2025_Codebase/control/install/traj_planning/lib/traj_planning
+Installing visualizer script to /home/bentoaz/NSF_IRES_2025_Codebase/control/install/traj_planning/lib/traj_planning
+
+Installed /home/bentoaz/NSF_IRES_2025_Codebase/control/build/traj_planning
+running symlink_data

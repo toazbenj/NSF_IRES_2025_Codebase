@@ -1,0 +1,19 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from traj_planning_msg/msg/Trajectory.msg
+// generated code does not contain a copyright notice
+
+#include "nav_msgs/msg/Path.idl"
+#include "std_msgs/msg/Float64.idl"
+#include "std_msgs/msg/Header.idl"
+
+module traj_planning_msg {
+  module msg {
+    struct Trajectory {
+      std_msgs::msg::Header header;
+
+      nav_msgs::msg::Path path;
+
+      std_msgs::msg::Float64 speed;
+    };
+  };
+};

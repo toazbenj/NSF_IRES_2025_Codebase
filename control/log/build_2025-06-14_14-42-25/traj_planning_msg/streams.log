@@ -1,0 +1,246 @@
+[0.073s] Invoking command in '/home/bentoaz/NSF_IRES_2025_Codebase/control/build/traj_planning_msg': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/bentoaz/autoware/install/autoware_carla_interface:/home/bentoaz/autoware/install/ros2agnocast:/home/bentoaz/autoware/install/autoware_adapi_visualizers:/opt/ros/humble /usr/bin/cmake /home/bentoaz/NSF_IRES_2025_Codebase/control/src/traj_planning_msg -DCMAKE_INSTALL_PREFIX=/home/bentoaz/NSF_IRES_2025_Codebase/control/install/traj_planning_msg
+[0.145s] -- Found ament_cmake: 1.3.11 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.497s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[0.521s] -- Found ament_lint_auto: 0.12.12 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[0.679s] -- Found std_msgs: 4.8.0 (/opt/ros/humble/share/std_msgs/cmake)
+[0.751s] -- Found rosidl_generator_c: 3.1.6 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[0.756s] -- Found rosidl_adapter: 3.1.6 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[0.768s] -- Found rosidl_generator_cpp: 3.1.6 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[0.847s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.932s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[1.033s] -- Found nav_msgs: 4.8.0 (/opt/ros/humble/share/nav_msgs/cmake)
+[1.086s] -- Found rosidl_default_generators: 1.2.0 (/opt/ros/humble/share/rosidl_default_generators/cmake)
+[1.908s] -- Found ament_cmake_ros: 0.10.0 (/opt/ros/humble/share/ament_cmake_ros/cmake)
+[2.999s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[3.452s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[3.527s] -- Found python_cmake_module: 0.10.0 (/opt/ros/humble/share/python_cmake_module/cmake)
+[3.596s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[3.597s] -- Using PYTHON_INCLUDE_DIRS: /usr/include/python3.10
+[3.597s] -- Using PYTHON_LIBRARIES: /usr/lib/x86_64-linux-gnu/libpython3.10.so
+[5.046s] -- Added test 'lint_cmake' to check CMake code style
+[5.047s] -- Added test 'xmllint' to check XML markup files
+[5.058s] -- Configuring done
+[5.120s] -- Generating done
+[5.140s] -- Build files have been written to: /home/bentoaz/NSF_IRES_2025_Codebase/control/build/traj_planning_msg
+[5.152s] Invoked command in '/home/bentoaz/NSF_IRES_2025_Codebase/control/build/traj_planning_msg' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/bentoaz/autoware/install/autoware_carla_interface:/home/bentoaz/autoware/install/ros2agnocast:/home/bentoaz/autoware/install/autoware_adapi_visualizers:/opt/ros/humble /usr/bin/cmake /home/bentoaz/NSF_IRES_2025_Codebase/control/src/traj_planning_msg -DCMAKE_INSTALL_PREFIX=/home/bentoaz/NSF_IRES_2025_Codebase/control/install/traj_planning_msg
+[5.156s] Invoking command in '/home/bentoaz/NSF_IRES_2025_Codebase/control/build/traj_planning_msg': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/bentoaz/autoware/install/autoware_carla_interface:/home/bentoaz/autoware/install/ros2agnocast:/home/bentoaz/autoware/install/autoware_adapi_visualizers:/opt/ros/humble /usr/bin/cmake --build /home/bentoaz/NSF_IRES_2025_Codebase/control/build/traj_planning_msg -- -j16 -l16
+[5.422s] [  2%] [34m[1mGenerating C code for ROS interfaces[0m
+[5.511s] [  5%] [34m[1mGenerating C++ code for ROS interfaces[0m
+[5.557s] [  5%] Built target ament_cmake_python_symlink_traj_planning_msg
+[6.310s] [  5%] Built target traj_planning_msg__cpp
+[6.359s] [  7%] [32mBuilding C object CMakeFiles/traj_planning_msg__rosidl_generator_c.dir/rosidl_generator_c/traj_planning_msg/msg/detail/trajectory_list__functions.c.o[0m
+[6.388s] running egg_info
+[6.391s] writing traj_planning_msg.egg-info/PKG-INFO
+[6.392s] writing dependency_links to traj_planning_msg.egg-info/dependency_links.txt
+[6.392s] writing top-level names to traj_planning_msg.egg-info/top_level.txt
+[6.395s] [ 10%] [32mBuilding C object CMakeFiles/traj_planning_msg__rosidl_generator_c.dir/rosidl_generator_c/traj_planning_msg/msg/detail/trajectory__functions.c.o[0m
+[6.403s] reading manifest file 'traj_planning_msg.egg-info/SOURCES.txt'
+[6.406s] writing manifest file 'traj_planning_msg.egg-info/SOURCES.txt'
+[6.431s] [ 12%] [34m[1mGenerating C++ type support for eProsima Fast-RTPS[0m
+[6.433s] [ 15%] [34m[1mGenerating C++ type support dispatch for ROS interfaces[0m
+[6.485s] [ 17%] [34m[1mGenerating C++ introspection for ROS interfaces[0m
+[6.567s] [ 17%] Built target ament_cmake_python_build_traj_planning_msg_egg
+[6.883s] [ 20%] [32m[1mLinking C shared library libtraj_planning_msg__rosidl_generator_c.so[0m
+[7.219s] [ 20%] Built target traj_planning_msg__rosidl_generator_c
+[7.356s] [ 23%] [34m[1mGenerating C type support for eProsima Fast-RTPS[0m
+[7.384s] [ 25%] [34m[1mGenerating C type support dispatch for ROS interfaces[0m
+[7.390s] [ 28%] [34m[1mGenerating C introspection for ROS interfaces[0m
+[7.730s] [ 30%] [32mBuilding CXX object CMakeFiles/traj_planning_msg__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/traj_planning_msg/msg/trajectory_list__type_support.cpp.o[0m
+[7.754s] [ 33%] [32mBuilding CXX object CMakeFiles/traj_planning_msg__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/traj_planning_msg/msg/trajectory__type_support.cpp.o[0m
+[7.849s] [ 35%] [32mBuilding CXX object CMakeFiles/traj_planning_msg__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/traj_planning_msg/msg/detail/trajectory_list__type_support.cpp.o[0m
+[7.856s] [ 38%] [32mBuilding CXX object CMakeFiles/traj_planning_msg__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/traj_planning_msg/msg/detail/trajectory__type_support.cpp.o[0m
+[7.891s] [ 41%] [32mBuilding CXX object CMakeFiles/traj_planning_msg__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/traj_planning_msg/msg/detail/dds_fastrtps/trajectory__type_support.cpp.o[0m
+[7.905s] [ 43%] [32mBuilding CXX object CMakeFiles/traj_planning_msg__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/traj_planning_msg/msg/detail/dds_fastrtps/trajectory_list__type_support.cpp.o[0m
+[8.870s] [ 46%] [32mBuilding CXX object CMakeFiles/traj_planning_msg__rosidl_typesupport_c.dir/rosidl_typesupport_c/traj_planning_msg/msg/trajectory_list__type_support.cpp.o[0m
+[8.870s] [ 48%] [32mBuilding CXX object CMakeFiles/traj_planning_msg__rosidl_typesupport_c.dir/rosidl_typesupport_c/traj_planning_msg/msg/trajectory__type_support.cpp.o[0m
+[8.910s] [ 51%] [32mBuilding C object CMakeFiles/traj_planning_msg__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/traj_planning_msg/msg/detail/trajectory_list__type_support.c.o[0m
+[8.950s] [ 53%] [32mBuilding C object CMakeFiles/traj_planning_msg__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/traj_planning_msg/msg/detail/trajectory__type_support.c.o[0m
+[8.955s] [ 56%] [32mBuilding CXX object CMakeFiles/traj_planning_msg__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/traj_planning_msg/msg/detail/trajectory__type_support_c.cpp.o[0m
+[9.003s] [ 58%] [32mBuilding CXX object CMakeFiles/traj_planning_msg__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/traj_planning_msg/msg/detail/trajectory_list__type_support_c.cpp.o[0m
+[9.356s] [ 61%] [32m[1mLinking CXX shared library libtraj_planning_msg__rosidl_typesupport_cpp.so[0m
+[9.371s] [ 64%] [32m[1mLinking CXX shared library libtraj_planning_msg__rosidl_typesupport_c.so[0m
+[9.433s] [ 66%] [32m[1mLinking C shared library libtraj_planning_msg__rosidl_typesupport_introspection_c.so[0m
+[9.799s] [ 66%] Built target traj_planning_msg__rosidl_typesupport_c
+[9.806s] [ 66%] Built target traj_planning_msg__rosidl_typesupport_introspection_c
+[9.812s] [ 66%] Built target traj_planning_msg__rosidl_typesupport_cpp
+[9.871s] [ 69%] [32m[1mLinking CXX shared library libtraj_planning_msg__rosidl_typesupport_fastrtps_cpp.so[0m
+[9.936s] [ 71%] [32m[1mLinking CXX shared library libtraj_planning_msg__rosidl_typesupport_introspection_cpp.so[0m
+[10.337s] [ 71%] Built target traj_planning_msg__rosidl_typesupport_fastrtps_cpp
+[10.448s] [ 71%] Built target traj_planning_msg__rosidl_typesupport_introspection_cpp
+[10.706s] [ 74%] [32m[1mLinking CXX shared library libtraj_planning_msg__rosidl_typesupport_fastrtps_c.so[0m
+[11.127s] [ 74%] Built target traj_planning_msg__rosidl_typesupport_fastrtps_c
+[11.348s] [ 74%] Built target traj_planning_msg
+[11.581s] [ 76%] [34m[1mGenerating Python code for ROS interfaces[0m
+[12.638s] [ 76%] Built target traj_planning_msg__py
+[12.879s] [ 79%] [32mBuilding C object CMakeFiles/traj_planning_msg__rosidl_generator_py.dir/rosidl_generator_py/traj_planning_msg/msg/_trajectory_list_s.c.o[0m
+[12.899s] [ 82%] [32mBuilding C object CMakeFiles/traj_planning_msg__rosidl_generator_py.dir/rosidl_generator_py/traj_planning_msg/msg/_trajectory_s.c.o[0m
+[13.553s] [ 84%] [32m[1mLinking C shared library rosidl_generator_py/traj_planning_msg/libtraj_planning_msg__rosidl_generator_py.so[0m
+[13.899s] [ 84%] Built target traj_planning_msg__rosidl_generator_py
+[14.038s] [35m[1mConsolidate compiler generated dependencies of target traj_planning_msg__rosidl_typesupport_c__pyext[0m
+[14.061s] [35m[1mConsolidate compiler generated dependencies of target traj_planning_msg__rosidl_typesupport_introspection_c__pyext[0m
+[14.061s] [35m[1mConsolidate compiler generated dependencies of target traj_planning_msg__rosidl_typesupport_fastrtps_c__pyext[0m
+[14.169s] [ 87%] [32mBuilding C object CMakeFiles/traj_planning_msg__rosidl_typesupport_c__pyext.dir/rosidl_generator_py/traj_planning_msg/_traj_planning_msg_s.ep.rosidl_typesupport_c.c.o[0m
+[14.187s] [ 89%] [32mBuilding C object CMakeFiles/traj_planning_msg__rosidl_typesupport_fastrtps_c__pyext.dir/rosidl_generator_py/traj_planning_msg/_traj_planning_msg_s.ep.rosidl_typesupport_fastrtps_c.c.o[0m
+[14.215s] [ 92%] [32mBuilding C object CMakeFiles/traj_planning_msg__rosidl_typesupport_introspection_c__pyext.dir/rosidl_generator_py/traj_planning_msg/_traj_planning_msg_s.ep.rosidl_typesupport_introspection_c.c.o[0m
+[14.795s] [ 94%] [32m[1mLinking C shared library rosidl_generator_py/traj_planning_msg/traj_planning_msg_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so[0m
+[14.796s] [ 97%] [32m[1mLinking C shared library rosidl_generator_py/traj_planning_msg/traj_planning_msg_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so[0m
+[14.868s] [100%] [32m[1mLinking C shared library rosidl_generator_py/traj_planning_msg/traj_planning_msg_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so[0m
+[15.121s] [100%] Built target traj_planning_msg__rosidl_typesupport_c__pyext
+[15.179s] [100%] Built target traj_planning_msg__rosidl_typesupport_fastrtps_c__pyext
+[15.181s] [100%] Built target traj_planning_msg__rosidl_typesupport_introspection_c__pyext
+[15.253s] Invoked command in '/home/bentoaz/NSF_IRES_2025_Codebase/control/build/traj_planning_msg' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/bentoaz/autoware/install/autoware_carla_interface:/home/bentoaz/autoware/install/ros2agnocast:/home/bentoaz/autoware/install/autoware_adapi_visualizers:/opt/ros/humble /usr/bin/cmake --build /home/bentoaz/NSF_IRES_2025_Codebase/control/build/traj_planning_msg -- -j16 -l16
+[15.335s] Invoking command in '/home/bentoaz/NSF_IRES_2025_Codebase/control/build/traj_planning_msg': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/bentoaz/autoware/install/autoware_carla_interface:/home/bentoaz/autoware/install/ros2agnocast:/home/bentoaz/autoware/install/autoware_adapi_visualizers:/opt/ros/humble /usr/bin/cmake --install /home/bentoaz/NSF_IRES_2025_Codebase/control/build/traj_planning_msg
+[15.398s] -- Install configuration: ""
+[15.399s] -- Execute custom install script
+[15.400s] -- Up-to-date symlink: /home/bentoaz/NSF_IRES_2025_Codebase/control/install/traj_planning_msg/share/ament_index/resource_index/rosidl_interfaces/traj_planning_msg
+[15.401s] -- Up-to-date symlink: /home/bentoaz/NSF_IRES_2025_Codebase/control/install/traj_planning_msg/include/traj_planning_msg/traj_planning_msg/msg/detail/path_list__functions.h
+[15.401s] -- Up-to-date symlink: /home/bentoaz/NSF_IRES_2025_Codebase/control/install/traj_planning_msg/include/traj_planning_msg/traj_planning_msg/msg/detail/path_list__struct.h
+[15.402s] -- Up-to-date symlink: /home/bentoaz/NSF_IRES_2025_Codebase/control/install/traj_planning_msg/include/traj_planning_msg/traj_planning_msg/msg/detail/path_list__type_support.h
+[15.402s] -- Up-to-date symlink: /home/bentoaz/NSF_IRES_2025_Codebase/control/install/traj_planning_msg/include/traj_planning_msg/traj_planning_msg/msg/detail/speed_path__functions.h
+[15.402s] -- Up-to-date symlink: /home/bentoaz/NSF_IRES_2025_Codebase/control/install/traj_planning_msg/include/traj_planning_msg/traj_planning_msg/msg/detail/speed_path__struct.h
+[15.403s] -- Up-to-date symlink: /home/bentoaz/NSF_IRES_2025_Codebase/control/install/traj_planning_msg/include/traj_planning_msg/traj_planning_msg/msg/detail/speed_path__type_support.h
+[15.403s] -- Symlinking: /home/bentoaz/NSF_IRES_2025_Codebase/control/install/traj_planning_msg/include/traj_planning_msg/traj_planning_msg/msg/detail/trajectory__functions.h
+[15.467s] -- Symlinking: /home/bentoaz/NSF_IRES_2025_Codebase/control/install/traj_planning_msg/include/traj_planning_msg/traj_planning_msg/msg/detail/trajectory__struct.h
+[15.529s] -- Symlinking: /home/bentoaz/NSF_IRES_2025_Codebase/control/install/traj_planning_msg/include/traj_planning_msg/traj_planning_msg/msg/detail/trajectory__type_support.h
+[15.589s] -- Symlinking: /home/bentoaz/NSF_IRES_2025_Codebase/control/install/traj_planning_msg/include/traj_planning_msg/traj_planning_msg/msg/detail/trajectory_list__functions.h
+[15.652s] -- Symlinking: /home/bentoaz/NSF_IRES_2025_Codebase/control/install/traj_planning_msg/include/traj_planning_msg/traj_planning_msg/msg/detail/trajectory_list__struct.h
+[15.728s] -- Symlinking: /home/bentoaz/NSF_IRES_2025_Codebase/control/install/traj_planning_msg/include/traj_planning_msg/traj_planning_msg/msg/detail/trajectory_list__type_support.h
+[15.795s] -- Up-to-date symlink: /home/bentoaz/NSF_IRES_2025_Codebase/control/install/traj_planning_msg/include/traj_planning_msg/traj_planning_msg/msg/path_list.h
+[15.795s] -- Up-to-date symlink: /home/bentoaz/NSF_IRES_2025_Codebase/control/install/traj_planning_msg/include/traj_planning_msg/traj_planning_msg/msg/rosidl_generator_c__visibility_control.h
+[15.795s] -- Up-to-date symlink: /home/bentoaz/NSF_IRES_2025_Codebase/control/install/traj_planning_msg/include/traj_planning_msg/traj_planning_msg/msg/speed_path.h
+[15.795s] -- Symlinking: /home/bentoaz/NSF_IRES_2025_Codebase/control/install/traj_planning_msg/include/traj_planning_msg/traj_planning_msg/msg/trajectory.h
+[15.864s] -- Symlinking: /home/bentoaz/NSF_IRES_2025_Codebase/control/install/traj_planning_msg/include/traj_planning_msg/traj_planning_msg/msg/trajectory_list.h
+[15.930s] -- Up-to-date symlink: /home/bentoaz/NSF_IRES_2025_Codebase/control/install/traj_planning_msg/share/traj_planning_msg/environment/library_path.sh
+[15.931s] -- Up-to-date symlink: /home/bentoaz/NSF_IRES_2025_Codebase/control/install/traj_planning_msg/share/traj_planning_msg/environment/library_path.dsv
+[15.932s] -- Up-to-date symlink: /home/bentoaz/NSF_IRES_2025_Codebase/control/install/traj_planning_msg/include/traj_planning_msg/traj_planning_msg/msg/detail/path_list__rosidl_typesupport_fastrtps_c.h
+[15.933s] -- Up-to-date symlink: /home/bentoaz/NSF_IRES_2025_Codebase/control/install/traj_planning_msg/include/traj_planning_msg/traj_planning_msg/msg/detail/speed_path__rosidl_typesupport_fastrtps_c.h
+[15.933s] -- Symlinking: /home/bentoaz/NSF_IRES_2025_Codebase/control/install/traj_planning_msg/include/traj_planning_msg/traj_planning_msg/msg/detail/trajectory__rosidl_typesupport_fastrtps_c.h
+[16.001s] -- Symlinking: /home/bentoaz/NSF_IRES_2025_Codebase/control/install/traj_planning_msg/include/traj_planning_msg/traj_planning_msg/msg/detail/trajectory_list__rosidl_typesupport_fastrtps_c.h
+[16.065s] -- Up-to-date symlink: /home/bentoaz/NSF_IRES_2025_Codebase/control/install/traj_planning_msg/include/traj_planning_msg/traj_planning_msg/msg/rosidl_typesupport_fastrtps_c__visibility_control.h
+[16.066s] -- Up-to-date symlink: /home/bentoaz/NSF_IRES_2025_Codebase/control/install/traj_planning_msg/include/traj_planning_msg/traj_planning_msg/msg/detail/path_list__builder.hpp
+[16.066s] -- Up-to-date symlink: /home/bentoaz/NSF_IRES_2025_Codebase/control/install/traj_planning_msg/include/traj_planning_msg/traj_planning_msg/msg/detail/path_list__struct.hpp
+[16.067s] -- Up-to-date symlink: /home/bentoaz/NSF_IRES_2025_Codebase/control/install/traj_planning_msg/include/traj_planning_msg/traj_planning_msg/msg/detail/path_list__traits.hpp
+[16.067s] -- Up-to-date symlink: /home/bentoaz/NSF_IRES_2025_Codebase/control/install/traj_planning_msg/include/traj_planning_msg/traj_planning_msg/msg/detail/path_list__type_support.hpp
+[16.067s] -- Up-to-date symlink: /home/bentoaz/NSF_IRES_2025_Codebase/control/install/traj_planning_msg/include/traj_planning_msg/traj_planning_msg/msg/detail/speed_path__builder.hpp
+[16.067s] -- Up-to-date symlink: /home/bentoaz/NSF_IRES_2025_Codebase/control/install/traj_planning_msg/include/traj_planning_msg/traj_planning_msg/msg/detail/speed_path__struct.hpp
+[16.068s] -- Up-to-date symlink: /home/bentoaz/NSF_IRES_2025_Codebase/control/install/traj_planning_msg/include/traj_planning_msg/traj_planning_msg/msg/detail/speed_path__traits.hpp
+[16.068s] -- Up-to-date symlink: /home/bentoaz/NSF_IRES_2025_Codebase/control/install/traj_planning_msg/include/traj_planning_msg/traj_planning_msg/msg/detail/speed_path__type_support.hpp
+[16.068s] -- Symlinking: /home/bentoaz/NSF_IRES_2025_Codebase/control/install/traj_planning_msg/include/traj_planning_msg/traj_planning_msg/msg/detail/trajectory__builder.hpp
+[16.136s] -- Symlinking: /home/bentoaz/NSF_IRES_2025_Codebase/control/install/traj_planning_msg/include/traj_planning_msg/traj_planning_msg/msg/detail/trajectory__struct.hpp
+[16.201s] -- Symlinking: /home/bentoaz/NSF_IRES_2025_Codebase/control/install/traj_planning_msg/include/traj_planning_msg/traj_planning_msg/msg/detail/trajectory__traits.hpp
+[16.264s] -- Symlinking: /home/bentoaz/NSF_IRES_2025_Codebase/control/install/traj_planning_msg/include/traj_planning_msg/traj_planning_msg/msg/detail/trajectory__type_support.hpp
+[16.321s] -- Symlinking: /home/bentoaz/NSF_IRES_2025_Codebase/control/install/traj_planning_msg/include/traj_planning_msg/traj_planning_msg/msg/detail/trajectory_list__builder.hpp
+[16.380s] -- Symlinking: /home/bentoaz/NSF_IRES_2025_Codebase/control/install/traj_planning_msg/include/traj_planning_msg/traj_planning_msg/msg/detail/trajectory_list__struct.hpp
+[16.434s] -- Symlinking: /home/bentoaz/NSF_IRES_2025_Codebase/control/install/traj_planning_msg/include/traj_planning_msg/traj_planning_msg/msg/detail/trajectory_list__traits.hpp
+[16.501s] -- Symlinking: /home/bentoaz/NSF_IRES_2025_Codebase/control/install/traj_planning_msg/include/traj_planning_msg/traj_planning_msg/msg/detail/trajectory_list__type_support.hpp
+[16.564s] -- Up-to-date symlink: /home/bentoaz/NSF_IRES_2025_Codebase/control/install/traj_planning_msg/include/traj_planning_msg/traj_planning_msg/msg/path_list.hpp
+[16.564s] -- Up-to-date symlink: /home/bentoaz/NSF_IRES_2025_Codebase/control/install/traj_planning_msg/include/traj_planning_msg/traj_planning_msg/msg/rosidl_generator_cpp__visibility_control.hpp
+[16.565s] -- Up-to-date symlink: /home/bentoaz/NSF_IRES_2025_Codebase/control/install/traj_planning_msg/include/traj_planning_msg/traj_planning_msg/msg/speed_path.hpp
+[16.565s] -- Symlinking: /home/bentoaz/NSF_IRES_2025_Codebase/control/install/traj_planning_msg/include/traj_planning_msg/traj_planning_msg/msg/trajectory.hpp
+[16.632s] -- Symlinking: /home/bentoaz/NSF_IRES_2025_Codebase/control/install/traj_planning_msg/include/traj_planning_msg/traj_planning_msg/msg/trajectory_list.hpp
+[16.691s] -- Up-to-date symlink: /home/bentoaz/NSF_IRES_2025_Codebase/control/install/traj_planning_msg/include/traj_planning_msg/traj_planning_msg/msg/detail/path_list__rosidl_typesupport_fastrtps_cpp.hpp
+[16.692s] -- Up-to-date symlink: /home/bentoaz/NSF_IRES_2025_Codebase/control/install/traj_planning_msg/include/traj_planning_msg/traj_planning_msg/msg/detail/speed_path__rosidl_typesupport_fastrtps_cpp.hpp
+[16.692s] -- Symlinking: /home/bentoaz/NSF_IRES_2025_Codebase/control/install/traj_planning_msg/include/traj_planning_msg/traj_planning_msg/msg/detail/trajectory__rosidl_typesupport_fastrtps_cpp.hpp
+[16.765s] -- Symlinking: /home/bentoaz/NSF_IRES_2025_Codebase/control/install/traj_planning_msg/include/traj_planning_msg/traj_planning_msg/msg/detail/trajectory_list__rosidl_typesupport_fastrtps_cpp.hpp
+[16.824s] -- Up-to-date symlink: /home/bentoaz/NSF_IRES_2025_Codebase/control/install/traj_planning_msg/include/traj_planning_msg/traj_planning_msg/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h
+[16.824s] -- Up-to-date symlink: /home/bentoaz/NSF_IRES_2025_Codebase/control/install/traj_planning_msg/include/traj_planning_msg/traj_planning_msg/msg/detail/path_list__rosidl_typesupport_introspection_c.h
+[16.824s] -- Up-to-date symlink: /home/bentoaz/NSF_IRES_2025_Codebase/control/install/traj_planning_msg/include/traj_planning_msg/traj_planning_msg/msg/detail/speed_path__rosidl_typesupport_introspection_c.h
+[16.825s] -- Symlinking: /home/bentoaz/NSF_IRES_2025_Codebase/control/install/traj_planning_msg/include/traj_planning_msg/traj_planning_msg/msg/detail/trajectory__rosidl_typesupport_introspection_c.h
+[16.886s] -- Symlinking: /home/bentoaz/NSF_IRES_2025_Codebase/control/install/traj_planning_msg/include/traj_planning_msg/traj_planning_msg/msg/detail/trajectory_list__rosidl_typesupport_introspection_c.h
+[16.958s] -- Up-to-date symlink: /home/bentoaz/NSF_IRES_2025_Codebase/control/install/traj_planning_msg/include/traj_planning_msg/traj_planning_msg/msg/rosidl_typesupport_introspection_c__visibility_control.h
+[16.959s] -- Up-to-date symlink: /home/bentoaz/NSF_IRES_2025_Codebase/control/install/traj_planning_msg/include/traj_planning_msg/traj_planning_msg/msg/detail/path_list__rosidl_typesupport_introspection_cpp.hpp
+[16.959s] -- Up-to-date symlink: /home/bentoaz/NSF_IRES_2025_Codebase/control/install/traj_planning_msg/include/traj_planning_msg/traj_planning_msg/msg/detail/speed_path__rosidl_typesupport_introspection_cpp.hpp
+[16.959s] -- Symlinking: /home/bentoaz/NSF_IRES_2025_Codebase/control/install/traj_planning_msg/include/traj_planning_msg/traj_planning_msg/msg/detail/trajectory__rosidl_typesupport_introspection_cpp.hpp
+[17.029s] -- Symlinking: /home/bentoaz/NSF_IRES_2025_Codebase/control/install/traj_planning_msg/include/traj_planning_msg/traj_planning_msg/msg/detail/trajectory_list__rosidl_typesupport_introspection_cpp.hpp
+[17.091s] -- Up-to-date symlink: /home/bentoaz/NSF_IRES_2025_Codebase/control/install/traj_planning_msg/share/traj_planning_msg/environment/pythonpath.sh
+[17.091s] -- Up-to-date symlink: /home/bentoaz/NSF_IRES_2025_Codebase/control/install/traj_planning_msg/share/traj_planning_msg/environment/pythonpath.dsv
+[17.092s] -- Up-to-date symlink: /home/bentoaz/NSF_IRES_2025_Codebase/control/install/traj_planning_msg/local/lib/python3.10/dist-packages/traj_planning_msg-0.0.0-py3.10.egg-info/PKG-INFO
+[17.092s] -- Up-to-date symlink: /home/bentoaz/NSF_IRES_2025_Codebase/control/install/traj_planning_msg/local/lib/python3.10/dist-packages/traj_planning_msg-0.0.0-py3.10.egg-info/SOURCES.txt
+[17.093s] -- Up-to-date symlink: /home/bentoaz/NSF_IRES_2025_Codebase/control/install/traj_planning_msg/local/lib/python3.10/dist-packages/traj_planning_msg-0.0.0-py3.10.egg-info/dependency_links.txt
+[17.093s] -- Up-to-date symlink: /home/bentoaz/NSF_IRES_2025_Codebase/control/install/traj_planning_msg/local/lib/python3.10/dist-packages/traj_planning_msg-0.0.0-py3.10.egg-info/top_level.txt
+[17.093s] -- Up-to-date symlink: /home/bentoaz/NSF_IRES_2025_Codebase/control/install/traj_planning_msg/local/lib/python3.10/dist-packages/traj_planning_msg/__init__.py
+[17.093s] -- Up-to-date symlink: /home/bentoaz/NSF_IRES_2025_Codebase/control/install/traj_planning_msg/local/lib/python3.10/dist-packages/traj_planning_msg/_traj_planning_msg_s.ep.rosidl_typesupport_c.c
+[17.094s] -- Up-to-date symlink: /home/bentoaz/NSF_IRES_2025_Codebase/control/install/traj_planning_msg/local/lib/python3.10/dist-packages/traj_planning_msg/_traj_planning_msg_s.ep.rosidl_typesupport_fastrtps_c.c
+[17.094s] -- Up-to-date symlink: /home/bentoaz/NSF_IRES_2025_Codebase/control/install/traj_planning_msg/local/lib/python3.10/dist-packages/traj_planning_msg/_traj_planning_msg_s.ep.rosidl_typesupport_introspection_c.c
+[17.094s] -- Up-to-date symlink: /home/bentoaz/NSF_IRES_2025_Codebase/control/install/traj_planning_msg/local/lib/python3.10/dist-packages/traj_planning_msg/libtraj_planning_msg__rosidl_generator_py.so
+[17.094s] -- Up-to-date symlink: /home/bentoaz/NSF_IRES_2025_Codebase/control/install/traj_planning_msg/local/lib/python3.10/dist-packages/traj_planning_msg/msg/__init__.py
+[17.095s] -- Up-to-date symlink: /home/bentoaz/NSF_IRES_2025_Codebase/control/install/traj_planning_msg/local/lib/python3.10/dist-packages/traj_planning_msg/msg/_path_list.py
+[17.095s] -- Up-to-date symlink: /home/bentoaz/NSF_IRES_2025_Codebase/control/install/traj_planning_msg/local/lib/python3.10/dist-packages/traj_planning_msg/msg/_path_list_s.c
+[17.095s] -- Up-to-date symlink: /home/bentoaz/NSF_IRES_2025_Codebase/control/install/traj_planning_msg/local/lib/python3.10/dist-packages/traj_planning_msg/msg/_speed_path.py
+[17.095s] -- Up-to-date symlink: /home/bentoaz/NSF_IRES_2025_Codebase/control/install/traj_planning_msg/local/lib/python3.10/dist-packages/traj_planning_msg/msg/_speed_path_s.c
+[17.095s] -- Symlinking: /home/bentoaz/NSF_IRES_2025_Codebase/control/install/traj_planning_msg/local/lib/python3.10/dist-packages/traj_planning_msg/msg/_trajectory.py
+[17.159s] -- Symlinking: /home/bentoaz/NSF_IRES_2025_Codebase/control/install/traj_planning_msg/local/lib/python3.10/dist-packages/traj_planning_msg/msg/_trajectory_list.py
+[17.225s] -- Symlinking: /home/bentoaz/NSF_IRES_2025_Codebase/control/install/traj_planning_msg/local/lib/python3.10/dist-packages/traj_planning_msg/msg/_trajectory_list_s.c
+[17.289s] -- Symlinking: /home/bentoaz/NSF_IRES_2025_Codebase/control/install/traj_planning_msg/local/lib/python3.10/dist-packages/traj_planning_msg/msg/_trajectory_s.c
+[17.350s] -- Up-to-date symlink: /home/bentoaz/NSF_IRES_2025_Codebase/control/install/traj_planning_msg/local/lib/python3.10/dist-packages/traj_planning_msg/traj_planning_msg_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so
+[17.351s] -- Up-to-date symlink: /home/bentoaz/NSF_IRES_2025_Codebase/control/install/traj_planning_msg/local/lib/python3.10/dist-packages/traj_planning_msg/traj_planning_msg_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so
+[17.351s] -- Up-to-date symlink: /home/bentoaz/NSF_IRES_2025_Codebase/control/install/traj_planning_msg/local/lib/python3.10/dist-packages/traj_planning_msg/traj_planning_msg_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so
+[17.351s] -- Up-to-date symlink: /home/bentoaz/NSF_IRES_2025_Codebase/control/install/traj_planning_msg/local/lib/python3.10/dist-packages/traj_planning_msg/traj_planning_msg_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so
+[17.352s] -- Up-to-date symlink: /home/bentoaz/NSF_IRES_2025_Codebase/control/install/traj_planning_msg/local/lib/python3.10/dist-packages/traj_planning_msg/traj_planning_msg_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so
+[17.352s] -- Up-to-date symlink: /home/bentoaz/NSF_IRES_2025_Codebase/control/install/traj_planning_msg/local/lib/python3.10/dist-packages/traj_planning_msg/traj_planning_msg_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so
+[17.353s] -- Symlinking: /home/bentoaz/NSF_IRES_2025_Codebase/control/install/traj_planning_msg/share/traj_planning_msg/msg/TrajectoryList.idl
+[17.453s] -- Symlinking: /home/bentoaz/NSF_IRES_2025_Codebase/control/install/traj_planning_msg/share/traj_planning_msg/msg/Trajectory.idl
+[17.558s] -- Symlinking: /home/bentoaz/NSF_IRES_2025_Codebase/control/install/traj_planning_msg/share/traj_planning_msg/msg/TrajectoryList.msg
+[17.629s] -- Symlinking: /home/bentoaz/NSF_IRES_2025_Codebase/control/install/traj_planning_msg/share/traj_planning_msg/msg/Trajectory.msg
+[17.715s] -- Up-to-date symlink: /home/bentoaz/NSF_IRES_2025_Codebase/control/install/traj_planning_msg/share/ament_index/resource_index/package_run_dependencies/traj_planning_msg
+[17.716s] -- Up-to-date symlink: /home/bentoaz/NSF_IRES_2025_Codebase/control/install/traj_planning_msg/share/ament_index/resource_index/parent_prefix_path/traj_planning_msg
+[17.716s] -- Up-to-date symlink: /home/bentoaz/NSF_IRES_2025_Codebase/control/install/traj_planning_msg/share/traj_planning_msg/environment/ament_prefix_path.sh
+[17.716s] -- Up-to-date symlink: /home/bentoaz/NSF_IRES_2025_Codebase/control/install/traj_planning_msg/share/traj_planning_msg/environment/ament_prefix_path.dsv
+[17.717s] -- Up-to-date symlink: /home/bentoaz/NSF_IRES_2025_Codebase/control/install/traj_planning_msg/share/traj_planning_msg/environment/path.sh
+[17.717s] -- Up-to-date symlink: /home/bentoaz/NSF_IRES_2025_Codebase/control/install/traj_planning_msg/share/traj_planning_msg/environment/path.dsv
+[17.718s] -- Up-to-date symlink: /home/bentoaz/NSF_IRES_2025_Codebase/control/install/traj_planning_msg/share/traj_planning_msg/local_setup.bash
+[17.718s] -- Up-to-date symlink: /home/bentoaz/NSF_IRES_2025_Codebase/control/install/traj_planning_msg/share/traj_planning_msg/local_setup.sh
+[17.718s] -- Up-to-date symlink: /home/bentoaz/NSF_IRES_2025_Codebase/control/install/traj_planning_msg/share/traj_planning_msg/local_setup.zsh
+[17.719s] -- Up-to-date symlink: /home/bentoaz/NSF_IRES_2025_Codebase/control/install/traj_planning_msg/share/traj_planning_msg/local_setup.dsv
+[17.719s] -- Symlinking: /home/bentoaz/NSF_IRES_2025_Codebase/control/install/traj_planning_msg/share/traj_planning_msg/package.dsv
+[17.794s] -- Up-to-date symlink: /home/bentoaz/NSF_IRES_2025_Codebase/control/install/traj_planning_msg/share/ament_index/resource_index/packages/traj_planning_msg
+[17.794s] -- Up-to-date symlink: /home/bentoaz/NSF_IRES_2025_Codebase/control/install/traj_planning_msg/share/traj_planning_msg/cmake/rosidl_cmake-extras.cmake
+[17.795s] -- Up-to-date symlink: /home/bentoaz/NSF_IRES_2025_Codebase/control/install/traj_planning_msg/share/traj_planning_msg/cmake/ament_cmake_export_dependencies-extras.cmake
+[17.795s] -- Up-to-date symlink: /home/bentoaz/NSF_IRES_2025_Codebase/control/install/traj_planning_msg/share/traj_planning_msg/cmake/ament_cmake_export_include_directories-extras.cmake
+[17.796s] -- Up-to-date symlink: /home/bentoaz/NSF_IRES_2025_Codebase/control/install/traj_planning_msg/share/traj_planning_msg/cmake/ament_cmake_export_libraries-extras.cmake
+[17.796s] -- Up-to-date symlink: /home/bentoaz/NSF_IRES_2025_Codebase/control/install/traj_planning_msg/share/traj_planning_msg/cmake/ament_cmake_export_targets-extras.cmake
+[17.796s] -- Up-to-date symlink: /home/bentoaz/NSF_IRES_2025_Codebase/control/install/traj_planning_msg/share/traj_planning_msg/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake
+[17.797s] -- Up-to-date symlink: /home/bentoaz/NSF_IRES_2025_Codebase/control/install/traj_planning_msg/share/traj_planning_msg/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake
+[17.797s] -- Up-to-date symlink: /home/bentoaz/NSF_IRES_2025_Codebase/control/install/traj_planning_msg/share/traj_planning_msg/cmake/traj_planning_msgConfig.cmake
+[17.797s] -- Up-to-date symlink: /home/bentoaz/NSF_IRES_2025_Codebase/control/install/traj_planning_msg/share/traj_planning_msg/cmake/traj_planning_msgConfig-version.cmake
+[17.798s] -- Up-to-date symlink: /home/bentoaz/NSF_IRES_2025_Codebase/control/install/traj_planning_msg/share/traj_planning_msg/package.xml
+[17.808s] -- Installing: /home/bentoaz/NSF_IRES_2025_Codebase/control/install/traj_planning_msg/lib/libtraj_planning_msg__rosidl_generator_c.so
+[17.809s] -- Set runtime path of "/home/bentoaz/NSF_IRES_2025_Codebase/control/install/traj_planning_msg/lib/libtraj_planning_msg__rosidl_generator_c.so" to ""
+[17.809s] -- Installing: /home/bentoaz/NSF_IRES_2025_Codebase/control/install/traj_planning_msg/lib/libtraj_planning_msg__rosidl_typesupport_fastrtps_c.so
+[17.810s] -- Set runtime path of "/home/bentoaz/NSF_IRES_2025_Codebase/control/install/traj_planning_msg/lib/libtraj_planning_msg__rosidl_typesupport_fastrtps_c.so" to ""
+[17.811s] -- Installing: /home/bentoaz/NSF_IRES_2025_Codebase/control/install/traj_planning_msg/lib/libtraj_planning_msg__rosidl_typesupport_fastrtps_cpp.so
+[17.811s] -- Set runtime path of "/home/bentoaz/NSF_IRES_2025_Codebase/control/install/traj_planning_msg/lib/libtraj_planning_msg__rosidl_typesupport_fastrtps_cpp.so" to ""
+[17.812s] -- Installing: /home/bentoaz/NSF_IRES_2025_Codebase/control/install/traj_planning_msg/lib/libtraj_planning_msg__rosidl_typesupport_introspection_c.so
+[17.812s] -- Set runtime path of "/home/bentoaz/NSF_IRES_2025_Codebase/control/install/traj_planning_msg/lib/libtraj_planning_msg__rosidl_typesupport_introspection_c.so" to ""
+[17.813s] -- Installing: /home/bentoaz/NSF_IRES_2025_Codebase/control/install/traj_planning_msg/lib/libtraj_planning_msg__rosidl_typesupport_c.so
+[17.813s] -- Set runtime path of "/home/bentoaz/NSF_IRES_2025_Codebase/control/install/traj_planning_msg/lib/libtraj_planning_msg__rosidl_typesupport_c.so" to ""
+[17.814s] -- Installing: /home/bentoaz/NSF_IRES_2025_Codebase/control/install/traj_planning_msg/lib/libtraj_planning_msg__rosidl_typesupport_introspection_cpp.so
+[17.814s] -- Set runtime path of "/home/bentoaz/NSF_IRES_2025_Codebase/control/install/traj_planning_msg/lib/libtraj_planning_msg__rosidl_typesupport_introspection_cpp.so" to ""
+[17.815s] -- Installing: /home/bentoaz/NSF_IRES_2025_Codebase/control/install/traj_planning_msg/lib/libtraj_planning_msg__rosidl_typesupport_cpp.so
+[17.815s] -- Set runtime path of "/home/bentoaz/NSF_IRES_2025_Codebase/control/install/traj_planning_msg/lib/libtraj_planning_msg__rosidl_typesupport_cpp.so" to ""
+[17.973s] Listing '/home/bentoaz/NSF_IRES_2025_Codebase/control/install/traj_planning_msg/local/lib/python3.10/dist-packages/traj_planning_msg'...
+[17.973s] Compiling '/home/bentoaz/NSF_IRES_2025_Codebase/control/install/traj_planning_msg/local/lib/python3.10/dist-packages/traj_planning_msg/__init__.py'...
+[17.974s] Listing '/home/bentoaz/NSF_IRES_2025_Codebase/control/install/traj_planning_msg/local/lib/python3.10/dist-packages/traj_planning_msg/msg'...
+[17.974s] Compiling '/home/bentoaz/NSF_IRES_2025_Codebase/control/install/traj_planning_msg/local/lib/python3.10/dist-packages/traj_planning_msg/msg/__init__.py'...
+[17.974s] Compiling '/home/bentoaz/NSF_IRES_2025_Codebase/control/install/traj_planning_msg/local/lib/python3.10/dist-packages/traj_planning_msg/msg/_trajectory.py'...
+[17.974s] Compiling '/home/bentoaz/NSF_IRES_2025_Codebase/control/install/traj_planning_msg/local/lib/python3.10/dist-packages/traj_planning_msg/msg/_trajectory_list.py'...
+[17.983s] -- Installing: /home/bentoaz/NSF_IRES_2025_Codebase/control/install/traj_planning_msg/lib/libtraj_planning_msg__rosidl_generator_py.so
+[17.983s] -- Set runtime path of "/home/bentoaz/NSF_IRES_2025_Codebase/control/install/traj_planning_msg/lib/libtraj_planning_msg__rosidl_generator_py.so" to ""
+[17.983s] -- Up-to-date: /home/bentoaz/NSF_IRES_2025_Codebase/control/install/traj_planning_msg/share/traj_planning_msg/cmake/export_traj_planning_msg__rosidl_generator_cExport.cmake
+[17.984s] -- Up-to-date: /home/bentoaz/NSF_IRES_2025_Codebase/control/install/traj_planning_msg/share/traj_planning_msg/cmake/export_traj_planning_msg__rosidl_generator_cExport-noconfig.cmake
+[17.984s] -- Up-to-date: /home/bentoaz/NSF_IRES_2025_Codebase/control/install/traj_planning_msg/share/traj_planning_msg/cmake/export_traj_planning_msg__rosidl_typesupport_fastrtps_cExport.cmake
+[17.984s] -- Up-to-date: /home/bentoaz/NSF_IRES_2025_Codebase/control/install/traj_planning_msg/share/traj_planning_msg/cmake/export_traj_planning_msg__rosidl_typesupport_fastrtps_cExport-noconfig.cmake
+[17.984s] -- Up-to-date: /home/bentoaz/NSF_IRES_2025_Codebase/control/install/traj_planning_msg/share/traj_planning_msg/cmake/export_traj_planning_msg__rosidl_generator_cppExport.cmake
+[17.984s] -- Up-to-date: /home/bentoaz/NSF_IRES_2025_Codebase/control/install/traj_planning_msg/share/traj_planning_msg/cmake/export_traj_planning_msg__rosidl_typesupport_fastrtps_cppExport.cmake
+[17.985s] -- Up-to-date: /home/bentoaz/NSF_IRES_2025_Codebase/control/install/traj_planning_msg/share/traj_planning_msg/cmake/export_traj_planning_msg__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake
+[17.985s] -- Up-to-date: /home/bentoaz/NSF_IRES_2025_Codebase/control/install/traj_planning_msg/share/traj_planning_msg/cmake/traj_planning_msg__rosidl_typesupport_introspection_cExport.cmake
+[17.985s] -- Up-to-date: /home/bentoaz/NSF_IRES_2025_Codebase/control/install/traj_planning_msg/share/traj_planning_msg/cmake/traj_planning_msg__rosidl_typesupport_introspection_cExport-noconfig.cmake
+[17.985s] -- Up-to-date: /home/bentoaz/NSF_IRES_2025_Codebase/control/install/traj_planning_msg/share/traj_planning_msg/cmake/traj_planning_msg__rosidl_typesupport_cExport.cmake
+[17.985s] -- Up-to-date: /home/bentoaz/NSF_IRES_2025_Codebase/control/install/traj_planning_msg/share/traj_planning_msg/cmake/traj_planning_msg__rosidl_typesupport_cExport-noconfig.cmake
+[17.985s] -- Up-to-date: /home/bentoaz/NSF_IRES_2025_Codebase/control/install/traj_planning_msg/share/traj_planning_msg/cmake/traj_planning_msg__rosidl_typesupport_introspection_cppExport.cmake
+[17.985s] -- Up-to-date: /home/bentoaz/NSF_IRES_2025_Codebase/control/install/traj_planning_msg/share/traj_planning_msg/cmake/traj_planning_msg__rosidl_typesupport_introspection_cppExport-noconfig.cmake
+[17.986s] -- Up-to-date: /home/bentoaz/NSF_IRES_2025_Codebase/control/install/traj_planning_msg/share/traj_planning_msg/cmake/traj_planning_msg__rosidl_typesupport_cppExport.cmake
+[17.986s] -- Up-to-date: /home/bentoaz/NSF_IRES_2025_Codebase/control/install/traj_planning_msg/share/traj_planning_msg/cmake/traj_planning_msg__rosidl_typesupport_cppExport-noconfig.cmake
+[17.986s] -- Up-to-date: /home/bentoaz/NSF_IRES_2025_Codebase/control/install/traj_planning_msg/share/traj_planning_msg/cmake/export_traj_planning_msg__rosidl_generator_pyExport.cmake
+[17.986s] -- Up-to-date: /home/bentoaz/NSF_IRES_2025_Codebase/control/install/traj_planning_msg/share/traj_planning_msg/cmake/export_traj_planning_msg__rosidl_generator_pyExport-noconfig.cmake
+[17.989s] Invoked command in '/home/bentoaz/NSF_IRES_2025_Codebase/control/build/traj_planning_msg' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/bentoaz/autoware/install/autoware_carla_interface:/home/bentoaz/autoware/install/ros2agnocast:/home/bentoaz/autoware/install/autoware_adapi_visualizers:/opt/ros/humble /usr/bin/cmake --install /home/bentoaz/NSF_IRES_2025_Codebase/control/build/traj_planning_msg

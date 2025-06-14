@@ -3,7 +3,8 @@
   "output_dir": "/home/bentoaz/NSF_IRES_2025_Codebase/control/build/traj_planning_msg/rosidl_generator_c/traj_planning_msg",
   "template_dir": "/opt/ros/humble/share/rosidl_generator_c/cmake/../resource",
   "idl_tuples": [
-    "/home/bentoaz/NSF_IRES_2025_Codebase/control/build/traj_planning_msg/rosidl_adapter/traj_planning_msg:msg/PathList.idl"
+    "/home/bentoaz/NSF_IRES_2025_Codebase/control/build/traj_planning_msg/rosidl_adapter/traj_planning_msg:msg/TrajectoryList.idl",
+    "/home/bentoaz/NSF_IRES_2025_Codebase/control/build/traj_planning_msg/rosidl_adapter/traj_planning_msg:msg/Trajectory.idl"
   ],
   "ros_interface_dependencies": [
     "nav_msgs:/opt/ros/humble/share/nav_msgs/msg/Goals.idl",
@@ -93,7 +94,8 @@
     "/opt/ros/humble/share/rosidl_generator_c/cmake/../resource/msg__struct.h.em",
     "/opt/ros/humble/share/rosidl_generator_c/cmake/../resource/msg__type_support.h.em",
     "/opt/ros/humble/share/rosidl_generator_c/cmake/../resource/srv__type_support.h.em",
-    "/home/bentoaz/NSF_IRES_2025_Codebase/control/build/traj_planning_msg/rosidl_adapter/traj_planning_msg/msg/PathList.idl",
+    "/home/bentoaz/NSF_IRES_2025_Codebase/control/build/traj_planning_msg/rosidl_adapter/traj_planning_msg/msg/TrajectoryList.idl",
+    "/home/bentoaz/NSF_IRES_2025_Codebase/control/build/traj_planning_msg/rosidl_adapter/traj_planning_msg/msg/Trajectory.idl",
     "/opt/ros/humble/share/nav_msgs/msg/Goals.idl",
     "/opt/ros/humble/share/nav_msgs/msg/GridCells.idl",
     "/opt/ros/humble/share/nav_msgs/msg/MapMetaData.idl",

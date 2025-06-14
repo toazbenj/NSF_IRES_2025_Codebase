@@ -358,11 +358,17 @@ include("/home/bentoaz/NSF_IRES_2025_Codebase/control/build/traj_planning_msg/am
 # install("TARGETS" "traj_planning_msg__rosidl_typesupport_c__pyext" "DESTINATION" "local/lib/python3.10/dist-packages/traj_planning_msg")
 include("/home/bentoaz/NSF_IRES_2025_Codebase/control/build/traj_planning_msg/ament_cmake_symlink_install_targets_2_${CMAKE_INSTALL_CONFIG_NAME}.cmake")
 
-# install(FILES "/home/bentoaz/NSF_IRES_2025_Codebase/control/build/traj_planning_msg/rosidl_adapter/traj_planning_msg/msg/PathList.idl" "DESTINATION" "share/traj_planning_msg/msg")
-ament_cmake_symlink_install_files("/home/bentoaz/NSF_IRES_2025_Codebase/control/src/traj_planning_msg" FILES "/home/bentoaz/NSF_IRES_2025_Codebase/control/build/traj_planning_msg/rosidl_adapter/traj_planning_msg/msg/PathList.idl" "DESTINATION" "share/traj_planning_msg/msg")
+# install(FILES "/home/bentoaz/NSF_IRES_2025_Codebase/control/build/traj_planning_msg/rosidl_adapter/traj_planning_msg/msg/TrajectoryList.idl" "DESTINATION" "share/traj_planning_msg/msg")
+ament_cmake_symlink_install_files("/home/bentoaz/NSF_IRES_2025_Codebase/control/src/traj_planning_msg" FILES "/home/bentoaz/NSF_IRES_2025_Codebase/control/build/traj_planning_msg/rosidl_adapter/traj_planning_msg/msg/TrajectoryList.idl" "DESTINATION" "share/traj_planning_msg/msg")
 
-# install(FILES "/home/bentoaz/NSF_IRES_2025_Codebase/control/src/traj_planning_msg/msg/PathList.msg" "DESTINATION" "share/traj_planning_msg/msg")
-ament_cmake_symlink_install_files("/home/bentoaz/NSF_IRES_2025_Codebase/control/src/traj_planning_msg" FILES "/home/bentoaz/NSF_IRES_2025_Codebase/control/src/traj_planning_msg/msg/PathList.msg" "DESTINATION" "share/traj_planning_msg/msg")
+# install(FILES "/home/bentoaz/NSF_IRES_2025_Codebase/control/build/traj_planning_msg/rosidl_adapter/traj_planning_msg/msg/Trajectory.idl" "DESTINATION" "share/traj_planning_msg/msg")
+ament_cmake_symlink_install_files("/home/bentoaz/NSF_IRES_2025_Codebase/control/src/traj_planning_msg" FILES "/home/bentoaz/NSF_IRES_2025_Codebase/control/build/traj_planning_msg/rosidl_adapter/traj_planning_msg/msg/Trajectory.idl" "DESTINATION" "share/traj_planning_msg/msg")
+
+# install(FILES "/home/bentoaz/NSF_IRES_2025_Codebase/control/src/traj_planning_msg/msg/TrajectoryList.msg" "DESTINATION" "share/traj_planning_msg/msg")
+ament_cmake_symlink_install_files("/home/bentoaz/NSF_IRES_2025_Codebase/control/src/traj_planning_msg" FILES "/home/bentoaz/NSF_IRES_2025_Codebase/control/src/traj_planning_msg/msg/TrajectoryList.msg" "DESTINATION" "share/traj_planning_msg/msg")
+
+# install(FILES "/home/bentoaz/NSF_IRES_2025_Codebase/control/src/traj_planning_msg/msg/Trajectory.msg" "DESTINATION" "share/traj_planning_msg/msg")
+ament_cmake_symlink_install_files("/home/bentoaz/NSF_IRES_2025_Codebase/control/src/traj_planning_msg" FILES "/home/bentoaz/NSF_IRES_2025_Codebase/control/src/traj_planning_msg/msg/Trajectory.msg" "DESTINATION" "share/traj_planning_msg/msg")
 
 # install(FILES "/home/bentoaz/NSF_IRES_2025_Codebase/control/build/traj_planning_msg/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/traj_planning_msg" "DESTINATION" "share/ament_index/resource_index/package_run_dependencies")
 ament_cmake_symlink_install_files("/home/bentoaz/NSF_IRES_2025_Codebase/control/src/traj_planning_msg" FILES "/home/bentoaz/NSF_IRES_2025_Codebase/control/build/traj_planning_msg/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/traj_planning_msg" "DESTINATION" "share/ament_index/resource_index/package_run_dependencies")

@@ -16,7 +16,7 @@
 
 // Include directives for member types
 // Member 'paths'
-#include "nav_msgs/msg/detail/path__traits.hpp"
+#include "traj_planning_msg/msg/detail/speed_path__traits.hpp"
 
 namespace traj_planning_msg
 {

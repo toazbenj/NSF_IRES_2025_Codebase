@@ -42,9 +42,9 @@ class Metaclass_PathList(type):
             cls._TYPE_SUPPORT = module.type_support_msg__msg__path_list
             cls._DESTROY_ROS_MESSAGE = module.destroy_ros_message_msg__msg__path_list
 
-            from nav_msgs.msg import Path
-            if Path.__class__._TYPE_SUPPORT is None:
-                Path.__class__.__import_type_support__()
+            from traj_planning_msg.msg import SpeedPath
+            if SpeedPath.__class__._TYPE_SUPPORT is None:
+                SpeedPath.__class__.__import_type_support__()
 
     @classmethod
     def __prepare__(cls, name, bases, **kwargs):
@@ -63,11 +63,11 @@ class PathList(metaclass=Metaclass_PathList):
     ]
 
     _fields_and_field_types = {
-        'paths': 'sequence<nav_msgs/Path>',
+        'paths': 'sequence<traj_planning_msg/SpeedPath>',
     }
 
     SLOT_TYPES = (
-        rosidl_parser.definition.UnboundedSequence(rosidl_parser.definition.NamespacedType(['nav_msgs', 'msg'], 'Path')),  # noqa: E501
+        rosidl_parser.definition.UnboundedSequence(rosidl_parser.definition.NamespacedType(['traj_planning_msg', 'msg'], 'SpeedPath')),  # noqa: E501
     )
 
     def __init__(self, **kwargs):
@@ -122,7 +122,7 @@ class PathList(metaclass=Metaclass_PathList):
     @paths.setter
     def paths(self, value):
         if __debug__:
-            from nav_msgs.msg import Path
+            from traj_planning_msg.msg import SpeedPath
             from collections.abc import Sequence
             from collections.abc import Set
             from collections import UserList
@@ -133,7 +133,7 @@ class PathList(metaclass=Metaclass_PathList):
                   isinstance(value, UserList)) and
                  not isinstance(value, str) and
                  not isinstance(value, UserString) and
-                 all(isinstance(v, Path) for v in value) and
+                 all(isinstance(v, SpeedPath) for v in value) and
                  True), \
-                "The 'paths' field must be a set or sequence and each value of type 'Path'"
+                "The 'paths' field must be a set or sequence and each value of type 'SpeedPath'"
         self._paths = value

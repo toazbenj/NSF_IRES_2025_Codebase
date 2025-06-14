@@ -29,8 +29,9 @@ find_package(nav_msgs REQUIRED)
 find_package(rosidl_default_generators REQUIRED)
 
 rosidl_generate_interfaces(${PROJECT_NAME}
-  "msg/PathList.msg"
-  DEPENDENCIES nav_msgs
+  "msg/TrajectoryList.msg"
+  "msg/Trajectory.msg"
+  DEPENDENCIES nav_msgs std_msgs
 )
 
 

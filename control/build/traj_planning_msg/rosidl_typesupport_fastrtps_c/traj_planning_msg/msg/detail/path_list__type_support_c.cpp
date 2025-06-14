@@ -34,23 +34,20 @@ extern "C"
 {
 #endif
 
-#include "nav_msgs/msg/detail/path__functions.h"  // paths
+#include "traj_planning_msg/msg/detail/speed_path__functions.h"  // paths
 
 // forward declare type support functions
-ROSIDL_TYPESUPPORT_FASTRTPS_C_IMPORT_traj_planning_msg
-size_t get_serialized_size_nav_msgs__msg__Path(
+size_t get_serialized_size_traj_planning_msg__msg__SpeedPath(
   const void * untyped_ros_message,
   size_t current_alignment);
 
-ROSIDL_TYPESUPPORT_FASTRTPS_C_IMPORT_traj_planning_msg
-size_t max_serialized_size_nav_msgs__msg__Path(
+size_t max_serialized_size_traj_planning_msg__msg__SpeedPath(
   bool & full_bounded,
   bool & is_plain,
   size_t current_alignment);
 
-ROSIDL_TYPESUPPORT_FASTRTPS_C_IMPORT_traj_planning_msg
 const rosidl_message_type_support_t *
-  ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(rosidl_typesupport_fastrtps_c, nav_msgs, msg, Path)();
+  ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(rosidl_typesupport_fastrtps_c, traj_planning_msg, msg, SpeedPath)();
 
 
 using _PathList__ros_msg_type = traj_planning_msg__msg__PathList;
@@ -69,7 +66,7 @@ static bool _PathList__cdr_serialize(
     const message_type_support_callbacks_t * callbacks =
       static_cast<const message_type_support_callbacks_t *>(
       ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(
-        rosidl_typesupport_fastrtps_c, nav_msgs, msg, Path
+        rosidl_typesupport_fastrtps_c, traj_planning_msg, msg, SpeedPath
       )()->data);
     size_t size = ros_message->paths.size;
     auto array_ptr = ros_message->paths.data;
@@ -100,15 +97,15 @@ static bool _PathList__cdr_deserialize(
     const message_type_support_callbacks_t * callbacks =
       static_cast<const message_type_support_callbacks_t *>(
       ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(
-        rosidl_typesupport_fastrtps_c, nav_msgs, msg, Path
+        rosidl_typesupport_fastrtps_c, traj_planning_msg, msg, SpeedPath
       )()->data);
     uint32_t cdrSize;
     cdr >> cdrSize;
     size_t size = static_cast<size_t>(cdrSize);
     if (ros_message->paths.data) {
-      nav_msgs__msg__Path__Sequence__fini(&ros_message->paths);
+      traj_planning_msg__msg__SpeedPath__Sequence__fini(&ros_message->paths);
     }
-    if (!nav_msgs__msg__Path__Sequence__init(&ros_message->paths, size)) {
+    if (!traj_planning_msg__msg__SpeedPath__Sequence__init(&ros_message->paths, size)) {
       fprintf(stderr, "failed to create array for field 'paths'");
       return false;
     }
@@ -147,7 +144,7 @@ size_t get_serialized_size_traj_planning_msg__msg__PathList(
       eprosima::fastcdr::Cdr::alignment(current_alignment, padding);
 
     for (size_t index = 0; index < array_size; ++index) {
-      current_alignment += get_serialized_size_nav_msgs__msg__Path(
+      current_alignment += get_serialized_size_traj_planning_msg__msg__SpeedPath(
         &array_ptr[index], current_alignment);
     }
   }
@@ -195,7 +192,7 @@ size_t max_serialized_size_traj_planning_msg__msg__PathList(
       bool inner_is_plain;
       size_t inner_size;
       inner_size =
-        max_serialized_size_nav_msgs__msg__Path(
+        max_serialized_size_traj_planning_msg__msg__SpeedPath(
         inner_full_bounded, inner_is_plain, current_alignment);
       last_member_size += inner_size;
       current_alignment += inner_size;

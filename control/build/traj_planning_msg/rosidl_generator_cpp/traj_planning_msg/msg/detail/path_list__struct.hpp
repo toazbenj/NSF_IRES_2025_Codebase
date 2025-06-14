@@ -17,7 +17,7 @@
 
 // Include directives for member types
 // Member 'paths'
-#include "nav_msgs/msg/detail/path__struct.hpp"
+#include "traj_planning_msg/msg/detail/speed_path__struct.hpp"
 
 #ifndef _WIN32
 # define DEPRECATED__traj_planning_msg__msg__PathList __attribute__((deprecated))
@@ -50,12 +50,12 @@ struct PathList_
 
   // field types and members
   using _paths_type =
-    std::vector<nav_msgs::msg::Path_<ContainerAllocator>, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<nav_msgs::msg::Path_<ContainerAllocator>>>;
+    std::vector<traj_planning_msg::msg::SpeedPath_<ContainerAllocator>, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<traj_planning_msg::msg::SpeedPath_<ContainerAllocator>>>;
   _paths_type paths;
 
   // setters for named parameter idiom
   Type & set__paths(
-    const std::vector<nav_msgs::msg::Path_<ContainerAllocator>, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<nav_msgs::msg::Path_<ContainerAllocator>>> & _arg)
+    const std::vector<traj_planning_msg::msg::SpeedPath_<ContainerAllocator>, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<traj_planning_msg::msg::SpeedPath_<ContainerAllocator>>> & _arg)
   {
     this->paths = _arg;
     return *this;

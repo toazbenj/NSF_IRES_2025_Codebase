@@ -16,29 +16,29 @@
 
 
 // forward declaration of message dependencies and their conversion functions
-namespace nav_msgs
+namespace traj_planning_msg
 {
 namespace msg
 {
 namespace typesupport_fastrtps_cpp
 {
 bool cdr_serialize(
-  const nav_msgs::msg::Path &,
+  const traj_planning_msg::msg::SpeedPath &,
   eprosima::fastcdr::Cdr &);
 bool cdr_deserialize(
   eprosima::fastcdr::Cdr &,
-  nav_msgs::msg::Path &);
+  traj_planning_msg::msg::SpeedPath &);
 size_t get_serialized_size(
-  const nav_msgs::msg::Path &,
+  const traj_planning_msg::msg::SpeedPath &,
   size_t current_alignment);
 size_t
-max_serialized_size_Path(
+max_serialized_size_SpeedPath(
   bool & full_bounded,
   bool & is_plain,
   size_t current_alignment);
 }  // namespace typesupport_fastrtps_cpp
 }  // namespace msg
-}  // namespace nav_msgs
+}  // namespace traj_planning_msg
 
 
 namespace traj_planning_msg
@@ -61,7 +61,7 @@ cdr_serialize(
     size_t size = ros_message.paths.size();
     cdr << static_cast<uint32_t>(size);
     for (size_t i = 0; i < size; i++) {
-      nav_msgs::msg::typesupport_fastrtps_cpp::cdr_serialize(
+      traj_planning_msg::msg::typesupport_fastrtps_cpp::cdr_serialize(
         ros_message.paths[i],
         cdr);
     }
@@ -82,7 +82,7 @@ cdr_deserialize(
     size_t size = static_cast<size_t>(cdrSize);
     ros_message.paths.resize(size);
     for (size_t i = 0; i < size; i++) {
-      nav_msgs::msg::typesupport_fastrtps_cpp::cdr_deserialize(
+      traj_planning_msg::msg::typesupport_fastrtps_cpp::cdr_deserialize(
         cdr, ros_message.paths[i]);
     }
   }
@@ -112,7 +112,7 @@ get_serialized_size(
 
     for (size_t index = 0; index < array_size; ++index) {
       current_alignment +=
-        nav_msgs::msg::typesupport_fastrtps_cpp::get_serialized_size(
+        traj_planning_msg::msg::typesupport_fastrtps_cpp::get_serialized_size(
         ros_message.paths[index], current_alignment);
     }
   }
@@ -154,7 +154,7 @@ max_serialized_size_PathList(
       bool inner_full_bounded;
       bool inner_is_plain;
       size_t inner_size =
-        nav_msgs::msg::typesupport_fastrtps_cpp::max_serialized_size_Path(
+        traj_planning_msg::msg::typesupport_fastrtps_cpp::max_serialized_size_SpeedPath(
         inner_full_bounded, inner_is_plain, current_alignment);
       last_member_size += inner_size;
       current_alignment += inner_size;

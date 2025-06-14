@@ -1,0 +1,13 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from traj_planning_msg/msg/TrajectoryList.msg
+// generated code does not contain a copyright notice
+
+#include "traj_planning_msg/msg/Trajectory.idl"
+
+module traj_planning_msg {
+  module msg {
+    struct TrajectoryList {
+      sequence<traj_planning_msg::msg::Trajectory> paths;
+    };
+  };
+};
