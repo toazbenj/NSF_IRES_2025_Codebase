@@ -1,0 +1,45 @@
+[0.437s] Invoking command in '/home/bentoaz/f1tenth_experimental_ws/build/safety_node': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/bentoaz/f1tenth_experimental_ws/install/stanley_avoidance:/home/bentoaz/f1tenth_experimental_ws/install/particle_filter:/home/bentoaz/f1tenth_experimental_ws/install/local_planner:/home/bentoaz/f1tenth_gym_ros/install/f1tenth_gym_ros:/home/bentoaz/autoware/install/autoware_carla_interface:/home/bentoaz/autoware/install/ros2agnocast:/home/bentoaz/autoware/install/autoware_adapi_visualizers:/opt/ros/humble /usr/bin/cmake --build /home/bentoaz/f1tenth_experimental_ws/build/safety_node -- -j16 -l16
+[0.830s] [100%] Built target safety_node
+[0.830s] [100%] Built target ament_cmake_python_symlink_safety_node_setup
+[0.830s] [100%] Built target ament_cmake_python_symlink_safety_node
+[0.986s] /usr/lib/python3/dist-packages/setuptools/dist.py:723: UserWarning: Usage of dash-separated 'script-dir' will not be supported in future versions. Please use the underscore name 'script_dir' instead
+[0.986s]   warnings.warn(
+[0.986s] /usr/lib/python3/dist-packages/setuptools/dist.py:723: UserWarning: Usage of dash-separated 'install-scripts' will not be supported in future versions. Please use the underscore name 'install_scripts' instead
+[0.986s]   warnings.warn(
+[0.995s] running egg_info
+[0.995s] writing safety_node.egg-info/PKG-INFO
+[0.995s] writing dependency_links to safety_node.egg-info/dependency_links.txt
+[0.995s] writing top-level names to safety_node.egg-info/top_level.txt
+[0.996s] reading manifest file 'safety_node.egg-info/SOURCES.txt'
+[0.999s] writing manifest file 'safety_node.egg-info/SOURCES.txt'
+[1.048s] [100%] Built target ament_cmake_python_build_safety_node_egg
+[1.379s] Invoked command in '/home/bentoaz/f1tenth_experimental_ws/build/safety_node' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/bentoaz/f1tenth_experimental_ws/install/stanley_avoidance:/home/bentoaz/f1tenth_experimental_ws/install/particle_filter:/home/bentoaz/f1tenth_experimental_ws/install/local_planner:/home/bentoaz/f1tenth_gym_ros/install/f1tenth_gym_ros:/home/bentoaz/autoware/install/autoware_carla_interface:/home/bentoaz/autoware/install/ros2agnocast:/home/bentoaz/autoware/install/autoware_adapi_visualizers:/opt/ros/humble /usr/bin/cmake --build /home/bentoaz/f1tenth_experimental_ws/build/safety_node -- -j16 -l16
+[1.381s] Invoking command in '/home/bentoaz/f1tenth_experimental_ws/build/safety_node': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/bentoaz/f1tenth_experimental_ws/install/stanley_avoidance:/home/bentoaz/f1tenth_experimental_ws/install/particle_filter:/home/bentoaz/f1tenth_experimental_ws/install/local_planner:/home/bentoaz/f1tenth_gym_ros/install/f1tenth_gym_ros:/home/bentoaz/autoware/install/autoware_carla_interface:/home/bentoaz/autoware/install/ros2agnocast:/home/bentoaz/autoware/install/autoware_adapi_visualizers:/opt/ros/humble /usr/bin/cmake --install /home/bentoaz/f1tenth_experimental_ws/build/safety_node
+[1.408s] -- Install configuration: ""
+[1.408s] -- Execute custom install script
+[1.408s] -- Up-to-date symlink: /home/bentoaz/f1tenth_experimental_ws/install/safety_node/lib/safety_node/safety_node
+[1.408s] -- Up-to-date symlink: /home/bentoaz/f1tenth_experimental_ws/install/safety_node/share/safety_node/environment/pythonpath.sh
+[1.408s] -- Up-to-date symlink: /home/bentoaz/f1tenth_experimental_ws/install/safety_node/share/safety_node/environment/pythonpath.dsv
+[1.408s] -- Up-to-date symlink: /home/bentoaz/f1tenth_experimental_ws/install/safety_node/local/lib/python3.10/dist-packages/safety_node-0.0.0-py3.10.egg-info/PKG-INFO
+[1.408s] -- Up-to-date symlink: /home/bentoaz/f1tenth_experimental_ws/install/safety_node/local/lib/python3.10/dist-packages/safety_node-0.0.0-py3.10.egg-info/SOURCES.txt
+[1.408s] -- Up-to-date symlink: /home/bentoaz/f1tenth_experimental_ws/install/safety_node/local/lib/python3.10/dist-packages/safety_node-0.0.0-py3.10.egg-info/dependency_links.txt
+[1.408s] -- Up-to-date symlink: /home/bentoaz/f1tenth_experimental_ws/install/safety_node/local/lib/python3.10/dist-packages/safety_node-0.0.0-py3.10.egg-info/top_level.txt
+[1.409s] -- Up-to-date symlink: /home/bentoaz/f1tenth_experimental_ws/install/safety_node/local/lib/python3.10/dist-packages/safety_node/__init__.py
+[1.409s] -- Up-to-date symlink: /home/bentoaz/f1tenth_experimental_ws/install/safety_node/lib/safety_node/safety_node.py
+[1.409s] -- Up-to-date symlink: /home/bentoaz/f1tenth_experimental_ws/install/safety_node/share/ament_index/resource_index/package_run_dependencies/safety_node
+[1.409s] -- Up-to-date symlink: /home/bentoaz/f1tenth_experimental_ws/install/safety_node/share/ament_index/resource_index/parent_prefix_path/safety_node
+[1.409s] -- Up-to-date symlink: /home/bentoaz/f1tenth_experimental_ws/install/safety_node/share/safety_node/environment/ament_prefix_path.sh
+[1.409s] -- Up-to-date symlink: /home/bentoaz/f1tenth_experimental_ws/install/safety_node/share/safety_node/environment/ament_prefix_path.dsv
+[1.409s] -- Up-to-date symlink: /home/bentoaz/f1tenth_experimental_ws/install/safety_node/share/safety_node/environment/path.sh
+[1.409s] -- Up-to-date symlink: /home/bentoaz/f1tenth_experimental_ws/install/safety_node/share/safety_node/environment/path.dsv
+[1.409s] -- Up-to-date symlink: /home/bentoaz/f1tenth_experimental_ws/install/safety_node/share/safety_node/local_setup.bash
+[1.409s] -- Up-to-date symlink: /home/bentoaz/f1tenth_experimental_ws/install/safety_node/share/safety_node/local_setup.sh
+[1.409s] -- Up-to-date symlink: /home/bentoaz/f1tenth_experimental_ws/install/safety_node/share/safety_node/local_setup.zsh
+[1.409s] -- Up-to-date symlink: /home/bentoaz/f1tenth_experimental_ws/install/safety_node/share/safety_node/local_setup.dsv
+[1.410s] -- Symlinking: /home/bentoaz/f1tenth_experimental_ws/install/safety_node/share/safety_node/package.dsv
+[1.432s] -- Up-to-date symlink: /home/bentoaz/f1tenth_experimental_ws/install/safety_node/share/ament_index/resource_index/packages/safety_node
+[1.432s] -- Up-to-date symlink: /home/bentoaz/f1tenth_experimental_ws/install/safety_node/share/safety_node/cmake/safety_nodeConfig.cmake
+[1.432s] -- Up-to-date symlink: /home/bentoaz/f1tenth_experimental_ws/install/safety_node/share/safety_node/cmake/safety_nodeConfig-version.cmake
+[1.432s] -- Up-to-date symlink: /home/bentoaz/f1tenth_experimental_ws/install/safety_node/share/safety_node/package.xml
+[1.484s] Listing '/home/bentoaz/f1tenth_experimental_ws/install/safety_node/local/lib/python3.10/dist-packages/safety_node'...
+[1.490s] Invoked command in '/home/bentoaz/f1tenth_experimental_ws/build/safety_node' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/bentoaz/f1tenth_experimental_ws/install/stanley_avoidance:/home/bentoaz/f1tenth_experimental_ws/install/particle_filter:/home/bentoaz/f1tenth_experimental_ws/install/local_planner:/home/bentoaz/f1tenth_gym_ros/install/f1tenth_gym_ros:/home/bentoaz/autoware/install/autoware_carla_interface:/home/bentoaz/autoware/install/ros2agnocast:/home/bentoaz/autoware/install/autoware_adapi_visualizers:/opt/ros/humble /usr/bin/cmake --install /home/bentoaz/f1tenth_experimental_ws/build/safety_node

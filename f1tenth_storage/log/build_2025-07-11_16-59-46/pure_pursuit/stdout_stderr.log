@@ -1,0 +1,284 @@
+-- The C compiler identification is GNU 11.4.0
+-- The CXX compiler identification is GNU 11.4.0
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /usr/bin/cc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Found ament_cmake: 1.3.11 (/opt/ros/humble/share/ament_cmake/cmake)
+-- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+-- Override CMake install command with custom implementation using symlinks instead of copying resources
+-- Found rclcpp: 16.0.12 (/opt/ros/humble/share/rclcpp/cmake)
+-- Found rosidl_generator_c: 3.1.6 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+-- Found rosidl_adapter: 3.1.6 (/opt/ros/humble/share/rosidl_adapter/cmake)
+-- Found rosidl_generator_cpp: 3.1.6 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+-- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+-- Found rmw_cyclonedds_cpp: 1.3.4 (/opt/ros/humble/share/rmw_cyclonedds_cpp/cmake)
+-- Using RMW implementation 'rmw_cyclonedds_cpp' as default
+-- Looking for pthread.h
+-- Looking for pthread.h - found
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+-- Found Threads: TRUE  
+-- Found rclpy: 3.3.16 (/opt/ros/humble/share/rclpy/cmake)
+-- Found geometry_msgs: 4.9.0 (/opt/ros/humble/share/geometry_msgs/cmake)
+-- Found nav_msgs: 4.9.0 (/opt/ros/humble/share/nav_msgs/cmake)
+-- Found ackermann_msgs: 2.0.2 (/opt/ros/humble/share/ackermann_msgs/cmake)
+-- Found sensor_msgs: 4.9.0 (/opt/ros/humble/share/sensor_msgs/cmake)
+-- Found visualization_msgs: 4.9.0 (/opt/ros/humble/share/visualization_msgs/cmake)
+-- Found eigen3_cmake_module: 0.1.1 (/opt/ros/humble/share/eigen3_cmake_module/cmake)
+-- Found Eigen3: TRUE (found version "3.4.0") 
+-- Found tf2_ros: 0.25.13 (/opt/ros/humble/share/tf2_ros/cmake)
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/bentoaz/f1tenth_experimental_ws/build/pure_pursuit
+[ 25%] [32mBuilding CXX object CMakeFiles/pure_pursuit.dir/src/pure_pursuit.cpp.o[0m
+[ 50%] [32mBuilding CXX object CMakeFiles/waypoint_visualizer.dir/src/waypoint_visualizer.cpp.o[0m
+In file included from [01m[K/home/bentoaz/f1tenth_experimental_ws/src/pure_pursuit/src/pure_pursuit.cpp:1[m[K:
+[01m[K/home/bentoaz/f1tenth_experimental_ws/src/pure_pursuit/include/pure_pursuit.hpp:94:41:[m[K [01;31m[Kerror: [m[K‘[01m[KBool[m[K’ is not a member of ‘[01m[Kstd_msgs::msg[m[K’
+   94 |     rclcpp::Subscription<std_msgs::msg::[01;31m[KBool[m[K>::SharedPtr pause_sub;
+      |                                         [01;31m[K^~~~[m[K
+[01m[K/home/bentoaz/f1tenth_experimental_ws/src/pure_pursuit/include/pure_pursuit.hpp:94:45:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+   94 |     rclcpp::Subscription<std_msgs::msg::Bool[01;31m[K>[m[K::SharedPtr pause_sub;
+      |                                             [01;31m[K^[m[K
+[01m[K/home/bentoaz/f1tenth_experimental_ws/src/pure_pursuit/include/pure_pursuit.hpp:94:45:[m[K [01;31m[Kerror: [m[Ktemplate argument 3 is invalid
+[01m[K/home/bentoaz/f1tenth_experimental_ws/src/pure_pursuit/include/pure_pursuit.hpp:94:45:[m[K [01;31m[Kerror: [m[Ktemplate argument 4 is invalid
+[01m[K/home/bentoaz/f1tenth_experimental_ws/src/pure_pursuit/include/pure_pursuit.hpp:94:45:[m[K [01;31m[Kerror: [m[Ktemplate argument 5 is invalid
+[01m[K/home/bentoaz/f1tenth_experimental_ws/src/pure_pursuit/include/pure_pursuit.hpp:94:48:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K;[m[K’ at end of member declaration
+   94 |     rclcpp::Subscription<std_msgs::msg::Bool>::[01;31m[KSharedPtr[m[K pause_sub;
+      |                                                [01;31m[K^~~~~~~~~[m[K
+      |                                                         [32m[K;[m[K
+[01m[K/home/bentoaz/f1tenth_experimental_ws/src/pure_pursuit/include/pure_pursuit.hpp:94:58:[m[K [01;31m[Kerror: [m[K‘[01m[Kpause_sub[m[K’ does not name a type
+   94 |     rclcpp::Subscription<std_msgs::msg::Bool>::SharedPtr [01;31m[Kpause_sub[m[K;
+      |                                                          [01;31m[K^~~~~~~~~[m[K
+[01m[K/home/bentoaz/f1tenth_experimental_ws/src/pure_pursuit/src/pure_pursuit.cpp:[m[K In constructor ‘[01m[KPurePursuit::PurePursuit()[m[K’:
+[01m[K/home/bentoaz/f1tenth_experimental_ws/src/pure_pursuit/src/pure_pursuit.cpp:88:5:[m[K [01;31m[Kerror: [m[K‘[01m[Kpause_sub_[m[K’ was not declared in this scope; did you mean ‘[01m[Kpaused_[m[K’?
+   88 |     [01;31m[Kpause_sub_[m[K = this->create_subscription<std_msgs::msg::Bool>(
+      |     [01;31m[K^~~~~~~~~~[m[K
+      |     [32m[Kpaused_[m[K
+[01m[K/home/bentoaz/f1tenth_experimental_ws/src/pure_pursuit/src/pure_pursuit.cpp:88:59:[m[K [01;31m[Kerror: [m[K‘[01m[KBool[m[K’ is not a member of ‘[01m[Kstd_msgs::msg[m[K’
+   88 |     pause_sub_ = this->create_subscription<std_msgs::msg::[01;31m[KBool[m[K>(
+      |                                                           [01;31m[K^~~~[m[K
+[01m[K/home/bentoaz/f1tenth_experimental_ws/src/pure_pursuit/src/pure_pursuit.cpp:90:27:[m[K [01;31m[Kerror: [m[K‘[01m[Kstd_msgs::msg::Bool[m[K’ has not been declared
+   90 |     [this](std_msgs::msg::[01;31m[KBool[m[K::SharedPtr msg) {
+      |                           [01;31m[K^~~~[m[K
+[01m[K/home/bentoaz/f1tenth_experimental_ws/src/pure_pursuit/src/pure_pursuit.cpp:90:43:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K,[m[K’ or ‘[01m[K...[m[K’ before ‘[01m[Kmsg[m[K’
+   90 |     [this](std_msgs::msg::Bool::SharedPtr [01;31m[Kmsg[m[K) {
+      |                                           [01;31m[K^~~[m[K
+[01m[K/home/bentoaz/f1tenth_experimental_ws/src/pure_pursuit/src/pure_pursuit.cpp:[m[K In lambda function:
+[01m[K/home/bentoaz/f1tenth_experimental_ws/src/pure_pursuit/src/pure_pursuit.cpp:91:19:[m[K [01;31m[Kerror: [m[K‘[01m[Kmsg[m[K’ was not declared in this scope
+   91 |         paused_ = [01;31m[Kmsg[m[K->data;
+      |                   [01;31m[K^~~[m[K
+[01m[K/home/bentoaz/f1tenth_experimental_ws/src/pure_pursuit/src/pure_pursuit.cpp:91:19:[m[K [01;36m[Knote: [m[Ksuggested alternatives:
+In file included from [01m[K/opt/ros/humble/include/std_msgs/std_msgs/msg/detail/header__struct.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/transform_stamped__struct.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/transform_stamped.hpp:7[m[K,
+                 from [01m[K/opt/ros/humble/include/tf2/tf2/buffer_core.hpp:48[m[K,
+                 from [01m[K/opt/ros/humble/include/tf2_ros/tf2_ros/async_buffer_interface.h:39[m[K,
+                 from [01m[K/opt/ros/humble/include/tf2_ros/tf2_ros/buffer.h:41[m[K,
+                 from [01m[K/home/bentoaz/f1tenth_experimental_ws/src/pure_pursuit/include/pure_pursuit.hpp:6[m[K,
+                 from [01m[K/home/bentoaz/f1tenth_experimental_ws/src/pure_pursuit/src/pure_pursuit.cpp:1[m[K:
+[01m[K/opt/ros/humble/include/builtin_interfaces/builtin_interfaces/msg/detail/time__struct.hpp:27:11:[m[K [01;36m[Knote: [m[K  ‘[01m[Kbuiltin_interfaces::msg[m[K’
+   27 | namespace [01;36m[Kmsg[m[K
+      |           [01;36m[K^~~[m[K
+In file included from [01m[K/opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/transform_stamped__struct.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/transform_stamped.hpp:7[m[K,
+                 from [01m[K/opt/ros/humble/include/tf2/tf2/buffer_core.hpp:48[m[K,
+                 from [01m[K/opt/ros/humble/include/tf2_ros/tf2_ros/async_buffer_interface.h:39[m[K,
+                 from [01m[K/opt/ros/humble/include/tf2_ros/tf2_ros/buffer.h:41[m[K,
+                 from [01m[K/home/bentoaz/f1tenth_experimental_ws/src/pure_pursuit/include/pure_pursuit.hpp:6[m[K,
+                 from [01m[K/home/bentoaz/f1tenth_experimental_ws/src/pure_pursuit/src/pure_pursuit.cpp:1[m[K:
+[01m[K/opt/ros/humble/include/std_msgs/std_msgs/msg/detail/header__struct.hpp:31:11:[m[K [01;36m[Knote: [m[K  ‘[01m[Kstd_msgs::msg[m[K’
+   31 | namespace [01;36m[Kmsg[m[K
+      |           [01;36m[K^~~[m[K
+In file included from [01m[K/opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/transform__struct.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/transform_stamped__struct.hpp:22[m[K,
+                 from [01m[K/opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/transform_stamped.hpp:7[m[K,
+                 from [01m[K/opt/ros/humble/include/tf2/tf2/buffer_core.hpp:48[m[K,
+                 from [01m[K/opt/ros/humble/include/tf2_ros/tf2_ros/async_buffer_interface.h:39[m[K,
+                 from [01m[K/opt/ros/humble/include/tf2_ros/tf2_ros/buffer.h:41[m[K,
+                 from [01m[K/home/bentoaz/f1tenth_experimental_ws/src/pure_pursuit/include/pure_pursuit.hpp:6[m[K,
+                 from [01m[K/home/bentoaz/f1tenth_experimental_ws/src/pure_pursuit/src/pure_pursuit.cpp:1[m[K:
+[01m[K/opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/vector3__struct.hpp:27:11:[m[K [01;36m[Knote: [m[K  ‘[01m[Kgeometry_msgs::msg[m[K’
+   27 | namespace [01;36m[Kmsg[m[K
+      |           [01;36m[K^~~[m[K
+In file included from [01m[K/opt/ros/humble/include/rcl_interfaces/rcl_interfaces/msg/set_parameters_result.hpp:7[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/qos_overriding_options.hpp:28[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/subscription_options.hpp:30[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/subscription.hpp:45[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+                 from [01m[K/opt/ros/humble/include/tf2_ros/tf2_ros/buffer_interface.h:48[m[K,
+                 from [01m[K/opt/ros/humble/include/tf2_ros/tf2_ros/buffer.h:42[m[K,
+                 from [01m[K/home/bentoaz/f1tenth_experimental_ws/src/pure_pursuit/include/pure_pursuit.hpp:6[m[K,
+                 from [01m[K/home/bentoaz/f1tenth_experimental_ws/src/pure_pursuit/src/pure_pursuit.cpp:1[m[K:
+[01m[K/opt/ros/humble/include/rcl_interfaces/rcl_interfaces/msg/detail/set_parameters_result__struct.hpp:27:11:[m[K [01;36m[Knote: [m[K  ‘[01m[Krcl_interfaces::msg[m[K’
+   27 | namespace [01;36m[Kmsg[m[K
+      |           [01;36m[K^~~[m[K
+In file included from [01m[K/opt/ros/humble/include/statistics_msgs/statistics_msgs/msg/detail/metrics_message__struct.hpp:23[m[K,
+                 from [01m[K/opt/ros/humble/include/statistics_msgs/statistics_msgs/msg/metrics_message.hpp:7[m[K,
+                 from [01m[K/opt/ros/humble/include/libstatistics_collector/libstatistics_collector/collector/generate_statistics_message.hpp:21[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/topic_statistics/subscription_topic_statistics.hpp:23[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/subscription.hpp:50[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+                 from [01m[K/opt/ros/humble/include/tf2_ros/tf2_ros/buffer_interface.h:48[m[K,
+                 from [01m[K/opt/ros/humble/include/tf2_ros/tf2_ros/buffer.h:42[m[K,
+                 from [01m[K/home/bentoaz/f1tenth_experimental_ws/src/pure_pursuit/include/pure_pursuit.hpp:6[m[K,
+                 from [01m[K/home/bentoaz/f1tenth_experimental_ws/src/pure_pursuit/src/pure_pursuit.cpp:1[m[K:
+[01m[K/opt/ros/humble/include/statistics_msgs/statistics_msgs/msg/detail/statistic_data_point__struct.hpp:27:11:[m[K [01;36m[Knote: [m[K  ‘[01m[Kstatistics_msgs::msg[m[K’
+   27 | namespace [01;36m[Kmsg[m[K
+      |           [01;36m[K^~~[m[K
+In file included from [01m[K/opt/ros/humble/include/tf2_msgs/tf2_msgs/msg/tf_message.hpp:7[m[K,
+                 from [01m[K/opt/ros/humble/include/tf2_ros/tf2_ros/transform_listener.h:44[m[K,
+                 from [01m[K/home/bentoaz/f1tenth_experimental_ws/src/pure_pursuit/include/pure_pursuit.hpp:7[m[K,
+                 from [01m[K/home/bentoaz/f1tenth_experimental_ws/src/pure_pursuit/src/pure_pursuit.cpp:1[m[K:
+[01m[K/opt/ros/humble/include/tf2_msgs/tf2_msgs/msg/detail/tf_message__struct.hpp:31:11:[m[K [01;36m[Knote: [m[K  ‘[01m[Ktf2_msgs::msg[m[K’
+   31 | namespace [01;36m[Kmsg[m[K
+      |           [01;36m[K^~~[m[K
+In file included from [01m[K/opt/ros/humble/include/ackermann_msgs/ackermann_msgs/msg/detail/ackermann_drive_stamped__struct.hpp:22[m[K,
+                 from [01m[K/opt/ros/humble/include/ackermann_msgs/ackermann_msgs/msg/ackermann_drive_stamped.hpp:7[m[K,
+                 from [01m[K/home/bentoaz/f1tenth_experimental_ws/src/pure_pursuit/include/pure_pursuit.hpp:21[m[K,
+                 from [01m[K/home/bentoaz/f1tenth_experimental_ws/src/pure_pursuit/src/pure_pursuit.cpp:1[m[K:
+[01m[K/opt/ros/humble/include/ackermann_msgs/ackermann_msgs/msg/detail/ackermann_drive__struct.hpp:27:11:[m[K [01;36m[Knote: [m[K  ‘[01m[Kackermann_msgs::msg[m[K’
+   27 | namespace [01;36m[Kmsg[m[K
+      |           [01;36m[K^~~[m[K
+In file included from [01m[K/opt/ros/humble/include/nav_msgs/nav_msgs/msg/odometry.hpp:7[m[K,
+                 from [01m[K/home/bentoaz/f1tenth_experimental_ws/src/pure_pursuit/include/pure_pursuit.hpp:23[m[K,
+                 from [01m[K/home/bentoaz/f1tenth_experimental_ws/src/pure_pursuit/src/pure_pursuit.cpp:1[m[K:
+[01m[K/opt/ros/humble/include/nav_msgs/nav_msgs/msg/detail/odometry__struct.hpp:35:11:[m[K [01;36m[Knote: [m[K  ‘[01m[Knav_msgs::msg[m[K’
+   35 | namespace [01;36m[Kmsg[m[K
+      |           [01;36m[K^~~[m[K
+In file included from [01m[K/opt/ros/humble/include/visualization_msgs/visualization_msgs/msg/detail/marker__struct.hpp:33[m[K,
+                 from [01m[K/opt/ros/humble/include/visualization_msgs/visualization_msgs/msg/marker.hpp:7[m[K,
+                 from [01m[K/home/bentoaz/f1tenth_experimental_ws/src/pure_pursuit/include/pure_pursuit.hpp:25[m[K,
+                 from [01m[K/home/bentoaz/f1tenth_experimental_ws/src/pure_pursuit/src/pure_pursuit.cpp:1[m[K:
+[01m[K/opt/ros/humble/include/sensor_msgs/sensor_msgs/msg/detail/compressed_image__struct.hpp:31:11:[m[K [01;36m[Knote: [m[K  ‘[01m[Ksensor_msgs::msg[m[K’
+   31 | namespace [01;36m[Kmsg[m[K
+      |           [01;36m[K^~~[m[K
+In file included from [01m[K/opt/ros/humble/include/visualization_msgs/visualization_msgs/msg/detail/marker__struct.hpp:35[m[K,
+                 from [01m[K/opt/ros/humble/include/visualization_msgs/visualization_msgs/msg/marker.hpp:7[m[K,
+                 from [01m[K/home/bentoaz/f1tenth_experimental_ws/src/pure_pursuit/include/pure_pursuit.hpp:25[m[K,
+                 from [01m[K/home/bentoaz/f1tenth_experimental_ws/src/pure_pursuit/src/pure_pursuit.cpp:1[m[K:
+[01m[K/opt/ros/humble/include/visualization_msgs/visualization_msgs/msg/detail/uv_coordinate__struct.hpp:27:11:[m[K [01;36m[Knote: [m[K  ‘[01m[Kvisualization_msgs::msg[m[K’
+   27 | namespace [01;36m[Kmsg[m[K
+      |           [01;36m[K^~~[m[K
+[01m[K/home/bentoaz/f1tenth_experimental_ws/src/pure_pursuit/src/pure_pursuit.cpp:90:33:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[KSharedPtr[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+   90 |     [this]([01;35m[Kstd_msgs::msg::Bool::SharedPtr[m[K msg) {
+      |            [01;35m[K~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~[m[K
+[01m[K/home/bentoaz/f1tenth_experimental_ws/src/pure_pursuit/src/pure_pursuit.cpp:[m[K In constructor ‘[01m[KPurePursuit::PurePursuit()[m[K’:
+[01m[K/home/bentoaz/f1tenth_experimental_ws/src/pure_pursuit/src/pure_pursuit.cpp:88:64:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[KPurePursuit::create_subscription<<expression error> >(const char [13], int, PurePursuit::PurePursuit()::<lambda(int)>)[m[K’
+   88 |     pause_sub_ = [01;31m[Kthis->create_subscription<std_msgs::msg::Bool>([m[K
+      |                  [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^[m[K
+   89 | [01;31m[K    "/pause_state", 10,[m[K
+      |     [01;31m[K~~~~~~~~~~~~~~~~~~~[m[K                                         
+   90 | [01;31m[K    [this](std_msgs::msg::Bool::SharedPtr msg) {[m[K
+      |     [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K                
+   91 | [01;31m[K        paused_ = msg->data;[m[K
+      |         [01;31m[K~~~~~~~~~~~~~~~~~~~~[m[K                                    
+   92 | [01;31m[K    })[m[K;
+      |     [01;31m[K~~[m[K                                                          
+In file included from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/node.hpp:1321[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/single_threaded_executor.hpp:28[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:22[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+                 from [01m[K/opt/ros/humble/include/tf2_ros/tf2_ros/buffer_interface.h:48[m[K,
+                 from [01m[K/opt/ros/humble/include/tf2_ros/tf2_ros/buffer.h:42[m[K,
+                 from [01m[K/home/bentoaz/f1tenth_experimental_ws/src/pure_pursuit/include/pure_pursuit.hpp:6[m[K,
+                 from [01m[K/home/bentoaz/f1tenth_experimental_ws/src/pure_pursuit/src/pure_pursuit.cpp:1[m[K:
+[01m[K/opt/ros/humble/include/rclcpp/rclcpp/node_impl.hpp:92:1:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class MessageT, class CallbackT, class AllocatorT, class SubscriptionT, class MessageMemoryStrategyT> std::shared_ptr<ROSMessageT> rclcpp::Node::create_subscription(const string&, const rclcpp::QoS&, CallbackT&&, const rclcpp::SubscriptionOptionsWithAllocator<AllocatorT>&, typename MessageMemoryStrategyT::SharedPtr)[m[K’
+   92 | [01;36m[KNode[m[K::create_subscription(
+      | [01;36m[K^~~~[m[K
+[01m[K/opt/ros/humble/include/rclcpp/rclcpp/node_impl.hpp:92:1:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/bentoaz/f1tenth_experimental_ws/src/pure_pursuit/src/pure_pursuit.cpp:88:64:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+   88 |     pause_sub_ = [01;31m[Kthis->create_subscription<std_msgs::msg::Bool>([m[K
+      |                  [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^[m[K
+   89 | [01;31m[K    "/pause_state", 10,[m[K
+      |     [01;31m[K~~~~~~~~~~~~~~~~~~~[m[K                                         
+   90 | [01;31m[K    [this](std_msgs::msg::Bool::SharedPtr msg) {[m[K
+      |     [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K                
+   91 | [01;31m[K        paused_ = msg->data;[m[K
+      |         [01;31m[K~~~~~~~~~~~~~~~~~~~~[m[K                                    
+   92 | [01;31m[K    })[m[K;
+      |     [01;31m[K~~[m[K                                                          
+In file included from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/logging.hpp:24[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/client.hpp:40[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:24[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+                 from [01m[K/opt/ros/humble/include/tf2_ros/tf2_ros/buffer_interface.h:48[m[K,
+                 from [01m[K/opt/ros/humble/include/tf2_ros/tf2_ros/buffer.h:42[m[K,
+                 from [01m[K/home/bentoaz/f1tenth_experimental_ws/src/pure_pursuit/include/pure_pursuit.hpp:6[m[K,
+                 from [01m[K/home/bentoaz/f1tenth_experimental_ws/src/pure_pursuit/src/pure_pursuit.cpp:1[m[K:
+[01m[K/home/bentoaz/f1tenth_experimental_ws/src/pure_pursuit/src/pure_pursuit.cpp:[m[K In member function ‘[01m[Kvoid PurePursuit::selected_waypoints_callback(nav_msgs::msg::Path_<std::allocator<void> >::SharedPtr)[m[K’:
+[01m[K/home/bentoaz/f1tenth_experimental_ws/src/pure_pursuit/src/pure_pursuit.cpp:136:37:[m[K [01;35m[Kwarning: [m[Kformat ‘[01m[K%zu[m[K’ expects argument of type ‘[01m[Ksize_t[m[K’, but argument 5 has type ‘[01m[Kint[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wformat=-Wformat=]8;;[m[K]
+  136 |     RCLCPP_INFO(this->get_logger(), [01;35m[K"Finished loading %zu waypoints from Path message"[m[K, [32m[Knum_waypoints[m[K);
+      |                                     [01;35m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K  [32m[K~~~~~~~~~~~~~[m[K
+      |                                                                                         [32m[K|[m[K
+      |                                                                                         [32m[Kint[m[K
+[01m[K/home/bentoaz/f1tenth_experimental_ws/src/pure_pursuit/src/pure_pursuit.cpp:136:57:[m[K [01;36m[Knote: [m[Kformat string is defined here
+  136 |     RCLCPP_INFO(this->get_logger(), "Finished loading [01;36m[K%zu[m[K waypoints from Path message", num_waypoints);
+      |                                                       [01;36m[K~~^[m[K
+      |                                                         [01;36m[K|[m[K
+      |                                                         [01;36m[Klong unsigned int[m[K
+      |                                                       [32m[K%u[m[K
+[01m[K/home/bentoaz/f1tenth_experimental_ws/src/pure_pursuit/src/pure_pursuit.cpp:141:30:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Ksize_t[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} and ‘[01m[Kint[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wsign-compare-Wsign-compare]8;;[m[K]
+  141 |         for (size_t i = 0; [01;35m[Ki < num_waypoints - 1[m[K; i++) {
+      |                            [01;35m[K~~^~~~~~~~~~~~~~~~~~~[m[K
+In file included from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/logging.hpp:24[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/client.hpp:40[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:24[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+                 from [01m[K/opt/ros/humble/include/tf2_ros/tf2_ros/buffer_interface.h:48[m[K,
+                 from [01m[K/opt/ros/humble/include/tf2_ros/tf2_ros/buffer.h:42[m[K,
+                 from [01m[K/home/bentoaz/f1tenth_experimental_ws/src/pure_pursuit/include/pure_pursuit.hpp:6[m[K,
+                 from [01m[K/home/bentoaz/f1tenth_experimental_ws/src/pure_pursuit/src/pure_pursuit.cpp:1[m[K:
+[01m[K/home/bentoaz/f1tenth_experimental_ws/src/pure_pursuit/src/pure_pursuit.cpp:[m[K In member function ‘[01m[Kvoid PurePursuit::load_waypoints()[m[K’:
+[01m[K/home/bentoaz/f1tenth_experimental_ws/src/pure_pursuit/src/pure_pursuit.cpp:182:42:[m[K [01;35m[Kwarning: [m[Ktoo many arguments for format [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wformat-extra-args-Wformat-extra-args]8;;[m[K]
+  182 |         RCLCPP_ERROR(this->get_logger(), [01;35m[K"Cannot Open CSV File: "[m[K, waypoints_path.c_str());
+      |                                          [01;35m[K^~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/bentoaz/f1tenth_experimental_ws/src/pure_pursuit/src/pure_pursuit.cpp:212:37:[m[K [01;35m[Kwarning: [m[Kformat ‘[01m[K%s[m[K’ expects argument of type ‘[01m[Kchar*[m[K’, but argument 6 has type ‘[01m[Kstd::string[m[K’ {aka ‘[01m[Kstd::__cxx11::basic_string<char>[m[K’} [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wformat=-Wformat=]8;;[m[K]
+  212 |     RCLCPP_INFO(this->get_logger(), [01;35m[K"Finished loading %d waypoints from %s"[m[K, num_waypoints, waypoints_path);
+      |                                     [01;35m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/bentoaz/f1tenth_experimental_ws/src/pure_pursuit/src/pure_pursuit.cpp:212:74:[m[K [01;36m[Knote: [m[Kformat string is defined here
+  212 |     RCLCPP_INFO(this->get_logger(), "Finished loading %d waypoints from [01;36m[K%s[m[K", num_waypoints, waypoints_path);
+      |                                                                         [01;36m[K~^[m[K
+      |                                                                          [01;36m[K|[m[K
+      |                                                                          [01;36m[Kchar*[m[K
+[ 75%] [32m[1mLinking CXX executable waypoint_visualizer[0m
+[ 75%] Built target waypoint_visualizer
+gmake[2]: *** [CMakeFiles/pure_pursuit.dir/build.make:76: CMakeFiles/pure_pursuit.dir/src/pure_pursuit.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:139: CMakeFiles/pure_pursuit.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

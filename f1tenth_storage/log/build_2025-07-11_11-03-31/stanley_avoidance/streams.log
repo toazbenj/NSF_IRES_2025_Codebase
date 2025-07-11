@@ -1,0 +1,24 @@
+[1.190s] Invoking command in '/home/bentoaz/f1tenth_experimental_ws/src/stanley_avoidance': PYTHONPATH=/home/bentoaz/f1tenth_experimental_ws/build/stanley_avoidance/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/bentoaz/f1tenth_experimental_ws/install/stanley_avoidance/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/stanley_avoidance build --build-base /home/bentoaz/f1tenth_experimental_ws/build/stanley_avoidance/build install --record /home/bentoaz/f1tenth_experimental_ws/build/stanley_avoidance/install.log --install-scripts $base/lib/stanley_avoidance --single-version-externally-managed install_data
+[1.388s] /usr/lib/python3/dist-packages/setuptools/dist.py:723: UserWarning: Usage of dash-separated 'script-dir' will not be supported in future versions. Please use the underscore name 'script_dir' instead
+[1.388s]   warnings.warn(
+[1.394s] running egg_info
+[1.395s] writing ../../build/stanley_avoidance/stanley_avoidance.egg-info/PKG-INFO
+[1.395s] writing dependency_links to ../../build/stanley_avoidance/stanley_avoidance.egg-info/dependency_links.txt
+[1.395s] writing entry points to ../../build/stanley_avoidance/stanley_avoidance.egg-info/entry_points.txt
+[1.396s] writing requirements to ../../build/stanley_avoidance/stanley_avoidance.egg-info/requires.txt
+[1.396s] writing top-level names to ../../build/stanley_avoidance/stanley_avoidance.egg-info/top_level.txt
+[1.396s] reading manifest file '../../build/stanley_avoidance/stanley_avoidance.egg-info/SOURCES.txt'
+[1.396s] adding license file 'LICENSE'
+[1.397s] writing manifest file '../../build/stanley_avoidance/stanley_avoidance.egg-info/SOURCES.txt'
+[1.397s] running build
+[1.397s] running build_py
+[1.397s] running install
+[1.398s] running install_lib
+[1.398s] running install_data
+[1.398s] running install_egg_info
+[1.400s] removing '/home/bentoaz/f1tenth_experimental_ws/install/stanley_avoidance/lib/python3.10/site-packages/stanley_avoidance-0.0.0-py3.10.egg-info' (and everything under it)
+[1.400s] Copying ../../build/stanley_avoidance/stanley_avoidance.egg-info to /home/bentoaz/f1tenth_experimental_ws/install/stanley_avoidance/lib/python3.10/site-packages/stanley_avoidance-0.0.0-py3.10.egg-info
+[1.400s] running install_scripts
+[1.415s] Installing stanley_avoidance script to /home/bentoaz/f1tenth_experimental_ws/install/stanley_avoidance/lib/stanley_avoidance
+[1.416s] writing list of installed files to '/home/bentoaz/f1tenth_experimental_ws/build/stanley_avoidance/install.log'
+[1.433s] Invoked command in '/home/bentoaz/f1tenth_experimental_ws/src/stanley_avoidance' returned '0': PYTHONPATH=/home/bentoaz/f1tenth_experimental_ws/build/stanley_avoidance/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/bentoaz/f1tenth_experimental_ws/install/stanley_avoidance/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/stanley_avoidance build --build-base /home/bentoaz/f1tenth_experimental_ws/build/stanley_avoidance/build install --record /home/bentoaz/f1tenth_experimental_ws/build/stanley_avoidance/install.log --install-scripts $base/lib/stanley_avoidance --single-version-externally-managed install_data

@@ -1,0 +1,31 @@
+[0.379s] Invoking command in '/home/bentoaz/f1tenth_experimental_ws/build/pure_pursuit': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/bentoaz/f1tenth_experimental_ws/install/stanley_avoidance:/home/bentoaz/f1tenth_experimental_ws/install/particle_filter:/home/bentoaz/f1tenth_experimental_ws/install/local_planner:/home/bentoaz/f1tenth_gym_ros/install/f1tenth_gym_ros:/home/bentoaz/autoware/install/autoware_carla_interface:/home/bentoaz/autoware/install/ros2agnocast:/home/bentoaz/autoware/install/autoware_adapi_visualizers:/opt/ros/humble /usr/bin/cmake --build /home/bentoaz/f1tenth_experimental_ws/build/pure_pursuit -- -j16 -l16
+[0.814s] [ 75%] Built target pure_pursuit
+[0.814s] [100%] Built target waypoint_visualizer
+[0.815s] Invoked command in '/home/bentoaz/f1tenth_experimental_ws/build/pure_pursuit' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/bentoaz/f1tenth_experimental_ws/install/stanley_avoidance:/home/bentoaz/f1tenth_experimental_ws/install/particle_filter:/home/bentoaz/f1tenth_experimental_ws/install/local_planner:/home/bentoaz/f1tenth_gym_ros/install/f1tenth_gym_ros:/home/bentoaz/autoware/install/autoware_carla_interface:/home/bentoaz/autoware/install/ros2agnocast:/home/bentoaz/autoware/install/autoware_adapi_visualizers:/opt/ros/humble /usr/bin/cmake --build /home/bentoaz/f1tenth_experimental_ws/build/pure_pursuit -- -j16 -l16
+[0.836s] Invoking command in '/home/bentoaz/f1tenth_experimental_ws/build/pure_pursuit': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/bentoaz/f1tenth_experimental_ws/install/stanley_avoidance:/home/bentoaz/f1tenth_experimental_ws/install/particle_filter:/home/bentoaz/f1tenth_experimental_ws/install/local_planner:/home/bentoaz/f1tenth_gym_ros/install/f1tenth_gym_ros:/home/bentoaz/autoware/install/autoware_carla_interface:/home/bentoaz/autoware/install/ros2agnocast:/home/bentoaz/autoware/install/autoware_adapi_visualizers:/opt/ros/humble /usr/bin/cmake --install /home/bentoaz/f1tenth_experimental_ws/build/pure_pursuit
+[0.855s] -- Install configuration: ""
+[0.856s] -- Execute custom install script
+[0.856s] -- Up-to-date symlink: /home/bentoaz/f1tenth_experimental_ws/install/pure_pursuit/lib/pure_pursuit/pure_pursuit
+[0.856s] -- Up-to-date symlink: /home/bentoaz/f1tenth_experimental_ws/install/pure_pursuit/lib/pure_pursuit/waypoint_visualizer
+[0.856s] -- Up-to-date symlink: /home/bentoaz/f1tenth_experimental_ws/install/pure_pursuit/share/pure_pursuit/launch/pure_pursuit.rviz
+[0.857s] -- Up-to-date symlink: /home/bentoaz/f1tenth_experimental_ws/install/pure_pursuit/share/pure_pursuit/launch/pure_pursuit_launch.py
+[0.857s] -- Up-to-date symlink: /home/bentoaz/f1tenth_experimental_ws/install/pure_pursuit/share/pure_pursuit/launch/sim_pure_pursuit.rviz
+[0.857s] -- Up-to-date symlink: /home/bentoaz/f1tenth_experimental_ws/install/pure_pursuit/share/pure_pursuit/launch/sim_pure_pursuit_launch.py
+[0.857s] -- Up-to-date symlink: /home/bentoaz/f1tenth_experimental_ws/install/pure_pursuit/share/pure_pursuit/config/config.yaml
+[0.857s] -- Up-to-date symlink: /home/bentoaz/f1tenth_experimental_ws/install/pure_pursuit/share/pure_pursuit/config/sim_config.yaml
+[0.857s] -- Up-to-date symlink: /home/bentoaz/f1tenth_experimental_ws/install/pure_pursuit/share/ament_index/resource_index/package_run_dependencies/pure_pursuit
+[0.857s] -- Up-to-date symlink: /home/bentoaz/f1tenth_experimental_ws/install/pure_pursuit/share/ament_index/resource_index/parent_prefix_path/pure_pursuit
+[0.857s] -- Up-to-date symlink: /home/bentoaz/f1tenth_experimental_ws/install/pure_pursuit/share/pure_pursuit/environment/ament_prefix_path.sh
+[0.858s] -- Up-to-date symlink: /home/bentoaz/f1tenth_experimental_ws/install/pure_pursuit/share/pure_pursuit/environment/ament_prefix_path.dsv
+[0.858s] -- Up-to-date symlink: /home/bentoaz/f1tenth_experimental_ws/install/pure_pursuit/share/pure_pursuit/environment/path.sh
+[0.858s] -- Up-to-date symlink: /home/bentoaz/f1tenth_experimental_ws/install/pure_pursuit/share/pure_pursuit/environment/path.dsv
+[0.858s] -- Up-to-date symlink: /home/bentoaz/f1tenth_experimental_ws/install/pure_pursuit/share/pure_pursuit/local_setup.bash
+[0.858s] -- Up-to-date symlink: /home/bentoaz/f1tenth_experimental_ws/install/pure_pursuit/share/pure_pursuit/local_setup.sh
+[0.858s] -- Up-to-date symlink: /home/bentoaz/f1tenth_experimental_ws/install/pure_pursuit/share/pure_pursuit/local_setup.zsh
+[0.858s] -- Up-to-date symlink: /home/bentoaz/f1tenth_experimental_ws/install/pure_pursuit/share/pure_pursuit/local_setup.dsv
+[0.858s] -- Symlinking: /home/bentoaz/f1tenth_experimental_ws/install/pure_pursuit/share/pure_pursuit/package.dsv
+[0.883s] -- Up-to-date symlink: /home/bentoaz/f1tenth_experimental_ws/install/pure_pursuit/share/ament_index/resource_index/packages/pure_pursuit
+[0.883s] -- Up-to-date symlink: /home/bentoaz/f1tenth_experimental_ws/install/pure_pursuit/share/pure_pursuit/cmake/pure_pursuitConfig.cmake
+[0.883s] -- Up-to-date symlink: /home/bentoaz/f1tenth_experimental_ws/install/pure_pursuit/share/pure_pursuit/cmake/pure_pursuitConfig-version.cmake
+[0.883s] -- Up-to-date symlink: /home/bentoaz/f1tenth_experimental_ws/install/pure_pursuit/share/pure_pursuit/package.xml
+[0.885s] Invoked command in '/home/bentoaz/f1tenth_experimental_ws/build/pure_pursuit' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/bentoaz/f1tenth_experimental_ws/install/stanley_avoidance:/home/bentoaz/f1tenth_experimental_ws/install/particle_filter:/home/bentoaz/f1tenth_experimental_ws/install/local_planner:/home/bentoaz/f1tenth_gym_ros/install/f1tenth_gym_ros:/home/bentoaz/autoware/install/autoware_carla_interface:/home/bentoaz/autoware/install/ros2agnocast:/home/bentoaz/autoware/install/autoware_adapi_visualizers:/opt/ros/humble /usr/bin/cmake --install /home/bentoaz/f1tenth_experimental_ws/build/pure_pursuit

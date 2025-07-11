@@ -1,0 +1,23 @@
+[1.238s] Invoking command in '/home/bentoaz/f1tenth_experimental_ws/src/particle_filter': PYTHONPATH=/home/bentoaz/f1tenth_experimental_ws/build/particle_filter/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/bentoaz/f1tenth_experimental_ws/install/particle_filter/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/particle_filter build --build-base /home/bentoaz/f1tenth_experimental_ws/build/particle_filter/build install --record /home/bentoaz/f1tenth_experimental_ws/build/particle_filter/install.log --install-scripts $base/lib/particle_filter --single-version-externally-managed install_data
+[1.438s] /usr/lib/python3/dist-packages/setuptools/dist.py:723: UserWarning: Usage of dash-separated 'script-dir' will not be supported in future versions. Please use the underscore name 'script_dir' instead
+[1.438s]   warnings.warn(
+[1.444s] running egg_info
+[1.444s] writing ../../build/particle_filter/particle_filter.egg-info/PKG-INFO
+[1.445s] writing dependency_links to ../../build/particle_filter/particle_filter.egg-info/dependency_links.txt
+[1.445s] writing entry points to ../../build/particle_filter/particle_filter.egg-info/entry_points.txt
+[1.445s] writing requirements to ../../build/particle_filter/particle_filter.egg-info/requires.txt
+[1.445s] writing top-level names to ../../build/particle_filter/particle_filter.egg-info/top_level.txt
+[1.446s] reading manifest file '../../build/particle_filter/particle_filter.egg-info/SOURCES.txt'
+[1.447s] writing manifest file '../../build/particle_filter/particle_filter.egg-info/SOURCES.txt'
+[1.447s] running build
+[1.447s] running build_py
+[1.447s] running install
+[1.447s] running install_lib
+[1.448s] running install_data
+[1.448s] running install_egg_info
+[1.450s] removing '/home/bentoaz/f1tenth_experimental_ws/install/particle_filter/lib/python3.10/site-packages/particle_filter-0.2.0-py3.10.egg-info' (and everything under it)
+[1.450s] Copying ../../build/particle_filter/particle_filter.egg-info to /home/bentoaz/f1tenth_experimental_ws/install/particle_filter/lib/python3.10/site-packages/particle_filter-0.2.0-py3.10.egg-info
+[1.450s] running install_scripts
+[1.465s] Installing particle_filter script to /home/bentoaz/f1tenth_experimental_ws/install/particle_filter/lib/particle_filter
+[1.465s] writing list of installed files to '/home/bentoaz/f1tenth_experimental_ws/build/particle_filter/install.log'
+[1.489s] Invoked command in '/home/bentoaz/f1tenth_experimental_ws/src/particle_filter' returned '0': PYTHONPATH=/home/bentoaz/f1tenth_experimental_ws/build/particle_filter/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/bentoaz/f1tenth_experimental_ws/install/particle_filter/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/particle_filter build --build-base /home/bentoaz/f1tenth_experimental_ws/build/particle_filter/build install --record /home/bentoaz/f1tenth_experimental_ws/build/particle_filter/install.log --install-scripts $base/lib/particle_filter --single-version-externally-managed install_data

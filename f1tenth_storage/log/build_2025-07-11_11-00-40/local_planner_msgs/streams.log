@@ -1,0 +1,16 @@
+[0.119s] Invoking command in '/home/bentoaz/f1tenth_experimental_ws/build/local_planner_msgs': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/bentoaz/f1tenth_gym_ros/install/f1tenth_gym_ros:/home/bentoaz/autoware/install/autoware_carla_interface:/home/bentoaz/autoware/install/ros2agnocast:/home/bentoaz/autoware/install/autoware_adapi_visualizers:/opt/ros/humble /usr/bin/cmake --build /home/bentoaz/f1tenth_experimental_ws/build/local_planner_msgs -- -j16 -l16
+[0.665s] [35m[1mConsolidate compiler generated dependencies of target local_planner_msgs__rosidl_generator_c[0m
+[0.666s] [  2%] Built target local_planner_msgs__cpp
+[0.666s] [ 12%] Built target local_planner_msgs__rosidl_generator_c
+[0.666s] [35m[1mConsolidate compiler generated dependencies of target local_planner_msgs__rosidl_typesupport_cpp[0m
+[0.666s] [35m[1mConsolidate compiler generated dependencies of target local_planner_msgs__rosidl_typesupport_fastrtps_cpp[0m
+[0.666s] [35m[1mConsolidate compiler generated dependencies of target local_planner_msgs__rosidl_typesupport_introspection_cpp[0m
+[0.666s] [ 23%] Built target local_planner_msgs__rosidl_typesupport_cpp
+[0.667s] [ 33%] Built target local_planner_msgs__rosidl_typesupport_introspection_cpp
+[0.667s] [ 43%] Built target local_planner_msgs__rosidl_typesupport_fastrtps_cpp
+[0.669s] failed to create symbolic link '/home/bentoaz/f1tenth_experimental_ws/build/local_planner_msgs/ament_cmake_python/local_planner_msgs/local_planner_msgs' because existing path cannot be removed: Is a directory
+[0.669s] gmake[2]: *** [CMakeFiles/ament_cmake_python_symlink_local_planner_msgs.dir/build.make:70: CMakeFiles/ament_cmake_python_symlink_local_planner_msgs] Error 1
+[0.670s] gmake[1]: *** [CMakeFiles/Makefile2:421: CMakeFiles/ament_cmake_python_symlink_local_planner_msgs.dir/all] Error 2
+[0.670s] gmake[1]: *** Waiting for unfinished jobs....
+[0.670s] gmake: *** [Makefile:146: all] Error 2
+[0.673s] Invoked command in '/home/bentoaz/f1tenth_experimental_ws/build/local_planner_msgs' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/bentoaz/f1tenth_gym_ros/install/f1tenth_gym_ros:/home/bentoaz/autoware/install/autoware_carla_interface:/home/bentoaz/autoware/install/ros2agnocast:/home/bentoaz/autoware/install/autoware_adapi_visualizers:/opt/ros/humble /usr/bin/cmake --build /home/bentoaz/f1tenth_experimental_ws/build/local_planner_msgs -- -j16 -l16

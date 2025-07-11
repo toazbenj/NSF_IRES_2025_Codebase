@@ -1,0 +1,41 @@
+[35m[1mConsolidate compiler generated dependencies of target safety_node[0m
+[100%] Built target safety_node
+[100%] Built target ament_cmake_python_copy_safety_node_setup
+[100%] Built target ament_cmake_python_copy_safety_node
+running egg_info
+writing safety_node.egg-info/PKG-INFO
+writing dependency_links to safety_node.egg-info/dependency_links.txt
+writing top-level names to safety_node.egg-info/top_level.txt
+reading manifest file 'safety_node.egg-info/SOURCES.txt'
+writing manifest file 'safety_node.egg-info/SOURCES.txt'
+[100%] Built target ament_cmake_python_build_safety_node_egg
+-- Install configuration: ""
+-- Installing: /home/bentoaz/f1tenth_experimental_ws/install/safety_node/lib/safety_node/safety_node
+-- Set runtime path of "/home/bentoaz/f1tenth_experimental_ws/install/safety_node/lib/safety_node/safety_node" to ""
+-- Installing: /home/bentoaz/f1tenth_experimental_ws/install/safety_node/share/safety_node/environment/pythonpath.sh
+-- Installing: /home/bentoaz/f1tenth_experimental_ws/install/safety_node/share/safety_node/environment/pythonpath.dsv
+-- Installing: /home/bentoaz/f1tenth_experimental_ws/install/safety_node/local/lib/python3.10/dist-packages/safety_node-0.0.0-py3.10.egg-info
+-- Installing: /home/bentoaz/f1tenth_experimental_ws/install/safety_node/local/lib/python3.10/dist-packages/safety_node-0.0.0-py3.10.egg-info/SOURCES.txt
+-- Installing: /home/bentoaz/f1tenth_experimental_ws/install/safety_node/local/lib/python3.10/dist-packages/safety_node-0.0.0-py3.10.egg-info/dependency_links.txt
+-- Installing: /home/bentoaz/f1tenth_experimental_ws/install/safety_node/local/lib/python3.10/dist-packages/safety_node-0.0.0-py3.10.egg-info/top_level.txt
+-- Installing: /home/bentoaz/f1tenth_experimental_ws/install/safety_node/local/lib/python3.10/dist-packages/safety_node-0.0.0-py3.10.egg-info/PKG-INFO
+-- Installing: /home/bentoaz/f1tenth_experimental_ws/install/safety_node/local/lib/python3.10/dist-packages/safety_node
+-- Installing: /home/bentoaz/f1tenth_experimental_ws/install/safety_node/local/lib/python3.10/dist-packages/safety_node/__init__.py
+Listing '/home/bentoaz/f1tenth_experimental_ws/install/safety_node/local/lib/python3.10/dist-packages/safety_node'...
+Compiling '/home/bentoaz/f1tenth_experimental_ws/install/safety_node/local/lib/python3.10/dist-packages/safety_node/__init__.py'...
+-- Installing: /home/bentoaz/f1tenth_experimental_ws/install/safety_node/lib/safety_node/safety_node.py
+-- Installing: /home/bentoaz/f1tenth_experimental_ws/install/safety_node/share/ament_index/resource_index/package_run_dependencies/safety_node
+-- Installing: /home/bentoaz/f1tenth_experimental_ws/install/safety_node/share/ament_index/resource_index/parent_prefix_path/safety_node
+-- Installing: /home/bentoaz/f1tenth_experimental_ws/install/safety_node/share/safety_node/environment/ament_prefix_path.sh
+-- Installing: /home/bentoaz/f1tenth_experimental_ws/install/safety_node/share/safety_node/environment/ament_prefix_path.dsv
+-- Installing: /home/bentoaz/f1tenth_experimental_ws/install/safety_node/share/safety_node/environment/path.sh
+-- Installing: /home/bentoaz/f1tenth_experimental_ws/install/safety_node/share/safety_node/environment/path.dsv
+-- Installing: /home/bentoaz/f1tenth_experimental_ws/install/safety_node/share/safety_node/local_setup.bash
+-- Installing: /home/bentoaz/f1tenth_experimental_ws/install/safety_node/share/safety_node/local_setup.sh
+-- Installing: /home/bentoaz/f1tenth_experimental_ws/install/safety_node/share/safety_node/local_setup.zsh
+-- Installing: /home/bentoaz/f1tenth_experimental_ws/install/safety_node/share/safety_node/local_setup.dsv
+-- Installing: /home/bentoaz/f1tenth_experimental_ws/install/safety_node/share/safety_node/package.dsv
+-- Installing: /home/bentoaz/f1tenth_experimental_ws/install/safety_node/share/ament_index/resource_index/packages/safety_node
+-- Installing: /home/bentoaz/f1tenth_experimental_ws/install/safety_node/share/safety_node/cmake/safety_nodeConfig.cmake
+-- Installing: /home/bentoaz/f1tenth_experimental_ws/install/safety_node/share/safety_node/cmake/safety_nodeConfig-version.cmake
+-- Installing: /home/bentoaz/f1tenth_experimental_ws/install/safety_node/share/safety_node/package.xml

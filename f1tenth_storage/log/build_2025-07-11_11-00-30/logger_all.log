@@ -1,0 +1,257 @@
+[0.071s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build', '--packages-select', 'gap_follow', '--cmake-clean-cache']
+[0.071s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=False, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=16, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=['gap_follow'], packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, allow_overriding=[], cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=True, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, mixin_files=None, mixin=None, verb_parser=<colcon_mixin.mixin.mixin_argument.MixinArgumentDecorator object at 0x7bcf908e31f0>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x7bcf908e2d40>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x7bcf908e2d40>>, mixin_verb=('build',))
+[0.191s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[0.191s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[0.191s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[0.191s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[0.191s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[0.191s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[0.191s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/bentoaz/f1tenth_experimental_ws'
+[0.191s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[0.191s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[0.191s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[0.191s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[0.191s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[0.191s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[0.191s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[0.191s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[0.191s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[0.197s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[0.197s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[0.197s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[0.197s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[0.197s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[0.197s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[0.197s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[0.197s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[0.197s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[0.197s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[0.197s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[0.197s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[0.197s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[0.197s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[0.197s] Level 1:colcon.colcon_core.package_identification:_identify(racelines) by extensions ['ignore', 'ignore_ament_install']
+[0.197s] Level 1:colcon.colcon_core.package_identification:_identify(racelines) by extension 'ignore'
+[0.198s] Level 1:colcon.colcon_core.package_identification:_identify(racelines) by extension 'ignore_ament_install'
+[0.198s] Level 1:colcon.colcon_core.package_identification:_identify(racelines) by extensions ['colcon_pkg']
+[0.198s] Level 1:colcon.colcon_core.package_identification:_identify(racelines) by extension 'colcon_pkg'
+[0.198s] Level 1:colcon.colcon_core.package_identification:_identify(racelines) by extensions ['colcon_meta']
+[0.198s] Level 1:colcon.colcon_core.package_identification:_identify(racelines) by extension 'colcon_meta'
+[0.198s] Level 1:colcon.colcon_core.package_identification:_identify(racelines) by extensions ['ros']
+[0.198s] Level 1:colcon.colcon_core.package_identification:_identify(racelines) by extension 'ros'
+[0.198s] Level 1:colcon.colcon_core.package_identification:_identify(racelines) by extensions ['cmake', 'python']
+[0.198s] Level 1:colcon.colcon_core.package_identification:_identify(racelines) by extension 'cmake'
+[0.198s] Level 1:colcon.colcon_core.package_identification:_identify(racelines) by extension 'python'
+[0.198s] Level 1:colcon.colcon_core.package_identification:_identify(racelines) by extensions ['python_setup_py']
+[0.198s] Level 1:colcon.colcon_core.package_identification:_identify(racelines) by extension 'python_setup_py'
+[0.198s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ignore', 'ignore_ament_install']
+[0.198s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore'
+[0.198s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore_ament_install'
+[0.198s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_pkg']
+[0.198s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_pkg'
+[0.198s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_meta']
+[0.198s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_meta'
+[0.198s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ros']
+[0.198s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ros'
+[0.198s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['cmake', 'python']
+[0.198s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'cmake'
+[0.198s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python'
+[0.198s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['python_setup_py']
+[0.198s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python_setup_py'
+[0.198s] Level 1:colcon.colcon_core.package_identification:_identify(src/gap_follow) by extensions ['ignore', 'ignore_ament_install']
+[0.198s] Level 1:colcon.colcon_core.package_identification:_identify(src/gap_follow) by extension 'ignore'
+[0.198s] Level 1:colcon.colcon_core.package_identification:_identify(src/gap_follow) by extension 'ignore_ament_install'
+[0.198s] Level 1:colcon.colcon_core.package_identification:_identify(src/gap_follow) by extensions ['colcon_pkg']
+[0.198s] Level 1:colcon.colcon_core.package_identification:_identify(src/gap_follow) by extension 'colcon_pkg'
+[0.198s] Level 1:colcon.colcon_core.package_identification:_identify(src/gap_follow) by extensions ['colcon_meta']
+[0.198s] Level 1:colcon.colcon_core.package_identification:_identify(src/gap_follow) by extension 'colcon_meta'
+[0.198s] Level 1:colcon.colcon_core.package_identification:_identify(src/gap_follow) by extensions ['ros']
+[0.198s] Level 1:colcon.colcon_core.package_identification:_identify(src/gap_follow) by extension 'ros'
+[0.199s] DEBUG:colcon.colcon_core.package_identification:Package 'src/gap_follow' with type 'ros.ament_cmake' and name 'gap_follow'
+[0.200s] Level 1:colcon.colcon_core.package_identification:_identify(src/local_planner) by extensions ['ignore', 'ignore_ament_install']
+[0.200s] Level 1:colcon.colcon_core.package_identification:_identify(src/local_planner) by extension 'ignore'
+[0.200s] Level 1:colcon.colcon_core.package_identification:_identify(src/local_planner) by extension 'ignore_ament_install'
+[0.200s] Level 1:colcon.colcon_core.package_identification:_identify(src/local_planner) by extensions ['colcon_pkg']
+[0.200s] Level 1:colcon.colcon_core.package_identification:_identify(src/local_planner) by extension 'colcon_pkg'
+[0.200s] Level 1:colcon.colcon_core.package_identification:_identify(src/local_planner) by extensions ['colcon_meta']
+[0.200s] Level 1:colcon.colcon_core.package_identification:_identify(src/local_planner) by extension 'colcon_meta'
+[0.200s] Level 1:colcon.colcon_core.package_identification:_identify(src/local_planner) by extensions ['ros']
+[0.200s] Level 1:colcon.colcon_core.package_identification:_identify(src/local_planner) by extension 'ros'
+[0.200s] DEBUG:colcon.colcon_core.package_identification:Package 'src/local_planner' with type 'ros.ament_python' and name 'local_planner'
+[0.200s] Level 1:colcon.colcon_core.package_identification:_identify(src/local_planner_msgs) by extensions ['ignore', 'ignore_ament_install']
+[0.200s] Level 1:colcon.colcon_core.package_identification:_identify(src/local_planner_msgs) by extension 'ignore'
+[0.200s] Level 1:colcon.colcon_core.package_identification:_identify(src/local_planner_msgs) by extension 'ignore_ament_install'
+[0.200s] Level 1:colcon.colcon_core.package_identification:_identify(src/local_planner_msgs) by extensions ['colcon_pkg']
+[0.200s] Level 1:colcon.colcon_core.package_identification:_identify(src/local_planner_msgs) by extension 'colcon_pkg'
+[0.200s] Level 1:colcon.colcon_core.package_identification:_identify(src/local_planner_msgs) by extensions ['colcon_meta']
+[0.200s] Level 1:colcon.colcon_core.package_identification:_identify(src/local_planner_msgs) by extension 'colcon_meta'
+[0.200s] Level 1:colcon.colcon_core.package_identification:_identify(src/local_planner_msgs) by extensions ['ros']
+[0.200s] Level 1:colcon.colcon_core.package_identification:_identify(src/local_planner_msgs) by extension 'ros'
+[0.201s] DEBUG:colcon.colcon_core.package_identification:Package 'src/local_planner_msgs' with type 'ros.ament_cmake' and name 'local_planner_msgs'
+[0.201s] Level 1:colcon.colcon_core.package_identification:_identify(src/particle_filter) by extensions ['ignore', 'ignore_ament_install']
+[0.201s] Level 1:colcon.colcon_core.package_identification:_identify(src/particle_filter) by extension 'ignore'
+[0.201s] Level 1:colcon.colcon_core.package_identification:_identify(src/particle_filter) by extension 'ignore_ament_install'
+[0.201s] Level 1:colcon.colcon_core.package_identification:_identify(src/particle_filter) by extensions ['colcon_pkg']
+[0.201s] Level 1:colcon.colcon_core.package_identification:_identify(src/particle_filter) by extension 'colcon_pkg'
+[0.201s] Level 1:colcon.colcon_core.package_identification:_identify(src/particle_filter) by extensions ['colcon_meta']
+[0.201s] Level 1:colcon.colcon_core.package_identification:_identify(src/particle_filter) by extension 'colcon_meta'
+[0.201s] Level 1:colcon.colcon_core.package_identification:_identify(src/particle_filter) by extensions ['ros']
+[0.201s] Level 1:colcon.colcon_core.package_identification:_identify(src/particle_filter) by extension 'ros'
+[0.201s] DEBUG:colcon.colcon_core.package_identification:Package 'src/particle_filter' with type 'ros.ament_python' and name 'particle_filter'
+[0.201s] Level 1:colcon.colcon_core.package_identification:_identify(src/pure_pursuit) by extensions ['ignore', 'ignore_ament_install']
+[0.201s] Level 1:colcon.colcon_core.package_identification:_identify(src/pure_pursuit) by extension 'ignore'
+[0.201s] Level 1:colcon.colcon_core.package_identification:_identify(src/pure_pursuit) by extension 'ignore_ament_install'
+[0.201s] Level 1:colcon.colcon_core.package_identification:_identify(src/pure_pursuit) by extensions ['colcon_pkg']
+[0.201s] Level 1:colcon.colcon_core.package_identification:_identify(src/pure_pursuit) by extension 'colcon_pkg'
+[0.201s] Level 1:colcon.colcon_core.package_identification:_identify(src/pure_pursuit) by extensions ['colcon_meta']
+[0.201s] Level 1:colcon.colcon_core.package_identification:_identify(src/pure_pursuit) by extension 'colcon_meta'
+[0.201s] Level 1:colcon.colcon_core.package_identification:_identify(src/pure_pursuit) by extensions ['ros']
+[0.201s] Level 1:colcon.colcon_core.package_identification:_identify(src/pure_pursuit) by extension 'ros'
+[0.202s] DEBUG:colcon.colcon_core.package_identification:Package 'src/pure_pursuit' with type 'ros.ament_cmake' and name 'pure_pursuit'
+[0.202s] Level 1:colcon.colcon_core.package_identification:_identify(src/safety_node) by extensions ['ignore', 'ignore_ament_install']
+[0.202s] Level 1:colcon.colcon_core.package_identification:_identify(src/safety_node) by extension 'ignore'
+[0.202s] Level 1:colcon.colcon_core.package_identification:_identify(src/safety_node) by extension 'ignore_ament_install'
+[0.202s] Level 1:colcon.colcon_core.package_identification:_identify(src/safety_node) by extensions ['colcon_pkg']
+[0.202s] Level 1:colcon.colcon_core.package_identification:_identify(src/safety_node) by extension 'colcon_pkg'
+[0.202s] Level 1:colcon.colcon_core.package_identification:_identify(src/safety_node) by extensions ['colcon_meta']
+[0.202s] Level 1:colcon.colcon_core.package_identification:_identify(src/safety_node) by extension 'colcon_meta'
+[0.202s] Level 1:colcon.colcon_core.package_identification:_identify(src/safety_node) by extensions ['ros']
+[0.202s] Level 1:colcon.colcon_core.package_identification:_identify(src/safety_node) by extension 'ros'
+[0.203s] DEBUG:colcon.colcon_core.package_identification:Package 'src/safety_node' with type 'ros.ament_cmake' and name 'safety_node'
+[0.203s] Level 1:colcon.colcon_core.package_identification:_identify(src/scan_matching) by extensions ['ignore', 'ignore_ament_install']
+[0.203s] Level 1:colcon.colcon_core.package_identification:_identify(src/scan_matching) by extension 'ignore'
+[0.203s] Level 1:colcon.colcon_core.package_identification:_identify(src/scan_matching) by extension 'ignore_ament_install'
+[0.203s] Level 1:colcon.colcon_core.package_identification:_identify(src/scan_matching) by extensions ['colcon_pkg']
+[0.203s] Level 1:colcon.colcon_core.package_identification:_identify(src/scan_matching) by extension 'colcon_pkg'
+[0.203s] Level 1:colcon.colcon_core.package_identification:_identify(src/scan_matching) by extensions ['colcon_meta']
+[0.203s] Level 1:colcon.colcon_core.package_identification:_identify(src/scan_matching) by extension 'colcon_meta'
+[0.203s] Level 1:colcon.colcon_core.package_identification:_identify(src/scan_matching) by extensions ['ros']
+[0.203s] Level 1:colcon.colcon_core.package_identification:_identify(src/scan_matching) by extension 'ros'
+[0.203s] DEBUG:colcon.colcon_core.package_identification:Package 'src/scan_matching' with type 'ros.ament_cmake' and name 'scan_matching'
+[0.203s] Level 1:colcon.colcon_core.package_identification:_identify(src/stanley_avoidance) by extensions ['ignore', 'ignore_ament_install']
+[0.203s] Level 1:colcon.colcon_core.package_identification:_identify(src/stanley_avoidance) by extension 'ignore'
+[0.203s] Level 1:colcon.colcon_core.package_identification:_identify(src/stanley_avoidance) by extension 'ignore_ament_install'
+[0.203s] Level 1:colcon.colcon_core.package_identification:_identify(src/stanley_avoidance) by extensions ['colcon_pkg']
+[0.203s] Level 1:colcon.colcon_core.package_identification:_identify(src/stanley_avoidance) by extension 'colcon_pkg'
+[0.203s] Level 1:colcon.colcon_core.package_identification:_identify(src/stanley_avoidance) by extensions ['colcon_meta']
+[0.203s] Level 1:colcon.colcon_core.package_identification:_identify(src/stanley_avoidance) by extension 'colcon_meta'
+[0.203s] Level 1:colcon.colcon_core.package_identification:_identify(src/stanley_avoidance) by extensions ['ros']
+[0.203s] Level 1:colcon.colcon_core.package_identification:_identify(src/stanley_avoidance) by extension 'ros'
+[0.204s] DEBUG:colcon.colcon_core.package_identification:Package 'src/stanley_avoidance' with type 'ros.ament_python' and name 'stanley_avoidance'
+[0.204s] Level 1:colcon.colcon_core.package_identification:_identify(src/wall_follow) by extensions ['ignore', 'ignore_ament_install']
+[0.204s] Level 1:colcon.colcon_core.package_identification:_identify(src/wall_follow) by extension 'ignore'
+[0.204s] Level 1:colcon.colcon_core.package_identification:_identify(src/wall_follow) by extension 'ignore_ament_install'
+[0.204s] Level 1:colcon.colcon_core.package_identification:_identify(src/wall_follow) by extensions ['colcon_pkg']
+[0.204s] Level 1:colcon.colcon_core.package_identification:_identify(src/wall_follow) by extension 'colcon_pkg'
+[0.204s] Level 1:colcon.colcon_core.package_identification:_identify(src/wall_follow) by extensions ['colcon_meta']
+[0.204s] Level 1:colcon.colcon_core.package_identification:_identify(src/wall_follow) by extension 'colcon_meta'
+[0.204s] Level 1:colcon.colcon_core.package_identification:_identify(src/wall_follow) by extensions ['ros']
+[0.204s] Level 1:colcon.colcon_core.package_identification:_identify(src/wall_follow) by extension 'ros'
+[0.205s] DEBUG:colcon.colcon_core.package_identification:Package 'src/wall_follow' with type 'ros.ament_cmake' and name 'wall_follow'
+[0.205s] Level 1:colcon.colcon_core.package_identification:_identify(src/waypoint_generator) by extensions ['ignore', 'ignore_ament_install']
+[0.205s] Level 1:colcon.colcon_core.package_identification:_identify(src/waypoint_generator) by extension 'ignore'
+[0.205s] Level 1:colcon.colcon_core.package_identification:_identify(src/waypoint_generator) by extension 'ignore_ament_install'
+[0.205s] Level 1:colcon.colcon_core.package_identification:_identify(src/waypoint_generator) by extensions ['colcon_pkg']
+[0.205s] Level 1:colcon.colcon_core.package_identification:_identify(src/waypoint_generator) by extension 'colcon_pkg'
+[0.205s] Level 1:colcon.colcon_core.package_identification:_identify(src/waypoint_generator) by extensions ['colcon_meta']
+[0.205s] Level 1:colcon.colcon_core.package_identification:_identify(src/waypoint_generator) by extension 'colcon_meta'
+[0.205s] Level 1:colcon.colcon_core.package_identification:_identify(src/waypoint_generator) by extensions ['ros']
+[0.205s] Level 1:colcon.colcon_core.package_identification:_identify(src/waypoint_generator) by extension 'ros'
+[0.205s] DEBUG:colcon.colcon_core.package_identification:Package 'src/waypoint_generator' with type 'ros.ament_cmake' and name 'waypoint_generator'
+[0.205s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[0.205s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[0.205s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[0.205s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[0.205s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[0.219s] INFO:colcon.colcon_core.package_selection:Skipping not selected package 'local_planner_msgs' in 'src/local_planner_msgs'
+[0.219s] INFO:colcon.colcon_core.package_selection:Skipping not selected package 'particle_filter' in 'src/particle_filter'
+[0.219s] INFO:colcon.colcon_core.package_selection:Skipping not selected package 'pure_pursuit' in 'src/pure_pursuit'
+[0.219s] INFO:colcon.colcon_core.package_selection:Skipping not selected package 'safety_node' in 'src/safety_node'
+[0.219s] INFO:colcon.colcon_core.package_selection:Skipping not selected package 'scan_matching' in 'src/scan_matching'
+[0.219s] INFO:colcon.colcon_core.package_selection:Skipping not selected package 'stanley_avoidance' in 'src/stanley_avoidance'
+[0.219s] INFO:colcon.colcon_core.package_selection:Skipping not selected package 'wall_follow' in 'src/wall_follow'
+[0.219s] INFO:colcon.colcon_core.package_selection:Skipping not selected package 'waypoint_generator' in 'src/waypoint_generator'
+[0.219s] INFO:colcon.colcon_core.package_selection:Skipping not selected package 'local_planner' in 'src/local_planner'
+[0.219s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[0.219s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[0.229s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 403 installed packages in /home/bentoaz/autoware/install
+[0.230s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 1 installed packages in /home/bentoaz/f1tenth_gym_ros/install
+[0.231s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 394 installed packages in /opt/ros/humble
+[0.232s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[0.266s] Level 5:colcon.colcon_core.verb:set package 'gap_follow' build argument 'cmake_args' from command line to 'None'
+[0.267s] Level 5:colcon.colcon_core.verb:set package 'gap_follow' build argument 'cmake_target' from command line to 'None'
+[0.267s] Level 5:colcon.colcon_core.verb:set package 'gap_follow' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.267s] Level 5:colcon.colcon_core.verb:set package 'gap_follow' build argument 'cmake_clean_cache' from command line to 'True'
+[0.267s] Level 5:colcon.colcon_core.verb:set package 'gap_follow' build argument 'cmake_clean_first' from command line to 'False'
+[0.267s] Level 5:colcon.colcon_core.verb:set package 'gap_follow' build argument 'cmake_force_configure' from command line to 'False'
+[0.267s] Level 5:colcon.colcon_core.verb:set package 'gap_follow' build argument 'ament_cmake_args' from command line to 'None'
+[0.267s] Level 5:colcon.colcon_core.verb:set package 'gap_follow' build argument 'catkin_cmake_args' from command line to 'None'
+[0.267s] Level 5:colcon.colcon_core.verb:set package 'gap_follow' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.267s] DEBUG:colcon.colcon_core.verb:Building package 'gap_follow' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/bentoaz/f1tenth_experimental_ws/build/gap_follow', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': True, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/bentoaz/f1tenth_experimental_ws/install/gap_follow', 'merge_install': False, 'path': '/home/bentoaz/f1tenth_experimental_ws/src/gap_follow', 'symlink_install': False, 'test_result_base': None}
+[0.267s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[0.267s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[0.267s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/bentoaz/f1tenth_experimental_ws/src/gap_follow' with build type 'ament_cmake'
+[0.267s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/bentoaz/f1tenth_experimental_ws/src/gap_follow'
+[0.269s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[0.269s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.269s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.294s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/bentoaz/f1tenth_experimental_ws/build/gap_follow': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/bentoaz/f1tenth_gym_ros/install/f1tenth_gym_ros:/home/bentoaz/autoware/install/autoware_carla_interface:/home/bentoaz/autoware/install/ros2agnocast:/home/bentoaz/autoware/install/autoware_adapi_visualizers:/opt/ros/humble /usr/bin/cmake /home/bentoaz/f1tenth_experimental_ws/src/gap_follow -DCMAKE_INSTALL_PREFIX=/home/bentoaz/f1tenth_experimental_ws/install/gap_follow
+[2.990s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/bentoaz/f1tenth_experimental_ws/build/gap_follow' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/bentoaz/f1tenth_gym_ros/install/f1tenth_gym_ros:/home/bentoaz/autoware/install/autoware_carla_interface:/home/bentoaz/autoware/install/ros2agnocast:/home/bentoaz/autoware/install/autoware_adapi_visualizers:/opt/ros/humble /usr/bin/cmake /home/bentoaz/f1tenth_experimental_ws/src/gap_follow -DCMAKE_INSTALL_PREFIX=/home/bentoaz/f1tenth_experimental_ws/install/gap_follow
+[2.990s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/bentoaz/f1tenth_experimental_ws/build/gap_follow': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/bentoaz/f1tenth_gym_ros/install/f1tenth_gym_ros:/home/bentoaz/autoware/install/autoware_carla_interface:/home/bentoaz/autoware/install/ros2agnocast:/home/bentoaz/autoware/install/autoware_adapi_visualizers:/opt/ros/humble /usr/bin/cmake --build /home/bentoaz/f1tenth_experimental_ws/build/gap_follow -- -j16 -l16
+[3.460s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/bentoaz/f1tenth_experimental_ws/build/gap_follow' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/bentoaz/f1tenth_gym_ros/install/f1tenth_gym_ros:/home/bentoaz/autoware/install/autoware_carla_interface:/home/bentoaz/autoware/install/ros2agnocast:/home/bentoaz/autoware/install/autoware_adapi_visualizers:/opt/ros/humble /usr/bin/cmake --build /home/bentoaz/f1tenth_experimental_ws/build/gap_follow -- -j16 -l16
+[3.487s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/bentoaz/f1tenth_experimental_ws/build/gap_follow': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/bentoaz/f1tenth_gym_ros/install/f1tenth_gym_ros:/home/bentoaz/autoware/install/autoware_carla_interface:/home/bentoaz/autoware/install/ros2agnocast:/home/bentoaz/autoware/install/autoware_adapi_visualizers:/opt/ros/humble /usr/bin/cmake --install /home/bentoaz/f1tenth_experimental_ws/build/gap_follow
+[3.564s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(gap_follow)
+[3.564s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/bentoaz/f1tenth_experimental_ws/build/gap_follow' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/bentoaz/f1tenth_gym_ros/install/f1tenth_gym_ros:/home/bentoaz/autoware/install/autoware_carla_interface:/home/bentoaz/autoware/install/ros2agnocast:/home/bentoaz/autoware/install/autoware_adapi_visualizers:/opt/ros/humble /usr/bin/cmake --install /home/bentoaz/f1tenth_experimental_ws/build/gap_follow
+[3.566s] Level 1:colcon.colcon_core.environment:checking '/home/bentoaz/f1tenth_experimental_ws/install/gap_follow' for CMake module files
+[3.566s] Level 1:colcon.colcon_core.environment:checking '/home/bentoaz/f1tenth_experimental_ws/install/gap_follow' for CMake config files
+[3.566s] Level 1:colcon.colcon_core.shell:create_environment_hook('gap_follow', 'cmake_prefix_path')
+[3.566s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/bentoaz/f1tenth_experimental_ws/install/gap_follow/share/gap_follow/hook/cmake_prefix_path.ps1'
+[3.567s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/bentoaz/f1tenth_experimental_ws/install/gap_follow/share/gap_follow/hook/cmake_prefix_path.dsv'
+[3.567s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/bentoaz/f1tenth_experimental_ws/install/gap_follow/share/gap_follow/hook/cmake_prefix_path.sh'
+[3.567s] Level 1:colcon.colcon_core.environment:checking '/home/bentoaz/f1tenth_experimental_ws/install/gap_follow/lib'
+[3.567s] Level 1:colcon.colcon_core.environment:checking '/home/bentoaz/f1tenth_experimental_ws/install/gap_follow/bin'
+[3.567s] Level 1:colcon.colcon_core.environment:checking '/home/bentoaz/f1tenth_experimental_ws/install/gap_follow/lib/pkgconfig/gap_follow.pc'
+[3.568s] Level 1:colcon.colcon_core.environment:checking '/home/bentoaz/f1tenth_experimental_ws/install/gap_follow/lib/python3.10/site-packages'
+[3.568s] Level 1:colcon.colcon_core.environment:checking '/home/bentoaz/f1tenth_experimental_ws/install/gap_follow/bin'
+[3.568s] INFO:colcon.colcon_core.shell:Creating package script '/home/bentoaz/f1tenth_experimental_ws/install/gap_follow/share/gap_follow/package.ps1'
+[3.568s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/bentoaz/f1tenth_experimental_ws/install/gap_follow/share/gap_follow/package.dsv'
+[3.568s] INFO:colcon.colcon_core.shell:Creating package script '/home/bentoaz/f1tenth_experimental_ws/install/gap_follow/share/gap_follow/package.sh'
+[3.569s] INFO:colcon.colcon_core.shell:Creating package script '/home/bentoaz/f1tenth_experimental_ws/install/gap_follow/share/gap_follow/package.bash'
+[3.569s] INFO:colcon.colcon_core.shell:Creating package script '/home/bentoaz/f1tenth_experimental_ws/install/gap_follow/share/gap_follow/package.zsh'
+[3.569s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/bentoaz/f1tenth_experimental_ws/install/gap_follow/share/colcon-core/packages/gap_follow)
+[3.570s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(gap_follow)
+[3.570s] Level 1:colcon.colcon_core.environment:checking '/home/bentoaz/f1tenth_experimental_ws/install/gap_follow' for CMake module files
+[3.570s] Level 1:colcon.colcon_core.environment:checking '/home/bentoaz/f1tenth_experimental_ws/install/gap_follow' for CMake config files
+[3.570s] Level 1:colcon.colcon_core.shell:create_environment_hook('gap_follow', 'cmake_prefix_path')
+[3.570s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/bentoaz/f1tenth_experimental_ws/install/gap_follow/share/gap_follow/hook/cmake_prefix_path.ps1'
+[3.571s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/bentoaz/f1tenth_experimental_ws/install/gap_follow/share/gap_follow/hook/cmake_prefix_path.dsv'
+[3.571s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/bentoaz/f1tenth_experimental_ws/install/gap_follow/share/gap_follow/hook/cmake_prefix_path.sh'
+[3.571s] Level 1:colcon.colcon_core.environment:checking '/home/bentoaz/f1tenth_experimental_ws/install/gap_follow/lib'
+[3.571s] Level 1:colcon.colcon_core.environment:checking '/home/bentoaz/f1tenth_experimental_ws/install/gap_follow/bin'
+[3.571s] Level 1:colcon.colcon_core.environment:checking '/home/bentoaz/f1tenth_experimental_ws/install/gap_follow/lib/pkgconfig/gap_follow.pc'
+[3.571s] Level 1:colcon.colcon_core.environment:checking '/home/bentoaz/f1tenth_experimental_ws/install/gap_follow/lib/python3.10/site-packages'
+[3.572s] Level 1:colcon.colcon_core.environment:checking '/home/bentoaz/f1tenth_experimental_ws/install/gap_follow/bin'
+[3.572s] INFO:colcon.colcon_core.shell:Creating package script '/home/bentoaz/f1tenth_experimental_ws/install/gap_follow/share/gap_follow/package.ps1'
+[3.572s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/bentoaz/f1tenth_experimental_ws/install/gap_follow/share/gap_follow/package.dsv'
+[3.572s] INFO:colcon.colcon_core.shell:Creating package script '/home/bentoaz/f1tenth_experimental_ws/install/gap_follow/share/gap_follow/package.sh'
+[3.572s] INFO:colcon.colcon_core.shell:Creating package script '/home/bentoaz/f1tenth_experimental_ws/install/gap_follow/share/gap_follow/package.bash'
+[3.573s] INFO:colcon.colcon_core.shell:Creating package script '/home/bentoaz/f1tenth_experimental_ws/install/gap_follow/share/gap_follow/package.zsh'
+[3.573s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/bentoaz/f1tenth_experimental_ws/install/gap_follow/share/colcon-core/packages/gap_follow)
+[3.573s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[3.573s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[3.573s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[3.573s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[3.579s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[3.579s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[3.579s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[3.590s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[3.590s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/bentoaz/f1tenth_experimental_ws/install/local_setup.ps1'
+[3.591s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/bentoaz/f1tenth_experimental_ws/install/_local_setup_util_ps1.py'
+[3.591s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/bentoaz/f1tenth_experimental_ws/install/setup.ps1'
+[3.598s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/bentoaz/f1tenth_experimental_ws/install/local_setup.sh'
+[3.598s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/bentoaz/f1tenth_experimental_ws/install/_local_setup_util_sh.py'
+[3.599s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/bentoaz/f1tenth_experimental_ws/install/setup.sh'
+[3.605s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/bentoaz/f1tenth_experimental_ws/install/local_setup.bash'
+[3.606s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/bentoaz/f1tenth_experimental_ws/install/setup.bash'
+[3.612s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/bentoaz/f1tenth_experimental_ws/install/local_setup.zsh'
+[3.612s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/bentoaz/f1tenth_experimental_ws/install/setup.zsh'

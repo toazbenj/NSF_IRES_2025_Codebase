@@ -1,0 +1,44 @@
+[0.352s] Invoking command in '/home/bentoaz/f1tenth_experimental_ws/build/scan_matching': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/bentoaz/f1tenth_experimental_ws/install/stanley_avoidance:/home/bentoaz/f1tenth_experimental_ws/install/particle_filter:/home/bentoaz/f1tenth_experimental_ws/install/local_planner:/home/bentoaz/f1tenth_gym_ros/install/f1tenth_gym_ros:/home/bentoaz/autoware/install/autoware_carla_interface:/home/bentoaz/autoware/install/ros2agnocast:/home/bentoaz/autoware/install/autoware_adapi_visualizers:/opt/ros/humble /usr/bin/cmake --build /home/bentoaz/f1tenth_experimental_ws/build/scan_matching -- -j16 -l16
+[0.683s] [100%] Built target scanmatch_node
+[0.683s] [100%] Built target ament_cmake_python_symlink_scan_matching
+[0.683s] [100%] Built target ament_cmake_python_symlink_scan_matching_setup
+[0.991s] /usr/lib/python3/dist-packages/setuptools/dist.py:723: UserWarning: Usage of dash-separated 'script-dir' will not be supported in future versions. Please use the underscore name 'script_dir' instead
+[0.991s]   warnings.warn(
+[0.991s] /usr/lib/python3/dist-packages/setuptools/dist.py:723: UserWarning: Usage of dash-separated 'install-scripts' will not be supported in future versions. Please use the underscore name 'install_scripts' instead
+[0.991s]   warnings.warn(
+[0.995s] running egg_info
+[0.996s] writing scan_matching.egg-info/PKG-INFO
+[0.996s] writing dependency_links to scan_matching.egg-info/dependency_links.txt
+[0.996s] writing top-level names to scan_matching.egg-info/top_level.txt
+[0.997s] reading manifest file 'scan_matching.egg-info/SOURCES.txt'
+[0.998s] writing manifest file 'scan_matching.egg-info/SOURCES.txt'
+[1.040s] [100%] Built target ament_cmake_python_build_scan_matching_egg
+[1.197s] Invoked command in '/home/bentoaz/f1tenth_experimental_ws/build/scan_matching' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/bentoaz/f1tenth_experimental_ws/install/stanley_avoidance:/home/bentoaz/f1tenth_experimental_ws/install/particle_filter:/home/bentoaz/f1tenth_experimental_ws/install/local_planner:/home/bentoaz/f1tenth_gym_ros/install/f1tenth_gym_ros:/home/bentoaz/autoware/install/autoware_carla_interface:/home/bentoaz/autoware/install/ros2agnocast:/home/bentoaz/autoware/install/autoware_adapi_visualizers:/opt/ros/humble /usr/bin/cmake --build /home/bentoaz/f1tenth_experimental_ws/build/scan_matching -- -j16 -l16
+[1.198s] Invoking command in '/home/bentoaz/f1tenth_experimental_ws/build/scan_matching': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/bentoaz/f1tenth_experimental_ws/install/stanley_avoidance:/home/bentoaz/f1tenth_experimental_ws/install/particle_filter:/home/bentoaz/f1tenth_experimental_ws/install/local_planner:/home/bentoaz/f1tenth_gym_ros/install/f1tenth_gym_ros:/home/bentoaz/autoware/install/autoware_carla_interface:/home/bentoaz/autoware/install/ros2agnocast:/home/bentoaz/autoware/install/autoware_adapi_visualizers:/opt/ros/humble /usr/bin/cmake --install /home/bentoaz/f1tenth_experimental_ws/build/scan_matching
+[1.218s] -- Install configuration: ""
+[1.219s] -- Execute custom install script
+[1.219s] -- Up-to-date symlink: /home/bentoaz/f1tenth_experimental_ws/install/scan_matching/lib/scan_matching/scanmatch_node
+[1.219s] -- Up-to-date symlink: /home/bentoaz/f1tenth_experimental_ws/install/scan_matching/share/scan_matching/environment/pythonpath.sh
+[1.219s] -- Up-to-date symlink: /home/bentoaz/f1tenth_experimental_ws/install/scan_matching/share/scan_matching/environment/pythonpath.dsv
+[1.219s] -- Up-to-date symlink: /home/bentoaz/f1tenth_experimental_ws/install/scan_matching/local/lib/python3.10/dist-packages/scan_matching-0.0.0-py3.10.egg-info/PKG-INFO
+[1.220s] -- Up-to-date symlink: /home/bentoaz/f1tenth_experimental_ws/install/scan_matching/local/lib/python3.10/dist-packages/scan_matching-0.0.0-py3.10.egg-info/SOURCES.txt
+[1.220s] -- Up-to-date symlink: /home/bentoaz/f1tenth_experimental_ws/install/scan_matching/local/lib/python3.10/dist-packages/scan_matching-0.0.0-py3.10.egg-info/dependency_links.txt
+[1.220s] -- Up-to-date symlink: /home/bentoaz/f1tenth_experimental_ws/install/scan_matching/local/lib/python3.10/dist-packages/scan_matching-0.0.0-py3.10.egg-info/top_level.txt
+[1.220s] -- Up-to-date symlink: /home/bentoaz/f1tenth_experimental_ws/install/scan_matching/local/lib/python3.10/dist-packages/scan_matching/__init__.py
+[1.220s] -- Up-to-date symlink: /home/bentoaz/f1tenth_experimental_ws/install/scan_matching/share/ament_index/resource_index/package_run_dependencies/scan_matching
+[1.220s] -- Up-to-date symlink: /home/bentoaz/f1tenth_experimental_ws/install/scan_matching/share/ament_index/resource_index/parent_prefix_path/scan_matching
+[1.220s] -- Up-to-date symlink: /home/bentoaz/f1tenth_experimental_ws/install/scan_matching/share/scan_matching/environment/ament_prefix_path.sh
+[1.221s] -- Up-to-date symlink: /home/bentoaz/f1tenth_experimental_ws/install/scan_matching/share/scan_matching/environment/ament_prefix_path.dsv
+[1.221s] -- Up-to-date symlink: /home/bentoaz/f1tenth_experimental_ws/install/scan_matching/share/scan_matching/environment/path.sh
+[1.221s] -- Up-to-date symlink: /home/bentoaz/f1tenth_experimental_ws/install/scan_matching/share/scan_matching/environment/path.dsv
+[1.221s] -- Up-to-date symlink: /home/bentoaz/f1tenth_experimental_ws/install/scan_matching/share/scan_matching/local_setup.bash
+[1.221s] -- Up-to-date symlink: /home/bentoaz/f1tenth_experimental_ws/install/scan_matching/share/scan_matching/local_setup.sh
+[1.221s] -- Up-to-date symlink: /home/bentoaz/f1tenth_experimental_ws/install/scan_matching/share/scan_matching/local_setup.zsh
+[1.221s] -- Up-to-date symlink: /home/bentoaz/f1tenth_experimental_ws/install/scan_matching/share/scan_matching/local_setup.dsv
+[1.221s] -- Symlinking: /home/bentoaz/f1tenth_experimental_ws/install/scan_matching/share/scan_matching/package.dsv
+[1.242s] -- Up-to-date symlink: /home/bentoaz/f1tenth_experimental_ws/install/scan_matching/share/ament_index/resource_index/packages/scan_matching
+[1.243s] -- Up-to-date symlink: /home/bentoaz/f1tenth_experimental_ws/install/scan_matching/share/scan_matching/cmake/scan_matchingConfig.cmake
+[1.243s] -- Up-to-date symlink: /home/bentoaz/f1tenth_experimental_ws/install/scan_matching/share/scan_matching/cmake/scan_matchingConfig-version.cmake
+[1.243s] -- Up-to-date symlink: /home/bentoaz/f1tenth_experimental_ws/install/scan_matching/share/scan_matching/package.xml
+[1.290s] Listing '/home/bentoaz/f1tenth_experimental_ws/install/scan_matching/local/lib/python3.10/dist-packages/scan_matching'...
+[1.296s] Invoked command in '/home/bentoaz/f1tenth_experimental_ws/build/scan_matching' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/bentoaz/f1tenth_experimental_ws/install/stanley_avoidance:/home/bentoaz/f1tenth_experimental_ws/install/particle_filter:/home/bentoaz/f1tenth_experimental_ws/install/local_planner:/home/bentoaz/f1tenth_gym_ros/install/f1tenth_gym_ros:/home/bentoaz/autoware/install/autoware_carla_interface:/home/bentoaz/autoware/install/ros2agnocast:/home/bentoaz/autoware/install/autoware_adapi_visualizers:/opt/ros/humble /usr/bin/cmake --install /home/bentoaz/f1tenth_experimental_ws/build/scan_matching

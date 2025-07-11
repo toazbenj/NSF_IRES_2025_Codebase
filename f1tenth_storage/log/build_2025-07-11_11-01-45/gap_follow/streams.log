@@ -1,0 +1,74 @@
+[0.106s] Invoking command in '/home/bentoaz/f1tenth_experimental_ws/build/gap_follow': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/bentoaz/f1tenth_gym_ros/install/f1tenth_gym_ros:/home/bentoaz/autoware/install/autoware_carla_interface:/home/bentoaz/autoware/install/ros2agnocast:/home/bentoaz/autoware/install/autoware_adapi_visualizers:/opt/ros/humble /usr/bin/cmake /home/bentoaz/f1tenth_experimental_ws/src/gap_follow -DCMAKE_INSTALL_PREFIX=/home/bentoaz/f1tenth_experimental_ws/install/gap_follow
+[0.645s] -- The C compiler identification is GNU 11.4.0
+[0.645s] -- The CXX compiler identification is GNU 11.4.0
+[0.646s] -- Detecting C compiler ABI info
+[0.646s] -- Detecting C compiler ABI info - done
+[0.646s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.646s] -- Detecting C compile features
+[0.646s] -- Detecting C compile features - done
+[0.646s] -- Detecting CXX compiler ABI info
+[0.646s] -- Detecting CXX compiler ABI info - done
+[0.646s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.646s] -- Detecting CXX compile features
+[0.646s] -- Detecting CXX compile features - done
+[0.650s] -- Found ament_cmake: 1.3.11 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.962s] -- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+[1.582s] -- Found rclcpp: 16.0.12 (/opt/ros/humble/share/rclcpp/cmake)
+[1.995s] -- Found rosidl_generator_c: 3.1.6 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[2.062s] -- Found rosidl_adapter: 3.1.6 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[2.134s] -- Found rosidl_generator_cpp: 3.1.6 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[2.252s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[2.412s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[2.850s] -- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[2.937s] -- Found rmw_cyclonedds_cpp: 1.3.4 (/opt/ros/humble/share/rmw_cyclonedds_cpp/cmake)
+[3.213s] -- Using RMW implementation 'rmw_cyclonedds_cpp' as default
+[3.323s] -- Looking for pthread.h
+[3.481s] -- Looking for pthread.h - found
+[3.481s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+[3.649s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+[3.650s] -- Found Threads: TRUE  
+[3.814s] -- Found rclpy: 3.3.16 (/opt/ros/humble/share/rclpy/cmake)
+[3.834s] -- Found geometry_msgs: 4.9.0 (/opt/ros/humble/share/geometry_msgs/cmake)
+[3.861s] -- Found nav_msgs: 4.9.0 (/opt/ros/humble/share/nav_msgs/cmake)
+[3.890s] -- Found ackermann_msgs: 2.0.2 (/opt/ros/humble/share/ackermann_msgs/cmake)
+[3.916s] -- Found sensor_msgs: 4.9.0 (/opt/ros/humble/share/sensor_msgs/cmake)
+[4.279s] -- Found ament_lint_auto: 0.12.12 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[4.658s] -- Added test 'copyright' to check source files copyright and LICENSE
+[4.665s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[4.666s] -- Configured cppcheck include dirs: /home/bentoaz/f1tenth_experimental_ws/src/gap_follow/include
+[4.667s] -- Configured cppcheck exclude dirs and/or files: 
+[4.674s] -- Added test 'cpplint' to check C / C++ code against the Google style
+[4.674s] -- Configured cpplint exclude dirs and/or files: 
+[4.681s] -- Added test 'flake8' to check Python code syntax and style conventions
+[4.687s] -- Added test 'lint_cmake' to check CMake code style
+[4.693s] -- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257
+[4.700s] -- Added test 'uncrustify' to check C / C++ code style
+[4.700s] -- Configured uncrustify additional arguments: 
+[4.706s] -- Added test 'xmllint' to check XML markup files
+[4.719s] -- Configuring done
+[4.731s] -- Generating done
+[4.737s] -- Build files have been written to: /home/bentoaz/f1tenth_experimental_ws/build/gap_follow
+[4.752s] Invoked command in '/home/bentoaz/f1tenth_experimental_ws/build/gap_follow' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/bentoaz/f1tenth_gym_ros/install/f1tenth_gym_ros:/home/bentoaz/autoware/install/autoware_carla_interface:/home/bentoaz/autoware/install/ros2agnocast:/home/bentoaz/autoware/install/autoware_adapi_visualizers:/opt/ros/humble /usr/bin/cmake /home/bentoaz/f1tenth_experimental_ws/src/gap_follow -DCMAKE_INSTALL_PREFIX=/home/bentoaz/f1tenth_experimental_ws/install/gap_follow
+[4.752s] Invoking command in '/home/bentoaz/f1tenth_experimental_ws/build/gap_follow': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/bentoaz/f1tenth_gym_ros/install/f1tenth_gym_ros:/home/bentoaz/autoware/install/autoware_carla_interface:/home/bentoaz/autoware/install/ros2agnocast:/home/bentoaz/autoware/install/autoware_adapi_visualizers:/opt/ros/humble /usr/bin/cmake --build /home/bentoaz/f1tenth_experimental_ws/build/gap_follow -- -j16 -l16
+[4.986s] [ 50%] [32mBuilding CXX object CMakeFiles/reactive_node.dir/src/reactive_node.cpp.o[0m
+[5.063s] [ 50%] Built target ament_cmake_python_copy_gap_follow
+[5.083s] [ 50%] Built target ament_cmake_python_copy_gap_follow_setup
+[5.655s] /usr/lib/python3/dist-packages/setuptools/dist.py:723: UserWarning: Usage of dash-separated 'script-dir' will not be supported in future versions. Please use the underscore name 'script_dir' instead
+[5.656s]   warnings.warn(
+[5.656s] /usr/lib/python3/dist-packages/setuptools/dist.py:723: UserWarning: Usage of dash-separated 'install-scripts' will not be supported in future versions. Please use the underscore name 'install_scripts' instead
+[5.656s]   warnings.warn(
+[5.661s] running egg_info
+[5.663s] creating gap_follow.egg-info
+[5.664s] writing gap_follow.egg-info/PKG-INFO
+[5.664s] writing dependency_links to gap_follow.egg-info/dependency_links.txt
+[5.664s] writing top-level names to gap_follow.egg-info/top_level.txt
+[5.665s] writing manifest file 'gap_follow.egg-info/SOURCES.txt'
+[5.669s] reading manifest file 'gap_follow.egg-info/SOURCES.txt'
+[5.670s] writing manifest file 'gap_follow.egg-info/SOURCES.txt'
+[5.759s] [ 50%] Built target ament_cmake_python_build_gap_follow_egg
+[7.770s] [01m[K/home/bentoaz/f1tenth_experimental_ws/src/gap_follow/src/reactive_node.cpp:[m[K In member function ‘[01m[Kvoid ReactiveFollowGap::preprocess_lidar(sensor_msgs::msg::LaserScan_<std::allocator<void> >::ConstSharedPtr)[m[K’:
+[7.770s] [01m[K/home/bentoaz/f1tenth_experimental_ws/src/gap_follow/src/reactive_node.cpp:35:27:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Kstd::vector<float>::size_type[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wsign-compare-Wsign-compare]8;;[m[K]
+[7.770s]    35 |         for (int i = 0; [01;35m[Ki < scan_msg->ranges.size()[m[K; i++) {
+[7.770s]       |                         [01;35m[K~~^~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[13.752s] [100%] [32m[1mLinking CXX executable reactive_node[0m
+[14.103s] [100%] Built target reactive_node

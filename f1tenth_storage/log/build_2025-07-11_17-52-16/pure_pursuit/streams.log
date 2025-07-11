@@ -1,0 +1,232 @@
+[0.402s] Invoking command in '/home/bentoaz/f1tenth_experimental_ws/build/pure_pursuit': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/bentoaz/f1tenth_experimental_ws/install/stanley_avoidance:/home/bentoaz/f1tenth_experimental_ws/install/particle_filter:/home/bentoaz/f1tenth_experimental_ws/install/local_planner:/home/bentoaz/f1tenth_gym_ros/install/f1tenth_gym_ros:/home/bentoaz/autoware/install/autoware_carla_interface:/home/bentoaz/autoware/install/ros2agnocast:/home/bentoaz/autoware/install/autoware_adapi_visualizers:/opt/ros/humble /usr/bin/cmake --build /home/bentoaz/f1tenth_experimental_ws/build/pure_pursuit -- -j16 -l16
+[0.799s] [35m[1mConsolidate compiler generated dependencies of target pure_pursuit[0m
+[0.799s] [ 50%] Built target waypoint_visualizer
+[0.799s] [ 75%] [32mBuilding CXX object CMakeFiles/pure_pursuit.dir/src/pure_pursuit.cpp.o[0m
+[2.938s] [01m[K/home/bentoaz/f1tenth_experimental_ws/src/pure_pursuit/src/pure_pursuit.cpp:32:1:[m[K [01;31m[Kerror: [m[Kextra qualification ‘[01m[KPurePursuit::[m[K’ on member ‘[01m[KPurePursuit[m[K’ [[01;31m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-fpermissive-fpermissive]8;;[m[K]
+[2.938s]    32 | [01;31m[KPurePursuit[m[K::PurePursuit() : Node("pure_pursuit_node") {
+[2.938s]       | [01;31m[K^~~~~~~~~~~[m[K
+[2.938s] [01m[K/home/bentoaz/f1tenth_experimental_ws/src/pure_pursuit/src/pure_pursuit.cpp:32:1:[m[K [01;31m[Kerror: [m[K‘[01m[KPurePursuit::PurePursuit()[m[K’ cannot be overloaded with ‘[01m[KPurePursuit::PurePursuit()[m[K’
+[2.938s] In file included from [01m[K/home/bentoaz/f1tenth_experimental_ws/src/pure_pursuit/src/pure_pursuit.cpp:1[m[K:
+[2.938s] [01m[K/home/bentoaz/f1tenth_experimental_ws/src/pure_pursuit/include/pure_pursuit.hpp:42:5:[m[K [01;36m[Knote: [m[Kprevious declaration ‘[01m[KPurePursuit::PurePursuit()[m[K’
+[2.938s]    42 |     [01;36m[KPurePursuit[m[K();
+[2.939s]       |     [01;36m[K^~~~~~~~~~~[m[K
+[2.939s] [01m[K/home/bentoaz/f1tenth_experimental_ws/src/pure_pursuit/src/pure_pursuit.cpp:107:6:[m[K [01;31m[Kerror: [m[Kextra qualification ‘[01m[KPurePursuit::[m[K’ on member ‘[01m[Kpause_callback[m[K’ [[01;31m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-fpermissive-fpermissive]8;;[m[K]
+[2.939s]   107 | void [01;31m[KPurePursuit[m[K::pause_callback(std_msgs::msg::Bool::SharedPtr msg){
+[2.939s]       |      [01;31m[K^~~~~~~~~~~[m[K
+[2.939s] [01m[K/home/bentoaz/f1tenth_experimental_ws/src/pure_pursuit/src/pure_pursuit.cpp:107:6:[m[K [01;31m[Kerror: [m[K‘[01m[Kvoid PurePursuit::pause_callback(std_msgs::msg::Bool_<std::allocator<void> >::SharedPtr)[m[K’ cannot be overloaded with ‘[01m[Kvoid PurePursuit::pause_callback(std_msgs::msg::Bool_<std::allocator<void> >::SharedPtr)[m[K’
+[2.939s] In file included from [01m[K/home/bentoaz/f1tenth_experimental_ws/src/pure_pursuit/src/pure_pursuit.cpp:1[m[K:
+[2.939s] [01m[K/home/bentoaz/f1tenth_experimental_ws/src/pure_pursuit/include/pure_pursuit.hpp:141:10:[m[K [01;36m[Knote: [m[Kprevious declaration ‘[01m[Kvoid PurePursuit::pause_callback(std_msgs::msg::Bool_<std::allocator<void> >::SharedPtr)[m[K’
+[2.939s]   141 |     void [01;36m[Kpause_callback[m[K(std_msgs::msg::Bool::SharedPtr msg){
+[2.939s]       |          [01;36m[K^~~~~~~~~~~~~~[m[K
+[2.940s] [01m[K/home/bentoaz/f1tenth_experimental_ws/src/pure_pursuit/src/pure_pursuit.cpp:119:6:[m[K [01;31m[Kerror: [m[Kextra qualification ‘[01m[KPurePursuit::[m[K’ on member ‘[01m[Kselected_waypoints_callback[m[K’ [[01;31m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-fpermissive-fpermissive]8;;[m[K]
+[2.940s]   119 | void [01;31m[KPurePursuit[m[K::selected_waypoints_callback(const nav_msgs::msg::Path::SharedPtr path_msg){
+[2.940s]       |      [01;31m[K^~~~~~~~~~~[m[K
+[2.940s] [01m[K/home/bentoaz/f1tenth_experimental_ws/src/pure_pursuit/src/pure_pursuit.cpp:119:6:[m[K [01;31m[Kerror: [m[K‘[01m[Kvoid PurePursuit::selected_waypoints_callback(nav_msgs::msg::Path_<std::allocator<void> >::SharedPtr)[m[K’ cannot be overloaded with ‘[01m[Kvoid PurePursuit::selected_waypoints_callback(nav_msgs::msg::Path_<std::allocator<void> >::SharedPtr)[m[K’
+[2.940s] In file included from [01m[K/home/bentoaz/f1tenth_experimental_ws/src/pure_pursuit/src/pure_pursuit.cpp:1[m[K:
+[2.940s] [01m[K/home/bentoaz/f1tenth_experimental_ws/src/pure_pursuit/include/pure_pursuit.hpp:139:10:[m[K [01;36m[Knote: [m[Kprevious declaration ‘[01m[Kvoid PurePursuit::selected_waypoints_callback(nav_msgs::msg::Path_<std::allocator<void> >::SharedPtr)[m[K’
+[2.940s]   139 |     void [01;36m[Kselected_waypoints_callback[m[K(const nav_msgs::msg::Path::SharedPtr path_msg);
+[2.940s]       |          [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[2.940s] [01m[K/home/bentoaz/f1tenth_experimental_ws/src/pure_pursuit/src/pure_pursuit.cpp:166:6:[m[K [01;31m[Kerror: [m[Kextra qualification ‘[01m[KPurePursuit::[m[K’ on member ‘[01m[Kspeed_command_callback[m[K’ [[01;31m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-fpermissive-fpermissive]8;;[m[K]
+[2.940s]   166 | void [01;31m[KPurePursuit[m[K::speed_command_callback(const std_msgs::msg::Float64::ConstSharedPtr msg) {
+[2.940s]       |      [01;31m[K^~~~~~~~~~~[m[K
+[2.940s] [01m[K/home/bentoaz/f1tenth_experimental_ws/src/pure_pursuit/src/pure_pursuit.cpp:166:6:[m[K [01;31m[Kerror: [m[K‘[01m[Kvoid PurePursuit::speed_command_callback(std_msgs::msg::Float64_<std::allocator<void> >::ConstSharedPtr)[m[K’ cannot be overloaded with ‘[01m[Kvoid PurePursuit::speed_command_callback(std_msgs::msg::Float64_<std::allocator<void> >::ConstSharedPtr)[m[K’
+[2.940s] In file included from [01m[K/home/bentoaz/f1tenth_experimental_ws/src/pure_pursuit/src/pure_pursuit.cpp:1[m[K:
+[2.940s] [01m[K/home/bentoaz/f1tenth_experimental_ws/src/pure_pursuit/include/pure_pursuit.hpp:140:10:[m[K [01;36m[Knote: [m[Kprevious declaration ‘[01m[Kvoid PurePursuit::speed_command_callback(std_msgs::msg::Float64_<std::allocator<void> >::ConstSharedPtr)[m[K’
+[2.940s]   140 |     void [01;36m[Kspeed_command_callback[m[K(const std_msgs::msg::Float64::ConstSharedPtr msg);
+[2.940s]       |          [01;36m[K^~~~~~~~~~~~~~~~~~~~~~[m[K
+[2.941s] [01m[K/home/bentoaz/f1tenth_experimental_ws/src/pure_pursuit/src/pure_pursuit.cpp:177:8:[m[K [01;31m[Kerror: [m[Kextra qualification ‘[01m[KPurePursuit::[m[K’ on member ‘[01m[Kto_radians[m[K’ [[01;31m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-fpermissive-fpermissive]8;;[m[K]
+[2.941s]   177 | double [01;31m[KPurePursuit[m[K::to_radians(double degrees) {
+[2.941s]       |        [01;31m[K^~~~~~~~~~~[m[K
+[2.941s] [01m[K/home/bentoaz/f1tenth_experimental_ws/src/pure_pursuit/src/pure_pursuit.cpp:177:8:[m[K [01;31m[Kerror: [m[K‘[01m[Kdouble PurePursuit::to_radians(double)[m[K’ cannot be overloaded with ‘[01m[Kdouble PurePursuit::to_radians(double)[m[K’
+[2.941s] In file included from [01m[K/home/bentoaz/f1tenth_experimental_ws/src/pure_pursuit/src/pure_pursuit.cpp:1[m[K:
+[2.941s] [01m[K/home/bentoaz/f1tenth_experimental_ws/src/pure_pursuit/include/pure_pursuit.hpp:108:12:[m[K [01;36m[Knote: [m[Kprevious declaration ‘[01m[Kdouble PurePursuit::to_radians(double)[m[K’
+[2.941s]   108 |     double [01;36m[Kto_radians[m[K(double degrees);
+[2.941s]       |            [01;36m[K^~~~~~~~~~[m[K
+[2.941s] [01m[K/home/bentoaz/f1tenth_experimental_ws/src/pure_pursuit/src/pure_pursuit.cpp:182:8:[m[K [01;31m[Kerror: [m[Kextra qualification ‘[01m[KPurePursuit::[m[K’ on member ‘[01m[Kto_degrees[m[K’ [[01;31m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-fpermissive-fpermissive]8;;[m[K]
+[2.941s]   182 | double [01;31m[KPurePursuit[m[K::to_degrees(double radians) {
+[2.941s]       |        [01;31m[K^~~~~~~~~~~[m[K
+[2.941s] [01m[K/home/bentoaz/f1tenth_experimental_ws/src/pure_pursuit/src/pure_pursuit.cpp:182:8:[m[K [01;31m[Kerror: [m[K‘[01m[Kdouble PurePursuit::to_degrees(double)[m[K’ cannot be overloaded with ‘[01m[Kdouble PurePursuit::to_degrees(double)[m[K’
+[2.941s] In file included from [01m[K/home/bentoaz/f1tenth_experimental_ws/src/pure_pursuit/src/pure_pursuit.cpp:1[m[K:
+[2.941s] [01m[K/home/bentoaz/f1tenth_experimental_ws/src/pure_pursuit/include/pure_pursuit.hpp:109:12:[m[K [01;36m[Knote: [m[Kprevious declaration ‘[01m[Kdouble PurePursuit::to_degrees(double)[m[K’
+[2.941s]   109 |     double [01;36m[Kto_degrees[m[K(double radians);
+[2.941s]       |            [01;36m[K^~~~~~~~~~[m[K
+[2.941s] [01m[K/home/bentoaz/f1tenth_experimental_ws/src/pure_pursuit/src/pure_pursuit.cpp:187:8:[m[K [01;31m[Kerror: [m[Kextra qualification ‘[01m[KPurePursuit::[m[K’ on member ‘[01m[Kp2pdist[m[K’ [[01;31m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-fpermissive-fpermissive]8;;[m[K]
+[2.941s]   187 | double [01;31m[KPurePursuit[m[K::p2pdist(double &x1, double &x2, double &y1, double &y2) {
+[2.942s]       |        [01;31m[K^~~~~~~~~~~[m[K
+[2.942s] [01m[K/home/bentoaz/f1tenth_experimental_ws/src/pure_pursuit/src/pure_pursuit.cpp:187:8:[m[K [01;31m[Kerror: [m[K‘[01m[Kdouble PurePursuit::p2pdist(double&, double&, double&, double&)[m[K’ cannot be overloaded with ‘[01m[Kdouble PurePursuit::p2pdist(double&, double&, double&, double&)[m[K’
+[2.942s] In file included from [01m[K/home/bentoaz/f1tenth_experimental_ws/src/pure_pursuit/src/pure_pursuit.cpp:1[m[K:
+[2.942s] [01m[K/home/bentoaz/f1tenth_experimental_ws/src/pure_pursuit/include/pure_pursuit.hpp:110:12:[m[K [01;36m[Knote: [m[Kprevious declaration ‘[01m[Kdouble PurePursuit::p2pdist(double&, double&, double&, double&)[m[K’
+[2.942s]   110 |     double [01;36m[Kp2pdist[m[K(double &x1, double &x2, double &y1, double &y2);
+[2.942s]       |            [01;36m[K^~~~~~~[m[K
+[2.942s] [01m[K/home/bentoaz/f1tenth_experimental_ws/src/pure_pursuit/src/pure_pursuit.cpp:192:6:[m[K [01;31m[Kerror: [m[Kextra qualification ‘[01m[KPurePursuit::[m[K’ on member ‘[01m[Kload_waypoints[m[K’ [[01;31m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-fpermissive-fpermissive]8;;[m[K]
+[2.942s]   192 | void [01;31m[KPurePursuit[m[K::load_waypoints() {
+[2.942s]       |      [01;31m[K^~~~~~~~~~~[m[K
+[2.942s] [01m[K/home/bentoaz/f1tenth_experimental_ws/src/pure_pursuit/src/pure_pursuit.cpp:192:6:[m[K [01;31m[Kerror: [m[K‘[01m[Kvoid PurePursuit::load_waypoints()[m[K’ cannot be overloaded with ‘[01m[Kvoid PurePursuit::load_waypoints()[m[K’
+[2.942s] In file included from [01m[K/home/bentoaz/f1tenth_experimental_ws/src/pure_pursuit/src/pure_pursuit.cpp:1[m[K:
+[2.942s] [01m[K/home/bentoaz/f1tenth_experimental_ws/src/pure_pursuit/include/pure_pursuit.hpp:112:10:[m[K [01;36m[Knote: [m[Kprevious declaration ‘[01m[Kvoid PurePursuit::load_waypoints()[m[K’
+[2.942s]   112 |     void [01;36m[Kload_waypoints[m[K();
+[2.942s]       |          [01;36m[K^~~~~~~~~~~~~~[m[K
+[2.942s] [01m[K/home/bentoaz/f1tenth_experimental_ws/src/pure_pursuit/src/pure_pursuit.cpp:243:6:[m[K [01;31m[Kerror: [m[Kextra qualification ‘[01m[KPurePursuit::[m[K’ on member ‘[01m[Kvisualize_lookahead_point[m[K’ [[01;31m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-fpermissive-fpermissive]8;;[m[K]
+[2.942s]   243 | void [01;31m[KPurePursuit[m[K::visualize_lookahead_point(Eigen::Vector3d &point) {
+[2.942s]       |      [01;31m[K^~~~~~~~~~~[m[K
+[2.942s] [01m[K/home/bentoaz/f1tenth_experimental_ws/src/pure_pursuit/src/pure_pursuit.cpp:243:6:[m[K [01;31m[Kerror: [m[K‘[01m[Kvoid PurePursuit::visualize_lookahead_point(Eigen::Vector3d&)[m[K’ cannot be overloaded with ‘[01m[Kvoid PurePursuit::visualize_lookahead_point(Eigen::Vector3d&)[m[K’
+[2.943s] In file included from [01m[K/home/bentoaz/f1tenth_experimental_ws/src/pure_pursuit/src/pure_pursuit.cpp:1[m[K:
+[2.943s] [01m[K/home/bentoaz/f1tenth_experimental_ws/src/pure_pursuit/include/pure_pursuit.hpp:114:10:[m[K [01;36m[Knote: [m[Kprevious declaration ‘[01m[Kvoid PurePursuit::visualize_lookahead_point(Eigen::Vector3d&)[m[K’
+[2.943s]   114 |     void [01;36m[Kvisualize_lookahead_point[m[K(Eigen::Vector3d &point);
+[2.943s]       |          [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[2.943s] [01m[K/home/bentoaz/f1tenth_experimental_ws/src/pure_pursuit/src/pure_pursuit.cpp:261:6:[m[K [01;31m[Kerror: [m[Kextra qualification ‘[01m[KPurePursuit::[m[K’ on member ‘[01m[Kvisualize_current_point[m[K’ [[01;31m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-fpermissive-fpermissive]8;;[m[K]
+[2.943s]   261 | void [01;31m[KPurePursuit[m[K::visualize_current_point(Eigen::Vector3d &point) {
+[2.943s]       |      [01;31m[K^~~~~~~~~~~[m[K
+[2.943s] [01m[K/home/bentoaz/f1tenth_experimental_ws/src/pure_pursuit/src/pure_pursuit.cpp:261:6:[m[K [01;31m[Kerror: [m[K‘[01m[Kvoid PurePursuit::visualize_current_point(Eigen::Vector3d&)[m[K’ cannot be overloaded with ‘[01m[Kvoid PurePursuit::visualize_current_point(Eigen::Vector3d&)[m[K’
+[2.943s] In file included from [01m[K/home/bentoaz/f1tenth_experimental_ws/src/pure_pursuit/src/pure_pursuit.cpp:1[m[K:
+[2.943s] [01m[K/home/bentoaz/f1tenth_experimental_ws/src/pure_pursuit/include/pure_pursuit.hpp:115:10:[m[K [01;36m[Knote: [m[Kprevious declaration ‘[01m[Kvoid PurePursuit::visualize_current_point(Eigen::Vector3d&)[m[K’
+[2.943s]   115 |     void [01;36m[Kvisualize_current_point[m[K(Eigen::Vector3d &point);
+[2.943s]       |          [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~[m[K
+[2.943s] [01m[K/home/bentoaz/f1tenth_experimental_ws/src/pure_pursuit/src/pure_pursuit.cpp:279:6:[m[K [01;31m[Kerror: [m[Kextra qualification ‘[01m[KPurePursuit::[m[K’ on member ‘[01m[Kget_waypoint[m[K’ [[01;31m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-fpermissive-fpermissive]8;;[m[K]
+[2.943s]   279 | void [01;31m[KPurePursuit[m[K::get_waypoint() {
+[2.943s]       |      [01;31m[K^~~~~~~~~~~[m[K
+[2.943s] [01m[K/home/bentoaz/f1tenth_experimental_ws/src/pure_pursuit/src/pure_pursuit.cpp:279:6:[m[K [01;31m[Kerror: [m[K‘[01m[Kvoid PurePursuit::get_waypoint()[m[K’ cannot be overloaded with ‘[01m[Kvoid PurePursuit::get_waypoint()[m[K’
+[2.943s] In file included from [01m[K/home/bentoaz/f1tenth_experimental_ws/src/pure_pursuit/src/pure_pursuit.cpp:1[m[K:
+[2.943s] [01m[K/home/bentoaz/f1tenth_experimental_ws/src/pure_pursuit/include/pure_pursuit.hpp:117:10:[m[K [01;36m[Knote: [m[Kprevious declaration ‘[01m[Kvoid PurePursuit::get_waypoint()[m[K’
+[2.944s]   117 |     void [01;36m[Kget_waypoint[m[K();
+[2.944s]       |          [01;36m[K^~~~~~~~~~~~[m[K
+[2.944s] [01m[K/home/bentoaz/f1tenth_experimental_ws/src/pure_pursuit/src/pure_pursuit.cpp:342:6:[m[K [01;31m[Kerror: [m[Kextra qualification ‘[01m[KPurePursuit::[m[K’ on member ‘[01m[Kquat_to_rot[m[K’ [[01;31m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-fpermissive-fpermissive]8;;[m[K]
+[2.944s]   342 | void [01;31m[KPurePursuit[m[K::quat_to_rot(double q0, double q1, double q2, double q3) {
+[2.944s]       |      [01;31m[K^~~~~~~~~~~[m[K
+[2.944s] [01m[K/home/bentoaz/f1tenth_experimental_ws/src/pure_pursuit/src/pure_pursuit.cpp:342:6:[m[K [01;31m[Kerror: [m[K‘[01m[Kvoid PurePursuit::quat_to_rot(double, double, double, double)[m[K’ cannot be overloaded with ‘[01m[Kvoid PurePursuit::quat_to_rot(double, double, double, double)[m[K’
+[2.944s] In file included from [01m[K/home/bentoaz/f1tenth_experimental_ws/src/pure_pursuit/src/pure_pursuit.cpp:1[m[K:
+[2.944s] [01m[K/home/bentoaz/f1tenth_experimental_ws/src/pure_pursuit/include/pure_pursuit.hpp:119:10:[m[K [01;36m[Knote: [m[Kprevious declaration ‘[01m[Kvoid PurePursuit::quat_to_rot(double, double, double, double)[m[K’
+[2.944s]   119 |     void [01;36m[Kquat_to_rot[m[K(double q0, double q1, double q2, double q3);
+[2.944s]       |          [01;36m[K^~~~~~~~~~~[m[K
+[2.944s] [01m[K/home/bentoaz/f1tenth_experimental_ws/src/pure_pursuit/src/pure_pursuit.cpp:358:6:[m[K [01;31m[Kerror: [m[Kextra qualification ‘[01m[KPurePursuit::[m[K’ on member ‘[01m[Ktransformandinterp_waypoint[m[K’ [[01;31m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-fpermissive-fpermissive]8;;[m[K]
+[2.944s]   358 | void [01;31m[KPurePursuit[m[K::transformandinterp_waypoint() {  // pass old waypoint here
+[2.944s]       |      [01;31m[K^~~~~~~~~~~[m[K
+[2.944s] [01m[K/home/bentoaz/f1tenth_experimental_ws/src/pure_pursuit/src/pure_pursuit.cpp:358:6:[m[K [01;31m[Kerror: [m[K‘[01m[Kvoid PurePursuit::transformandinterp_waypoint()[m[K’ cannot be overloaded with ‘[01m[Kvoid PurePursuit::transformandinterp_waypoint()[m[K’
+[2.944s] In file included from [01m[K/home/bentoaz/f1tenth_experimental_ws/src/pure_pursuit/src/pure_pursuit.cpp:1[m[K:
+[2.944s] [01m[K/home/bentoaz/f1tenth_experimental_ws/src/pure_pursuit/include/pure_pursuit.hpp:121:10:[m[K [01;36m[Knote: [m[Kprevious declaration ‘[01m[Kvoid PurePursuit::transformandinterp_waypoint()[m[K’
+[2.944s]   121 |     void [01;36m[Ktransformandinterp_waypoint[m[K();
+[2.944s]       |          [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[2.945s] [01m[K/home/bentoaz/f1tenth_experimental_ws/src/pure_pursuit/src/pure_pursuit.cpp:383:8:[m[K [01;31m[Kerror: [m[Kextra qualification ‘[01m[KPurePursuit::[m[K’ on member ‘[01m[Kp_controller[m[K’ [[01;31m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-fpermissive-fpermissive]8;;[m[K]
+[2.945s]   383 | double [01;31m[KPurePursuit[m[K::p_controller() {
+[2.945s]       |        [01;31m[K^~~~~~~~~~~[m[K
+[2.945s] [01m[K/home/bentoaz/f1tenth_experimental_ws/src/pure_pursuit/src/pure_pursuit.cpp:383:8:[m[K [01;31m[Kerror: [m[K‘[01m[Kdouble PurePursuit::p_controller()[m[K’ cannot be overloaded with ‘[01m[Kdouble PurePursuit::p_controller()[m[K’
+[2.945s] In file included from [01m[K/home/bentoaz/f1tenth_experimental_ws/src/pure_pursuit/src/pure_pursuit.cpp:1[m[K:
+[2.945s] [01m[K/home/bentoaz/f1tenth_experimental_ws/src/pure_pursuit/include/pure_pursuit.hpp:123:12:[m[K [01;36m[Knote: [m[Kprevious declaration ‘[01m[Kdouble PurePursuit::p_controller()[m[K’
+[2.945s]   123 |     double [01;36m[Kp_controller[m[K();
+[2.945s]       |            [01;36m[K^~~~~~~~~~~~[m[K
+[2.945s] [01m[K/home/bentoaz/f1tenth_experimental_ws/src/pure_pursuit/src/pure_pursuit.cpp:391:8:[m[K [01;31m[Kerror: [m[Kextra qualification ‘[01m[KPurePursuit::[m[K’ on member ‘[01m[Kget_velocity[m[K’ [[01;31m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-fpermissive-fpermissive]8;;[m[K]
+[2.945s]   391 | double [01;31m[KPurePursuit[m[K::get_velocity(double steering_angle) {
+[2.945s]       |        [01;31m[K^~~~~~~~~~~[m[K
+[2.945s] [01m[K/home/bentoaz/f1tenth_experimental_ws/src/pure_pursuit/src/pure_pursuit.cpp:391:8:[m[K [01;31m[Kerror: [m[K‘[01m[Kdouble PurePursuit::get_velocity(double)[m[K’ cannot be overloaded with ‘[01m[Kdouble PurePursuit::get_velocity(double)[m[K’
+[2.945s] In file included from [01m[K/home/bentoaz/f1tenth_experimental_ws/src/pure_pursuit/src/pure_pursuit.cpp:1[m[K:
+[2.945s] [01m[K/home/bentoaz/f1tenth_experimental_ws/src/pure_pursuit/include/pure_pursuit.hpp:125:12:[m[K [01;36m[Knote: [m[Kprevious declaration ‘[01m[Kdouble PurePursuit::get_velocity(double)[m[K’
+[2.945s]   125 |     double [01;36m[Kget_velocity[m[K(double steering_angle);
+[2.945s]       |            [01;36m[K^~~~~~~~~~~~[m[K
+[2.945s] [01m[K/home/bentoaz/f1tenth_experimental_ws/src/pure_pursuit/src/pure_pursuit.cpp:409:6:[m[K [01;31m[Kerror: [m[Kextra qualification ‘[01m[KPurePursuit::[m[K’ on member ‘[01m[Kpublish_message[m[K’ [[01;31m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-fpermissive-fpermissive]8;;[m[K]
+[2.946s]   409 | void [01;31m[KPurePursuit[m[K::publish_message(double steering_angle) {
+[2.946s]       |      [01;31m[K^~~~~~~~~~~[m[K
+[2.946s] [01m[K/home/bentoaz/f1tenth_experimental_ws/src/pure_pursuit/src/pure_pursuit.cpp:409:6:[m[K [01;31m[Kerror: [m[K‘[01m[Kvoid PurePursuit::publish_message(double)[m[K’ cannot be overloaded with ‘[01m[Kvoid PurePursuit::publish_message(double)[m[K’
+[2.946s] In file included from [01m[K/home/bentoaz/f1tenth_experimental_ws/src/pure_pursuit/src/pure_pursuit.cpp:1[m[K:
+[2.946s] [01m[K/home/bentoaz/f1tenth_experimental_ws/src/pure_pursuit/include/pure_pursuit.hpp:127:10:[m[K [01;36m[Knote: [m[Kprevious declaration ‘[01m[Kvoid PurePursuit::publish_message(double)[m[K’
+[2.946s]   127 |     void [01;36m[Kpublish_message[m[K(double steering_angle);
+[2.946s]       |          [01;36m[K^~~~~~~~~~~~~~~[m[K
+[2.946s] [01m[K/home/bentoaz/f1tenth_experimental_ws/src/pure_pursuit/src/pure_pursuit.cpp:424:6:[m[K [01;31m[Kerror: [m[Kextra qualification ‘[01m[KPurePursuit::[m[K’ on member ‘[01m[Kodom_callback[m[K’ [[01;31m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-fpermissive-fpermissive]8;;[m[K]
+[2.946s]   424 | void [01;31m[KPurePursuit[m[K::odom_callback(const nav_msgs::msg::Odometry::ConstSharedPtr odom_submsgObj) {
+[2.946s]       |      [01;31m[K^~~~~~~~~~~[m[K
+[2.946s] [01m[K/home/bentoaz/f1tenth_experimental_ws/src/pure_pursuit/src/pure_pursuit.cpp:424:6:[m[K [01;31m[Kerror: [m[K‘[01m[Kvoid PurePursuit::odom_callback(nav_msgs::msg::Odometry_<std::allocator<void> >::ConstSharedPtr)[m[K’ cannot be overloaded with ‘[01m[Kvoid PurePursuit::odom_callback(nav_msgs::msg::Odometry_<std::allocator<void> >::ConstSharedPtr)[m[K’
+[2.946s] In file included from [01m[K/home/bentoaz/f1tenth_experimental_ws/src/pure_pursuit/src/pure_pursuit.cpp:1[m[K:
+[2.946s] [01m[K/home/bentoaz/f1tenth_experimental_ws/src/pure_pursuit/include/pure_pursuit.hpp:129:10:[m[K [01;36m[Knote: [m[Kprevious declaration ‘[01m[Kvoid PurePursuit::odom_callback(nav_msgs::msg::Odometry_<std::allocator<void> >::ConstSharedPtr)[m[K’
+[2.946s]   129 |     void [01;36m[Kodom_callback[m[K(const nav_msgs::msg::Odometry::ConstSharedPtr odom_submsgObj);
+[2.946s]       |          [01;36m[K^~~~~~~~~~~~~[m[K
+[2.946s] [01m[K/home/bentoaz/f1tenth_experimental_ws/src/pure_pursuit/src/pure_pursuit.cpp:445:6:[m[K [01;31m[Kerror: [m[Kextra qualification ‘[01m[KPurePursuit::[m[K’ on member ‘[01m[Ktimer_callback[m[K’ [[01;31m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-fpermissive-fpermissive]8;;[m[K]
+[2.946s]   445 | void [01;31m[KPurePursuit[m[K::timer_callback() {
+[2.946s]       |      [01;31m[K^~~~~~~~~~~[m[K
+[2.947s] [01m[K/home/bentoaz/f1tenth_experimental_ws/src/pure_pursuit/src/pure_pursuit.cpp:445:6:[m[K [01;31m[Kerror: [m[K‘[01m[Kvoid PurePursuit::timer_callback()[m[K’ cannot be overloaded with ‘[01m[Kvoid PurePursuit::timer_callback()[m[K’
+[2.947s] In file included from [01m[K/home/bentoaz/f1tenth_experimental_ws/src/pure_pursuit/src/pure_pursuit.cpp:1[m[K:
+[2.947s] [01m[K/home/bentoaz/f1tenth_experimental_ws/src/pure_pursuit/include/pure_pursuit.hpp:131:10:[m[K [01;36m[Knote: [m[Kprevious declaration ‘[01m[Kvoid PurePursuit::timer_callback()[m[K’
+[2.947s]   131 |     void [01;36m[Ktimer_callback[m[K();
+[2.947s]       |          [01;36m[K^~~~~~~~~~~~~~[m[K
+[2.947s] [01m[K/home/bentoaz/f1tenth_experimental_ws/src/pure_pursuit/src/pure_pursuit.cpp:463:2:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K}[m[K’ at end of input
+[2.947s]   463 | }
+[2.947s]       |  [01;31m[K^[m[K
+[2.947s] In file included from [01m[K/home/bentoaz/f1tenth_experimental_ws/src/pure_pursuit/src/pure_pursuit.cpp:1[m[K:
+[2.947s] [01m[K/home/bentoaz/f1tenth_experimental_ws/src/pure_pursuit/include/pure_pursuit.hpp:40:41:[m[K [01;36m[Knote: [m[Kto match this ‘[01m[K{[m[K’
+[2.947s]    40 | class PurePursuit : public rclcpp::Node [01;36m[K{[m[K
+[2.947s]       |                                         [01;36m[K^[m[K
+[2.947s] In file included from [01m[K/home/bentoaz/f1tenth_experimental_ws/src/pure_pursuit/src/pure_pursuit.cpp:1[m[K:
+[2.947s] [01m[K/home/bentoaz/f1tenth_experimental_ws/src/pure_pursuit/include/pure_pursuit.hpp:[m[K In member function ‘[01m[Kvoid PurePursuit::pause_callback(std_msgs::msg::Bool_<std::allocator<void> >::SharedPtr)[m[K’:
+[2.947s] [01m[K/home/bentoaz/f1tenth_experimental_ws/src/pure_pursuit/include/pure_pursuit.hpp:141:56:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kmsg[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[2.947s]   141 |     void pause_callback([01;35m[Kstd_msgs::msg::Bool::SharedPtr msg[m[K){
+[2.947s]       |                         [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~[m[K
+[2.957s] [01m[K/home/bentoaz/f1tenth_experimental_ws/src/pure_pursuit/src/pure_pursuit.cpp:[m[K In constructor ‘[01m[KPurePursuit::PurePursuit()[m[K’:
+[2.957s] [01m[K/home/bentoaz/f1tenth_experimental_ws/src/pure_pursuit/src/pure_pursuit.cpp:97:6:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K)[m[K’ before ‘[01m[K;[m[K’ token
+[2.957s]    97 |     )[01;31m[K;[m[K
+[2.958s]       |      [01;31m[K^[m[K
+[2.958s] [01m[K/home/bentoaz/f1tenth_experimental_ws/src/pure_pursuit/src/pure_pursuit.cpp:94:64:[m[K [01;36m[Knote: [m[Kto match this ‘[01m[K([m[K’
+[2.958s]    94 |     pause_sub_ = this->create_subscription<std_msgs::msg::Bool>[01;36m[K([m[K
+[2.958s]       |                                                                [01;36m[K^[m[K
+[2.962s] In file included from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/logging.hpp:24[m[K,
+[2.962s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/client.hpp:40[m[K,
+[2.962s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:24[m[K,
+[2.963s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:20[m[K,
+[2.963s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+[2.963s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+[2.963s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+[2.963s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+[2.963s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+[2.963s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+[2.963s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+[2.963s]                  from [01m[K/opt/ros/humble/include/tf2_ros/tf2_ros/buffer_interface.h:48[m[K,
+[2.963s]                  from [01m[K/opt/ros/humble/include/tf2_ros/tf2_ros/buffer.h:42[m[K,
+[2.963s]                  from [01m[K/home/bentoaz/f1tenth_experimental_ws/src/pure_pursuit/include/pure_pursuit.hpp:6[m[K,
+[2.963s]                  from [01m[K/home/bentoaz/f1tenth_experimental_ws/src/pure_pursuit/src/pure_pursuit.cpp:1[m[K:
+[2.963s] [01m[K/home/bentoaz/f1tenth_experimental_ws/src/pure_pursuit/src/pure_pursuit.cpp:[m[K In member function ‘[01m[Kvoid PurePursuit::selected_waypoints_callback(nav_msgs::msg::Path_<std::allocator<void> >::SharedPtr)[m[K’:
+[2.963s] [01m[K/home/bentoaz/f1tenth_experimental_ws/src/pure_pursuit/src/pure_pursuit.cpp:152:37:[m[K [01;35m[Kwarning: [m[Kformat ‘[01m[K%zu[m[K’ expects argument of type ‘[01m[Ksize_t[m[K’, but argument 5 has type ‘[01m[Kint[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wformat=-Wformat=]8;;[m[K]
+[2.963s]   152 |     RCLCPP_INFO(this->get_logger(), [01;35m[K"Finished loading %zu waypoints from Path message"[m[K, [32m[Knum_waypoints[m[K);
+[2.963s]       |                                     [01;35m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K  [32m[K~~~~~~~~~~~~~[m[K
+[2.963s]       |                                                                                         [32m[K|[m[K
+[2.963s]       |                                                                                         [32m[Kint[m[K
+[2.963s] [01m[K/home/bentoaz/f1tenth_experimental_ws/src/pure_pursuit/src/pure_pursuit.cpp:152:57:[m[K [01;36m[Knote: [m[Kformat string is defined here
+[2.964s]   152 |     RCLCPP_INFO(this->get_logger(), "Finished loading [01;36m[K%zu[m[K waypoints from Path message", num_waypoints);
+[2.964s]       |                                                       [01;36m[K~~^[m[K
+[2.964s]       |                                                         [01;36m[K|[m[K
+[2.964s]       |                                                         [01;36m[Klong unsigned int[m[K
+[2.964s]       |                                                       [32m[K%u[m[K
+[2.964s] [01m[K/home/bentoaz/f1tenth_experimental_ws/src/pure_pursuit/src/pure_pursuit.cpp:157:30:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Ksize_t[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} and ‘[01m[Kint[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wsign-compare-Wsign-compare]8;;[m[K]
+[2.964s]   157 |         for (size_t i = 0; [01;35m[Ki < num_waypoints - 1[m[K; i++) {
+[2.964s]       |                            [01;35m[K~~^~~~~~~~~~~~~~~~~~~[m[K
+[2.965s] In file included from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/logging.hpp:24[m[K,
+[2.965s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/client.hpp:40[m[K,
+[2.965s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:24[m[K,
+[2.965s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:20[m[K,
+[2.965s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+[2.965s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+[2.965s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+[2.965s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+[2.965s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+[2.965s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+[2.965s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+[2.965s]                  from [01m[K/opt/ros/humble/include/tf2_ros/tf2_ros/buffer_interface.h:48[m[K,
+[2.965s]                  from [01m[K/opt/ros/humble/include/tf2_ros/tf2_ros/buffer.h:42[m[K,
+[2.965s]                  from [01m[K/home/bentoaz/f1tenth_experimental_ws/src/pure_pursuit/include/pure_pursuit.hpp:6[m[K,
+[2.965s]                  from [01m[K/home/bentoaz/f1tenth_experimental_ws/src/pure_pursuit/src/pure_pursuit.cpp:1[m[K:
+[2.966s] [01m[K/home/bentoaz/f1tenth_experimental_ws/src/pure_pursuit/src/pure_pursuit.cpp:[m[K In member function ‘[01m[Kvoid PurePursuit::load_waypoints()[m[K’:
+[2.966s] [01m[K/home/bentoaz/f1tenth_experimental_ws/src/pure_pursuit/src/pure_pursuit.cpp:198:42:[m[K [01;35m[Kwarning: [m[Ktoo many arguments for format [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wformat-extra-args-Wformat-extra-args]8;;[m[K]
+[2.966s]   198 |         RCLCPP_ERROR(this->get_logger(), [01;35m[K"Cannot Open CSV File: "[m[K, waypoints_path.c_str());
+[2.966s]       |                                          [01;35m[K^~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[2.966s] [01m[K/home/bentoaz/f1tenth_experimental_ws/src/pure_pursuit/src/pure_pursuit.cpp:228:37:[m[K [01;35m[Kwarning: [m[Kformat ‘[01m[K%s[m[K’ expects argument of type ‘[01m[Kchar*[m[K’, but argument 6 has type ‘[01m[Kstd::string[m[K’ {aka ‘[01m[Kstd::__cxx11::basic_string<char>[m[K’} [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wformat=-Wformat=]8;;[m[K]
+[2.966s]   228 |     RCLCPP_INFO(this->get_logger(), [01;35m[K"Finished loading %d waypoints from %s"[m[K, num_waypoints, waypoints_path);
+[2.966s]       |                                     [01;35m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[2.966s] [01m[K/home/bentoaz/f1tenth_experimental_ws/src/pure_pursuit/src/pure_pursuit.cpp:228:74:[m[K [01;36m[Knote: [m[Kformat string is defined here
+[2.966s]   228 |     RCLCPP_INFO(this->get_logger(), "Finished loading %d waypoints from [01;36m[K%s[m[K", num_waypoints, waypoints_path);
+[2.966s]       |                                                                         [01;36m[K~^[m[K
+[2.966s]       |                                                                          [01;36m[K|[m[K
+[2.966s]       |                                                                          [01;36m[Kchar*[m[K
+[2.983s] [01m[K/home/bentoaz/f1tenth_experimental_ws/src/pure_pursuit/src/pure_pursuit.cpp:[m[K At global scope:
+[2.983s] [01m[K/home/bentoaz/f1tenth_experimental_ws/src/pure_pursuit/src/pure_pursuit.cpp:463:2:[m[K [01;31m[Kerror: [m[Kexpected unqualified-id at end of input
+[2.983s]   463 | }
+[2.983s]       |  [01;31m[K^[m[K
+[5.185s] gmake[2]: *** [CMakeFiles/pure_pursuit.dir/build.make:76: CMakeFiles/pure_pursuit.dir/src/pure_pursuit.cpp.o] Error 1
+[5.185s] gmake[1]: *** [CMakeFiles/Makefile2:139: CMakeFiles/pure_pursuit.dir/all] Error 2
+[5.185s] gmake: *** [Makefile:146: all] Error 2
+[5.187s] Invoked command in '/home/bentoaz/f1tenth_experimental_ws/build/pure_pursuit' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/bentoaz/f1tenth_experimental_ws/install/stanley_avoidance:/home/bentoaz/f1tenth_experimental_ws/install/particle_filter:/home/bentoaz/f1tenth_experimental_ws/install/local_planner:/home/bentoaz/f1tenth_gym_ros/install/f1tenth_gym_ros:/home/bentoaz/autoware/install/autoware_carla_interface:/home/bentoaz/autoware/install/ros2agnocast:/home/bentoaz/autoware/install/autoware_adapi_visualizers:/opt/ros/humble /usr/bin/cmake --build /home/bentoaz/f1tenth_experimental_ws/build/pure_pursuit -- -j16 -l16

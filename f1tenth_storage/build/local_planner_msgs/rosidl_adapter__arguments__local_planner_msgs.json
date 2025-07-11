@@ -1,0 +1,7 @@
+{
+  "package_name": "local_planner_msgs",
+  "non_idl_tuples": [
+    "/home/bentoaz/f1tenth_experimental_ws/src/local_planner_msgs:msg/TrajectoryList.msg",
+    "/home/bentoaz/f1tenth_experimental_ws/src/local_planner_msgs:msg/Trajectory.msg"
+  ]
+}

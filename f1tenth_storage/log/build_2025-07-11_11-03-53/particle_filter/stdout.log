@@ -1,0 +1,17 @@
+running develop
+running egg_info
+creating particle_filter.egg-info
+writing particle_filter.egg-info/PKG-INFO
+writing dependency_links to particle_filter.egg-info/dependency_links.txt
+writing entry points to particle_filter.egg-info/entry_points.txt
+writing requirements to particle_filter.egg-info/requires.txt
+writing top-level names to particle_filter.egg-info/top_level.txt
+writing manifest file 'particle_filter.egg-info/SOURCES.txt'
+reading manifest file 'particle_filter.egg-info/SOURCES.txt'
+writing manifest file 'particle_filter.egg-info/SOURCES.txt'
+running build_ext
+Creating /home/bentoaz/f1tenth_experimental_ws/install/particle_filter/lib/python3.10/site-packages/particle-filter.egg-link (link to .)
+Installing particle_filter script to /home/bentoaz/f1tenth_experimental_ws/install/particle_filter/lib/particle_filter
+
+Installed /home/bentoaz/f1tenth_experimental_ws/build/particle_filter
+running symlink_data

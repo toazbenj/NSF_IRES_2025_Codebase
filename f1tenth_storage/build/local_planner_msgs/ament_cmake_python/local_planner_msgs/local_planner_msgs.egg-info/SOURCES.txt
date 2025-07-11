@@ -1,0 +1,9 @@
+setup.py
+local_planner_msgs/__init__.py
+local_planner_msgs.egg-info/PKG-INFO
+local_planner_msgs.egg-info/SOURCES.txt
+local_planner_msgs.egg-info/dependency_links.txt
+local_planner_msgs.egg-info/top_level.txt
+local_planner_msgs/msg/__init__.py
+local_planner_msgs/msg/_trajectory.py
+local_planner_msgs/msg/_trajectory_list.py

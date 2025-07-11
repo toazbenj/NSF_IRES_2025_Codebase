@@ -1,0 +1,26 @@
+[0.959s] Invoking command in '/home/bentoaz/f1tenth_experimental_ws/build/stanley_avoidance': PYTHONPATH=/home/bentoaz/f1tenth_experimental_ws/build/stanley_avoidance/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/bentoaz/f1tenth_experimental_ws/install/stanley_avoidance/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/bentoaz/f1tenth_experimental_ws/build/stanley_avoidance/build --no-deps symlink_data --force
+[1.188s] /usr/lib/python3/dist-packages/setuptools/dist.py:723: UserWarning: Usage of dash-separated 'script-dir' will not be supported in future versions. Please use the underscore name 'script_dir' instead
+[1.189s]   warnings.warn(
+[1.213s] running develop
+[1.469s] running egg_info
+[1.470s] writing stanley_avoidance.egg-info/PKG-INFO
+[1.470s] writing dependency_links to stanley_avoidance.egg-info/dependency_links.txt
+[1.470s] writing entry points to stanley_avoidance.egg-info/entry_points.txt
+[1.470s] writing requirements to stanley_avoidance.egg-info/requires.txt
+[1.470s] writing top-level names to stanley_avoidance.egg-info/top_level.txt
+[1.471s] reading manifest file 'stanley_avoidance.egg-info/SOURCES.txt'
+[1.472s] writing manifest file 'stanley_avoidance.egg-info/SOURCES.txt'
+[1.502s] running build_ext
+[1.502s] Creating /home/bentoaz/f1tenth_experimental_ws/install/stanley_avoidance/lib/python3.10/site-packages/stanley-avoidance.egg-link (link to .)
+[1.502s] Installing stanley_avoidance script to /home/bentoaz/f1tenth_experimental_ws/install/stanley_avoidance/lib/stanley_avoidance
+[1.503s] 
+[1.503s] Installed /home/bentoaz/f1tenth_experimental_ws/build/stanley_avoidance
+[1.503s] running symlink_data
+[1.503s] symbolically linking /home/bentoaz/f1tenth_experimental_ws/build/stanley_avoidance/resource/stanley_avoidance -> /home/bentoaz/f1tenth_experimental_ws/install/stanley_avoidance/share/ament_index/resource_index/packages
+[1.503s] symbolically linking /home/bentoaz/f1tenth_experimental_ws/build/stanley_avoidance/package.xml -> /home/bentoaz/f1tenth_experimental_ws/install/stanley_avoidance/share/stanley_avoidance
+[1.503s] symbolically linking /home/bentoaz/f1tenth_experimental_ws/build/stanley_avoidance/launch/sim_stanley_avoidance_launch.py -> /home/bentoaz/f1tenth_experimental_ws/install/stanley_avoidance/share/stanley_avoidance/launch
+[1.503s] symbolically linking /home/bentoaz/f1tenth_experimental_ws/build/stanley_avoidance/launch/stanley_avoidance_launch.py -> /home/bentoaz/f1tenth_experimental_ws/install/stanley_avoidance/share/stanley_avoidance/launch
+[1.503s] symbolically linking /home/bentoaz/f1tenth_experimental_ws/build/stanley_avoidance/launch/sim_multi_agent_stanley_avoidance_launch.py -> /home/bentoaz/f1tenth_experimental_ws/install/stanley_avoidance/share/stanley_avoidance/launch
+[1.503s] symbolically linking /home/bentoaz/f1tenth_experimental_ws/build/stanley_avoidance/launch/stanley_avoidance.rviz -> /home/bentoaz/f1tenth_experimental_ws/install/stanley_avoidance/share/stanley_avoidance/launch
+[1.503s] symbolically linking /home/bentoaz/f1tenth_experimental_ws/build/stanley_avoidance/config/sim_config.yaml -> /home/bentoaz/f1tenth_experimental_ws/install/stanley_avoidance/share/stanley_avoidance/config
+[1.503s] symbolically linking /home/bentoaz/f1tenth_experimental_ws/build/stanley_avoidance/config/config.yaml -> /home/bentoaz/f1tenth_experimental_ws/install/stanley_avoidance/share/stanley_avoidance/config

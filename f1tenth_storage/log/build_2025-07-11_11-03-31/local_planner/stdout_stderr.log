@@ -1,0 +1,51 @@
+running egg_info
+creating ../../build/local_planner/local_planner.egg-info
+writing ../../build/local_planner/local_planner.egg-info/PKG-INFO
+writing dependency_links to ../../build/local_planner/local_planner.egg-info/dependency_links.txt
+writing entry points to ../../build/local_planner/local_planner.egg-info/entry_points.txt
+writing requirements to ../../build/local_planner/local_planner.egg-info/requires.txt
+writing top-level names to ../../build/local_planner/local_planner.egg-info/top_level.txt
+writing manifest file '../../build/local_planner/local_planner.egg-info/SOURCES.txt'
+reading manifest file '../../build/local_planner/local_planner.egg-info/SOURCES.txt'
+writing manifest file '../../build/local_planner/local_planner.egg-info/SOURCES.txt'
+running build
+running build_py
+creating /home/bentoaz/f1tenth_experimental_ws/build/local_planner/build
+creating /home/bentoaz/f1tenth_experimental_ws/build/local_planner/build/lib
+creating /home/bentoaz/f1tenth_experimental_ws/build/local_planner/build/lib/local_planner
+copying local_planner/__init__.py -> /home/bentoaz/f1tenth_experimental_ws/build/local_planner/build/lib/local_planner
+copying local_planner/traj_server.py -> /home/bentoaz/f1tenth_experimental_ws/build/local_planner/build/lib/local_planner
+copying local_planner/constants.py -> /home/bentoaz/f1tenth_experimental_ws/build/local_planner/build/lib/local_planner
+copying local_planner/traj_selecter.py -> /home/bentoaz/f1tenth_experimental_ws/build/local_planner/build/lib/local_planner
+copying local_planner/cost_utils.py -> /home/bentoaz/f1tenth_experimental_ws/build/local_planner/build/lib/local_planner
+copying local_planner/visualizer.py -> /home/bentoaz/f1tenth_experimental_ws/build/local_planner/build/lib/local_planner
+running install
+running install_lib
+creating /home/bentoaz/f1tenth_experimental_ws/install/local_planner/lib/python3.10/site-packages/local_planner
+copying /home/bentoaz/f1tenth_experimental_ws/build/local_planner/build/lib/local_planner/__init__.py -> /home/bentoaz/f1tenth_experimental_ws/install/local_planner/lib/python3.10/site-packages/local_planner
+copying /home/bentoaz/f1tenth_experimental_ws/build/local_planner/build/lib/local_planner/traj_server.py -> /home/bentoaz/f1tenth_experimental_ws/install/local_planner/lib/python3.10/site-packages/local_planner
+copying /home/bentoaz/f1tenth_experimental_ws/build/local_planner/build/lib/local_planner/constants.py -> /home/bentoaz/f1tenth_experimental_ws/install/local_planner/lib/python3.10/site-packages/local_planner
+copying /home/bentoaz/f1tenth_experimental_ws/build/local_planner/build/lib/local_planner/traj_selecter.py -> /home/bentoaz/f1tenth_experimental_ws/install/local_planner/lib/python3.10/site-packages/local_planner
+copying /home/bentoaz/f1tenth_experimental_ws/build/local_planner/build/lib/local_planner/cost_utils.py -> /home/bentoaz/f1tenth_experimental_ws/install/local_planner/lib/python3.10/site-packages/local_planner
+copying /home/bentoaz/f1tenth_experimental_ws/build/local_planner/build/lib/local_planner/visualizer.py -> /home/bentoaz/f1tenth_experimental_ws/install/local_planner/lib/python3.10/site-packages/local_planner
+byte-compiling /home/bentoaz/f1tenth_experimental_ws/install/local_planner/lib/python3.10/site-packages/local_planner/__init__.py to __init__.cpython-310.pyc
+byte-compiling /home/bentoaz/f1tenth_experimental_ws/install/local_planner/lib/python3.10/site-packages/local_planner/traj_server.py to traj_server.cpython-310.pyc
+byte-compiling /home/bentoaz/f1tenth_experimental_ws/install/local_planner/lib/python3.10/site-packages/local_planner/constants.py to constants.cpython-310.pyc
+byte-compiling /home/bentoaz/f1tenth_experimental_ws/install/local_planner/lib/python3.10/site-packages/local_planner/traj_selecter.py to traj_selecter.cpython-310.pyc
+byte-compiling /home/bentoaz/f1tenth_experimental_ws/install/local_planner/lib/python3.10/site-packages/local_planner/cost_utils.py to cost_utils.cpython-310.pyc
+byte-compiling /home/bentoaz/f1tenth_experimental_ws/install/local_planner/lib/python3.10/site-packages/local_planner/visualizer.py to visualizer.cpython-310.pyc
+running install_data
+creating /home/bentoaz/f1tenth_experimental_ws/install/local_planner/share/ament_index
+creating /home/bentoaz/f1tenth_experimental_ws/install/local_planner/share/ament_index/resource_index
+creating /home/bentoaz/f1tenth_experimental_ws/install/local_planner/share/ament_index/resource_index/packages
+copying resource/local_planner -> /home/bentoaz/f1tenth_experimental_ws/install/local_planner/share/ament_index/resource_index/packages
+copying package.xml -> /home/bentoaz/f1tenth_experimental_ws/install/local_planner/share/local_planner
+creating /home/bentoaz/f1tenth_experimental_ws/install/local_planner/share/local_planner/launch
+copying launch/local_planner_launch.py -> /home/bentoaz/f1tenth_experimental_ws/install/local_planner/share/local_planner/launch
+running install_egg_info
+Copying ../../build/local_planner/local_planner.egg-info to /home/bentoaz/f1tenth_experimental_ws/install/local_planner/lib/python3.10/site-packages/local_planner-0.0.0-py3.10.egg-info
+running install_scripts
+Installing traj_selecter script to /home/bentoaz/f1tenth_experimental_ws/install/local_planner/lib/local_planner
+Installing traj_server script to /home/bentoaz/f1tenth_experimental_ws/install/local_planner/lib/local_planner
+Installing visualizer script to /home/bentoaz/f1tenth_experimental_ws/install/local_planner/lib/local_planner
+writing list of installed files to '/home/bentoaz/f1tenth_experimental_ws/build/local_planner/install.log'

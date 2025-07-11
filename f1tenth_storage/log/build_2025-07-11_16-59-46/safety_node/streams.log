@@ -1,0 +1,70 @@
+[0.077s] Invoking command in '/home/bentoaz/f1tenth_experimental_ws/build/safety_node': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/bentoaz/f1tenth_experimental_ws/install/stanley_avoidance:/home/bentoaz/f1tenth_experimental_ws/install/particle_filter:/home/bentoaz/f1tenth_experimental_ws/install/local_planner:/home/bentoaz/f1tenth_gym_ros/install/f1tenth_gym_ros:/home/bentoaz/autoware/install/autoware_carla_interface:/home/bentoaz/autoware/install/ros2agnocast:/home/bentoaz/autoware/install/autoware_adapi_visualizers:/opt/ros/humble /usr/bin/cmake /home/bentoaz/f1tenth_experimental_ws/src/safety_node -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/bentoaz/f1tenth_experimental_ws/install/safety_node
+[0.612s] -- The C compiler identification is GNU 11.4.0
+[0.612s] -- The CXX compiler identification is GNU 11.4.0
+[0.612s] -- Detecting C compiler ABI info
+[0.612s] -- Detecting C compiler ABI info - done
+[0.612s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.613s] -- Detecting C compile features
+[0.613s] -- Detecting C compile features - done
+[0.613s] -- Detecting CXX compiler ABI info
+[0.671s] -- Detecting CXX compiler ABI info - done
+[0.680s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.680s] -- Detecting CXX compile features
+[0.680s] -- Detecting CXX compile features - done
+[0.712s] -- Found ament_cmake: 1.3.11 (/opt/ros/humble/share/ament_cmake/cmake)
+[1.064s] -- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+[1.146s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[1.554s] -- Found rclcpp: 16.0.12 (/opt/ros/humble/share/rclcpp/cmake)
+[1.998s] -- Found rosidl_generator_c: 3.1.6 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[2.041s] -- Found rosidl_adapter: 3.1.6 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[2.090s] -- Found rosidl_generator_cpp: 3.1.6 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[2.260s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[2.453s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[2.747s] -- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[2.794s] -- Found rmw_cyclonedds_cpp: 1.3.4 (/opt/ros/humble/share/rmw_cyclonedds_cpp/cmake)
+[2.957s] -- Using RMW implementation 'rmw_cyclonedds_cpp' as default
+[3.067s] -- Looking for pthread.h
+[3.231s] -- Looking for pthread.h - found
+[3.231s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+[3.376s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+[3.377s] -- Found Threads: TRUE  
+[3.609s] -- Found rclpy: 3.3.16 (/opt/ros/humble/share/rclpy/cmake)
+[3.646s] -- Found nav_msgs: 4.9.0 (/opt/ros/humble/share/nav_msgs/cmake)
+[3.748s] -- Found ackermann_msgs: 2.0.2 (/opt/ros/humble/share/ackermann_msgs/cmake)
+[3.797s] -- Found sensor_msgs: 4.9.0 (/opt/ros/humble/share/sensor_msgs/cmake)
+[4.168s] -- Found ament_lint_auto: 0.12.12 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[4.597s] -- Added test 'copyright' to check source files copyright and LICENSE
+[4.604s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[4.604s] -- Configured cppcheck include dirs: /home/bentoaz/f1tenth_experimental_ws/src/safety_node/include
+[4.604s] -- Configured cppcheck exclude dirs and/or files: 
+[4.611s] -- Added test 'cpplint' to check C / C++ code against the Google style
+[4.611s] -- Configured cpplint exclude dirs and/or files: 
+[4.617s] -- Added test 'flake8' to check Python code syntax and style conventions
+[4.623s] -- Added test 'lint_cmake' to check CMake code style
+[4.629s] -- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257
+[4.636s] -- Added test 'uncrustify' to check C / C++ code style
+[4.636s] -- Configured uncrustify additional arguments: 
+[4.643s] -- Added test 'xmllint' to check XML markup files
+[4.655s] -- Configuring done
+[4.668s] -- Generating done
+[4.673s] -- Build files have been written to: /home/bentoaz/f1tenth_experimental_ws/build/safety_node
+[4.683s] Invoked command in '/home/bentoaz/f1tenth_experimental_ws/build/safety_node' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/bentoaz/f1tenth_experimental_ws/install/stanley_avoidance:/home/bentoaz/f1tenth_experimental_ws/install/particle_filter:/home/bentoaz/f1tenth_experimental_ws/install/local_planner:/home/bentoaz/f1tenth_gym_ros/install/f1tenth_gym_ros:/home/bentoaz/autoware/install/autoware_carla_interface:/home/bentoaz/autoware/install/ros2agnocast:/home/bentoaz/autoware/install/autoware_adapi_visualizers:/opt/ros/humble /usr/bin/cmake /home/bentoaz/f1tenth_experimental_ws/src/safety_node -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/bentoaz/f1tenth_experimental_ws/install/safety_node
+[4.685s] Invoking command in '/home/bentoaz/f1tenth_experimental_ws/build/safety_node': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/bentoaz/f1tenth_experimental_ws/install/stanley_avoidance:/home/bentoaz/f1tenth_experimental_ws/install/particle_filter:/home/bentoaz/f1tenth_experimental_ws/install/local_planner:/home/bentoaz/f1tenth_gym_ros/install/f1tenth_gym_ros:/home/bentoaz/autoware/install/autoware_carla_interface:/home/bentoaz/autoware/install/ros2agnocast:/home/bentoaz/autoware/install/autoware_adapi_visualizers:/opt/ros/humble /usr/bin/cmake --build /home/bentoaz/f1tenth_experimental_ws/build/safety_node -- -j16 -l16
+[4.864s] [ 50%] [32mBuilding CXX object CMakeFiles/safety_node.dir/src/safety_node.cpp.o[0m
+[4.868s] [ 50%] Built target ament_cmake_python_symlink_safety_node
+[4.888s] [ 50%] Built target ament_cmake_python_symlink_safety_node_setup
+[5.337s] /usr/lib/python3/dist-packages/setuptools/dist.py:723: UserWarning: Usage of dash-separated 'script-dir' will not be supported in future versions. Please use the underscore name 'script_dir' instead
+[5.337s]   warnings.warn(
+[5.337s] /usr/lib/python3/dist-packages/setuptools/dist.py:723: UserWarning: Usage of dash-separated 'install-scripts' will not be supported in future versions. Please use the underscore name 'install_scripts' instead
+[5.337s]   warnings.warn(
+[5.343s] running egg_info
+[5.344s] creating safety_node.egg-info
+[5.344s] writing safety_node.egg-info/PKG-INFO
+[5.344s] writing dependency_links to safety_node.egg-info/dependency_links.txt
+[5.344s] writing top-level names to safety_node.egg-info/top_level.txt
+[5.345s] writing manifest file 'safety_node.egg-info/SOURCES.txt'
+[5.347s] reading manifest file 'safety_node.egg-info/SOURCES.txt'
+[5.348s] writing manifest file 'safety_node.egg-info/SOURCES.txt'
+[5.421s] [ 50%] Built target ament_cmake_python_build_safety_node_egg
+[14.786s] [100%] [32m[1mLinking CXX executable safety_node[0m
+[15.211s] [100%] Built target safety_node

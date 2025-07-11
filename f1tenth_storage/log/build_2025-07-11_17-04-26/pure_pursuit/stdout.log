@@ -1,0 +1,30 @@
+[35m[1mConsolidate compiler generated dependencies of target pure_pursuit[0m
+[ 50%] Built target waypoint_visualizer
+[ 75%] [32mBuilding CXX object CMakeFiles/pure_pursuit.dir/src/pure_pursuit.cpp.o[0m
+[100%] [32m[1mLinking CXX executable pure_pursuit[0m
+[100%] Built target pure_pursuit
+-- Install configuration: ""
+-- Execute custom install script
+-- Symlinking: /home/bentoaz/f1tenth_experimental_ws/install/pure_pursuit/lib/pure_pursuit/pure_pursuit
+-- Symlinking: /home/bentoaz/f1tenth_experimental_ws/install/pure_pursuit/lib/pure_pursuit/waypoint_visualizer
+-- Symlinking: /home/bentoaz/f1tenth_experimental_ws/install/pure_pursuit/share/pure_pursuit/launch/pure_pursuit.rviz
+-- Symlinking: /home/bentoaz/f1tenth_experimental_ws/install/pure_pursuit/share/pure_pursuit/launch/pure_pursuit_launch.py
+-- Symlinking: /home/bentoaz/f1tenth_experimental_ws/install/pure_pursuit/share/pure_pursuit/launch/sim_pure_pursuit.rviz
+-- Symlinking: /home/bentoaz/f1tenth_experimental_ws/install/pure_pursuit/share/pure_pursuit/launch/sim_pure_pursuit_launch.py
+-- Symlinking: /home/bentoaz/f1tenth_experimental_ws/install/pure_pursuit/share/pure_pursuit/config/config.yaml
+-- Symlinking: /home/bentoaz/f1tenth_experimental_ws/install/pure_pursuit/share/pure_pursuit/config/sim_config.yaml
+-- Symlinking: /home/bentoaz/f1tenth_experimental_ws/install/pure_pursuit/share/ament_index/resource_index/package_run_dependencies/pure_pursuit
+-- Symlinking: /home/bentoaz/f1tenth_experimental_ws/install/pure_pursuit/share/ament_index/resource_index/parent_prefix_path/pure_pursuit
+-- Symlinking: /home/bentoaz/f1tenth_experimental_ws/install/pure_pursuit/share/pure_pursuit/environment/ament_prefix_path.sh
+-- Symlinking: /home/bentoaz/f1tenth_experimental_ws/install/pure_pursuit/share/pure_pursuit/environment/ament_prefix_path.dsv
+-- Symlinking: /home/bentoaz/f1tenth_experimental_ws/install/pure_pursuit/share/pure_pursuit/environment/path.sh
+-- Symlinking: /home/bentoaz/f1tenth_experimental_ws/install/pure_pursuit/share/pure_pursuit/environment/path.dsv
+-- Symlinking: /home/bentoaz/f1tenth_experimental_ws/install/pure_pursuit/share/pure_pursuit/local_setup.bash
+-- Symlinking: /home/bentoaz/f1tenth_experimental_ws/install/pure_pursuit/share/pure_pursuit/local_setup.sh
+-- Symlinking: /home/bentoaz/f1tenth_experimental_ws/install/pure_pursuit/share/pure_pursuit/local_setup.zsh
+-- Symlinking: /home/bentoaz/f1tenth_experimental_ws/install/pure_pursuit/share/pure_pursuit/local_setup.dsv
+-- Symlinking: /home/bentoaz/f1tenth_experimental_ws/install/pure_pursuit/share/pure_pursuit/package.dsv
+-- Symlinking: /home/bentoaz/f1tenth_experimental_ws/install/pure_pursuit/share/ament_index/resource_index/packages/pure_pursuit
+-- Symlinking: /home/bentoaz/f1tenth_experimental_ws/install/pure_pursuit/share/pure_pursuit/cmake/pure_pursuitConfig.cmake
+-- Symlinking: /home/bentoaz/f1tenth_experimental_ws/install/pure_pursuit/share/pure_pursuit/cmake/pure_pursuitConfig-version.cmake
+-- Symlinking: /home/bentoaz/f1tenth_experimental_ws/install/pure_pursuit/share/pure_pursuit/package.xml

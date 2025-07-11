@@ -1,0 +1,7 @@
+setup.cfg
+setup.py
+scan_matching/__init__.py
+scan_matching.egg-info/PKG-INFO
+scan_matching.egg-info/SOURCES.txt
+scan_matching.egg-info/dependency_links.txt
+scan_matching.egg-info/top_level.txt

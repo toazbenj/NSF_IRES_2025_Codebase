@@ -1,0 +1,260 @@
+[0.115s] Invoking command in '/home/bentoaz/f1tenth_experimental_ws/build/local_planner_msgs': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/bentoaz/f1tenth_gym_ros/install/f1tenth_gym_ros:/home/bentoaz/autoware/install/autoware_carla_interface:/home/bentoaz/autoware/install/ros2agnocast:/home/bentoaz/autoware/install/autoware_adapi_visualizers:/opt/ros/humble /usr/bin/cmake /home/bentoaz/f1tenth_experimental_ws/src/local_planner_msgs -DCMAKE_INSTALL_PREFIX=/home/bentoaz/f1tenth_experimental_ws/install/local_planner_msgs
+[0.656s] -- The C compiler identification is GNU 11.4.0
+[0.657s] -- The CXX compiler identification is GNU 11.4.0
+[0.657s] -- Detecting C compiler ABI info
+[0.657s] -- Detecting C compiler ABI info - done
+[0.658s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.658s] -- Detecting C compile features
+[0.658s] -- Detecting C compile features - done
+[0.658s] -- Detecting CXX compiler ABI info
+[0.658s] -- Detecting CXX compiler ABI info - done
+[0.658s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.658s] -- Detecting CXX compile features
+[0.658s] -- Detecting CXX compile features - done
+[0.670s] -- Found ament_cmake: 1.3.11 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.934s] -- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+[1.338s] -- Found ament_lint_auto: 0.12.12 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[1.620s] -- Found std_msgs: 4.9.0 (/opt/ros/humble/share/std_msgs/cmake)
+[1.789s] -- Found rosidl_generator_c: 3.1.6 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[1.823s] -- Found rosidl_adapter: 3.1.6 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[1.858s] -- Found rosidl_generator_cpp: 3.1.6 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[1.939s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[2.017s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[2.101s] -- Found nav_msgs: 4.9.0 (/opt/ros/humble/share/nav_msgs/cmake)
+[2.149s] -- Found rosidl_default_generators: 1.2.0 (/opt/ros/humble/share/rosidl_default_generators/cmake)
+[2.636s] -- Found ament_cmake_ros: 0.10.0 (/opt/ros/humble/share/ament_cmake_ros/cmake)
+[3.320s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[3.564s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[3.602s] -- Found PythonInterp: /usr/bin/python3 (found suitable version "3.10.12", minimum required is "3.6") 
+[3.639s] -- Found python_cmake_module: 0.10.0 (/opt/ros/humble/share/python_cmake_module/cmake)
+[3.698s] -- Found PythonLibs: /usr/lib/x86_64-linux-gnu/libpython3.10.so (found suitable version "3.10.12", minimum required is "3.5") 
+[3.698s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[3.698s] -- Using PYTHON_INCLUDE_DIRS: /usr/include/python3.10
+[3.698s] -- Using PYTHON_LIBRARIES: /usr/lib/x86_64-linux-gnu/libpython3.10.so
+[3.727s] -- Found PythonExtra: .so  
+[4.435s] -- Added test 'lint_cmake' to check CMake code style
+[4.438s] -- Added test 'xmllint' to check XML markup files
+[4.447s] -- Configuring done
+[4.469s] -- Generating done
+[4.477s] -- Build files have been written to: /home/bentoaz/f1tenth_experimental_ws/build/local_planner_msgs
+[4.486s] Invoked command in '/home/bentoaz/f1tenth_experimental_ws/build/local_planner_msgs' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/bentoaz/f1tenth_gym_ros/install/f1tenth_gym_ros:/home/bentoaz/autoware/install/autoware_carla_interface:/home/bentoaz/autoware/install/ros2agnocast:/home/bentoaz/autoware/install/autoware_adapi_visualizers:/opt/ros/humble /usr/bin/cmake /home/bentoaz/f1tenth_experimental_ws/src/local_planner_msgs -DCMAKE_INSTALL_PREFIX=/home/bentoaz/f1tenth_experimental_ws/install/local_planner_msgs
+[4.487s] Invoking command in '/home/bentoaz/f1tenth_experimental_ws/build/local_planner_msgs': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/bentoaz/f1tenth_gym_ros/install/f1tenth_gym_ros:/home/bentoaz/autoware/install/autoware_carla_interface:/home/bentoaz/autoware/install/ros2agnocast:/home/bentoaz/autoware/install/autoware_adapi_visualizers:/opt/ros/humble /usr/bin/cmake --build /home/bentoaz/f1tenth_experimental_ws/build/local_planner_msgs -- -j16 -l16
+[4.649s] [  2%] [34m[1mGenerating C code for ROS interfaces[0m
+[4.701s] [  5%] [34m[1mGenerating C++ code for ROS interfaces[0m
+[4.741s] [  5%] Built target ament_cmake_python_copy_local_planner_msgs
+[5.286s] [  5%] Built target local_planner_msgs__cpp
+[5.331s] [  7%] [32mBuilding C object CMakeFiles/local_planner_msgs__rosidl_generator_c.dir/rosidl_generator_c/local_planner_msgs/msg/detail/trajectory_list__functions.c.o[0m
+[5.335s] [ 10%] [32mBuilding C object CMakeFiles/local_planner_msgs__rosidl_generator_c.dir/rosidl_generator_c/local_planner_msgs/msg/detail/trajectory__functions.c.o[0m
+[5.367s] [ 12%] [34m[1mGenerating C++ type support dispatch for ROS interfaces[0m
+[5.376s] [ 15%] [34m[1mGenerating C++ introspection for ROS interfaces[0m
+[5.382s] running egg_info
+[5.382s] creating local_planner_msgs.egg-info
+[5.383s] writing local_planner_msgs.egg-info/PKG-INFO
+[5.383s] writing dependency_links to local_planner_msgs.egg-info/dependency_links.txt
+[5.387s] writing top-level names to local_planner_msgs.egg-info/top_level.txt
+[5.387s] [ 17%] [34m[1mGenerating C++ type support for eProsima Fast-RTPS[0m
+[5.387s] writing manifest file 'local_planner_msgs.egg-info/SOURCES.txt'
+[5.389s] reading manifest file 'local_planner_msgs.egg-info/SOURCES.txt'
+[5.391s] writing manifest file 'local_planner_msgs.egg-info/SOURCES.txt'
+[5.469s] [ 17%] Built target ament_cmake_python_build_local_planner_msgs_egg
+[5.471s] [ 20%] [32m[1mLinking C shared library liblocal_planner_msgs__rosidl_generator_c.so[0m
+[5.588s] [ 20%] Built target local_planner_msgs__rosidl_generator_c
+[5.689s] [ 23%] [34m[1mGenerating C introspection for ROS interfaces[0m
+[5.689s] [ 25%] [34m[1mGenerating C type support for eProsima Fast-RTPS[0m
+[5.695s] [ 28%] [34m[1mGenerating C type support dispatch for ROS interfaces[0m
+[5.944s] [ 30%] [32mBuilding CXX object CMakeFiles/local_planner_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/local_planner_msgs/msg/trajectory_list__type_support.cpp.o[0m
+[5.948s] [ 33%] [32mBuilding CXX object CMakeFiles/local_planner_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/local_planner_msgs/msg/trajectory__type_support.cpp.o[0m
+[5.993s] [ 35%] [32mBuilding CXX object CMakeFiles/local_planner_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/local_planner_msgs/msg/detail/dds_fastrtps/trajectory_list__type_support.cpp.o[0m
+[6.002s] [ 38%] [32mBuilding CXX object CMakeFiles/local_planner_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/local_planner_msgs/msg/detail/dds_fastrtps/trajectory__type_support.cpp.o[0m
+[6.028s] [ 41%] [32mBuilding CXX object CMakeFiles/local_planner_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/local_planner_msgs/msg/detail/trajectory__type_support.cpp.o[0m
+[6.040s] [ 43%] [32mBuilding CXX object CMakeFiles/local_planner_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/local_planner_msgs/msg/detail/trajectory_list__type_support.cpp.o[0m
+[6.308s] [ 46%] [32mBuilding CXX object CMakeFiles/local_planner_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/local_planner_msgs/msg/trajectory_list__type_support.cpp.o[0m
+[6.343s] [ 48%] [32mBuilding CXX object CMakeFiles/local_planner_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/local_planner_msgs/msg/trajectory__type_support.cpp.o[0m
+[6.402s] [ 51%] [32mBuilding C object CMakeFiles/local_planner_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/local_planner_msgs/msg/detail/trajectory_list__type_support.c.o[0m
+[6.417s] [ 53%] [32mBuilding C object CMakeFiles/local_planner_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/local_planner_msgs/msg/detail/trajectory__type_support.c.o[0m
+[6.432s] [ 58%] [32mBuilding CXX object CMakeFiles/local_planner_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/local_planner_msgs/msg/detail/trajectory__type_support_c.cpp.o[0m
+[6.436s] [ 58%] [32mBuilding CXX object CMakeFiles/local_planner_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/local_planner_msgs/msg/detail/trajectory_list__type_support_c.cpp.o[0m
+[6.448s] [ 61%] [32m[1mLinking CXX shared library liblocal_planner_msgs__rosidl_typesupport_cpp.so[0m
+[6.487s] [ 64%] [32m[1mLinking CXX shared library liblocal_planner_msgs__rosidl_typesupport_c.so[0m
+[6.570s] [ 66%] [32m[1mLinking C shared library liblocal_planner_msgs__rosidl_typesupport_introspection_c.so[0m
+[6.638s] [ 66%] Built target local_planner_msgs__rosidl_typesupport_cpp
+[6.650s] [ 66%] Built target local_planner_msgs__rosidl_typesupport_c
+[6.705s] [ 66%] Built target local_planner_msgs__rosidl_typesupport_introspection_c
+[6.706s] [ 69%] [32m[1mLinking CXX shared library liblocal_planner_msgs__rosidl_typesupport_fastrtps_cpp.so[0m
+[6.851s] [ 71%] [32m[1mLinking CXX shared library liblocal_planner_msgs__rosidl_typesupport_introspection_cpp.so[0m
+[6.860s] [ 71%] Built target local_planner_msgs__rosidl_typesupport_fastrtps_cpp
+[6.913s] [ 74%] [32m[1mLinking CXX shared library liblocal_planner_msgs__rosidl_typesupport_fastrtps_c.so[0m
+[7.035s] [ 74%] Built target local_planner_msgs__rosidl_typesupport_fastrtps_c
+[7.040s] [ 74%] Built target local_planner_msgs__rosidl_typesupport_introspection_cpp
+[7.194s] [ 74%] Built target local_planner_msgs
+[7.292s] [ 76%] [34m[1mGenerating Python code for ROS interfaces[0m
+[7.693s] [ 76%] Built target local_planner_msgs__py
+[7.796s] [ 82%] [32mBuilding C object CMakeFiles/local_planner_msgs__rosidl_generator_py.dir/rosidl_generator_py/local_planner_msgs/msg/_trajectory_s.c.o[0m
+[7.796s] [ 82%] [32mBuilding C object CMakeFiles/local_planner_msgs__rosidl_generator_py.dir/rosidl_generator_py/local_planner_msgs/msg/_trajectory_list_s.c.o[0m
+[8.005s] [ 84%] [32m[1mLinking C shared library rosidl_generator_py/local_planner_msgs/liblocal_planner_msgs__rosidl_generator_py.so[0m
+[8.118s] [ 84%] Built target local_planner_msgs__rosidl_generator_py
+[8.196s] [ 87%] [32mBuilding C object CMakeFiles/local_planner_msgs__rosidl_typesupport_fastrtps_c__pyext.dir/rosidl_generator_py/local_planner_msgs/_local_planner_msgs_s.ep.rosidl_typesupport_fastrtps_c.c.o[0m
+[8.204s] [ 89%] [32mBuilding C object CMakeFiles/local_planner_msgs__rosidl_typesupport_introspection_c__pyext.dir/rosidl_generator_py/local_planner_msgs/_local_planner_msgs_s.ep.rosidl_typesupport_introspection_c.c.o[0m
+[8.224s] [ 92%] [32mBuilding C object CMakeFiles/local_planner_msgs__rosidl_typesupport_c__pyext.dir/rosidl_generator_py/local_planner_msgs/_local_planner_msgs_s.ep.rosidl_typesupport_c.c.o[0m
+[8.315s] [ 94%] [32m[1mLinking C shared library rosidl_generator_py/local_planner_msgs/local_planner_msgs_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so[0m
+[8.321s] [ 97%] [32m[1mLinking C shared library rosidl_generator_py/local_planner_msgs/local_planner_msgs_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so[0m
+[8.406s] [100%] [32m[1mLinking C shared library rosidl_generator_py/local_planner_msgs/local_planner_msgs_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so[0m
+[8.431s] [100%] Built target local_planner_msgs__rosidl_typesupport_introspection_c__pyext
+[8.444s] [100%] Built target local_planner_msgs__rosidl_typesupport_fastrtps_c__pyext
+[8.513s] [100%] Built target local_planner_msgs__rosidl_typesupport_c__pyext
+[8.542s] Invoked command in '/home/bentoaz/f1tenth_experimental_ws/build/local_planner_msgs' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/bentoaz/f1tenth_gym_ros/install/f1tenth_gym_ros:/home/bentoaz/autoware/install/autoware_carla_interface:/home/bentoaz/autoware/install/ros2agnocast:/home/bentoaz/autoware/install/autoware_adapi_visualizers:/opt/ros/humble /usr/bin/cmake --build /home/bentoaz/f1tenth_experimental_ws/build/local_planner_msgs -- -j16 -l16
+[8.569s] Invoking command in '/home/bentoaz/f1tenth_experimental_ws/build/local_planner_msgs': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/bentoaz/f1tenth_gym_ros/install/f1tenth_gym_ros:/home/bentoaz/autoware/install/autoware_carla_interface:/home/bentoaz/autoware/install/ros2agnocast:/home/bentoaz/autoware/install/autoware_adapi_visualizers:/opt/ros/humble /usr/bin/cmake --install /home/bentoaz/f1tenth_experimental_ws/build/local_planner_msgs
+[8.592s] -- Install configuration: ""
+[8.592s] -- Installing: /home/bentoaz/f1tenth_experimental_ws/install/local_planner_msgs/share/ament_index/resource_index/rosidl_interfaces/local_planner_msgs
+[8.592s] -- Installing: /home/bentoaz/f1tenth_experimental_ws/install/local_planner_msgs/include/local_planner_msgs/local_planner_msgs
+[8.593s] -- Installing: /home/bentoaz/f1tenth_experimental_ws/install/local_planner_msgs/include/local_planner_msgs/local_planner_msgs/msg
+[8.593s] -- Installing: /home/bentoaz/f1tenth_experimental_ws/install/local_planner_msgs/include/local_planner_msgs/local_planner_msgs/msg/trajectory_list.h
+[8.593s] -- Installing: /home/bentoaz/f1tenth_experimental_ws/install/local_planner_msgs/include/local_planner_msgs/local_planner_msgs/msg/rosidl_generator_c__visibility_control.h
+[8.593s] -- Installing: /home/bentoaz/f1tenth_experimental_ws/install/local_planner_msgs/include/local_planner_msgs/local_planner_msgs/msg/detail
+[8.593s] -- Installing: /home/bentoaz/f1tenth_experimental_ws/install/local_planner_msgs/include/local_planner_msgs/local_planner_msgs/msg/detail/trajectory_list__struct.h
+[8.593s] -- Installing: /home/bentoaz/f1tenth_experimental_ws/install/local_planner_msgs/include/local_planner_msgs/local_planner_msgs/msg/detail/trajectory__functions.h
+[8.593s] -- Installing: /home/bentoaz/f1tenth_experimental_ws/install/local_planner_msgs/include/local_planner_msgs/local_planner_msgs/msg/detail/trajectory_list__functions.h
+[8.593s] -- Installing: /home/bentoaz/f1tenth_experimental_ws/install/local_planner_msgs/include/local_planner_msgs/local_planner_msgs/msg/detail/trajectory_list__functions.c
+[8.593s] -- Installing: /home/bentoaz/f1tenth_experimental_ws/install/local_planner_msgs/include/local_planner_msgs/local_planner_msgs/msg/detail/trajectory__type_support.h
+[8.593s] -- Installing: /home/bentoaz/f1tenth_experimental_ws/install/local_planner_msgs/include/local_planner_msgs/local_planner_msgs/msg/detail/trajectory_list__type_support.h
+[8.594s] -- Installing: /home/bentoaz/f1tenth_experimental_ws/install/local_planner_msgs/include/local_planner_msgs/local_planner_msgs/msg/detail/trajectory__functions.c
+[8.594s] -- Installing: /home/bentoaz/f1tenth_experimental_ws/install/local_planner_msgs/include/local_planner_msgs/local_planner_msgs/msg/detail/trajectory__struct.h
+[8.594s] -- Installing: /home/bentoaz/f1tenth_experimental_ws/install/local_planner_msgs/include/local_planner_msgs/local_planner_msgs/msg/trajectory.h
+[8.594s] -- Installing: /home/bentoaz/f1tenth_experimental_ws/install/local_planner_msgs/share/local_planner_msgs/environment/library_path.sh
+[8.594s] -- Installing: /home/bentoaz/f1tenth_experimental_ws/install/local_planner_msgs/share/local_planner_msgs/environment/library_path.dsv
+[8.595s] -- Installing: /home/bentoaz/f1tenth_experimental_ws/install/local_planner_msgs/lib/liblocal_planner_msgs__rosidl_generator_c.so
+[8.595s] -- Set runtime path of "/home/bentoaz/f1tenth_experimental_ws/install/local_planner_msgs/lib/liblocal_planner_msgs__rosidl_generator_c.so" to ""
+[8.595s] -- Up-to-date: /home/bentoaz/f1tenth_experimental_ws/install/local_planner_msgs/include/local_planner_msgs/local_planner_msgs
+[8.595s] -- Up-to-date: /home/bentoaz/f1tenth_experimental_ws/install/local_planner_msgs/include/local_planner_msgs/local_planner_msgs/msg
+[8.595s] -- Installing: /home/bentoaz/f1tenth_experimental_ws/install/local_planner_msgs/include/local_planner_msgs/local_planner_msgs/msg/rosidl_typesupport_fastrtps_c__visibility_control.h
+[8.595s] -- Up-to-date: /home/bentoaz/f1tenth_experimental_ws/install/local_planner_msgs/include/local_planner_msgs/local_planner_msgs/msg/detail
+[8.596s] -- Installing: /home/bentoaz/f1tenth_experimental_ws/install/local_planner_msgs/include/local_planner_msgs/local_planner_msgs/msg/detail/trajectory_list__rosidl_typesupport_fastrtps_c.h
+[8.596s] -- Installing: /home/bentoaz/f1tenth_experimental_ws/install/local_planner_msgs/include/local_planner_msgs/local_planner_msgs/msg/detail/trajectory__rosidl_typesupport_fastrtps_c.h
+[8.596s] -- Installing: /home/bentoaz/f1tenth_experimental_ws/install/local_planner_msgs/lib/liblocal_planner_msgs__rosidl_typesupport_fastrtps_c.so
+[8.596s] -- Set runtime path of "/home/bentoaz/f1tenth_experimental_ws/install/local_planner_msgs/lib/liblocal_planner_msgs__rosidl_typesupport_fastrtps_c.so" to ""
+[8.596s] -- Up-to-date: /home/bentoaz/f1tenth_experimental_ws/install/local_planner_msgs/include/local_planner_msgs/local_planner_msgs
+[8.596s] -- Up-to-date: /home/bentoaz/f1tenth_experimental_ws/install/local_planner_msgs/include/local_planner_msgs/local_planner_msgs/msg
+[8.596s] -- Installing: /home/bentoaz/f1tenth_experimental_ws/install/local_planner_msgs/include/local_planner_msgs/local_planner_msgs/msg/trajectory_list.hpp
+[8.596s] -- Installing: /home/bentoaz/f1tenth_experimental_ws/install/local_planner_msgs/include/local_planner_msgs/local_planner_msgs/msg/trajectory.hpp
+[8.596s] -- Up-to-date: /home/bentoaz/f1tenth_experimental_ws/install/local_planner_msgs/include/local_planner_msgs/local_planner_msgs/msg/detail
+[8.597s] -- Installing: /home/bentoaz/f1tenth_experimental_ws/install/local_planner_msgs/include/local_planner_msgs/local_planner_msgs/msg/detail/trajectory__traits.hpp
+[8.597s] -- Installing: /home/bentoaz/f1tenth_experimental_ws/install/local_planner_msgs/include/local_planner_msgs/local_planner_msgs/msg/detail/trajectory__builder.hpp
+[8.597s] -- Installing: /home/bentoaz/f1tenth_experimental_ws/install/local_planner_msgs/include/local_planner_msgs/local_planner_msgs/msg/detail/trajectory_list__traits.hpp
+[8.597s] -- Installing: /home/bentoaz/f1tenth_experimental_ws/install/local_planner_msgs/include/local_planner_msgs/local_planner_msgs/msg/detail/trajectory_list__struct.hpp
+[8.597s] -- Installing: /home/bentoaz/f1tenth_experimental_ws/install/local_planner_msgs/include/local_planner_msgs/local_planner_msgs/msg/detail/trajectory_list__builder.hpp
+[8.597s] -- Installing: /home/bentoaz/f1tenth_experimental_ws/install/local_planner_msgs/include/local_planner_msgs/local_planner_msgs/msg/detail/trajectory_list__type_support.hpp
+[8.597s] -- Installing: /home/bentoaz/f1tenth_experimental_ws/install/local_planner_msgs/include/local_planner_msgs/local_planner_msgs/msg/detail/trajectory__struct.hpp
+[8.597s] -- Installing: /home/bentoaz/f1tenth_experimental_ws/install/local_planner_msgs/include/local_planner_msgs/local_planner_msgs/msg/detail/trajectory__type_support.hpp
+[8.597s] -- Installing: /home/bentoaz/f1tenth_experimental_ws/install/local_planner_msgs/include/local_planner_msgs/local_planner_msgs/msg/rosidl_generator_cpp__visibility_control.hpp
+[8.598s] -- Up-to-date: /home/bentoaz/f1tenth_experimental_ws/install/local_planner_msgs/include/local_planner_msgs/local_planner_msgs
+[8.598s] -- Up-to-date: /home/bentoaz/f1tenth_experimental_ws/install/local_planner_msgs/include/local_planner_msgs/local_planner_msgs/msg
+[8.598s] -- Up-to-date: /home/bentoaz/f1tenth_experimental_ws/install/local_planner_msgs/include/local_planner_msgs/local_planner_msgs/msg/detail
+[8.598s] -- Installing: /home/bentoaz/f1tenth_experimental_ws/install/local_planner_msgs/include/local_planner_msgs/local_planner_msgs/msg/detail/trajectory__rosidl_typesupport_fastrtps_cpp.hpp
+[8.598s] -- Installing: /home/bentoaz/f1tenth_experimental_ws/install/local_planner_msgs/include/local_planner_msgs/local_planner_msgs/msg/detail/trajectory_list__rosidl_typesupport_fastrtps_cpp.hpp
+[8.598s] -- Installing: /home/bentoaz/f1tenth_experimental_ws/install/local_planner_msgs/include/local_planner_msgs/local_planner_msgs/msg/detail/dds_fastrtps
+[8.598s] -- Installing: /home/bentoaz/f1tenth_experimental_ws/install/local_planner_msgs/include/local_planner_msgs/local_planner_msgs/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h
+[8.599s] -- Installing: /home/bentoaz/f1tenth_experimental_ws/install/local_planner_msgs/lib/liblocal_planner_msgs__rosidl_typesupport_fastrtps_cpp.so
+[8.599s] -- Set runtime path of "/home/bentoaz/f1tenth_experimental_ws/install/local_planner_msgs/lib/liblocal_planner_msgs__rosidl_typesupport_fastrtps_cpp.so" to ""
+[8.599s] -- Up-to-date: /home/bentoaz/f1tenth_experimental_ws/install/local_planner_msgs/include/local_planner_msgs/local_planner_msgs
+[8.599s] -- Up-to-date: /home/bentoaz/f1tenth_experimental_ws/install/local_planner_msgs/include/local_planner_msgs/local_planner_msgs/msg
+[8.599s] -- Up-to-date: /home/bentoaz/f1tenth_experimental_ws/install/local_planner_msgs/include/local_planner_msgs/local_planner_msgs/msg/detail
+[8.599s] -- Installing: /home/bentoaz/f1tenth_experimental_ws/install/local_planner_msgs/include/local_planner_msgs/local_planner_msgs/msg/detail/trajectory__rosidl_typesupport_introspection_c.h
+[8.599s] -- Installing: /home/bentoaz/f1tenth_experimental_ws/install/local_planner_msgs/include/local_planner_msgs/local_planner_msgs/msg/detail/trajectory_list__rosidl_typesupport_introspection_c.h
+[8.599s] -- Installing: /home/bentoaz/f1tenth_experimental_ws/install/local_planner_msgs/include/local_planner_msgs/local_planner_msgs/msg/detail/trajectory_list__type_support.c
+[8.599s] -- Installing: /home/bentoaz/f1tenth_experimental_ws/install/local_planner_msgs/include/local_planner_msgs/local_planner_msgs/msg/detail/trajectory__type_support.c
+[8.600s] -- Installing: /home/bentoaz/f1tenth_experimental_ws/install/local_planner_msgs/include/local_planner_msgs/local_planner_msgs/msg/rosidl_typesupport_introspection_c__visibility_control.h
+[8.600s] -- Installing: /home/bentoaz/f1tenth_experimental_ws/install/local_planner_msgs/lib/liblocal_planner_msgs__rosidl_typesupport_introspection_c.so
+[8.600s] -- Set runtime path of "/home/bentoaz/f1tenth_experimental_ws/install/local_planner_msgs/lib/liblocal_planner_msgs__rosidl_typesupport_introspection_c.so" to ""
+[8.600s] -- Installing: /home/bentoaz/f1tenth_experimental_ws/install/local_planner_msgs/lib/liblocal_planner_msgs__rosidl_typesupport_c.so
+[8.600s] -- Set runtime path of "/home/bentoaz/f1tenth_experimental_ws/install/local_planner_msgs/lib/liblocal_planner_msgs__rosidl_typesupport_c.so" to ""
+[8.600s] -- Up-to-date: /home/bentoaz/f1tenth_experimental_ws/install/local_planner_msgs/include/local_planner_msgs/local_planner_msgs
+[8.600s] -- Up-to-date: /home/bentoaz/f1tenth_experimental_ws/install/local_planner_msgs/include/local_planner_msgs/local_planner_msgs/msg
+[8.601s] -- Up-to-date: /home/bentoaz/f1tenth_experimental_ws/install/local_planner_msgs/include/local_planner_msgs/local_planner_msgs/msg/detail
+[8.601s] -- Installing: /home/bentoaz/f1tenth_experimental_ws/install/local_planner_msgs/include/local_planner_msgs/local_planner_msgs/msg/detail/trajectory__rosidl_typesupport_introspection_cpp.hpp
+[8.601s] -- Installing: /home/bentoaz/f1tenth_experimental_ws/install/local_planner_msgs/include/local_planner_msgs/local_planner_msgs/msg/detail/trajectory_list__rosidl_typesupport_introspection_cpp.hpp
+[8.601s] -- Installing: /home/bentoaz/f1tenth_experimental_ws/install/local_planner_msgs/include/local_planner_msgs/local_planner_msgs/msg/detail/trajectory_list__type_support.cpp
+[8.601s] -- Installing: /home/bentoaz/f1tenth_experimental_ws/install/local_planner_msgs/include/local_planner_msgs/local_planner_msgs/msg/detail/trajectory__type_support.cpp
+[8.601s] -- Installing: /home/bentoaz/f1tenth_experimental_ws/install/local_planner_msgs/lib/liblocal_planner_msgs__rosidl_typesupport_introspection_cpp.so
+[8.602s] -- Set runtime path of "/home/bentoaz/f1tenth_experimental_ws/install/local_planner_msgs/lib/liblocal_planner_msgs__rosidl_typesupport_introspection_cpp.so" to ""
+[8.602s] -- Installing: /home/bentoaz/f1tenth_experimental_ws/install/local_planner_msgs/lib/liblocal_planner_msgs__rosidl_typesupport_cpp.so
+[8.602s] -- Set runtime path of "/home/bentoaz/f1tenth_experimental_ws/install/local_planner_msgs/lib/liblocal_planner_msgs__rosidl_typesupport_cpp.so" to ""
+[8.602s] -- Installing: /home/bentoaz/f1tenth_experimental_ws/install/local_planner_msgs/share/local_planner_msgs/environment/pythonpath.sh
+[8.602s] -- Installing: /home/bentoaz/f1tenth_experimental_ws/install/local_planner_msgs/share/local_planner_msgs/environment/pythonpath.dsv
+[8.602s] -- Installing: /home/bentoaz/f1tenth_experimental_ws/install/local_planner_msgs/local/lib/python3.10/dist-packages/local_planner_msgs-0.0.0-py3.10.egg-info
+[8.603s] -- Installing: /home/bentoaz/f1tenth_experimental_ws/install/local_planner_msgs/local/lib/python3.10/dist-packages/local_planner_msgs-0.0.0-py3.10.egg-info/SOURCES.txt
+[8.603s] -- Installing: /home/bentoaz/f1tenth_experimental_ws/install/local_planner_msgs/local/lib/python3.10/dist-packages/local_planner_msgs-0.0.0-py3.10.egg-info/dependency_links.txt
+[8.603s] -- Installing: /home/bentoaz/f1tenth_experimental_ws/install/local_planner_msgs/local/lib/python3.10/dist-packages/local_planner_msgs-0.0.0-py3.10.egg-info/top_level.txt
+[8.603s] -- Installing: /home/bentoaz/f1tenth_experimental_ws/install/local_planner_msgs/local/lib/python3.10/dist-packages/local_planner_msgs-0.0.0-py3.10.egg-info/PKG-INFO
+[8.603s] -- Installing: /home/bentoaz/f1tenth_experimental_ws/install/local_planner_msgs/local/lib/python3.10/dist-packages/local_planner_msgs
+[8.603s] -- Installing: /home/bentoaz/f1tenth_experimental_ws/install/local_planner_msgs/local/lib/python3.10/dist-packages/local_planner_msgs/msg
+[8.603s] -- Installing: /home/bentoaz/f1tenth_experimental_ws/install/local_planner_msgs/local/lib/python3.10/dist-packages/local_planner_msgs/msg/__init__.py
+[8.604s] -- Installing: /home/bentoaz/f1tenth_experimental_ws/install/local_planner_msgs/local/lib/python3.10/dist-packages/local_planner_msgs/msg/_trajectory.py
+[8.604s] -- Installing: /home/bentoaz/f1tenth_experimental_ws/install/local_planner_msgs/local/lib/python3.10/dist-packages/local_planner_msgs/msg/_trajectory_list_s.c
+[8.604s] -- Installing: /home/bentoaz/f1tenth_experimental_ws/install/local_planner_msgs/local/lib/python3.10/dist-packages/local_planner_msgs/msg/_trajectory_s.c
+[8.604s] -- Installing: /home/bentoaz/f1tenth_experimental_ws/install/local_planner_msgs/local/lib/python3.10/dist-packages/local_planner_msgs/msg/_trajectory_list.py
+[8.604s] -- Installing: /home/bentoaz/f1tenth_experimental_ws/install/local_planner_msgs/local/lib/python3.10/dist-packages/local_planner_msgs/local_planner_msgs_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so
+[8.604s] -- Installing: /home/bentoaz/f1tenth_experimental_ws/install/local_planner_msgs/local/lib/python3.10/dist-packages/local_planner_msgs/__init__.py
+[8.604s] -- Installing: /home/bentoaz/f1tenth_experimental_ws/install/local_planner_msgs/local/lib/python3.10/dist-packages/local_planner_msgs/_local_planner_msgs_s.ep.rosidl_typesupport_fastrtps_c.c
+[8.604s] -- Installing: /home/bentoaz/f1tenth_experimental_ws/install/local_planner_msgs/local/lib/python3.10/dist-packages/local_planner_msgs/liblocal_planner_msgs__rosidl_generator_py.so
+[8.604s] -- Installing: /home/bentoaz/f1tenth_experimental_ws/install/local_planner_msgs/local/lib/python3.10/dist-packages/local_planner_msgs/local_planner_msgs_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so
+[8.604s] -- Installing: /home/bentoaz/f1tenth_experimental_ws/install/local_planner_msgs/local/lib/python3.10/dist-packages/local_planner_msgs/_local_planner_msgs_s.ep.rosidl_typesupport_c.c
+[8.604s] -- Installing: /home/bentoaz/f1tenth_experimental_ws/install/local_planner_msgs/local/lib/python3.10/dist-packages/local_planner_msgs/local_planner_msgs_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so
+[8.604s] -- Installing: /home/bentoaz/f1tenth_experimental_ws/install/local_planner_msgs/local/lib/python3.10/dist-packages/local_planner_msgs/_local_planner_msgs_s.ep.rosidl_typesupport_introspection_c.c
+[8.707s] Listing '/home/bentoaz/f1tenth_experimental_ws/install/local_planner_msgs/local/lib/python3.10/dist-packages/local_planner_msgs'...
+[8.707s] Compiling '/home/bentoaz/f1tenth_experimental_ws/install/local_planner_msgs/local/lib/python3.10/dist-packages/local_planner_msgs/__init__.py'...
+[8.707s] Listing '/home/bentoaz/f1tenth_experimental_ws/install/local_planner_msgs/local/lib/python3.10/dist-packages/local_planner_msgs/msg'...
+[8.708s] Compiling '/home/bentoaz/f1tenth_experimental_ws/install/local_planner_msgs/local/lib/python3.10/dist-packages/local_planner_msgs/msg/__init__.py'...
+[8.708s] Compiling '/home/bentoaz/f1tenth_experimental_ws/install/local_planner_msgs/local/lib/python3.10/dist-packages/local_planner_msgs/msg/_trajectory.py'...
+[8.708s] Compiling '/home/bentoaz/f1tenth_experimental_ws/install/local_planner_msgs/local/lib/python3.10/dist-packages/local_planner_msgs/msg/_trajectory_list.py'...
+[8.715s] -- Installing: /home/bentoaz/f1tenth_experimental_ws/install/local_planner_msgs/local/lib/python3.10/dist-packages/local_planner_msgs/local_planner_msgs_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so
+[8.715s] -- Set runtime path of "/home/bentoaz/f1tenth_experimental_ws/install/local_planner_msgs/local/lib/python3.10/dist-packages/local_planner_msgs/local_planner_msgs_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so" to ""
+[8.715s] -- Installing: /home/bentoaz/f1tenth_experimental_ws/install/local_planner_msgs/local/lib/python3.10/dist-packages/local_planner_msgs/local_planner_msgs_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so
+[8.716s] -- Set runtime path of "/home/bentoaz/f1tenth_experimental_ws/install/local_planner_msgs/local/lib/python3.10/dist-packages/local_planner_msgs/local_planner_msgs_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so" to ""
+[8.716s] -- Installing: /home/bentoaz/f1tenth_experimental_ws/install/local_planner_msgs/local/lib/python3.10/dist-packages/local_planner_msgs/local_planner_msgs_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so
+[8.716s] -- Set runtime path of "/home/bentoaz/f1tenth_experimental_ws/install/local_planner_msgs/local/lib/python3.10/dist-packages/local_planner_msgs/local_planner_msgs_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so" to ""
+[8.716s] -- Installing: /home/bentoaz/f1tenth_experimental_ws/install/local_planner_msgs/lib/liblocal_planner_msgs__rosidl_generator_py.so
+[8.717s] -- Set runtime path of "/home/bentoaz/f1tenth_experimental_ws/install/local_planner_msgs/lib/liblocal_planner_msgs__rosidl_generator_py.so" to ""
+[8.717s] -- Installing: /home/bentoaz/f1tenth_experimental_ws/install/local_planner_msgs/share/local_planner_msgs/msg/TrajectoryList.idl
+[8.717s] -- Installing: /home/bentoaz/f1tenth_experimental_ws/install/local_planner_msgs/share/local_planner_msgs/msg/Trajectory.idl
+[8.717s] -- Installing: /home/bentoaz/f1tenth_experimental_ws/install/local_planner_msgs/share/local_planner_msgs/msg/TrajectoryList.msg
+[8.717s] -- Installing: /home/bentoaz/f1tenth_experimental_ws/install/local_planner_msgs/share/local_planner_msgs/msg/Trajectory.msg
+[8.717s] -- Installing: /home/bentoaz/f1tenth_experimental_ws/install/local_planner_msgs/share/ament_index/resource_index/package_run_dependencies/local_planner_msgs
+[8.717s] -- Installing: /home/bentoaz/f1tenth_experimental_ws/install/local_planner_msgs/share/ament_index/resource_index/parent_prefix_path/local_planner_msgs
+[8.718s] -- Installing: /home/bentoaz/f1tenth_experimental_ws/install/local_planner_msgs/share/local_planner_msgs/environment/ament_prefix_path.sh
+[8.718s] -- Installing: /home/bentoaz/f1tenth_experimental_ws/install/local_planner_msgs/share/local_planner_msgs/environment/ament_prefix_path.dsv
+[8.718s] -- Installing: /home/bentoaz/f1tenth_experimental_ws/install/local_planner_msgs/share/local_planner_msgs/environment/path.sh
+[8.718s] -- Installing: /home/bentoaz/f1tenth_experimental_ws/install/local_planner_msgs/share/local_planner_msgs/environment/path.dsv
+[8.718s] -- Installing: /home/bentoaz/f1tenth_experimental_ws/install/local_planner_msgs/share/local_planner_msgs/local_setup.bash
+[8.718s] -- Installing: /home/bentoaz/f1tenth_experimental_ws/install/local_planner_msgs/share/local_planner_msgs/local_setup.sh
+[8.718s] -- Installing: /home/bentoaz/f1tenth_experimental_ws/install/local_planner_msgs/share/local_planner_msgs/local_setup.zsh
+[8.718s] -- Installing: /home/bentoaz/f1tenth_experimental_ws/install/local_planner_msgs/share/local_planner_msgs/local_setup.dsv
+[8.718s] -- Installing: /home/bentoaz/f1tenth_experimental_ws/install/local_planner_msgs/share/local_planner_msgs/package.dsv
+[8.719s] -- Installing: /home/bentoaz/f1tenth_experimental_ws/install/local_planner_msgs/share/ament_index/resource_index/packages/local_planner_msgs
+[8.719s] -- Installing: /home/bentoaz/f1tenth_experimental_ws/install/local_planner_msgs/share/local_planner_msgs/cmake/export_local_planner_msgs__rosidl_generator_cExport.cmake
+[8.719s] -- Installing: /home/bentoaz/f1tenth_experimental_ws/install/local_planner_msgs/share/local_planner_msgs/cmake/export_local_planner_msgs__rosidl_generator_cExport-noconfig.cmake
+[8.719s] -- Installing: /home/bentoaz/f1tenth_experimental_ws/install/local_planner_msgs/share/local_planner_msgs/cmake/export_local_planner_msgs__rosidl_typesupport_fastrtps_cExport.cmake
+[8.719s] -- Installing: /home/bentoaz/f1tenth_experimental_ws/install/local_planner_msgs/share/local_planner_msgs/cmake/export_local_planner_msgs__rosidl_typesupport_fastrtps_cExport-noconfig.cmake
+[8.719s] -- Installing: /home/bentoaz/f1tenth_experimental_ws/install/local_planner_msgs/share/local_planner_msgs/cmake/export_local_planner_msgs__rosidl_generator_cppExport.cmake
+[8.720s] -- Installing: /home/bentoaz/f1tenth_experimental_ws/install/local_planner_msgs/share/local_planner_msgs/cmake/export_local_planner_msgs__rosidl_typesupport_fastrtps_cppExport.cmake
+[8.720s] -- Installing: /home/bentoaz/f1tenth_experimental_ws/install/local_planner_msgs/share/local_planner_msgs/cmake/export_local_planner_msgs__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake
+[8.720s] -- Installing: /home/bentoaz/f1tenth_experimental_ws/install/local_planner_msgs/share/local_planner_msgs/cmake/local_planner_msgs__rosidl_typesupport_introspection_cExport.cmake
+[8.720s] -- Installing: /home/bentoaz/f1tenth_experimental_ws/install/local_planner_msgs/share/local_planner_msgs/cmake/local_planner_msgs__rosidl_typesupport_introspection_cExport-noconfig.cmake
+[8.720s] -- Installing: /home/bentoaz/f1tenth_experimental_ws/install/local_planner_msgs/share/local_planner_msgs/cmake/local_planner_msgs__rosidl_typesupport_cExport.cmake
+[8.720s] -- Installing: /home/bentoaz/f1tenth_experimental_ws/install/local_planner_msgs/share/local_planner_msgs/cmake/local_planner_msgs__rosidl_typesupport_cExport-noconfig.cmake
+[8.721s] -- Installing: /home/bentoaz/f1tenth_experimental_ws/install/local_planner_msgs/share/local_planner_msgs/cmake/local_planner_msgs__rosidl_typesupport_introspection_cppExport.cmake
+[8.721s] -- Installing: /home/bentoaz/f1tenth_experimental_ws/install/local_planner_msgs/share/local_planner_msgs/cmake/local_planner_msgs__rosidl_typesupport_introspection_cppExport-noconfig.cmake
+[8.721s] -- Installing: /home/bentoaz/f1tenth_experimental_ws/install/local_planner_msgs/share/local_planner_msgs/cmake/local_planner_msgs__rosidl_typesupport_cppExport.cmake
+[8.721s] -- Installing: /home/bentoaz/f1tenth_experimental_ws/install/local_planner_msgs/share/local_planner_msgs/cmake/local_planner_msgs__rosidl_typesupport_cppExport-noconfig.cmake
+[8.721s] -- Installing: /home/bentoaz/f1tenth_experimental_ws/install/local_planner_msgs/share/local_planner_msgs/cmake/export_local_planner_msgs__rosidl_generator_pyExport.cmake
+[8.721s] -- Installing: /home/bentoaz/f1tenth_experimental_ws/install/local_planner_msgs/share/local_planner_msgs/cmake/export_local_planner_msgs__rosidl_generator_pyExport-noconfig.cmake
+[8.721s] -- Installing: /home/bentoaz/f1tenth_experimental_ws/install/local_planner_msgs/share/local_planner_msgs/cmake/rosidl_cmake-extras.cmake
+[8.722s] -- Installing: /home/bentoaz/f1tenth_experimental_ws/install/local_planner_msgs/share/local_planner_msgs/cmake/ament_cmake_export_dependencies-extras.cmake
+[8.722s] -- Installing: /home/bentoaz/f1tenth_experimental_ws/install/local_planner_msgs/share/local_planner_msgs/cmake/ament_cmake_export_include_directories-extras.cmake
+[8.722s] -- Installing: /home/bentoaz/f1tenth_experimental_ws/install/local_planner_msgs/share/local_planner_msgs/cmake/ament_cmake_export_libraries-extras.cmake
+[8.722s] -- Installing: /home/bentoaz/f1tenth_experimental_ws/install/local_planner_msgs/share/local_planner_msgs/cmake/ament_cmake_export_targets-extras.cmake
+[8.722s] -- Installing: /home/bentoaz/f1tenth_experimental_ws/install/local_planner_msgs/share/local_planner_msgs/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake
+[8.722s] -- Installing: /home/bentoaz/f1tenth_experimental_ws/install/local_planner_msgs/share/local_planner_msgs/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake
+[8.723s] -- Installing: /home/bentoaz/f1tenth_experimental_ws/install/local_planner_msgs/share/local_planner_msgs/cmake/local_planner_msgsConfig.cmake
+[8.723s] -- Installing: /home/bentoaz/f1tenth_experimental_ws/install/local_planner_msgs/share/local_planner_msgs/cmake/local_planner_msgsConfig-version.cmake
+[8.723s] -- Installing: /home/bentoaz/f1tenth_experimental_ws/install/local_planner_msgs/share/local_planner_msgs/package.xml
+[8.726s] Invoked command in '/home/bentoaz/f1tenth_experimental_ws/build/local_planner_msgs' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/bentoaz/f1tenth_gym_ros/install/f1tenth_gym_ros:/home/bentoaz/autoware/install/autoware_carla_interface:/home/bentoaz/autoware/install/ros2agnocast:/home/bentoaz/autoware/install/autoware_adapi_visualizers:/opt/ros/humble /usr/bin/cmake --install /home/bentoaz/f1tenth_experimental_ws/build/local_planner_msgs

@@ -1,0 +1,11 @@
+[35m[1mConsolidate compiler generated dependencies of target local_planner_msgs__rosidl_generator_c[0m
+[ 10%] Built target local_planner_msgs__rosidl_generator_c
+[ 12%] Built target local_planner_msgs__cpp
+[35m[1mConsolidate compiler generated dependencies of target local_planner_msgs__rosidl_typesupport_fastrtps_c[0m
+[35m[1mConsolidate compiler generated dependencies of target local_planner_msgs__rosidl_typesupport_c[0m
+[35m[1mConsolidate compiler generated dependencies of target local_planner_msgs__rosidl_typesupport_introspection_c[0m
+[35m[1mConsolidate compiler generated dependencies of target local_planner_msgs__rosidl_typesupport_introspection_cpp[0m
+[ 41%] Built target local_planner_msgs__rosidl_typesupport_c
+[ 41%] Built target local_planner_msgs__rosidl_typesupport_introspection_c
+[ 43%] Built target local_planner_msgs__rosidl_typesupport_fastrtps_c
+[ 53%] Built target local_planner_msgs__rosidl_typesupport_introspection_cpp

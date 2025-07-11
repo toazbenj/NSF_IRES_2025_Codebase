@@ -1,0 +1,45 @@
+[0.570s] Invoking command in '/home/bentoaz/f1tenth_experimental_ws/build/waypoint_generator': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/bentoaz/f1tenth_experimental_ws/install/stanley_avoidance:/home/bentoaz/f1tenth_experimental_ws/install/particle_filter:/home/bentoaz/f1tenth_experimental_ws/install/local_planner:/home/bentoaz/f1tenth_gym_ros/install/f1tenth_gym_ros:/home/bentoaz/autoware/install/autoware_carla_interface:/home/bentoaz/autoware/install/ros2agnocast:/home/bentoaz/autoware/install/autoware_adapi_visualizers:/opt/ros/humble /usr/bin/cmake /home/bentoaz/f1tenth_experimental_ws/src/waypoint_generator -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/bentoaz/f1tenth_experimental_ws/install/waypoint_generator
+[0.698s] -- The C compiler identification is GNU 11.4.0
+[0.779s] -- The CXX compiler identification is GNU 11.4.0
+[0.788s] -- Detecting C compiler ABI info
+[0.945s] -- Detecting C compiler ABI info - done
+[0.953s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.954s] -- Detecting C compile features
+[0.954s] -- Detecting C compile features - done
+[0.957s] -- Detecting CXX compiler ABI info
+[1.147s] -- Detecting CXX compiler ABI info - done
+[1.151s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[1.151s] -- Detecting CXX compile features
+[1.151s] -- Detecting CXX compile features - done
+[1.170s] -- Found ament_cmake: 1.3.11 (/opt/ros/humble/share/ament_cmake/cmake)
+[1.439s] -- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+[1.514s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[2.083s] -- Found rclcpp: 16.0.12 (/opt/ros/humble/share/rclcpp/cmake)
+[2.538s] -- Found rosidl_generator_c: 3.1.6 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[2.614s] -- Found rosidl_adapter: 3.1.6 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[2.696s] -- Found rosidl_generator_cpp: 3.1.6 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[2.821s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[2.983s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[3.421s] -- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[3.504s] -- Found rmw_cyclonedds_cpp: 1.3.4 (/opt/ros/humble/share/rmw_cyclonedds_cpp/cmake)
+[3.780s] -- Using RMW implementation 'rmw_cyclonedds_cpp' as default
+[3.894s] -- Looking for pthread.h
+[4.066s] -- Looking for pthread.h - found
+[4.066s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+[4.240s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+[4.240s] -- Found Threads: TRUE  
+[4.478s] -- Found rclpy: 3.3.16 (/opt/ros/humble/share/rclpy/cmake)
+[4.516s] -- Found geometry_msgs: 4.9.0 (/opt/ros/humble/share/geometry_msgs/cmake)
+[4.566s] -- Found nav_msgs: 4.9.0 (/opt/ros/humble/share/nav_msgs/cmake)
+[4.624s] -- Found ackermann_msgs: 2.0.2 (/opt/ros/humble/share/ackermann_msgs/cmake)
+[4.678s] -- Found sensor_msgs: 4.9.0 (/opt/ros/humble/share/sensor_msgs/cmake)
+[4.736s] -- Found visualization_msgs: 4.9.0 (/opt/ros/humble/share/visualization_msgs/cmake)
+[4.842s] -- Found tf2_ros: 0.25.13 (/opt/ros/humble/share/tf2_ros/cmake)
+[5.755s] -- Configuring done
+[5.771s] -- Generating done
+[5.779s] -- Build files have been written to: /home/bentoaz/f1tenth_experimental_ws/build/waypoint_generator
+[5.804s] Invoked command in '/home/bentoaz/f1tenth_experimental_ws/build/waypoint_generator' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/bentoaz/f1tenth_experimental_ws/install/stanley_avoidance:/home/bentoaz/f1tenth_experimental_ws/install/particle_filter:/home/bentoaz/f1tenth_experimental_ws/install/local_planner:/home/bentoaz/f1tenth_gym_ros/install/f1tenth_gym_ros:/home/bentoaz/autoware/install/autoware_carla_interface:/home/bentoaz/autoware/install/ros2agnocast:/home/bentoaz/autoware/install/autoware_adapi_visualizers:/opt/ros/humble /usr/bin/cmake /home/bentoaz/f1tenth_experimental_ws/src/waypoint_generator -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/bentoaz/f1tenth_experimental_ws/install/waypoint_generator
+[5.805s] Invoking command in '/home/bentoaz/f1tenth_experimental_ws/build/waypoint_generator': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/bentoaz/f1tenth_experimental_ws/install/stanley_avoidance:/home/bentoaz/f1tenth_experimental_ws/install/particle_filter:/home/bentoaz/f1tenth_experimental_ws/install/local_planner:/home/bentoaz/f1tenth_gym_ros/install/f1tenth_gym_ros:/home/bentoaz/autoware/install/autoware_carla_interface:/home/bentoaz/autoware/install/ros2agnocast:/home/bentoaz/autoware/install/autoware_adapi_visualizers:/opt/ros/humble /usr/bin/cmake --build /home/bentoaz/f1tenth_experimental_ws/build/waypoint_generator -- -j16 -l16
+[6.047s] [ 50%] [32mBuilding CXX object CMakeFiles/waypoint_generator.dir/src/waypoint_generator.cpp.o[0m
+[14.532s] [100%] [32m[1mLinking CXX executable waypoint_generator[0m
+[14.875s] [100%] Built target waypoint_generator
