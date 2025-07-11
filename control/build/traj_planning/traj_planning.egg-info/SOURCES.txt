@@ -8,6 +8,7 @@ setup.py
 ../../build/traj_planning/traj_planning.egg-info/requires.txt
 ../../build/traj_planning/traj_planning.egg-info/top_level.txt
 ../../build/traj_planning/traj_planning.egg-info/zip-safe
+launch/carla_ros.launch.py
 resource/traj_planning
 test/test_copyright.py
 test/test_flake8.py
