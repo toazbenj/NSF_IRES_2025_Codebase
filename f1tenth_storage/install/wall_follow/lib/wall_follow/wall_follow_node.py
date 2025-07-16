@@ -1,1 +1,0 @@
-/home/bentoaz/f1tenth_experimental_ws/src/wall_follow/scripts/wall_follow_node.py

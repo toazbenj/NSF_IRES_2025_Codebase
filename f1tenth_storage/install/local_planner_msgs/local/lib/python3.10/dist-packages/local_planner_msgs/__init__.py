@@ -1,1 +1,0 @@
-/home/bentoaz/f1tenth_experimental_ws/build/local_planner_msgs/rosidl_generator_py/local_planner_msgs/__init__.py

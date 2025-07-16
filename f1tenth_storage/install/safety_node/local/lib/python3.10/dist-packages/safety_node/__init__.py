@@ -1,1 +1,0 @@
-/home/bentoaz/f1tenth_experimental_ws/src/safety_node/safety_node/__init__.py

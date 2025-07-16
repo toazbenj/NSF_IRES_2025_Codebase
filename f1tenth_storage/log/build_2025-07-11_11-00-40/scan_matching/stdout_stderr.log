@@ -1,9 +1,0 @@
-[35m[1mConsolidate compiler generated dependencies of target scanmatch_node[0m
-[  0%] Built target ament_cmake_python_symlink_scan_matching_setup
-[ 20%] [32m[1mLinking CXX executable scanmatch_node[0m
-failed to create symbolic link '/home/bentoaz/f1tenth_experimental_ws/build/scan_matching/ament_cmake_python/scan_matching/scan_matching' because existing path cannot be removed: Is a directory
-gmake[2]: *** [CMakeFiles/ament_cmake_python_symlink_scan_matching.dir/build.make:70: CMakeFiles/ament_cmake_python_symlink_scan_matching] Error 1
-gmake[1]: *** [CMakeFiles/Makefile2:167: CMakeFiles/ament_cmake_python_symlink_scan_matching.dir/all] Error 2
-gmake[1]: *** Waiting for unfinished jobs....
-[100%] Built target scanmatch_node
-gmake: *** [Makefile:146: all] Error 2

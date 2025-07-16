@@ -1,4 +1,0 @@
-source;share/scan_matching/local_setup.bash
-source;share/scan_matching/local_setup.dsv
-source;share/scan_matching/local_setup.sh
-source;share/scan_matching/local_setup.zsh

@@ -1,1 +1,0 @@
-/home/bentoaz/f1tenth_experimental_ws/build/waypoint_generator/ament_cmake_environment_hooks/local_setup.sh

@@ -1,1 +1,0 @@
-/home/bentoaz/f1tenth_experimental_ws/src/pure_pursuit/launch/sim_pure_pursuit_launch.py

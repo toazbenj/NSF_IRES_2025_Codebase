@@ -1,4 +1,0 @@
-[35m[1mConsolidate compiler generated dependencies of target pure_pursuit[0m
-[35m[1mConsolidate compiler generated dependencies of target waypoint_visualizer[0m
-[ 25%] [32mBuilding CXX object CMakeFiles/pure_pursuit.dir/src/pure_pursuit.cpp.o[0m
-[ 75%] Built target waypoint_visualizer

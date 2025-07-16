@@ -1,7 +1,0 @@
-[console_scripts]
-debug_node = local_planner.debug_node:main
-pause = local_planner.pause:main
-traj_selecter = local_planner.traj_selecter:main
-traj_server = local_planner.traj_server:main
-visualizer = local_planner.visualizer:main
-

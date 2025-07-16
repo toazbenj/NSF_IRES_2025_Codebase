@@ -1,4 +1,0 @@
-[35m[1mConsolidate compiler generated dependencies of target wall_follow_node[0m
-[ 50%] [32m[1mLinking CXX executable wall_follow_node[0m
-[ 50%] Built target ament_cmake_python_symlink_wall_follow_setup
-[100%] Built target wall_follow_node

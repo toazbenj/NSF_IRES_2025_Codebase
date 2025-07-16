@@ -1,1 +1,0 @@
-/home/bentoaz/f1tenth_experimental_ws/src/stanley_avoidance/launch/sim_multi_agent_stanley_avoidance_launch.py

@@ -1,1 +1,0 @@
-/home/bentoaz/f1tenth_experimental_ws/build/stanley_avoidance/launch/sim_stanley_avoidance_launch.py

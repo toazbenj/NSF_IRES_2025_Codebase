@@ -1,9 +1,0 @@
-[35m[1mConsolidate compiler generated dependencies of target wall_follow_node[0m
-failed to create symbolic link '/home/bentoaz/f1tenth_experimental_ws/build/wall_follow/ament_cmake_python/wall_follow/wall_follow' because existing path cannot be removed: Is a directory
-gmake[2]: *** [CMakeFiles/ament_cmake_python_symlink_wall_follow.dir/build.make:70: CMakeFiles/ament_cmake_python_symlink_wall_follow] Error 1
-gmake[1]: *** [CMakeFiles/Makefile2:167: CMakeFiles/ament_cmake_python_symlink_wall_follow.dir/all] Error 2
-gmake[1]: *** Waiting for unfinished jobs....
-[ 50%] [32m[1mLinking CXX executable wall_follow_node[0m
-[ 50%] Built target ament_cmake_python_symlink_wall_follow_setup
-[100%] Built target wall_follow_node
-gmake: *** [Makefile:146: all] Error 2

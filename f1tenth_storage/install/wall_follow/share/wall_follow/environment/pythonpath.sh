@@ -1,1 +1,0 @@
-/home/bentoaz/f1tenth_experimental_ws/build/wall_follow/ament_cmake_environment_hooks/pythonpath.sh
