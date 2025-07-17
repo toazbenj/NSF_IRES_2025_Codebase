@@ -2,7 +2,7 @@ import rclpy
 from rclpy.node import Node
 from nav_msgs.msg import Path
 from visualization_msgs.msg import MarkerArray
-from local_planner_msgs.msg import TrajectoryList, TrajectoryList
+from local_planner_msgs.msg import TrajectoryList
 from geometry_msgs.msg import Point
 from std_msgs.msg import Float64, Header
 from rclpy.qos import QoSProfile, QoSDurabilityPolicy
@@ -59,8 +59,11 @@ class TrajectorySelecter(Node):
         self.get_logger().info(f"Costs: {costs}")
 
         selected_idx = np.argmin(costs)
+
+        # selected_idx = 7
         selected_traj = path_list[selected_idx]
         selected_traj.header.stamp = self.get_clock().now().to_msg()
+        selected_traj.path.header.frame_id = "map" 
 
         self.path_publisher.publish(selected_traj.path)
         self.speed_publisher.publish(selected_traj.speed)

@@ -86,34 +86,29 @@ class TrajectoryServer(Node):
             self.odom_callback,
             10
         )
-
         self.subscription_selected_path = self.create_subscription(
             Path,
             '/ego_racecar/selected_waypoints',
             self.selected_path_callback,
             10
         )
-
         self.subscription_global_path = self.create_subscription(
             Path,
             '/waypoints',
             self.global_path_callback,
             10
         )
-        self.global_path = None
+        self.pause_sub = self.create_subscription(Bool, '/pause_state', self.pause_callback, 10)
 
+        self.timer = self.create_timer(ACTION_INTERVAL, self.timer_callback)
 
         self.publisher = self.create_publisher(TrajectoryList, '/ego_racecar/traj_list', 10)
-
+     
+        self.global_path = None
         self.selected_path = None
         self.latest_pose = None
         self.paused = False
         self.is_first_publish = True
-
-        self.create_subscription(Bool, '/pause_state', self.pause_callback, 10)
-
-        # Timer to trigger trajectory publishing
-        self.timer = self.create_timer(ACTION_INTERVAL, self.timer_callback)
 
         self.get_logger().info('TrajectoryServer initialized.')
 
@@ -135,13 +130,30 @@ class TrajectoryServer(Node):
 
         self.latest_pose = msg
 
-    #     pose = msg.pose.pose
+        # pose = msg.pose.pose
+        # x = float(pose.position.x)
+        # y = float(pose.position.y)
+
+        # vx = float(msg.twist.twist.linear.x)
+        # vy = float(msg.twist.twist.linear.y)
+        # speed = float((vx**2 + vy**2) ** 0.5)
+
+    #     if self.paused or self.latest_pose is None:
+    #         return
+
+    #     if self.selected_path is None:
+    #         pose = self.latest_pose.pose.pose
+    #     else:
+    #         pose_stamped = self.selected_path.poses[-1]
+    #         pose = pose_stamped.pose
+
     #     x = float(pose.position.x)
     #     y = float(pose.position.y)
+    #     orientation = pose.orientation
 
-    #     vx = float(msg.twist.twist.linear.x)
-    #     vy = float(msg.twist.twist.linear.y)
-    #     speed = float((vx**2 + vy**2) ** 0.5)
+    #     vx = float(self.latest_pose.twist.twist.linear.x)
+    #     vy = float(self.latest_pose.twist.twist.linear.y)
+    #     speed = float((vx ** 2 + vy ** 2) ** 0.5)
 
     #     if self.selected_path is None:
     #         self.publish_new_trajectories(x, y, pose.orientation, speed)
@@ -174,6 +186,26 @@ class TrajectoryServer(Node):
     #         self.publish_new_trajectories(x, y, pose.orientation, speed)
     #         self.is_first_publish = False
 
+    # def timer_callback(self):
+    #     if self.paused or self.latest_pose is None:
+    #         return
+
+    #     if self.selected_path is None:
+    #         pose = self.latest_pose.pose.pose
+    #     else:
+    #         pose_stamped = self.selected_path.poses[-1]
+    #         pose = pose_stamped.pose
+
+    #     x = float(pose.position.x)
+    #     y = float(pose.position.y)
+    #     orientation = pose.orientation
+
+    #     vx = float(self.latest_pose.twist.twist.linear.x)
+    #     vy = float(self.latest_pose.twist.twist.linear.y)
+    #     speed = float((vx ** 2 + vy ** 2) ** 0.5)
+
+    #     self.publish_new_trajectories(x, y, orientation, speed)
+
     def timer_callback(self):
         if self.paused or self.latest_pose is None:
             return
@@ -181,12 +213,41 @@ class TrajectoryServer(Node):
         pose = self.latest_pose.pose.pose
         x = float(pose.position.x)
         y = float(pose.position.y)
+        orientation = pose.orientation
 
         vx = float(self.latest_pose.twist.twist.linear.x)
         vy = float(self.latest_pose.twist.twist.linear.y)
-        speed = float((vx**2 + vy**2) ** 0.5)
+        speed = float((vx ** 2 + vy ** 2) ** 0.5)
 
-        self.publish_new_trajectories(x, y, pose.orientation, speed)
+        if self.selected_path is None:
+            self.publish_new_trajectories(x, y, orientation, speed)
+            return
+
+        # --- Compute progress ---
+        total_dist = 0.0
+        for i in range(len(self.selected_path.poses) - 1):
+            p1 = self.selected_path.poses[i].pose.position
+            p2 = self.selected_path.poses[i + 1].pose.position
+            total_dist += hypot(p2.x - p1.x, p2.y - p1.y)
+
+        # Find closest point index
+        _, _, closest_idx = project_point_to_reference_trajectory(pose.position, self.selected_path)
+
+        covered_dist = 0.0
+        for i in range(closest_idx):
+            p1 = self.selected_path.poses[i].pose.position
+            p2 = self.selected_path.poses[i + 1].pose.position
+            covered_dist += hypot(p2.x - p1.x, p2.y - p1.y)
+
+        progress_ratio = covered_dist / total_dist if total_dist > 0 else 0.0
+
+        self.get_logger().info(f"Progress ratio: {progress_ratio:.2f}")
+
+        # Re-plan if progress exceeds threshold or first time
+        if progress_ratio >= PROGRESS_RESET_RATIO and self.is_first_publish:
+            self.publish_new_trajectories(x, y, orientation, speed)
+            self.is_first_publish = False
+
 
     def publish_new_trajectories(self, x, y, orientation_q, speed):
         if self.paused:
@@ -214,7 +275,7 @@ class TrajectoryServer(Node):
                 acc = action[0] * ACCELERATION_INCREMENT
                 steering = action[1] * STEERING_INCREMENT
 
-                for _ in range(int(ACTION_INTERVAL/DT)):
+                for _ in range(int(RECEDING_HORIZON/DT)):
                     x_temp, y_temp, v_temp, phi_temp, b_temp = dynamics(
                         acc, steering, x_temp, y_temp, v_temp, phi_temp, b_temp
                     )

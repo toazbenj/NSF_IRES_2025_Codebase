@@ -17,33 +17,45 @@ class TrajectoryVisualizer(Node):
     def __init__(self):
         super().__init__('trajectory_visualizer')
 
-        self.subscription_odom = self.create_subscription(
+        self.odom_sub = self.create_subscription(
             Odometry,
             '/ego_racecar/odom',
             self.odom_callback,
             10
         )
 
-        self.action_space_sub = self.create_subscription(
+        self.traj_lst_sub = self.create_subscription(
             TrajectoryList,
             '/ego_racecar/traj_list',
             self.path_list_callback,
             10
         )
 
-        self.global_path_sub = self.create_subscription(
-            Path, '/waypoints', self.global_path_callback, 10)
+        self.selected_waypoints_sub = self.create_subscription(
+            Path,
+            '/ego_racecar/selected_waypoints',
+            self.selected_path_callback,
+            10
+        )
 
-        self.marker_pub = self.create_publisher(MarkerArray, '/ego_racecar/trajectories', 10)
-        self.selected_path_pub = self.create_publisher(MarkerArray, '/ego_racecar/selected_trajectory', 10)
+        self.waypoints_sub = self.create_subscription(
+            Path,
+            '/waypoints',
+            self.global_path_callback,
+            10
+        )
+
+        self.traj_lst_pub = self.create_publisher(MarkerArray, '/ego_racecar/trajectories', 10)
+        self.selected_traj_pub = self.create_publisher(MarkerArray, '/ego_racecar/selected_trajectory', 10)
 
         # self.timer = self.create_timer(100.0, self.timer_callback)
 
         # self.cost_pub = self.create_publisher(MarkerArray, 'cost_map_markers', 10)
-        self.cost_grid_pub = self.create_publisher(OccupancyGrid, '/cost_map', 10)
+        self.cost_map_pub = self.create_publisher(OccupancyGrid, '/cost_map', 10)
 
         self.reference_path = None 
         self.ego_pose = None
+        self.trajectory_counter = 0  # In __init__()
 
     def path_list_callback(self, msg: TrajectoryList):
         marker_array = MarkerArray()
@@ -61,29 +73,38 @@ class TrajectoryVisualizer(Node):
 
             marker_array.markers.append(marker)
 
-        self.marker_pub.publish(marker_array)
+        self.traj_lst_pub.publish(marker_array)
         self.cost_visual_callback()
 
     def selected_path_callback(self, msg: Path):
         marker_array = MarkerArray()
-
         marker = Marker()
         marker.header = msg.header
         marker.ns = 'selected_trajectory'
-        marker.id = 0
+        marker.id = self.trajectory_counter
+        self.trajectory_counter += 1
+
         marker.type = Marker.LINE_STRIP
         marker.action = Marker.ADD
         marker.scale.x = 0.1  # Line width
         marker.color = ColorRGBA(r=0.0, g=0.0, b=1.0, a=1.0)  # Red, opaque
-        marker.points = [pose.pose.position for pose in msg.path.poses]
+        marker.points = [pose.pose.position for pose in msg.poses]
+        marker_array.markers.append(marker)
 
-        self.selected_path_pub.publish(marker)
+        self.selected_traj_pub.publish(marker_array)
+
+        # self.get_logger().info("Selected Path callback")
+        # self.get_logger().info(f"Selected path has {len(msg.poses)} poses")
 
     def cost_visual_callback(self):
-        if self.reference_path is None or self.ego_pose is None:
-            self.get_logger().warn("Reference path or ego pose not available.")
+        if self.reference_path is None:
+            self.get_logger().warn("Reference path not available.")
             return
-        self.get_logger().info("callback start")
+        
+        if self.ego_pose is None:
+            self.get_logger().warn("Ego pose not available.")
+            return
+        # self.get_logger().info("Cost callback start")
 
         resolution = 1.0 # meters per cell
         width = 5  # number of cells in x
@@ -158,7 +179,7 @@ class TrajectoryVisualizer(Node):
             grid_data.append(norm_cost)
 
         grid.data = grid_data
-        self.cost_grid_pub.publish(grid)
+        self.cost_map_pub.publish(grid)
 
     # def timer_callback(self):
     #     if self.reference_path:

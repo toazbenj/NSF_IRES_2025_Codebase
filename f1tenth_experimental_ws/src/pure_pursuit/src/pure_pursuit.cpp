@@ -41,12 +41,8 @@ PurePursuit::PurePursuit() : Node("pure_pursuit_node") {
     this->declare_parameter("rviz_lookahead_waypoint_topic", "/lookahead_waypoint");
     this->declare_parameter("global_refFrame", "map");
 
-    // this->declare_parameter("min_lookahead", 0.5);
-    // this->declare_parameter("max_lookahead", 1.0);
-    // this->declare_parameter("lookahead_ratio", 8.0);
-
-    this->declare_parameter("min_lookahead", 0.0);
-    this->declare_parameter("max_lookahead", 0.0);
+    this->declare_parameter("min_lookahead", 0.5);
+    this->declare_parameter("max_lookahead", 1.0);
     this->declare_parameter("lookahead_ratio", 8.0);
 
     this->declare_parameter("K_p", 0.5);
@@ -84,6 +80,8 @@ PurePursuit::PurePursuit() : Node("pure_pursuit_node") {
     transform_listener_ = std::make_shared<tf2_ros::TransformListener>(*tf_buffer_);
 
     RCLCPP_INFO(this->get_logger(), "Pure pursuit node has been launched");
+    RCLCPP_INFO(this->get_logger(), "Parameters: %f, %f, %f", min_lookahead, max_lookahead, lookahead_ratio);
+    // RCLCPP_INFO(this->get_logger(), "Parameters: %f", min_lookahead);
 
     // load_waypoints();
 
@@ -121,7 +119,7 @@ void PurePursuit::pause_callback(std_msgs::msg::Bool::SharedPtr msg){
 void PurePursuit::selected_waypoints_callback(const nav_msgs::msg::Path::SharedPtr path_msg){
     if (paused_) return;
 
-    RCLCPP_INFO(this->get_logger(), "start selected waypoint callback");
+    // RCLCPP_INFO(this->get_logger(), "start selected waypoint callback");
 
     // Clear existing waypoints
     waypoints.X.clear();
@@ -137,7 +135,7 @@ void PurePursuit::selected_waypoints_callback(const nav_msgs::msg::Path::SharedP
         return;
     }
     
-    RCLCPP_INFO(this->get_logger(), "Loading waypoints from Path message");
+    // RCLCPP_INFO(this->get_logger(), "Loading waypoints from Path message");
     
     // Convert each pose in the path to waypoint format
     for (const auto& pose_stamped : path_msg->poses) {
@@ -163,7 +161,7 @@ void PurePursuit::selected_waypoints_callback(const nav_msgs::msg::Path::SharedP
             average_dist_between_waypoints += p2pdist(waypoints.X[i], waypoints.X[i + 1], waypoints.Y[i], waypoints.Y[i + 1]);
         }
         average_dist_between_waypoints /= num_waypoints;
-        RCLCPP_INFO(this->get_logger(), "Average distance between waypoints: %f", average_dist_between_waypoints);
+        // RCLCPP_INFO(this->get_logger(), "Average distance between waypoints: %f", average_dist_between_waypoints);
     };
 }
 
@@ -278,7 +276,7 @@ void PurePursuit::visualize_current_point(Eigen::Vector3d &point) {
 void PurePursuit::get_waypoint() {
     if (paused_ || waypoints.X.empty()) return;
 
-    RCLCPP_INFO(this->get_logger(), "Getting waypoint");
+    // RCLCPP_INFO(this->get_logger(), "Getting waypoint");
 
     // --- Step 1: Compute dynamic lookahead distance
     double lookahead = std::min(std::max(min_lookahead, max_lookahead * curr_velocity / lookahead_ratio), max_lookahead);
@@ -333,7 +331,7 @@ void PurePursuit::get_waypoint() {
                 lookahead_index = i;
             }
         }
-        RCLCPP_WARN(this->get_logger(), "Fallback: no valid lookahead found, using farthest reachable point.");
+        // RCLCPP_WARN(this->get_logger(), "Fallback: no valid lookahead found, using farthest reachable point.");
     }
 
     waypoints.index = lookahead_index;
