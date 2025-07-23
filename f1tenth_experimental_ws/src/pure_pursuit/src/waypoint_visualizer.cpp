@@ -15,12 +15,18 @@
 #include "rclcpp/rclcpp.hpp"
 #include "visualization_msgs/msg/marker.hpp"
 #include "visualization_msgs/msg/marker_array.hpp"
+#include "ament_index_cpp/get_package_share_directory.hpp"
 
 WaypointVisualizer::WaypointVisualizer() : Node("waypoint_visualizer_node") {
     this->declare_parameter("waypoints_path", "/src/pure_pursuit/racelines/e7_floor5.csv");
     this->declare_parameter("rviz_waypoints_topic", "/waypoints");
     
-    waypoints_path = this->get_parameter("waypoints_path").as_string();
+
+    std::string package_share_dir = ament_index_cpp::get_package_share_directory("pure_pursuit");
+    waypoints_path = package_share_dir + "/racelines/e7_floor5.csv";
+
+    // waypoints_path = this->get_parameter("waypoints_path").as_string();
+
     rviz_waypoints_topic = this->get_parameter("rviz_waypoints_topic").as_string();
     
     // Publisher for visualization (MarkerArray)
@@ -31,7 +37,9 @@ WaypointVisualizer::WaypointVisualizer() : Node("waypoint_visualizer_node") {
     
     timer_ = this->create_wall_timer(2000ms, std::bind(&WaypointVisualizer::timer_callback, this));
 
-    RCLCPP_INFO(this->get_logger(), "this node has been launched");
+    RCLCPP_INFO(this->get_logger(), "this node has been launched for real");
+    RCLCPP_INFO(this->get_logger(), "Loaded waypoints_path: %s", waypoints_path.c_str());
+
     download_waypoints();
     global_path_publish();
 }

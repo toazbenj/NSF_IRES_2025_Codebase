@@ -35,7 +35,7 @@ def generate_combinations(numbers, num_picks):
     return combinations
 
 
-def dynamics(acc, steering, x_in, y_in, v_in, phi_in, b_in):
+def dynamics(acc, steering, x_in, y_in, v_in, phi_in, b_in, v_max, dt, lf, lr):
     """
     Computes the next state of the bicycle using a simple bicycle model.
 
@@ -59,20 +59,20 @@ def dynamics(acc, steering, x_in, y_in, v_in, phi_in, b_in):
     # print(f'phi/b_in: {cos(phi_in + b_in)}')
     # v_in = v_in.data
 
-    x_next = x_in + v_in * cos(phi_in + b_in) * DT
-    y_next = y_in + v_in * sin(phi_in + b_in) * DT
+    x_next = x_in + v_in * cos(phi_in + b_in) * dt
+    y_next = y_in + v_in * sin(phi_in + b_in) * dt
 
     # Update heading angle
-    phi_next = phi_in + (v_in / LR) * sin(b_in) * DT
+    phi_next = phi_in + (v_in / lr) * sin(b_in) * dt
 
     # Update velocity
-    v_next = v_in + acc * DT
+    v_next = v_in + acc * dt
     # velocity limit
-    if v_next > VELOCITY_LIMIT:
-        v_next = VELOCITY_LIMIT
+    if v_next > v_max:
+        v_next = v_max
     v_next = max(0, v_next)  # Prevent negative velocity
 
-    b_next = atan2(LR * tan(steering), LR + LF)
+    b_next = atan2(lr * tan(steering), lr + lf)
 
     return x_next, y_next, v_next, phi_next, b_next
 
@@ -80,15 +80,45 @@ class TrajectoryServer(Node):
     def __init__(self):
         super().__init__('trajectory_server')
 
+        # Declare parameters with defaults (used if no YAML passed)
+        self.declare_parameter('NAMESPACE', '/ego_racecar')
+        self.declare_parameter('STEERING_INCREMENT', 0.6109)
+        self.declare_parameter('ACCELERATION_INCREMENT', 0.25)
+        self.declare_parameter('PROGRESS_RESET_RATIO', 0.75)
+        self.declare_parameter('ACTION_INTERVAL', 0.25)
+        self.declare_parameter('ACTION_LST', [0.0])
+
+        self.declare_parameter('MAX_SPEED', 1.0)
+        self.declare_parameter('DT', 0.25)
+        self.declare_parameter('LF', 1)
+        self.declare_parameter('LR', 1)
+        self.declare_parameter('RECEDING_HORIZON', 1.5)
+
+        # Load them from the parameter server
+        self.namespace = self.get_parameter('NAMESPACE').get_parameter_value().string_value
+        self.steering_increment = self.get_parameter('STEERING_INCREMENT').value
+        self.acceleration_increment = self.get_parameter('ACCELERATION_INCREMENT').value
+        self.progress_reset_ratio = self.get_parameter('PROGRESS_RESET_RATIO').value
+        self.action_interval = self.get_parameter('ACTION_INTERVAL').value
+
+        flat = self.get_parameter('ACTION_LST').get_parameter_value().double_array_value
+        self.action_lst = [(flat[i], flat[i+1]) for i in range(0, len(flat), 2)]
+  
+        self.max_speed = self.get_parameter('MAX_SPEED').value
+        self.dt = self.get_parameter('DT').value
+        self.lf = self.get_parameter('LF').value
+        self.lr = self.get_parameter('LR').value
+        self.receding_horizon = self.get_parameter('RECEDING_HORIZON').value
+
         self.subscription_odom = self.create_subscription(
             Odometry,
-            '/ego_racecar/odom',
+            f'{self.namespace}/odom',
             self.odom_callback,
             10
         )
         self.subscription_selected_path = self.create_subscription(
             Path,
-            '/ego_racecar/selected_waypoints',
+            f'{self.namespace}/selected_waypoints',
             self.selected_path_callback,
             10
         )
@@ -98,16 +128,14 @@ class TrajectoryServer(Node):
             self.global_path_callback,
             10
         )
-        self.pause_sub = self.create_subscription(Bool, '/pause_state', self.pause_callback, 10)
 
-        self.timer = self.create_timer(ACTION_INTERVAL, self.timer_callback)
+        self.timer = self.create_timer(self.action_interval, self.timer_callback)
 
-        self.publisher = self.create_publisher(TrajectoryList, '/ego_racecar/traj_list', 10)
+        self.publisher = self.create_publisher(TrajectoryList, f'{self.namespace}/traj_list', 10)
      
         self.global_path = None
         self.selected_path = None
         self.latest_pose = None
-        self.paused = False
         self.is_first_publish = True
 
         self.get_logger().info('TrajectoryServer initialized.')
@@ -116,100 +144,15 @@ class TrajectoryServer(Node):
         self.global_path = msg
 
     def selected_path_callback(self, msg: Path):
-        if self.paused:
-            return
-
         self.selected_path = msg
         self.get_logger().info("Received selected trajectory.")
         self.is_first_publish = True
 
 
     def odom_callback(self, msg: Odometry):
-        if self.paused:
-            return
-
         self.latest_pose = msg
 
-        # pose = msg.pose.pose
-        # x = float(pose.position.x)
-        # y = float(pose.position.y)
-
-        # vx = float(msg.twist.twist.linear.x)
-        # vy = float(msg.twist.twist.linear.y)
-        # speed = float((vx**2 + vy**2) ** 0.5)
-
-    #     if self.paused or self.latest_pose is None:
-    #         return
-
-    #     if self.selected_path is None:
-    #         pose = self.latest_pose.pose.pose
-    #     else:
-    #         pose_stamped = self.selected_path.poses[-1]
-    #         pose = pose_stamped.pose
-
-    #     x = float(pose.position.x)
-    #     y = float(pose.position.y)
-    #     orientation = pose.orientation
-
-    #     vx = float(self.latest_pose.twist.twist.linear.x)
-    #     vy = float(self.latest_pose.twist.twist.linear.y)
-    #     speed = float((vx ** 2 + vy ** 2) ** 0.5)
-
-    #     if self.selected_path is None:
-    #         self.publish_new_trajectories(x, y, pose.orientation, speed)
-    #         return
-
-    #     # Compute distance along the selected trajectory
-    #     total_dist = 0.0
-    #     for i in range(len(self.selected_path.poses) - 1):
-    #         p1 = self.selected_path.poses[i].pose.position
-    #         p2 = self.selected_path.poses[i + 1].pose.position
-    #         total_dist += hypot(p2.x - p1.x, p2.y - p1.y)
-
-    #     # Find closest point on the path
-    #     _, _, closest_idx = project_point_to_reference_trajectory(pose.position, self.selected_path)
-
-    #     # Compute progress ratio
-    #     covered_dist = 0.0
-    #     for i in range(closest_idx):
-    #         p1 = self.selected_path.poses[i].pose.position
-    #         p2 = self.selected_path.poses[i + 1].pose.position
-    #         covered_dist += hypot(p2.x - p1.x, p2.y - p1.y)
-
-    #     progress_ratio = covered_dist / total_dist if total_dist > 0 else 0
-    #     self.get_logger().info(f"Progress Ratio: {progress_ratio}")
-
-
-    #     # self.get_logger().info("Odom callback")
-
-    #     if progress_ratio >= PROGRESS_RESET_RATIO and self.is_first_publish:
-    #         self.publish_new_trajectories(x, y, pose.orientation, speed)
-    #         self.is_first_publish = False
-
-    # def timer_callback(self):
-    #     if self.paused or self.latest_pose is None:
-    #         return
-
-    #     if self.selected_path is None:
-    #         pose = self.latest_pose.pose.pose
-    #     else:
-    #         pose_stamped = self.selected_path.poses[-1]
-    #         pose = pose_stamped.pose
-
-    #     x = float(pose.position.x)
-    #     y = float(pose.position.y)
-    #     orientation = pose.orientation
-
-    #     vx = float(self.latest_pose.twist.twist.linear.x)
-    #     vy = float(self.latest_pose.twist.twist.linear.y)
-    #     speed = float((vx ** 2 + vy ** 2) ** 0.5)
-
-    #     self.publish_new_trajectories(x, y, orientation, speed)
-
     def timer_callback(self):
-        if self.paused or self.latest_pose is None:
-            return
-
         pose = self.latest_pose.pose.pose
         x = float(pose.position.x)
         y = float(pose.position.y)
@@ -244,22 +187,19 @@ class TrajectoryServer(Node):
         self.get_logger().info(f"Progress ratio: {progress_ratio:.2f}")
 
         # Re-plan if progress exceeds threshold or first time
-        if progress_ratio >= PROGRESS_RESET_RATIO and self.is_first_publish:
+        if progress_ratio >= self.progress_reset_ratio and self.is_first_publish:
             self.publish_new_trajectories(x, y, orientation, speed)
             self.is_first_publish = False
 
 
     def publish_new_trajectories(self, x, y, orientation_q, speed):
-        if self.paused:
-            return
-
         orientation_list = [orientation_q.x, orientation_q.y, orientation_q.z, orientation_q.w]
         _, _, yaw = euler_from_quaternion(orientation_list)
         yaw = float(yaw)
         # yaw = self.get_tangent_yaw_from_path(x, y) if self.global_path else float(yaw)
 
         traj_list = []
-        action_choices = generate_combinations(ACTION_LST, MPC_HORIZON)
+        action_choices = generate_combinations(self.action_lst, 1)
 
         for action_sequence in action_choices:
             x_temp, y_temp, v_temp, phi_temp, b_temp = x, y, speed, yaw, 0
@@ -272,12 +212,13 @@ class TrajectoryServer(Node):
             traj.header = header
 
             for action in action_sequence:
-                acc = action[0] * ACCELERATION_INCREMENT
-                steering = action[1] * STEERING_INCREMENT
+                acc = action[0] * self.acceleration_increment
+                steering = action[1] * self.steering_increment
 
-                for _ in range(int(RECEDING_HORIZON/DT)):
+                for _ in range(int(self.receding_horizon/self.dt)):
                     x_temp, y_temp, v_temp, phi_temp, b_temp = dynamics(
-                        acc, steering, x_temp, y_temp, v_temp, phi_temp, b_temp
+                        acc, steering, x_temp, y_temp, v_temp, phi_temp, b_temp, 
+                        self.max_speed, self.dt, self.lf, self.lr
                     )
 
                     q = quaternion_from_euler(0, 0, phi_temp)
@@ -301,9 +242,6 @@ class TrajectoryServer(Node):
 
         self.publisher.publish(path_list)
         self.get_logger().info("Trajectory list published")
-
-    def pause_callback(self, msg):
-        self.paused = msg.data
 
 
 def main(args=None):

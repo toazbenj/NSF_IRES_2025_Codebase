@@ -15,8 +15,19 @@ class TrajectorySelecter(Node):
     def __init__(self):
         super().__init__('trajectory_selecter')
 
+        # Declare and read parameters
+        self.declare_parameter('NAMESPACE', '/ego_racecar')
+        self.declare_parameter('BOUNDS_WEIGHT', 100)
+        self.declare_parameter('PROGRESS_WEIGHT', 1)
+        self.declare_parameter('BOUNDS_SPREAD', 5)
+
+        self.namespace = self.get_parameter('NAMESPACE').get_parameter_value().string_value
+        self.bounds_weight = self.get_parameter('BOUNDS_WEIGHT').value
+        self.progress_weight = self.get_parameter('PROGRESS_WEIGHT').value
+        self.bounds_spread = self.get_parameter('BOUNDS_SPREAD').value
+
         self.action_space_sub = self.create_subscription(
-            TrajectoryList, '/ego_racecar/traj_list', self.local_path_callback, 10)
+            TrajectoryList, f'{self.namespace}/traj_list', self.local_path_callback, 10)
 
         self.global_path_sub = self.create_subscription(
             Path, '/waypoints', self.global_path_callback, 10)
@@ -24,28 +35,19 @@ class TrajectorySelecter(Node):
         qos = QoSProfile(depth=10)
         qos.durability = QoSDurabilityPolicy.TRANSIENT_LOCAL
 
-        self.path_publisher = self.create_publisher(Path, '/ego_racecar/selected_waypoints', qos)
-        self.speed_publisher = self.create_publisher(Float64, '/ego_racecar/speed_command', qos)
+        self.path_publisher = self.create_publisher(Path, f'{self.namespace}/selected_waypoints', qos)
+        self.speed_publisher = self.create_publisher(Float64, f'{self.namespace}/speed_command', qos)
 
         self.reference_path = None
-
-        self.paused = False
-        self.create_subscription(Bool, '/pause_state', self.pause_callback, 10)
 
         self.get_logger().info("TrajectorySelecter initialized")
 
     def global_path_callback(self, msg: Path):
-        if self.paused:
-            return
-
         if msg != self.reference_path:
             self.reference_path = msg
             self.get_logger().info(f"New reference path received")
 
     def local_path_callback(self, msg: TrajectoryList):
-        if self.paused:
-            return
-
         path_list = msg.paths
 
         if not self.reference_path:
@@ -54,7 +56,8 @@ class TrajectorySelecter(Node):
 
         costs = np.zeros(len(path_list))
         for idx, path in enumerate(path_list):
-            costs[idx] = evaluate_path(path.path, self.reference_path)
+            costs[idx] = evaluate_path(path.path, self.reference_path,
+                                       self.progress_weight, self.bounds_weight, self.bounds_spread)
 
         self.get_logger().info(f"Costs: {costs}")
 
@@ -69,9 +72,6 @@ class TrajectorySelecter(Node):
         self.speed_publisher.publish(selected_traj.speed)
 
         self.get_logger().info(f"Published selected trajectory {selected_idx} at speed {selected_traj.speed.data} m/s")
-
-    def pause_callback(self, msg):
-        self.paused = msg.data
 
 def main(args=None):
     rclpy.init(args=args)

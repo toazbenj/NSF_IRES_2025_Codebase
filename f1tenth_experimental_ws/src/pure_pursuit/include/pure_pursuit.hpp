@@ -60,7 +60,6 @@ class PurePursuit : public rclcpp::Node {
 
     double x_car_world;
     double y_car_world;
-    bool paused_ = false;
 
     std::string odom_topic;
     std::string car_refFrame;
@@ -92,7 +91,6 @@ class PurePursuit : public rclcpp::Node {
 
     // declare subscriber sharedpointer obj
     rclcpp::Subscription<nav_msgs::msg::Odometry>::SharedPtr subscription_odom;
-    rclcpp::Subscription<std_msgs::msg::Bool>::SharedPtr pause_sub_;
 
     // declare publisher sharedpointer obj
     rclcpp::Publisher<ackermann_msgs::msg::AckermannDriveStamped>::SharedPtr publisher_drive;
@@ -139,7 +137,5 @@ class PurePursuit : public rclcpp::Node {
 
     void selected_waypoints_callback(const nav_msgs::msg::Path::SharedPtr path_msg);
     void speed_command_callback(const std_msgs::msg::Float64::ConstSharedPtr msg);
-    void pause_callback(std_msgs::msg::Bool::SharedPtr msg);
-
     
 };

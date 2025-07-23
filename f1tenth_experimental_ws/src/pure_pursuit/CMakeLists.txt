@@ -66,5 +66,6 @@ install(TARGETS
 # Install launch files and config
 install(DIRECTORY launch DESTINATION share/${PROJECT_NAME})
 install(DIRECTORY config DESTINATION share/${PROJECT_NAME})
+install(DIRECTORY racelines DESTINATION share/${PROJECT_NAME})
 
 ament_package()

@@ -5,8 +5,8 @@ pure_pursuit:
     car_refFrame: "ego_racecar/base_link"
     global_refFrame: "map"
     drive_topic: "/drive"
-    rviz_current_waypoint_topic: "/current_waypoint"
-    rviz_lookahead_waypoint_topic: "/lookahead_waypoint"
+    rviz_current_waypoint_topic: "/ego_racecar/current_waypoint"
+    rviz_lookahead_waypoint_topic: "/ego_racecar/lookahead_waypoint"
 
     # Pure Pursuit Parameters
     # Lookahead is computed using the following: lookahead = min(max(min_lookahead, max_lookahead * curr_velocity / lookahead_ratio), max_lookahead);

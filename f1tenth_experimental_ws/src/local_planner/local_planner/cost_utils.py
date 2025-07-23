@@ -4,10 +4,10 @@ from nav_msgs.msg import Path
 import numpy as np
 
 
-def evaluate_path(path: Path, reference_path: Path):
+def evaluate_path(path: Path, reference_path: Path, progress_weight, bounds_weight, bounds_spread):
     progress_cost = progress_costs(path, reference_path)
-    bounds_cost = bounds_costs(path, reference_path)
-    cost = RELATIVE_PROGRESS_WEIGHT_1 * progress_cost + BOUNDS_WEIGHT_1 * bounds_cost
+    bounds_cost = bounds_costs(path, reference_path, bounds_spread)
+    cost = progress_weight * progress_cost + bounds_weight * bounds_cost
     return cost
 
 def project_point_to_reference_trajectory(point, reference_path):
@@ -40,7 +40,7 @@ def progress_costs(path: Path, reference_path: Path):
     # incentive is negative cost
     return -dist
 
-def bounds_costs(path: Path, reference_path: Path):
+def bounds_costs(path: Path, reference_path: Path, bounds_spread):
     total_deviation = 0.0
     max_dist = 0.0
 
@@ -52,6 +52,6 @@ def bounds_costs(path: Path, reference_path: Path):
         if dist > max_dist:
             max_dist = dist
 
-    total_deviation +=  1 - np.exp(-(2/BOUNDS_SPREAD * max_dist) ** 2)
+    total_deviation +=  1 - np.exp(-(2/bounds_spread * max_dist) ** 2)
     
     return total_deviation

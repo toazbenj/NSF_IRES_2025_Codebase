@@ -80,20 +80,11 @@ PurePursuit::PurePursuit() : Node("pure_pursuit_node") {
     transform_listener_ = std::make_shared<tf2_ros::TransformListener>(*tf_buffer_);
 
     RCLCPP_INFO(this->get_logger(), "Pure pursuit node has been launched");
-    RCLCPP_INFO(this->get_logger(), "Parameters: %f, %f, %f", min_lookahead, max_lookahead, lookahead_ratio);
-    // RCLCPP_INFO(this->get_logger(), "Parameters: %f", min_lookahead);
-
+    // RCLCPP_INFO(this->get_logger(), "Parameters: %f, %f, %f", min_lookahead, max_lookahead, lookahead_ratio);
+    RCLCPP_INFO(this->get_logger(), "Publishing drive commands to: %s", drive_topic.c_str());
     // load_waypoints();
 
     //new stuff
-    // pause_sub_ = this->create_subscription<std_msgs::msg::Bool>(
-    // "/pause_state", rclcpp::QoS(10),
-    // [this](std_msgs::msg::Bool::SharedPtr msg) {
-    //     paused_ = msg->data;
-    // });
-
-    pause_sub_ = this->create_subscription<std_msgs::msg::Bool>("/pause_state", rclcpp::QoS(10), std::bind(&PurePursuit::pause_callback, this, _1));
-
 
     selected_waypoints_sub_ = this->create_subscription<nav_msgs::msg::Path>("/ego_racecar/selected_waypoints", 25, std::bind(&PurePursuit::selected_waypoints_callback, this, _1));
     speed_command_sub_ = this->create_subscription<std_msgs::msg::Float64>("/ego_racecar/speed_command", 25, std::bind(&PurePursuit::speed_command_callback, this, _1));
@@ -102,23 +93,7 @@ PurePursuit::PurePursuit() : Node("pure_pursuit_node") {
 
 //new stuff
 
-void PurePursuit::pause_callback(std_msgs::msg::Bool::SharedPtr msg){
-    paused_ = msg->data;
-    paused_ = 0;
-
-    // if (paused_){
-    // auto drive_msgObj = ackermann_msgs::msg::AckermannDriveStamped();
-    // drive_msgObj.drive.steering_angle = 0.0;
-    // drive_msgObj.drive.speed = 0.0;
-
-    // publisher_drive->publish(drive_msgObj);
-    // }
-}
-
-
 void PurePursuit::selected_waypoints_callback(const nav_msgs::msg::Path::SharedPtr path_msg){
-    if (paused_) return;
-
     // RCLCPP_INFO(this->get_logger(), "start selected waypoint callback");
 
     // Clear existing waypoints
@@ -167,7 +142,6 @@ void PurePursuit::selected_waypoints_callback(const nav_msgs::msg::Path::SharedP
 
 
 void PurePursuit::speed_command_callback(const std_msgs::msg::Float64::ConstSharedPtr msg) {
-    if (paused_) return;
 
     RCLCPP_INFO(this->get_logger(), "start speed command");
 
@@ -192,8 +166,6 @@ double PurePursuit::p2pdist(double &x1, double &x2, double &y1, double &y2) {
 }
 
 void PurePursuit::load_waypoints() {
-    if (paused_) return;
-
     csvFile_waypoints.open(waypoints_path, std::ios::in);
 
     if (!csvFile_waypoints.is_open()) {
@@ -274,8 +246,6 @@ void PurePursuit::visualize_current_point(Eigen::Vector3d &point) {
 }
 
 void PurePursuit::get_waypoint() {
-    if (paused_ || waypoints.X.empty()) return;
-
     // RCLCPP_INFO(this->get_logger(), "Getting waypoint");
 
     // --- Step 1: Compute dynamic lookahead distance
@@ -406,8 +376,6 @@ double PurePursuit::get_velocity(double steering_angle) {
 }
 
 void PurePursuit::publish_message(double steering_angle) {
-    if (paused_) return;
-
     auto drive_msgObj = ackermann_msgs::msg::AckermannDriveStamped();
     if (steering_angle < 0.0) {
         drive_msgObj.drive.steering_angle = std::max(steering_angle, -to_radians(steering_limit));  // ensure steering angle is dynamically capable
@@ -422,8 +390,6 @@ void PurePursuit::publish_message(double steering_angle) {
 }
 
 void PurePursuit::odom_callback(const nav_msgs::msg::Odometry::ConstSharedPtr odom_submsgObj) {
-    // if (paused_) return;
-
     x_car_world = odom_submsgObj->pose.pose.position.x;
     y_car_world = odom_submsgObj->pose.pose.position.y;
 
@@ -445,8 +411,6 @@ void PurePursuit::odom_callback(const nav_msgs::msg::Odometry::ConstSharedPtr od
 }
 
 void PurePursuit::timer_callback() {
-    // if (paused_) return;
-
     // Periodically check parameters and update
     K_p = this->get_parameter("K_p").as_double();
     velocity_percentage = this->get_parameter("velocity_percentage").as_double();

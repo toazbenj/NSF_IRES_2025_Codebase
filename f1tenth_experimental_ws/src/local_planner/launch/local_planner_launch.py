@@ -1,47 +1,41 @@
 from launch import LaunchDescription
 from launch_ros.actions import Node
-from ament_index_python.packages import get_package_share_directory
-import os
+from launch.substitutions import LaunchConfiguration
+from launch.actions import DeclareLaunchArgument
 
 
 def generate_launch_description():
-    ld = LaunchDescription()
-    config = os.path.join(
-        get_package_share_directory('local_planner')
-    )
+    namespace = LaunchConfiguration('namespace')
+    config_file = LaunchConfiguration('config')
 
     visualizer = Node(
         package='local_planner',
         executable='visualizer',
+        namespace=namespace,
         name='visualizer',
-        parameters=[]
+        parameters=[config_file]
     )
 
     traj_server = Node(
         package='local_planner',
         executable='traj_server',
+        namespace=namespace,
         name='traj_server',
-        parameters=[]
+        parameters=[config_file]
     )
 
     traj_selecter = Node(
         package='local_planner',
         executable='traj_selecter',
+        namespace=namespace,
         name='traj_selecter',
-        parameters=[]
+        parameters=[config_file]
     )
 
-    pause = Node(
-        package='local_planner',
-        executable='pause',
-        name='pause',
-        parameters=[]
-    )
-
-    # finalize
-    ld.add_action(visualizer)
-    ld.add_action(traj_server)
-    ld.add_action(traj_selecter)
-    # ld.add_action(pause)
-
-    return ld
+    return LaunchDescription([
+        DeclareLaunchArgument('namespace'),
+        DeclareLaunchArgument('config'),
+        visualizer,
+        traj_server,
+        traj_selecter
+    ])

@@ -17,23 +17,42 @@ class TrajectoryVisualizer(Node):
     def __init__(self):
         super().__init__('trajectory_visualizer')
 
+        # Declare and read parameters
+        self.declare_parameter('NAMESPACE', '/ego_racecar')
+        self.declare_parameter('DRIVE_TOPIC', '/drive')
+        self.declare_parameter('COLOR', 'green')
+        self.declare_parameter('BOUNDS_WEIGHT', 100)
+        self.declare_parameter('PROGRESS_WEIGHT', 1)
+        self.declare_parameter('BOUNDS_SPREAD', 5)
+
+
+        self.namespace = self.get_parameter('NAMESPACE').get_parameter_value().string_value
+        self.drive_topic = self.get_parameter('DRIVE_TOPIC').get_parameter_value().string_value
+        self.color = self.get_parameter('COLOR').get_parameter_value().string_value
+        self.bounds_weight = self.get_parameter('BOUNDS_WEIGHT').value
+        self.progress_weight = self.get_parameter('PROGRESS_WEIGHT').value
+        self.bounds_spread = self.get_parameter('BOUNDS_SPREAD').value
+
+
+        self.get_logger().info(f"Using namespace: {self.namespace}, color: {self.color}")
+
         self.odom_sub = self.create_subscription(
             Odometry,
-            '/ego_racecar/odom',
+            f'{self.namespace}/odom',
             self.odom_callback,
             10
         )
 
         self.traj_lst_sub = self.create_subscription(
             TrajectoryList,
-            '/ego_racecar/traj_list',
+            f'{self.namespace}/traj_list',
             self.path_list_callback,
             10
         )
 
         self.selected_waypoints_sub = self.create_subscription(
             Path,
-            '/ego_racecar/selected_waypoints',
+            f'{self.namespace}/selected_waypoints',
             self.selected_path_callback,
             10
         )
@@ -45,13 +64,13 @@ class TrajectoryVisualizer(Node):
             10
         )
 
-        self.traj_lst_pub = self.create_publisher(MarkerArray, '/ego_racecar/trajectories', 10)
-        self.selected_traj_pub = self.create_publisher(MarkerArray, '/ego_racecar/selected_trajectory', 10)
+        self.traj_lst_pub = self.create_publisher(MarkerArray, f'{self.namespace}/trajectories', 10)
+        self.selected_traj_pub = self.create_publisher(MarkerArray, f'{self.namespace}/selected_trajectory', 10)
 
         # self.timer = self.create_timer(100.0, self.timer_callback)
 
         # self.cost_pub = self.create_publisher(MarkerArray, 'cost_map_markers', 10)
-        self.cost_map_pub = self.create_publisher(OccupancyGrid, '/cost_map', 10)
+        self.cost_map_pub = self.create_publisher(OccupancyGrid, f'{self.namespace}/cost_map', 10)
 
         self.reference_path = None 
         self.ego_pose = None
@@ -151,7 +170,8 @@ class TrajectoryVisualizer(Node):
 
         # Compute costs
         for path in paths:
-            cost = cost_utils.evaluate_path(path, self.reference_path)
+            cost = cost_utils.evaluate_path(path, self.reference_path, 
+                                            self.progress_weight, self.bounds_weight, self.bounds_spread)
             max_cost = max(max_cost, cost)
             min_cost = min(min_cost, cost)
             data.append(cost)
