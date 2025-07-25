@@ -1,35 +1,3 @@
-# from launch import LaunchDescription
-# from launch_ros.actions import Node
-# from launch.substitutions import LaunchConfiguration
-# from ament_index_python.packages import get_package_share_directory
-
-
-# def generate_launch_description():
-#     namespace = LaunchConfiguration('namespace')
-#     config_file = LaunchConfiguration('config')
-
-#     pure_pursuit = Node(
-#         package='pure_pursuit',
-#         executable='pure_pursuit',
-#         namespace=namespace,
-#         name='pure_pursuit',
-#         parameters=[config_file]
-#     )
-
-#     waypoint_visualizer_node = Node(
-#         package='pure_pursuit',
-#         executable='waypoint_visualizer',
-#         namespace=namespace,
-#         name='waypoint_visualizer_node',
-#         parameters=[config_file]
-#     )
-
-#     ld = LaunchDescription()
-#     ld.add_action(pure_pursuit)
-#     ld.add_action(waypoint_visualizer_node)
-#     return ld
-
-
 from launch import LaunchDescription
 from launch.actions import DeclareLaunchArgument
 from launch.substitutions import LaunchConfiguration, PathJoinSubstitution
@@ -73,7 +41,6 @@ def generate_launch_description():
         emulate_tty=True,
     )
 
-    
     return LaunchDescription([
         namespace_arg,
         config_arg,
