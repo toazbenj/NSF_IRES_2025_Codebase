@@ -33,6 +33,7 @@
 PurePursuit::PurePursuit() : Node("pure_pursuit_node") {
     // initialise parameters
     this->declare_parameter("waypoints_path", "/src/pure_pursuit/racelines/e7_floor5.csv");
+    this->declare_parameter("namespace_str", "/opp_racecar");
 
     this->declare_parameter("odom_topic", "/ego_racecar/odom");
     this->declare_parameter("car_refFrame", "ego_racecar/base_link");
@@ -49,13 +50,22 @@ PurePursuit::PurePursuit() : Node("pure_pursuit_node") {
     this->declare_parameter("steering_limit", 25.0);
     this->declare_parameter("velocity_percentage", 0.6);
 
+    auto all_params = this->list_parameters({}, 10);
+    RCLCPP_INFO(this->get_logger(), "=== Loaded Parameters ===");
+    for (const auto& name : all_params.names) {
+        rclcpp::Parameter param;
+        if (this->get_parameter(name, param)) {
+            RCLCPP_INFO(this->get_logger(), "%s = %s", name.c_str(), param.value_to_string().c_str());
+        }
+    }
+
     // Default Values
     waypoints_path = this->get_parameter("waypoints_path").as_string();
     // RCLCPP_INFO(this->get_logger(), "Declared path param: %s", this->get_parameter("waypoints_path").as_string().c_str());
     // std::string test = "hello_world";
     // RCLCPP_INFO(this->get_logger(), "Test string: %s", test.c_str());
 
-
+    namespace_str = this->get_parameter("namespace_str").as_string();
     odom_topic = this->get_parameter("odom_topic").as_string();
     car_refFrame = this->get_parameter("car_refFrame").as_string();
     drive_topic = this->get_parameter("drive_topic").as_string();
@@ -86,8 +96,8 @@ PurePursuit::PurePursuit() : Node("pure_pursuit_node") {
 
     //new stuff
 
-    selected_waypoints_sub_ = this->create_subscription<nav_msgs::msg::Path>("/ego_racecar/selected_waypoints", 25, std::bind(&PurePursuit::selected_waypoints_callback, this, _1));
-    speed_command_sub_ = this->create_subscription<std_msgs::msg::Float64>("/ego_racecar/speed_command", 25, std::bind(&PurePursuit::speed_command_callback, this, _1));
+    selected_waypoints_sub_ = this->create_subscription<nav_msgs::msg::Path>(namespace_str + "/selected_waypoints", 25, std::bind(&PurePursuit::selected_waypoints_callback, this, _1));
+    speed_command_sub_ = this->create_subscription<std_msgs::msg::Float64>(namespace_str + "/speed_command", 25, std::bind(&PurePursuit::speed_command_callback, this, _1));
 
 }
 

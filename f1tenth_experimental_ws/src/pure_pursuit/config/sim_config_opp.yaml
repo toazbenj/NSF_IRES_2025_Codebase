@@ -1,11 +1,12 @@
-pure_pursuit:
+/**:
   ros__parameters:
+    namespace_str: "/opp_racecar"
     waypoints_path: "src/pure_pursuit/racelines/e7_floor5_square.csv"
     odom_topic: "/opp_racecar/odom"
     car_refFrame: "opp_racecar/base_link"
     global_refFrame: "map"
     drive_topic: "/opp_drive"
-    rviz_current_waypoint_topic: "opp_racecar/current_waypoint"
+    rviz_current_waypoint_topic: "/opp_racecar/current_waypoint"
     rviz_lookahead_waypoint_topic: "opp_racecar/lookahead_waypoint"
 
     # Pure Pursuit Parameters
@@ -19,7 +20,3 @@ pure_pursuit:
     K_p: 0.5
     steering_limit: 25.0
     velocity_percentage: 1.0 # the limit, can only do 1 lap with clean tires
-
-waypoint_visualizer_node:
-  ros__parameters:
-    waypoints_path: "src/pure_pursuit/racelines/e7_floor5_square.csv"

@@ -32,10 +32,10 @@ def generate_launch_description():
         parameters=[config_file]
     )
 
-    return LaunchDescription([
-        DeclareLaunchArgument('namespace'),
-        DeclareLaunchArgument('config'),
-        visualizer,
-        traj_server,
-        traj_selecter
-    ])
+    ld = LaunchDescription()
+
+    ld.add_action(visualizer)
+    ld.add_action(traj_server)
+    ld.add_action(traj_selecter)
+
+    return ld

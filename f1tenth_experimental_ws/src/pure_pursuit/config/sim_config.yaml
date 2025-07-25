@@ -18,7 +18,7 @@ pure_pursuit:
     lookahead_ratio: 4.0 # approximately the max velocity
     K_p: 0.5
     steering_limit: 25.0
-    velocity_percentage: 1.0 # the limit, can only do 1 lap with clean tires
+    velocity_percentage: 1000.0 # the limit, can only do 1 lap with clean tires
 
 waypoint_visualizer_node:
   ros__parameters:

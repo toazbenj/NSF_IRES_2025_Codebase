@@ -102,8 +102,12 @@ class TrajectoryServer(Node):
         self.action_interval = self.get_parameter('ACTION_INTERVAL').value
 
         flat = self.get_parameter('ACTION_LST').get_parameter_value().double_array_value
-        self.action_lst = [(flat[i], flat[i+1]) for i in range(0, len(flat), 2)]
-  
+        self.get_logger().info(f'flat: {flat}')
+        self.action_lst = [(flat[i], flat[i+1]) for i in range(0, len(flat)-1, 2)]
+        self.get_logger().info(f'action space: {self.action_lst }')
+        self.get_logger().info(f'ACCELERATION_INCREMENT: {self.acceleration_increment}')
+        self.get_logger().info(f'namaespace: {self.namespace}')
+
         self.max_speed = self.get_parameter('MAX_SPEED').value
         self.dt = self.get_parameter('DT').value
         self.lf = self.get_parameter('LF').value
@@ -153,7 +157,15 @@ class TrajectoryServer(Node):
         self.latest_pose = msg
 
     def timer_callback(self):
+
+        # if self.latest_pose is not None:
+        #     pose = self.latest_pose.pose.pose
+        # else:
+        #     return
+
         pose = self.latest_pose.pose.pose
+
+
         x = float(pose.position.x)
         y = float(pose.position.y)
         orientation = pose.orientation

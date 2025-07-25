@@ -20,7 +20,7 @@
                   1.0, -0.5,
                   1.0, 0.5]
 
-    MAX_SPEED: 0.8  # m/s
+    MAX_SPEED: 0.67  # m/s
     ACTION_INTERVAL: 0.25 # seconds
     RECEDING_HORIZON: 1.5 # seconds
     DT: 0.25

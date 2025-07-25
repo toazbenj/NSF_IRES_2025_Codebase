@@ -33,4 +33,3 @@ def generate_launch_description():
         ego_launch,
         opp_launch
     ])
-

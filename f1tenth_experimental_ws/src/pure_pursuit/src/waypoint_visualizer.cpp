@@ -96,6 +96,7 @@ void WaypointVisualizer::visualize_points() {
 }
 
 void WaypointVisualizer::global_path_publish() {
+
     // Publish Path message for path planning
     auto path_msg = nav_msgs::msg::Path();
     path_msg.header.frame_id = "map";
@@ -113,8 +114,12 @@ void WaypointVisualizer::global_path_publish() {
         path_msg.poses.push_back(pose);
     }
     
-    path_pub->publish(path_msg);
-    RCLCPP_INFO(this->get_logger(), "Published path with %zu waypoints", path_msg.poses.size());
+    int repeat_cnt = 2;
+    for (int i = 0; i < repeat_cnt; i++){
+        path_pub->publish(path_msg);
+        RCLCPP_INFO(this->get_logger(), "Published path with %zu waypoints", path_msg.poses.size());
+    }
+
 }
 
 void WaypointVisualizer::timer_callback() {

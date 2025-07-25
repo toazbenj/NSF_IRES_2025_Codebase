@@ -61,6 +61,7 @@ class PurePursuit : public rclcpp::Node {
     double x_car_world;
     double y_car_world;
 
+    std::string namespace_str;
     std::string odom_topic;
     std::string car_refFrame;
     std::string drive_topic;
