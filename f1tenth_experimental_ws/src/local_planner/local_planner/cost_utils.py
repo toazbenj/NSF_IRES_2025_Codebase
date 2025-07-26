@@ -4,11 +4,10 @@ from nav_msgs.msg import Path
 import numpy as np
 
 
-def evaluate_path(path: Path, reference_path: Path, progress_weight, bounds_weight, bounds_spread):
-    progress_cost = progress_costs(path, reference_path)
-    bounds_cost = bounds_costs(path, reference_path, bounds_spread)
-    cost = progress_weight * progress_cost + bounds_weight * bounds_cost
-    return cost
+def evaluate_static_path(path: Path, reference_path, bounds_spread):
+    progress_cost = calc_progress_costs(path, reference_path)
+    bounds_cost = calc_bounds_costs(path, reference_path, bounds_spread)
+    return progress_cost, bounds_cost
 
 def project_point_to_reference_trajectory(point, reference_path):
     min_dist = float('inf')
@@ -28,7 +27,7 @@ def project_point_to_reference_trajectory(point, reference_path):
 
     return min_dist, closest_ref_pt, idx
 
-def progress_costs(path: Path, reference_path: Path):
+def calc_progress_costs(path: Path, reference_path: Path):
     end_pose = path.poses[-1].pose.position
     _, end_ref_pt, _ = project_point_to_reference_trajectory(end_pose, reference_path)
 
@@ -40,7 +39,7 @@ def progress_costs(path: Path, reference_path: Path):
     # incentive is negative cost
     return -dist
 
-def bounds_costs(path: Path, reference_path: Path, bounds_spread):
+def calc_bounds_costs(path: Path, reference_path: Path, bounds_spread):
     total_deviation = 0.0
     max_dist = 0.0
 
@@ -55,3 +54,17 @@ def bounds_costs(path: Path, reference_path: Path, bounds_spread):
     total_deviation +=  1 - np.exp(-(2/bounds_spread * max_dist) ** 2)
     
     return total_deviation
+
+def calc_proximity_costs(path: Path, opponent_path: Path):
+    min_dist = 100000.0
+
+    for pose_stamped in path.poses:
+        p = pose_stamped.pose.position
+        # point = np.array([p.x, p.y, p.z])
+        dist, _, _ = project_point_to_reference_trajectory(p, opponent_path)
+
+        if dist < min_dist:
+            min_dist = dist
+
+    cost =  np.exp(-(2 * 1 / PROXIMITY_SPREAD * min_dist))
+    return cost

@@ -1,6 +1,8 @@
 /**:
   ros__parameters:
     NAMESPACE: /opp_racecar
+    OPPONENT_NAMESPACE: /ego_racecar
+
     DRIVE_TOPIC: /opp_drive
     COLOR: blue
 
@@ -36,4 +38,3 @@
     PROGRESS_WEIGHT: 1
     BOUNDS_WEIGHT: 100
     PROXIMITY_WEIGHT: 1
-

@@ -1,6 +1,8 @@
 /**:
   ros__parameters:
     NAMESPACE: /ego_racecar
+    OPPONENT_NAMESPACE: /opp_racecar
+
     DRIVE_TOPIC: /drive
     COLOR: green
 

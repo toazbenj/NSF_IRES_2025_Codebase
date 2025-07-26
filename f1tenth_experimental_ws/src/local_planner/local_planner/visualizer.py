@@ -170,8 +170,7 @@ class TrajectoryVisualizer(Node):
 
         # Compute costs
         for path in paths:
-            cost = cost_utils.evaluate_path(path, self.reference_path, 
-                                            self.progress_weight, self.bounds_weight, self.bounds_spread)
+            cost = sum(cost_utils.evaluate_static_path(path, self.reference_path, self.bounds_spread))
             max_cost = max(max_cost, cost)
             min_cost = min(min_cost, cost)
             data.append(cost)
