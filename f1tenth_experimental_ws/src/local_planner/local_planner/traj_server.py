@@ -128,7 +128,7 @@ class TrajectoryServer(Node):
         )
         self.subscription_global_path = self.create_subscription(
             Path,
-            '/waypoints',
+            self.namespace + '/waypoints',
             self.global_path_callback,
             10
         )

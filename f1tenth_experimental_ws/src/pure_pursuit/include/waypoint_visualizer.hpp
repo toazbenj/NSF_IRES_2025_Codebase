@@ -36,7 +36,7 @@ class WaypointVisualizer : public rclcpp::Node {
     // topic names
     std::string waypoints_path;
     std::string rviz_waypoints_topic;
-
+    std::string namespace_str;
     // file object
     std::fstream csvFile_waypoints;
 

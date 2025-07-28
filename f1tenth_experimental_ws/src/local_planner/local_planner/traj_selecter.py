@@ -26,6 +26,8 @@ class TrajectorySelecter(Node):
         self.declare_parameter('PROXIMITY_WEIGHT', 1)
         self.declare_parameter('PROXIMITY_SPREAD', 0.25)
 
+        self.declare_parameter('IS_VECTOR_COST', False)
+
         self.namespace = self.get_parameter('NAMESPACE').get_parameter_value().string_value
         self.opponent_namespace = self.get_parameter('OPPONENT_NAMESPACE').get_parameter_value().string_value
 
@@ -43,10 +45,10 @@ class TrajectorySelecter(Node):
             TrajectoryList, f'{self.opponent_namespace}/traj_list', self.opponent_path_callback, 10)
 
         self.global_path_sub = self.create_subscription(
-            Path, '/waypoints', self.global_path_callback, 10)
+            Path, self.namespace + '/waypoints', self.global_path_callback, 10)
 
-        self.opponent_cost_subscriptoin = self.create_subscription(
-            Float32MultiArray, f'{self.opponent_namespace}/composite_cost_arr', self.opponent_cost_callback, 10)
+        # self.opponent_cost_subscriptoin = self.create_subscription(
+        #     Float32MultiArray, f'{self.opponent_namespace}/composite_cost_arr', self.opponent_cost_callback, 10)
         
         qos = QoSProfile(depth=10)
         qos.durability = QoSDurabilityPolicy.TRANSIENT_LOCAL
@@ -58,6 +60,8 @@ class TrajectorySelecter(Node):
         self.opponent_path_list = None
         self.reference_path = None
 
+        self.is_vector_cost = self.get_parameter('IS_VECTOR_COST').value
+
         self.get_logger().info("TrajectorySelecter initialized")
 
     def global_path_callback(self, msg: Path):
@@ -65,8 +69,12 @@ class TrajectorySelecter(Node):
             self.reference_path = msg
             self.get_logger().info(f"New reference path received")
 
+        # self.reference_path = msg
+        # self.get_logger().info(f"New reference path received")
+
     def opponent_cost_callback(self, msg: Float32MultiArray):
         self.opponent_composite_cost_arr = np.array(msg.data, dtype=np.float32)
+        self.select_trajectory_callback()
 
     def opponent_path_callback(self, msg: TrajectoryList):
         self.opponent_path_list = msg.paths
@@ -92,12 +100,20 @@ class TrajectorySelecter(Node):
             self.bounds_costs[idx1] = bounds_row
 
             for idx2, opponent_path in enumerate(self.opponent_path_list):
-                self.progress_costs[idx1][idx2] = calc_proximity_costs(path.path, opponent_path.path)
+                self.proximity_costs[idx1][idx2] = calc_proximity_costs(path.path, opponent_path.path)
 
         # publish cost matrix to the other car
-        msg = Float32MultiArray
-        msg.data = self.progress_weight * self.progress_costs + self.bounds_weight * self.bounds_costs + self.proximity_weight * self.proximity_costs
+        msg = Float32MultiArray()
+        arr = self.progress_weight * self.progress_costs + self.bounds_weight * self.bounds_costs + self.proximity_weight * self.proximity_costs
+
+        arr = np.array(arr, dtype=np.float32)  # Ensure float32 type
+        # msg.data = arr.tolist()
+        # msg.data = [float(x) for x in arr]  # Ensure all elements are Python floats
+        msg.data = arr.flatten().astype(np.float32).tolist()  # Flatten and cast
+
         self.cost_publisher.publish(msg)
+        self.select_trajectory_callback()
+
 
     def select_trajectory_callback(self):
         if self.is_vector_cost:
@@ -113,11 +129,11 @@ class TrajectorySelecter(Node):
         else:
             composite_cost_arr = self.progress_weight * self.progress_costs + self.bounds_weight * self.bounds_costs + self.proximity_weight * self.proximity_costs
 
-        # self.get_logger().info(f"Costs: {costs}")
+        self.get_logger().info(f"Costs: {composite_cost_arr}")
 
         self.action_index = np.argmin(np.max(composite_cost_arr, axis=1))
 
-        # selected_idx = 7
+        # self.action_index = 7
         selected_traj = self.path_list[self.action_index]
         selected_traj.header.stamp = self.get_clock().now().to_msg()
         selected_traj.path.header.frame_id = "map" 

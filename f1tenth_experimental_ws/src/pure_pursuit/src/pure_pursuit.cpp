@@ -33,7 +33,7 @@
 PurePursuit::PurePursuit() : Node("pure_pursuit_node") {
     // initialise parameters
     this->declare_parameter("waypoints_path", "/src/pure_pursuit/racelines/e7_floor5.csv");
-    this->declare_parameter("namespace_str", "/opp_racecar");
+    this->declare_parameter("namespace_str", "/ego_racecar");
 
     this->declare_parameter("odom_topic", "/ego_racecar/odom");
     this->declare_parameter("car_refFrame", "ego_racecar/base_link");
@@ -50,14 +50,14 @@ PurePursuit::PurePursuit() : Node("pure_pursuit_node") {
     this->declare_parameter("steering_limit", 25.0);
     this->declare_parameter("velocity_percentage", 0.6);
 
-    auto all_params = this->list_parameters({}, 10);
-    RCLCPP_INFO(this->get_logger(), "=== Loaded Parameters ===");
-    for (const auto& name : all_params.names) {
-        rclcpp::Parameter param;
-        if (this->get_parameter(name, param)) {
-            RCLCPP_INFO(this->get_logger(), "%s = %s", name.c_str(), param.value_to_string().c_str());
-        }
-    }
+    // auto all_params = this->list_parameters({}, 10);
+    // RCLCPP_INFO(this->get_logger(), "=== Loaded Parameters ===");
+    // for (const auto& name : all_params.names) {
+    //     rclcpp::Parameter param;
+    //     if (this->get_parameter(name, param)) {
+    //         RCLCPP_INFO(this->get_logger(), "%s = %s", name.c_str(), param.value_to_string().c_str());
+    //     }
+    // }
 
     // Default Values
     waypoints_path = this->get_parameter("waypoints_path").as_string();
@@ -394,7 +394,7 @@ void PurePursuit::publish_message(double steering_angle) {
     }
 
     drive_msgObj.drive.speed = commanded_speed;
-    // RCLCPP_INFO(this->get_logger(), "index: %d ... distance: %.2fm ... Speed: %.2fm/s ... Steering Angle: %.2f ... K_p: %.2f ... velocity_percentage: %.2f", waypoints.index, p2pdist(waypoints.X[waypoints.index], x_car_world, waypoints.Y[waypoints.index], y_car_world), drive_msgObj.drive.speed, to_degrees(drive_msgObj.drive.steering_angle), K_p, velocity_percentage);
+    RCLCPP_INFO(this->get_logger(), "index: %d ... distance: %.2fm ... Speed: %.2fm/s ... Steering Angle: %.2f ... K_p: %.2f ... velocity_percentage: %.2f", waypoints.index, p2pdist(waypoints.X[waypoints.index], x_car_world, waypoints.Y[waypoints.index], y_car_world), drive_msgObj.drive.speed, to_degrees(drive_msgObj.drive.steering_angle), K_p, velocity_percentage);
     
     publisher_drive->publish(drive_msgObj);
 }

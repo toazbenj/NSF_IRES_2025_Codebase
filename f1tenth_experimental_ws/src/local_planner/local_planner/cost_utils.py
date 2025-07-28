@@ -36,8 +36,9 @@ def calc_progress_costs(path: Path, reference_path: Path):
 
     dist = np.linalg.norm(start_ref_pt - end_ref_pt)
 
-    # incentive is negative cost
-    return -dist
+    # incentive is negative cost   
+    # suspicious float conversion 
+    return float(-dist)
 
 def calc_bounds_costs(path: Path, reference_path: Path, bounds_spread):
     total_deviation = 0.0
@@ -53,7 +54,7 @@ def calc_bounds_costs(path: Path, reference_path: Path, bounds_spread):
 
     total_deviation +=  1 - np.exp(-(2/bounds_spread * max_dist) ** 2)
     
-    return total_deviation
+    return float(total_deviation)
 
 def calc_proximity_costs(path: Path, opponent_path: Path):
     min_dist = 100000.0
@@ -67,4 +68,4 @@ def calc_proximity_costs(path: Path, opponent_path: Path):
             min_dist = dist
 
     cost =  np.exp(-(2 * 1 / PROXIMITY_SPREAD * min_dist))
-    return cost
+    return float(cost)

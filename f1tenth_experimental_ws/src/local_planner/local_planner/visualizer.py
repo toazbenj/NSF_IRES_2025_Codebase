@@ -59,7 +59,7 @@ class TrajectoryVisualizer(Node):
 
         self.waypoints_sub = self.create_subscription(
             Path,
-            '/waypoints',
+            self.namespace + '/waypoints',
             self.global_path_callback,
             10
         )

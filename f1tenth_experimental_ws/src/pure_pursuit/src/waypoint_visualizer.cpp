@@ -20,7 +20,8 @@
 WaypointVisualizer::WaypointVisualizer() : Node("waypoint_visualizer_node") {
     this->declare_parameter("waypoints_path", "/src/pure_pursuit/racelines/e7_floor5.csv");
     this->declare_parameter("rviz_waypoints_topic", "/waypoints");
-    
+    this->declare_parameter("namespace_str", "/ego_racecar");
+
 
     std::string package_share_dir = ament_index_cpp::get_package_share_directory("pure_pursuit");
     waypoints_path = package_share_dir + "/racelines/e7_floor5.csv";
@@ -28,12 +29,13 @@ WaypointVisualizer::WaypointVisualizer() : Node("waypoint_visualizer_node") {
     // waypoints_path = this->get_parameter("waypoints_path").as_string();
 
     rviz_waypoints_topic = this->get_parameter("rviz_waypoints_topic").as_string();
-    
+    namespace_str = this->get_parameter("namespace_str").as_string();
+
     // Publisher for visualization (MarkerArray)
     vis_path_pub = this->create_publisher<visualization_msgs::msg::MarkerArray>(rviz_waypoints_topic + "_markers", 1000);
     
     // Publisher for path planning (Path)
-    path_pub = this->create_publisher<nav_msgs::msg::Path>("/waypoints", 10);
+    path_pub = this->create_publisher<nav_msgs::msg::Path>(namespace_str + rviz_waypoints_topic, 10);
     
     timer_ = this->create_wall_timer(2000ms, std::bind(&WaypointVisualizer::timer_callback, this));
 
@@ -114,7 +116,7 @@ void WaypointVisualizer::global_path_publish() {
         path_msg.poses.push_back(pose);
     }
     
-    int repeat_cnt = 2;
+    int repeat_cnt = 1;
     for (int i = 0; i < repeat_cnt; i++){
         path_pub->publish(path_msg);
         RCLCPP_INFO(this->get_logger(), "Published path with %zu waypoints", path_msg.poses.size());
@@ -124,6 +126,8 @@ void WaypointVisualizer::global_path_publish() {
 
 void WaypointVisualizer::timer_callback() {
     visualize_points();
+    // global_path_publish();
+
 }
 
 
