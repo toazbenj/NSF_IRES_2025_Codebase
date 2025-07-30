@@ -10,7 +10,7 @@ def generate_launch_description():
     config = os.path.join(
         get_package_share_directory('pure_pursuit'),
         'config',
-        'sim_config_opp.yaml'
+        'sim_config_ego.yaml'
     )
 
     pure_pursuit = Node(

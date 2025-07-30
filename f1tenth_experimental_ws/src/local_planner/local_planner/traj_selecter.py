@@ -99,8 +99,10 @@ class TrajectorySelecter(Node):
             self.progress_costs[idx1] = prog_row
             self.bounds_costs[idx1] = bounds_row
 
-            for idx2, opponent_path in enumerate(self.opponent_path_list):
-                self.proximity_costs[idx1][idx2] = calc_proximity_costs(path.path, opponent_path.path)
+            if self.opponent_path_list is not None:
+
+                for idx2, opponent_path in enumerate(self.opponent_path_list):
+                    self.proximity_costs[idx1][idx2] = calc_proximity_costs(path.path, opponent_path.path)
 
         # publish cost matrix to the other car
         msg = Float32MultiArray()

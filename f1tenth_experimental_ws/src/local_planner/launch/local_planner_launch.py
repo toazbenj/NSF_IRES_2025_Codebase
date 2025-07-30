@@ -5,6 +5,12 @@ from launch.actions import DeclareLaunchArgument
 
 
 def generate_launch_description():
+    ld = LaunchDescription()
+
+    ld.add_action(DeclareLaunchArgument('namespace', default_value='/ego_racecar'))
+    ld.add_action(DeclareLaunchArgument('config', 
+                                        default_value='/home/bentoaz/NSF_IRES_2025_Codebase/f1tenth_experimental_ws/src/local_planner/config/ego_config.yaml'))
+
     namespace = LaunchConfiguration('namespace')
     config_file = LaunchConfiguration('config')
 
@@ -32,7 +38,7 @@ def generate_launch_description():
         parameters=[config_file]
     )
 
-    ld = LaunchDescription()
+    # ld = LaunchDescription()
 
     ld.add_action(visualizer)
     ld.add_action(traj_server)
