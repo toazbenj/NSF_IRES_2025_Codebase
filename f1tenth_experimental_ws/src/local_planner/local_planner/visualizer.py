@@ -21,9 +21,9 @@ class TrajectoryVisualizer(Node):
         self.declare_parameter('NAMESPACE', '/ego_racecar')
         self.declare_parameter('DRIVE_TOPIC', '/drive')
         self.declare_parameter('COLOR', 'green')
-        self.declare_parameter('BOUNDS_WEIGHT', 100)
-        self.declare_parameter('PROGRESS_WEIGHT', 1)
-        self.declare_parameter('BOUNDS_SPREAD', 5)
+        self.declare_parameter('BOUNDS_WEIGHT', 1.0)
+        self.declare_parameter('PROGRESS_WEIGHT', 1.0)
+        self.declare_parameter('BOUNDS_SPREAD', 1.0)
 
 
         self.namespace = self.get_parameter('NAMESPACE').get_parameter_value().string_value

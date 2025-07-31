@@ -1,7 +1,7 @@
 /**:
   ros__parameters:
     namespace_str: "/ego_racecar"
-    waypoints_path: "src/pure_pursuit/racelines/e7_floor5_square.csv"
+    waypoints_path: "src/pure_pursuit/racelines/adjusted_smoothed_path.csv"
     odom_topic: "/ego_racecar/odom"
     car_refFrame: "ego_racecar/base_link"
     global_refFrame: "map"
@@ -14,6 +14,16 @@
     # min_lookahead: 0.5
     # max_lookahead: 3.0 # lookahead when the car is going around max velocity
     # lookahead_ratio: 8.0 # approximately the max velocity
+
+    # e7_floor5
+    # min_lookahead: 0.2
+    # max_lookahead: 1.0 # lookahead when the car is going around max velocity
+    # lookahead_ratio: 4.0 # approximately the max velocity
+    # K_p: 0.5
+    # steering_limit: 25.0
+    # velocity_percentage: 1.0 # the limit, can only do 1 lap with clean tires
+
+    # hallway
     min_lookahead: 0.2
     max_lookahead: 1.0 # lookahead when the car is going around max velocity
     lookahead_ratio: 4.0 # approximately the max velocity

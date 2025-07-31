@@ -22,9 +22,15 @@
                   1.0, -0.5,
                   1.0, 0.5]
 
-    MAX_SPEED: 0.67  # m/s
+    MAX_SPEED: 0.4  # m/s
 
-    ACTION_INTERVAL: 0.25 # seconds
+    # e7_floor5
+    # ACTION_INTERVAL: 0.25 # seconds
+    # RECEDING_HORIZON: 1.5 # seconds
+    # DT: 0.25
+
+    # hallway
+    ACTION_INTERVAL: 0.1 # seconds
     RECEDING_HORIZON: 1.5 # seconds
     DT: 0.25
 
@@ -37,10 +43,10 @@
     LF: 1
 
     # how close bike center points are in pixels to count as collision
-    COLLISION_RADIUS: 2
-    PROXIMITY_SPREAD: 2.0
-    BOUNDS_SPREAD: 5
+    COLLISION_RADIUS: 2.0
+    PROXIMITY_SPREAD: 1.0
+    BOUNDS_SPREAD: 3.0
 
-    PROGRESS_WEIGHT: 1
-    BOUNDS_WEIGHT: 100
-    PROXIMITY_WEIGHT: 10
+    PROGRESS_WEIGHT: 1.0
+    BOUNDS_WEIGHT: 4.0
+    PROXIMITY_WEIGHT: 1.0

@@ -20,10 +20,10 @@ class TrajectorySelecter(Node):
         self.declare_parameter('NAMESPACE', '/ego_racecar')
         self.declare_parameter('OPPONENT_NAMESPACE', '/opp_racecar')
 
-        self.declare_parameter('PROGRESS_WEIGHT', 1)
-        self.declare_parameter('BOUNDS_WEIGHT', 100)
-        self.declare_parameter('BOUNDS_SPREAD', 5)
-        self.declare_parameter('PROXIMITY_WEIGHT', 1)
+        self.declare_parameter('PROGRESS_WEIGHT', 1.0)
+        self.declare_parameter('BOUNDS_WEIGHT', 100.0)
+        self.declare_parameter('BOUNDS_SPREAD', 5.0)
+        self.declare_parameter('PROXIMITY_WEIGHT', 1.0)
         self.declare_parameter('PROXIMITY_SPREAD', 0.25)
 
         self.declare_parameter('IS_VECTOR_COST', False)
@@ -65,12 +65,12 @@ class TrajectorySelecter(Node):
         self.get_logger().info("TrajectorySelecter initialized")
 
     def global_path_callback(self, msg: Path):
-        if msg != self.reference_path:
-            self.reference_path = msg
-            self.get_logger().info(f"New reference path received")
-
-        # self.reference_path = msg
-        # self.get_logger().info(f"New reference path received")
+        # if msg != self.reference_path:
+        #     self.reference_path = msg
+        #     self.get_logger().info(f"New reference path received")
+        
+        self.reference_path = msg
+        self.get_logger().info(f"New reference path received")
 
     def opponent_cost_callback(self, msg: Float32MultiArray):
         self.opponent_composite_cost_arr = np.array(msg.data, dtype=np.float32)
@@ -103,6 +103,10 @@ class TrajectorySelecter(Node):
 
                 for idx2, opponent_path in enumerate(self.opponent_path_list):
                     self.proximity_costs[idx1][idx2] = calc_proximity_costs(path.path, opponent_path.path)
+            else:
+                self.get_logger().warn("No opponent trajectories.")
+                pass
+
 
         # publish cost matrix to the other car
         msg = Float32MultiArray()
@@ -135,7 +139,7 @@ class TrajectorySelecter(Node):
 
         self.action_index = np.argmin(np.max(composite_cost_arr, axis=1))
 
-        # self.action_index = 7
+        # self.action_index = 4
         selected_traj = self.path_list[self.action_index]
         selected_traj.header.stamp = self.get_clock().now().to_msg()
         selected_traj.path.header.frame_id = "map" 

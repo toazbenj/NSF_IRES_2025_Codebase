@@ -1,7 +1,7 @@
 /**:
   ros__parameters:
     namespace_str: "/opp_racecar"
-    waypoints_path: "src/pure_pursuit/racelines/e7_floor5_square.csv"
+    waypoints_path: "src/pure_pursuit/racelines/adjusted_smoothed_path.csv"
     odom_topic: "/opp_racecar/odom"
     car_refFrame: "opp_racecar/base_link"
     global_refFrame: "map"

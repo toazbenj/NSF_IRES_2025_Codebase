@@ -32,7 +32,7 @@
 
 PurePursuit::PurePursuit() : Node("pure_pursuit_node") {
     // initialise parameters
-    this->declare_parameter("waypoints_path", "/src/pure_pursuit/racelines/e7_floor5.csv");
+    this->declare_parameter("waypoints_path", "");
     this->declare_parameter("namespace_str", "/ego_racecar");
 
     this->declare_parameter("odom_topic", "/ego_racecar/odom");
