@@ -5,41 +5,43 @@ from matplotlib.image import imread
 from scipy.interpolate import splprep, splev
 import yaml
 import os
+from matplotlib.transforms import Affine2D
 
 class SmoothedPathEditorWithImage:
-    def __init__(self, waypoint_file, map_yaml_file, smooth_factor=2.0, num_points=100):
+    def __init__(self, waypoint_file, map_yaml_file, smooth_factor=2.0, num_points=300):
         self.df = pd.read_csv(waypoint_file)
         self.x_raw = self.df['x'].values
         self.y_raw = self.df['y'].values
         self.smooth_factor = smooth_factor
-        self.num_points = num_points
+        self.num_points = max(num_points, 300)
 
-        # Load map
         self.image, self.extent, self.resolution = self.load_map_and_extent(map_yaml_file)
-        self.waypoint_offset = [0.0, 0.0]  # Changed from image_offset to waypoint_offset
-        self.dragging_point = None
-        self.dragging_waypoints = False  # Changed from dragging_image to dragging_waypoints
-        self.last_mouse_pos = None
+        self.image_offset = [0.0, 0.0]
+        self.image_rotation = 0.0  # degrees
 
-        # Smoothing
         self.x_smooth, self.y_smooth = self.generate_smoothed_path()
 
-        # Plot setup
         self.fig, self.ax = plt.subplots()
         self.image_plot = self.ax.imshow(self.image, cmap='gray', origin='lower', extent=self.extent, alpha=0.6)
 
-        self.raw_plot = self.ax.plot(self.x_raw + self.waypoint_offset[0], self.y_raw + self.waypoint_offset[1], 'bo-', alpha=0.5, label='Raw Waypoints')[0]
-        self.scatter = self.ax.scatter(self.x_smooth + self.waypoint_offset[0], self.y_smooth + self.waypoint_offset[1], color='red', label='Smoothed Path', picker=True)
-        self.line = self.ax.plot(self.x_smooth + self.waypoint_offset[0], self.y_smooth + self.waypoint_offset[1], '-', color='red')[0]
+        self.ax.plot(self.x_raw, self.y_raw, 'bo-', alpha=0.5, label='Raw Waypoints')
+        self.scatter = self.ax.scatter(self.x_smooth, self.y_smooth, color='red', label='Smoothed Path', picker=True)
+        self.line = self.ax.plot(self.x_smooth, self.y_smooth, '-', color='red')[0]
 
-        # Events
-        self.fig.canvas.mpl_connect('button_press_event', self.on_press)
-        self.fig.canvas.mpl_connect('button_release_event', self.on_release)
-        self.fig.canvas.mpl_connect('motion_notify_event', self.on_motion)
-        self.fig.canvas.mpl_connect('close_event', self.on_close)
         self.fig.canvas.mpl_connect('key_press_event', self.on_key_press)
+        self.fig.canvas.mpl_connect('close_event', self.on_close)
 
-        self.ax.set_title("Smoothed Path Editor with Background Map\n(Arrow keys: move, Right-click: drag, R/E: rotate ±5°, +/-: scale)")
+        self.selected_point_idx = None  # Add this
+        self.selected_marker = self.ax.scatter([], [], color='yellow', s=100, label='Selected')  # For selection
+        self.dragging_point = None
+
+        self.fig.canvas.mpl_connect('button_press_event', self.on_press)
+        self.fig.canvas.mpl_connect('motion_notify_event', self.on_motion)
+        self.fig.canvas.mpl_connect('button_release_event', self.on_release)
+
+
+
+        self.ax.set_title("Move/Rotate Map: Arrow Keys + R/E")
         self.ax.set_xlabel("X")
         self.ax.set_ylabel("Y")
         self.ax.grid(True)
@@ -49,192 +51,109 @@ class SmoothedPathEditorWithImage:
     def load_map_and_extent(self, yaml_file):
         with open(yaml_file, 'r') as f:
             config = yaml.safe_load(f)
-
         pgm_path = os.path.join(os.path.dirname(yaml_file), config['image'])
         image = imread(pgm_path)
         resolution = config['resolution']
         origin_x, origin_y = config['origin'][0], config['origin'][1]
         height, width = image.shape[:2]
-
-        # Map size
-        map_width = width * resolution
-        map_height = height * resolution
-
-        # Map and waypoint centers
-        map_center_x = origin_x + map_width / 2
-        map_center_y = origin_y + map_height / 2
-        waypoint_center_x = (self.x_raw.min() + self.x_raw.max()) / 2
-        waypoint_center_y = (self.y_raw.min() + self.y_raw.max()) / 2
-
-        # Offset image to center under waypoints
-        # offset_x = waypoint_center_x - map_center_x
-        # offset_y = waypoint_center_y - map_center_y
-
-        extent = [
-            origin_x,
-            origin_x + map_width,
-            origin_y,
-            origin_y + map_height
-        ]
-
+        extent = [origin_x, origin_x + width * resolution, origin_y, origin_y + height * resolution]
         return image, extent, resolution
 
-    def update_waypoint_position(self):
-        # Update raw waypoints display
-        self.raw_plot.set_data(self.x_raw + self.waypoint_offset[0], self.y_raw + self.waypoint_offset[1])
-        
-        # Update smoothed path display
-        self.scatter.set_offsets(np.c_[self.x_smooth + self.waypoint_offset[0], self.y_smooth + self.waypoint_offset[1]])
-        self.line.set_data(self.x_smooth + self.waypoint_offset[0], self.y_smooth + self.waypoint_offset[1])
-        
-        self.fig.canvas.draw_idle()
-
     def generate_smoothed_path(self):
-        MIN_OUTPUT_POINTS = 300
-        target_points = max(self.num_points, MIN_OUTPUT_POINTS)
-
-        if len(self.x_raw) < 2:
-            raise ValueError("Not enough input points for smoothing.")
-
         tck, _ = splprep([self.x_raw, self.y_raw], s=self.smooth_factor)
-        unew = np.linspace(0, 1.0, target_points)
+        unew = np.linspace(0, 1.0, self.num_points)
         x_smooth, y_smooth = splev(unew, tck)
-
-        if len(x_smooth) < MIN_OUTPUT_POINTS:
-            raise ValueError(f"Smoothing produced only {len(x_smooth)} points — need at least {MIN_OUTPUT_POINTS}.")
-
         return np.array(x_smooth), np.array(y_smooth)
 
-    def update_display(self):
-        self.scatter.set_offsets(np.c_[self.x_smooth + self.waypoint_offset[0], self.y_smooth + self.waypoint_offset[1]])
-        self.line.set_data(self.x_smooth + self.waypoint_offset[0], self.y_smooth + self.waypoint_offset[1])
+    def update_image_transform(self):
+        transform = Affine2D().translate(*self.image_offset).rotate_deg_around(
+            (self.extent[0] + self.extent[1]) / 2,
+            (self.extent[2] + self.extent[3]) / 2,
+            self.image_rotation
+        )
+        self.image_plot.set_transform(transform + self.ax.transData)
         self.fig.canvas.draw_idle()
+
+    def on_key_press(self, event):
+        step = 0.1
+        rot_step = 5.0
+        if event.key == 'left':
+            self.image_offset[0] -= step
+        elif event.key == 'right':
+            self.image_offset[0] += step
+        elif event.key == 'up':
+            self.image_offset[1] += step
+        elif event.key == 'down':
+            self.image_offset[1] -= step
+        elif event.key == 'r':
+            self.image_rotation += rot_step
+        elif event.key == 'e':
+            self.image_rotation -= rot_step
+        elif event.key in ('delete', 'backspace'):
+            self.delete_selected_point()
+        self.update_image_transform()
 
     def on_press(self, event):
         if event.inaxes != self.ax:
             return
-        if event.button == 3:  # Right-click to drag the waypoints
-            self.dragging_waypoints = True
-            self.last_mouse_pos = (event.xdata, event.ydata)
+        dist = np.hypot(self.x_smooth - event.xdata, self.y_smooth - event.ydata)
+        if dist.min() < 0.2:
+            self.selected_point_idx = dist.argmin()
+            self.dragging_point = self.selected_point_idx
+            self.update_selected_marker()
         else:
-            # Check for individual point dragging (adjusted for waypoint offset)
-            x_display = self.x_smooth + self.waypoint_offset[0]
-            y_display = self.y_smooth + self.waypoint_offset[1]
-            dist = np.hypot(x_display - event.xdata, y_display - event.ydata)
-            if dist.min() < 0.1:
-                self.dragging_point = dist.argmin()
+            self.selected_point_idx = None
+            self.dragging_point = None
+            self.update_selected_marker()
 
     def on_motion(self, event):
-        if event.inaxes != self.ax:
+        if event.inaxes != self.ax or self.dragging_point is None:
             return
-        if self.dragging_waypoints and self.last_mouse_pos is not None:
-            dx = event.xdata - self.last_mouse_pos[0]
-            dy = event.ydata - self.last_mouse_pos[1]
-            self.waypoint_offset[0] += dx
-            self.waypoint_offset[1] += dy
-            self.last_mouse_pos = (event.xdata, event.ydata)
-            self.update_waypoint_position()
-        elif self.dragging_point is not None:
-            # Adjust individual point (accounting for waypoint offset)
-            self.x_smooth[self.dragging_point] = event.xdata - self.waypoint_offset[0]
-            self.y_smooth[self.dragging_point] = event.ydata - self.waypoint_offset[1]
-            self.update_display()
+        self.x_smooth[self.dragging_point] = event.xdata
+        self.y_smooth[self.dragging_point] = event.ydata
+        self.update_display()
+        self.update_selected_marker()
 
     def on_release(self, event):
         self.dragging_point = None
-        self.dragging_waypoints = False
-        self.last_mouse_pos = None
 
-    def scale_waypoints(self, scale_factor):
-        # Calculate center of raw waypoints
-        center_x = np.mean(self.x_raw)
-        center_y = np.mean(self.y_raw)
-        
-        # Scale waypoints relative to their center
-        x_centered = self.x_raw - center_x
-        y_centered = self.y_raw - center_y
-        
-        # Apply scaling
-        x_scaled = x_centered * scale_factor
-        y_scaled = y_centered * scale_factor
-        
-        self.x_raw = x_scaled + center_x
-        self.y_raw = y_scaled + center_y
-        
-        # Regenerate smoothed path with scaled waypoints
-        self.x_smooth, self.y_smooth = self.generate_smoothed_path()
-        
-        # Update display
-        self.update_waypoint_position()
 
-    def rotate_waypoints(self, degrees):
-        # Calculate center of raw waypoints
-        center_x = np.mean(self.x_raw)
-        center_y = np.mean(self.y_raw)
-        
-        # Convert degrees to radians
-        angle = np.radians(degrees)
-        
-        # Rotate raw waypoints around their center
-        x_centered = self.x_raw - center_x
-        y_centered = self.y_raw - center_y
-        
-        # Apply rotation matrix: [cos(θ) -sin(θ); sin(θ) cos(θ)]
-        x_rotated = x_centered * np.cos(angle) - y_centered * np.sin(angle)
-        y_rotated = x_centered * np.sin(angle) + y_centered * np.cos(angle)
-        
-        self.x_raw = x_rotated + center_x
-        self.y_raw = y_rotated + center_y
-        
-        # Regenerate smoothed path with rotated waypoints
-        self.x_smooth, self.y_smooth = self.generate_smoothed_path()
-        
-        # Update display
-        self.update_waypoint_position()
-
-    def on_key_press(self, event):
-        step = 0.1  # Adjust as needed for faster/slower movement
-        scale_step = 0.1  # Scale increment/decrement
-        rotation_step = 5.0  # Rotation in degrees
-        
-        if event.key == 'left':
-            self.waypoint_offset[0] -= step
-        elif event.key == 'right':
-            self.waypoint_offset[0] += step
-        elif event.key == 'up':
-            self.waypoint_offset[1] += step
-        elif event.key == 'down':
-            self.waypoint_offset[1] -= step
-        elif event.key == 'r':  # Press 'r' to rotate waypoints counterclockwise
-            self.rotate_waypoints(rotation_step)
-            return  # Don't call update_waypoint_position again
-        elif event.key == 'e':  # Press 'e' to rotate waypoints clockwise
-            self.rotate_waypoints(-rotation_step)
-            return  # Don't call update_waypoint_position again
-        elif event.key == '+' or event.key == '=':  # Press '+' to expand scale
-            self.scale_waypoints(1.0 + scale_step)
-            return  # Don't call update_waypoint_position again
-        elif event.key == '-':  # Press '-' to contract scale
-            self.scale_waypoints(1.0 - scale_step)
-            return  # Don't call update_waypoint_position again
+    def update_selected_marker(self):
+        if self.selected_point_idx is not None:
+            self.selected_marker.set_offsets([[self.x_smooth[self.selected_point_idx], self.y_smooth[self.selected_point_idx]]])
         else:
-            return
-        self.update_waypoint_position()
+            self.selected_marker.set_offsets([])
+        self.fig.canvas.draw_idle()
+
+    def delete_selected_point(self):
+        if self.selected_point_idx is not None and len(self.x_smooth) > 2:
+            # Remove point from smoothed arrays
+            self.x_smooth = np.delete(self.x_smooth, self.selected_point_idx)
+            self.y_smooth = np.delete(self.y_smooth, self.selected_point_idx)
+
+            # Clear selection
+            self.selected_point_idx = None
+
+            # Update red path display
+            self.scatter.set_offsets(np.c_[self.x_smooth, self.y_smooth])
+            self.line.set_data(self.x_smooth, self.y_smooth)
+            self.update_selected_marker()
+            self.fig.canvas.draw_idle()
+
+    def update_display(self):
+        self.scatter.set_offsets(np.c_[self.x_smooth, self.y_smooth])
+        self.line.set_data(self.x_smooth, self.y_smooth)
+        self.fig.canvas.draw_idle()
 
     def on_close(self, event):
-        output_file = 'src/pure_pursuit/racelines/output.csv'
-        # Apply the offset to the final coordinates
-        df_final = pd.DataFrame({
-            'x': self.x_smooth + self.waypoint_offset[0], 
-            'y': self.y_smooth + self.waypoint_offset[1]
-        })
-        df_final.to_csv(output_file, index=False)
-        print(f"Saved adjusted smoothed path to {output_file}")
-        print(f"Final waypoint offset: dx={self.waypoint_offset[0]:.2f}, dy={self.waypoint_offset[1]:.2f}")
-
+        df_final = pd.DataFrame({'x': self.x_smooth, 'y': self.y_smooth})
+        df_final.to_csv(
+            '/home/bentoaz/NSF_IRES_2025_Codebase/f1tenth_experimental_ws/src/pure_pursuit/racelines/test.csv',
+              index=False)
+        print("Saved adjusted smoothed path")
 
 SmoothedPathEditorWithImage(
-    waypoint_file='src/pure_pursuit/racelines/adjusted_smoothed_path.csv',
+    waypoint_file='src/pure_pursuit/racelines/hallway_adjusted.csv',
     map_yaml_file='src/particle_filter/maps/hallway.yaml',
     smooth_factor=2.0
 )

@@ -95,7 +95,6 @@ PurePursuit::PurePursuit() : Node("pure_pursuit_node") {
     // load_waypoints();
 
     //new stuff
-
     selected_waypoints_sub_ = this->create_subscription<nav_msgs::msg::Path>(namespace_str + "/selected_waypoints", 25, std::bind(&PurePursuit::selected_waypoints_callback, this, _1));
     speed_command_sub_ = this->create_subscription<std_msgs::msg::Float64>(namespace_str + "/speed_command", 25, std::bind(&PurePursuit::speed_command_callback, this, _1));
 
