@@ -1,7 +1,7 @@
 /**:
   ros__parameters:
     namespace_str: "/ego_racecar"
-    waypoints_path: "src/pure_pursuit/racelines/adjusted_smoothed_path.csv"
+    waypoints_path: "src/pure_pursuit/racelines/hallway_sim.csv"
     odom_topic: "/ego_racecar/odom"
     car_refFrame: "ego_racecar/base_link"
     global_refFrame: "map"

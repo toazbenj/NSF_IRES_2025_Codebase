@@ -6,8 +6,6 @@
     DRIVE_TOPIC: /drive
     COLOR: green
 
-    IS_VECTOR_COST: False
-    PROGRESS_RESET_RATIO: 0.75
     STEERING_INCREMENT: 0.6109
     ACCELERATION_INCREMENT: 0.25
     ACTION_LST: [-1.0, -1.0, 
@@ -28,15 +26,27 @@
     # RECEDING_HORIZON: 1.5 # seconds
     # DT: 0.25
 
-    # hallway
+    # hallway - scalar parameters
+    IS_VECTOR_COST: False
+    PROGRESS_RESET_RATIO: 0.75
     MAX_SPEED: 0.6  # m/s
     ACTION_INTERVAL: 0.1 # seconds
     RECEDING_HORIZON: 1.5 # seconds
     DT: 0.25
 
-    # ACTION_INTERVAL: 1.0 # seconds
+    # hallway - vector parameters
+    # IS_VECTOR_COST: True
+    # PROGRESS_RESET_RATIO: 0.8
+    # MAX_SPEED: 0.6  # m/s
+    # ACTION_INTERVAL: 0.1 # seconds
     # RECEDING_HORIZON: 5.0 # seconds
-    # DT: 1.0
+    # DT: 0.5
+
+    # PROGRESS_RESET_RATIO: 0.75
+    # MAX_SPEED: 0.6  # m/s
+    # ACTION_INTERVAL: 0.1 # seconds
+    # RECEDING_HORIZON: 3.0 # seconds
+    # DT: 0.5
 
     # size for calculations, radial (width) and frontal (length) axes
     LF: 1
@@ -50,3 +60,11 @@
     PROGRESS_WEIGHT: 1.0
     BOUNDS_WEIGHT: 4.0
     PROXIMITY_WEIGHT: 1.0
+
+    OPP_COLLISION_RADIUS: 2.0
+    OPP_PROXIMITY_SPREAD: 1.0
+    OPP_BOUNDS_SPREAD: 3.0
+
+    OPP_PROGRESS_WEIGHT: 1.0
+    OPP_BOUNDS_WEIGHT: 4.0
+    OPP_PROXIMITY_WEIGHT: 1.0

@@ -56,7 +56,7 @@ def calc_bounds_costs(path: Path, reference_path: Path, bounds_spread):
     
     return float(total_deviation)
 
-def calc_proximity_costs(path: Path, opponent_path: Path):
+def calc_proximity_costs(path: Path, opponent_path: Path, proximity_spread):
     min_dist = 100000.0
 
     for pose_stamped in path.poses:
@@ -67,5 +67,5 @@ def calc_proximity_costs(path: Path, opponent_path: Path):
         if dist < min_dist:
             min_dist = dist
 
-    cost =  np.exp(-(2 * 1 / PROXIMITY_SPREAD * min_dist))
+    cost =  np.exp(-(2 * 1 / proximity_spread * min_dist))
     return float(cost)

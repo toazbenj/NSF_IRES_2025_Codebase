@@ -19,15 +19,20 @@ RECEDING_HORIZON = 1.5 # seconds
 
 MPC_HORIZON = 1
 PROGRESS_RESET_RATIO = 0.75
+
 # Control inputs (acceleration, steering)
 # ACTION_LST = [(-1, -1), (-1, 0), (-1, 1), 
 #               (0, -1), (0, 0), (0, 1), 
 #               (1, -1), (1, 0), (1, 1)]
 
 ACTION_LST = [(-1, -1), (-1, 0), (-1, 1), 
-              (0, -1), (0, 0), (0, 1), 
-              (1, -1), (1, 0), (1, 1),
-              (1, -0.5), (1, 0.5)]
+              (1, -1), (1, 0), (1, 1)]
+
+# good for scalar cost in hallway and e7floor5 square
+# ACTION_LST = [(-1, -1), (-1, 0), (-1, 1), 
+#               (0, -1), (0, 0), (0, 1), 
+#               (1, -1), (1, 0), (1, 1),
+#               (1, -0.5), (1, 0.5)]
 
 # size for calculations, radial (width) and frontal (length) axes
 LR = 1

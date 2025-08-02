@@ -198,17 +198,20 @@ class TrajectoryServer(Node):
 
         self.get_logger().info(f"Progress ratio: {progress_ratio:.2f}")
 
-        # Re-plan if progress exceeds threshold or first time
+        # Re-plan if progress exceeds threshold and first time
         if progress_ratio >= self.progress_reset_ratio and self.is_first_publish:
             self.publish_new_trajectories(x, y, orientation, speed)
             self.is_first_publish = False
 
 
     def publish_new_trajectories(self, x, y, orientation_q, speed):
+
         orientation_list = [orientation_q.x, orientation_q.y, orientation_q.z, orientation_q.w]
         _, _, yaw = euler_from_quaternion(orientation_list)
         yaw = float(yaw)
         # yaw = self.get_tangent_yaw_from_path(x, y) if self.global_path else float(yaw)
+
+        # self.selected_path[-1]
 
         traj_list = []
         action_choices = generate_combinations(self.action_lst, 1)
