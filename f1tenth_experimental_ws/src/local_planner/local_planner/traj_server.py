@@ -86,7 +86,19 @@ class TrajectoryServer(Node):
         self.declare_parameter('ACCELERATION_INCREMENT', 0.25)
         self.declare_parameter('PROGRESS_RESET_RATIO', 0.75)
         self.declare_parameter('ACTION_INTERVAL', 0.25)
-        self.declare_parameter('ACTION_LST', [0.0])
+
+        # parameter not loading properly for car
+        self.declare_parameter('ACTION_LST', [-1.0, -1.0, 
+                                                -1.0, 0.0,
+                                                -1.0, 1.0, 
+                                                0.0, -1.0,
+                                                0.0, 0.0,
+                                                0.0, 1.0,
+                                                1.0, -1.0, 
+                                                1.0, 0.0,
+                                                1.0, 1.0, 
+                                                1.0, -0.5,
+                                                1.0, 0.5])
 
         # physical
         self.declare_parameter('GLOBAL_PATH_TOPIC', '/path')
