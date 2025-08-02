@@ -88,6 +88,12 @@ class TrajectoryServer(Node):
         self.declare_parameter('ACTION_INTERVAL', 0.25)
         self.declare_parameter('ACTION_LST', [0.0])
 
+        # physical
+        self.declare_parameter('GLOBAL_PATH_TOPIC', '/path')
+        self.declare_parameter('ODOM_TOPIC', '/pf/pose/odom')
+        self.declare_parameter('SPEED_TOPIC', '/target_speed')
+        self.declare_parameter('SELECTED_PATH_TOPIC', '/ego_racecar/selected_path')
+
         self.declare_parameter('MAX_SPEED', 1.0)
         self.declare_parameter('DT', 0.25)
         self.declare_parameter('LF', 1)
@@ -100,6 +106,12 @@ class TrajectoryServer(Node):
         self.acceleration_increment = self.get_parameter('ACCELERATION_INCREMENT').value
         self.progress_reset_ratio = self.get_parameter('PROGRESS_RESET_RATIO').value
         self.action_interval = self.get_parameter('ACTION_INTERVAL').value
+
+        # physical
+        self.global_path_topic = self.get_parameter('GLOBAL_PATH_TOPIC').get_parameter_value().string_value
+        self.odom_topic = self.get_parameter('ODOM_TOPIC').get_parameter_value().string_value
+        self.speed_topic = self.get_parameter('SPEED_TOPIC').get_parameter_value().string_value
+        self.selected_path_topic = self.get_parameter('SELECTED_PATH_TOPIC').get_parameter_value().string_value
 
         flat = self.get_parameter('ACTION_LST').get_parameter_value().double_array_value
         self.get_logger().info(f'flat: {flat}')
@@ -116,19 +128,19 @@ class TrajectoryServer(Node):
 
         self.subscription_odom = self.create_subscription(
             Odometry,
-            f'{self.namespace}/odom',
+            self.odom_topic,
             self.odom_callback,
             10
         )
         self.subscription_selected_path = self.create_subscription(
             Path,
-            f'{self.namespace}/selected_waypoints',
+            self.selected_path_topic
             self.selected_path_callback,
             10
         )
         self.subscription_global_path = self.create_subscription(
             Path,
-            self.namespace + '/waypoints',
+            self.global_path_topic,
             self.global_path_callback,
             10
         )

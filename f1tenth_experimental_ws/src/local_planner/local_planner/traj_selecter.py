@@ -16,9 +16,21 @@ class TrajectorySelecter(Node):
     def __init__(self):
         super().__init__('trajectory_selecter')
 
+        # GLOBAL_PATH_TOPIC: /path        
+        # DRIVE_TOPIC: /drive
+        # ODOM_TOPIC: /pf/pose/odom
+        # SPEED_TOPIC: /target_speed
+
         # Declare and read parameters
         self.declare_parameter('NAMESPACE', '/ego_racecar')
         self.declare_parameter('OPPONENT_NAMESPACE', '/opp_racecar')
+
+        # physical
+        self.declare_parameter('GLOBAL_PATH_TOPIC', '/path')
+        self.declare_parameter('ODOM_TOPIC', '/pf/pose/odom')
+        self.declare_parameter('SPEED_TOPIC', '/target_speed')
+        self.declare_parameter('SELECTED_PATH_TOPIC', '/ego_racecar/selected_path')
+
 
         self.declare_parameter('PROGRESS_WEIGHT', 1.0)
         self.declare_parameter('BOUNDS_WEIGHT', 100.0)
@@ -37,6 +49,13 @@ class TrajectorySelecter(Node):
         self.namespace = self.get_parameter('NAMESPACE').get_parameter_value().string_value
         self.opponent_namespace = self.get_parameter('OPPONENT_NAMESPACE').get_parameter_value().string_value
 
+        # physical
+        self.global_path_topic = self.get_parameter('GLOBAL_PATH_TOPIC').get_parameter_value().string_value
+        self.odom_topic = self.get_parameter('ODOM_TOPIC').get_parameter_value().string_value
+        self.speed_topic = self.get_parameter('SPEED_TOPIC').get_parameter_value().string_value
+        self.selected_path_topic = self.get_parameter('SELECTED_PATH_TOPIC').get_parameter_value().string_value
+
+        # costs
         self.bounds_weight = self.get_parameter('BOUNDS_WEIGHT').value
         self.progress_weight = self.get_parameter('PROGRESS_WEIGHT').value
         self.bounds_spread = self.get_parameter('BOUNDS_SPREAD').value
@@ -61,7 +80,7 @@ class TrajectorySelecter(Node):
         qos = QoSProfile(depth=10)
         qos.durability = QoSDurabilityPolicy.TRANSIENT_LOCAL
         self.global_path_sub = self.create_subscription(
-              Path, self.namespace + '/waypoints', self.global_path_callback, qos)
+              Path, self.global_path_topic, self.global_path_callback, qos)
 
         # self.opponent_cost_subscriptoin = self.create_subscription(
         #     Float32MultiArray, f'{self.opponent_namespace}/composite_cost_arr', self.opponent_cost_callback, 10)
@@ -69,8 +88,8 @@ class TrajectorySelecter(Node):
 
         qos = QoSProfile(depth=10)
         qos.durability = QoSDurabilityPolicy.TRANSIENT_LOCAL
-        self.path_publisher = self.create_publisher(Path, f'{self.namespace}/selected_waypoints', qos)
-        self.speed_publisher = self.create_publisher(Float64, f'{self.namespace}/speed_command', qos)
+        self.path_publisher = self.create_publisher(Path, self.selected_path_topic, qos)
+        self.speed_publisher = self.create_publisher(Float64, self.speed_topic, qos)
 
         self.opponent_path_list = None
         self.reference_path = None

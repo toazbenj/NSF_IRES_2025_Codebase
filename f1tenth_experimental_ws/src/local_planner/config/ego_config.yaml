@@ -1,9 +1,21 @@
 /**:
   ros__parameters:
+
+    # sim
+    # NAMESPACE: /ego_racecar
+    # OPPONENT_NAMESPACE: /opp_racecar
+    # GLOBAL_PATH_TOPIC: /ego_racecar/waypoints
+    # DRIVE_TOPIC: /drive
+
+    # physical
     NAMESPACE: /ego_racecar
     OPPONENT_NAMESPACE: /opp_racecar
-    GLOBAL_PATH_TOPIC: /ego_racecar/waypoints
+    GLOBAL_PATH_TOPIC: /path
     DRIVE_TOPIC: /drive
+    ODOM_TOPIC: /pf/pose/odom
+    SPEED_TOPIC: /target_speed
+    SELECTED_PATH_TOPIC: /ego_racecar/selected_path
+
     COLOR: green
 
     STEERING_INCREMENT: 0.6109
