@@ -85,7 +85,7 @@ class TrajectoryServer(Node):
         self.declare_parameter('STEERING_INCREMENT', 0.6109)
         self.declare_parameter('ACCELERATION_INCREMENT', 1.5)
         self.declare_parameter('PROGRESS_RESET_RATIO', 0.75)
-        self.declare_parameter('ACTION_INTERVAL', 0.25)
+        self.declare_parameter('ACTION_INTERVAL', 0.1)
 
         # parameter not loading properly for car
         self.declare_parameter('ACTION_LST', [-1.0, -1.0, 
@@ -106,11 +106,11 @@ class TrajectoryServer(Node):
         self.declare_parameter('SPEED_TOPIC', '/target_speed')
         self.declare_parameter('SELECTED_PATH_TOPIC', '/ego_racecar/selected_path')
 
-        self.declare_parameter('MAX_SPEED', 1.0)
-        self.declare_parameter('DT', 0.25)
+        self.declare_parameter('MAX_SPEED', 2.0)
+        self.declare_parameter('DT', 0.5)
         self.declare_parameter('LF', 1)
         self.declare_parameter('LR', 1)
-        self.declare_parameter('RECEDING_HORIZON', 1.5)
+        self.declare_parameter('RECEDING_HORIZON', 2.0)
 
         # Load them from the parameter server
         self.namespace = self.get_parameter('NAMESPACE').get_parameter_value().string_value
