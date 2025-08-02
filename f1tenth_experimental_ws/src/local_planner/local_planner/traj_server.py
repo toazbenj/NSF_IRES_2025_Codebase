@@ -83,7 +83,7 @@ class TrajectoryServer(Node):
         # Declare parameters with defaults (used if no YAML passed)
         self.declare_parameter('NAMESPACE', '/ego_racecar')
         self.declare_parameter('STEERING_INCREMENT', 0.6109)
-        self.declare_parameter('ACCELERATION_INCREMENT', 0.25)
+        self.declare_parameter('ACCELERATION_INCREMENT', 1.5)
         self.declare_parameter('PROGRESS_RESET_RATIO', 0.75)
         self.declare_parameter('ACTION_INTERVAL', 0.25)
 
