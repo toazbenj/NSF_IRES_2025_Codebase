@@ -39,8 +39,6 @@ class SmoothedPathEditorWithImage:
         self.fig.canvas.mpl_connect('motion_notify_event', self.on_motion)
         self.fig.canvas.mpl_connect('button_release_event', self.on_release)
 
-
-
         self.ax.set_title("Move/Rotate Map: Arrow Keys + R/E")
         self.ax.set_xlabel("X")
         self.ax.set_ylabel("Y")
@@ -148,12 +146,12 @@ class SmoothedPathEditorWithImage:
     def on_close(self, event):
         df_final = pd.DataFrame({'x': self.x_smooth, 'y': self.y_smooth})
         df_final.to_csv(
-            '/home/bentoaz/NSF_IRES_2025_Codebase/f1tenth_experimental_ws/src/pure_pursuit/racelines/hallway_adjusted_2.csv',
+            '/home/bentoaz/NSF_IRES_2025_Codebase/f1tenth_experimental_ws/src/pure_pursuit/racelines/hallway_adjusted_3.csv',
               index=False)
         print("Saved adjusted smoothed path")
 
 SmoothedPathEditorWithImage(
-    waypoint_file='src/pure_pursuit/racelines/hallway.csv',
+    waypoint_file='src/pure_pursuit/racelines/way.csv',
     map_yaml_file='src/particle_filter/maps/hallway.yaml',
     smooth_factor=2.0
 )
