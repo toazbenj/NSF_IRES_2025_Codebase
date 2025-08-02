@@ -86,10 +86,13 @@ class TrajectorySelecter(Node):
         #     Float32MultiArray, f'{self.opponent_namespace}/composite_cost_arr', self.opponent_cost_callback, 10)
         # self.cost_publisher = self.create_publisher(Float32MultiArray, f'{self.namespace}/composite_cost_arr', qos)
 
-        qos = QoSProfile(depth=10)
-        qos.durability = QoSDurabilityPolicy.TRANSIENT_LOCAL
-        self.path_publisher = self.create_publisher(Path, self.selected_path_topic, qos)
-        self.speed_publisher = self.create_publisher(Float64, self.speed_topic, qos)
+        # qos = QoSProfile(depth=10)
+        # qos.durability = QoSDurabilityPolicy.TRANSIENT_LOCAL
+        # self.path_publisher = self.create_publisher(Path, self.selected_path_topic, qos)
+        # self.speed_publisher = self.create_publisher(Float64, self.speed_topic, qos)
+
+        self.path_publisher = self.create_publisher(Path, self.selected_path_topic, 10)
+        self.speed_publisher = self.create_publisher(Float64, self.speed_topic, 10)
 
         self.opponent_path_list = None
         self.reference_path = None
