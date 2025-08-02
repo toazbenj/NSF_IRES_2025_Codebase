@@ -41,7 +41,7 @@
     # hallway - scalar parameters
     IS_VECTOR_COST: False
     PROGRESS_RESET_RATIO: 0.75
-    MAX_SPEED: 0.6  # m/s
+    MAX_SPEED: 1.0  # m/s
     ACTION_INTERVAL: 0.1 # seconds
     RECEDING_HORIZON: 1.5 # seconds
     DT: 0.25
