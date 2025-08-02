@@ -134,7 +134,7 @@ class TrajectoryServer(Node):
         )
         self.subscription_selected_path = self.create_subscription(
             Path,
-            self.selected_path_topic
+            self.selected_path_topic,
             self.selected_path_callback,
             10
         )

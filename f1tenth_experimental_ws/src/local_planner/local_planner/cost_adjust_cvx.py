@@ -29,7 +29,7 @@ Entry Point:
 """
 
 import numpy as np
-import cvxpy as cp
+# import cvxpy as cp
 
 def cost_adjustment(A1, D2, global_min_position):
     """
@@ -54,8 +54,8 @@ def cost_adjustment(A1, D2, global_min_position):
 
     # Convex optimization to find Ea
     m, n = A1.shape
-    E = cp.Variable((m, n))
-    phi = cp.Variable((m, n))
+    # E = cp.Variable((m, n))
+    # phi = cp.Variable((m, n))
     A_prime = A1 + E
     constraints = []
 

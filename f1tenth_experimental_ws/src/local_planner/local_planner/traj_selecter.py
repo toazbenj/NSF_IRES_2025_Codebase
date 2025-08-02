@@ -9,7 +9,7 @@ from rclpy.qos import QoSProfile, QoSDurabilityPolicy
 import numpy as np
 from local_planner.cost_utils import evaluate_static_path, calc_proximity_costs
 from std_msgs.msg import Bool
-from local_planner.cost_adjust_cvx import find_adjusted_costs
+# from local_planner.cost_adjust_cvx import find_adjusted_costs
 from std_msgs.msg import Float32MultiArray
 
 class TrajectorySelecter(Node):
@@ -167,17 +167,17 @@ class TrajectorySelecter(Node):
 
         # self.cost_publisher.publish(msg)
 
-        if self.is_vector_cost:
-            E = find_adjusted_costs(self.progress_costs, self.bounds_costs, self.proximity_costs, opponent_composite_cost_arr)
+        # if self.is_vector_cost:
+        #     E = find_adjusted_costs(self.progress_costs, self.bounds_costs, self.proximity_costs, opponent_composite_cost_arr)
 
-            if E is None:
-                # print("no minima")
-                composite_cost_arr = self.progress_weight * self.progress_costs + self.bounds_weight * self.bounds_costs + self.proximity_weight * self.proximity_costs
-            else:
-                print("adjustment success")
-                composite_cost_arr = self.progress_costs + E
-        else:
-            composite_cost_arr = self.progress_weight * self.progress_costs + self.bounds_weight * self.bounds_costs + self.proximity_weight * self.proximity_costs
+        #     if E is None:
+        #         # print("no minima")
+        #         composite_cost_arr = self.progress_weight * self.progress_costs + self.bounds_weight * self.bounds_costs + self.proximity_weight * self.proximity_costs
+        #     else:
+        #         print("adjustment success")
+        #         composite_cost_arr = self.progress_costs + E
+        # else:
+        #     composite_cost_arr = self.progress_weight * self.progress_costs + self.bounds_weight * self.bounds_costs + self.proximity_weight * self.proximity_costs
 
 
         # for debugging, force weighted sum
