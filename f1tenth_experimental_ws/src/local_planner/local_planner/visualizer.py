@@ -191,7 +191,9 @@ class TrajectoryVisualizer(Node):
         # Convert cost to OccupancyGrid format (0-100)
         grid = OccupancyGrid()
         grid.header.stamp = self.get_clock().now().to_msg()
-        grid.header.frame_id = "map"
+        # grid.header.frame_id = "map"
+        grid.header.frame_id = "odom"
+
 
         grid.info = MapMetaData()
         grid.info.resolution = resolution

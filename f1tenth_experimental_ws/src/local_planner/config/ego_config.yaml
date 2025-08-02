@@ -19,7 +19,10 @@
     COLOR: green
 
     STEERING_INCREMENT: 0.6109
-    ACCELERATION_INCREMENT: 0.25
+    
+    # ACCELERATION_INCREMENT: 0.25
+    ACCELERATION_INCREMENT: 0.5
+
     ACTION_LST: [-1.0, -1.0, 
                  -1.0, 0.0,
                  -1.0, 1.0, 
@@ -41,7 +44,8 @@
     # hallway - scalar parameters
     IS_VECTOR_COST: False
     PROGRESS_RESET_RATIO: 0.75
-    MAX_SPEED: 1.0  # m/s
+    # MAX_SPEED: 1.0  # m/s
+    MAX_SPEED: 0.6  # m/s
     ACTION_INTERVAL: 0.1 # seconds
     RECEDING_HORIZON: 1.5 # seconds
     DT: 0.25

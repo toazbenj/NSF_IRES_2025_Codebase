@@ -191,7 +191,9 @@ class TrajectorySelecter(Node):
         # self.action_index = 4
         selected_traj = self.path_list[self.action_index]
         selected_traj.header.stamp = self.get_clock().now().to_msg()
-        selected_traj.path.header.frame_id = "map" 
+        # selected_traj.path.header.frame_id = "map" 
+        selected_traj.path.header.frame_id = "odom" 
+
 
         self.path_publisher.publish(selected_traj.path)
         self.speed_publisher.publish(selected_traj.speed)

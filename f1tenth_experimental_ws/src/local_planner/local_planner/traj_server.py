@@ -245,7 +245,9 @@ class TrajectoryServer(Node):
 
             header = Header()
             header.stamp = self.get_clock().now().to_msg()
-            header.frame_id = "map"
+            # header.frame_id = "map"
+            header.frame_id = "odom"
+
 
             traj = Trajectory()
             traj.header = header
