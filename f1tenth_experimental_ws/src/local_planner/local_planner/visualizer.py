@@ -25,6 +25,11 @@ class TrajectoryVisualizer(Node):
         self.declare_parameter('PROGRESS_WEIGHT', 1.0)
         self.declare_parameter('BOUNDS_SPREAD', 1.0)
 
+        # physical
+        self.declare_parameter('GLOBAL_PATH_TOPIC', '/path')
+        self.declare_parameter('ODOM_TOPIC', '/pf/pose/odom')
+        self.declare_parameter('SPEED_TOPIC', '/target_speed')
+        self.declare_parameter('SELECTED_PATH_TOPIC', '/ego_racecar/selected_path')
 
         self.namespace = self.get_parameter('NAMESPACE').get_parameter_value().string_value
         self.drive_topic = self.get_parameter('DRIVE_TOPIC').get_parameter_value().string_value
@@ -33,12 +38,18 @@ class TrajectoryVisualizer(Node):
         self.progress_weight = self.get_parameter('PROGRESS_WEIGHT').value
         self.bounds_spread = self.get_parameter('BOUNDS_SPREAD').value
 
+        # physical
+        self.global_path_topic = self.get_parameter('GLOBAL_PATH_TOPIC').get_parameter_value().string_value
+        self.odom_topic = self.get_parameter('ODOM_TOPIC').get_parameter_value().string_value
+        self.speed_topic = self.get_parameter('SPEED_TOPIC').get_parameter_value().string_value
+        self.selected_path_topic = self.get_parameter('SELECTED_PATH_TOPIC').get_parameter_value().string_value
+
 
         self.get_logger().info(f"Using namespace: {self.namespace}, color: {self.color}")
 
         self.odom_sub = self.create_subscription(
             Odometry,
-            f'{self.namespace}/odom',
+            self.odom_topic,
             self.odom_callback,
             10
         )
@@ -52,14 +63,14 @@ class TrajectoryVisualizer(Node):
 
         self.selected_waypoints_sub = self.create_subscription(
             Path,
-            f'{self.namespace}/selected_waypoints',
+            self.selected_path_topic,
             self.selected_path_callback,
             10
         )
 
         self.waypoints_sub = self.create_subscription(
             Path,
-            self.namespace + '/waypoints',
+            self.global_path_topic,
             self.global_path_callback,
             10
         )
