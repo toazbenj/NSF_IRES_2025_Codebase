@@ -120,6 +120,9 @@ class TrajectoryServer(Node):
             self.odom_callback,
             10
         )
+        # self.get_logger().info(f'Odom topic: {self.namespace}/odom')
+
+
         self.subscription_selected_path = self.create_subscription(
             Path,
             f'{self.namespace}/selected_waypoints',
