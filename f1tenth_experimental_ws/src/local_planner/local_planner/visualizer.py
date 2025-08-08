@@ -5,7 +5,7 @@ from geometry_msgs.msg import Point
 from nav_msgs.msg import Path, Odometry
 from visualization_msgs.msg import Marker, MarkerArray
 from std_msgs.msg import ColorRGBA
-from local_planner import cost_utils
+from local_planner.cost_utils import evaluate_static_path, build_kdtree, nearest_point
 from visualization_msgs.msg import Marker, MarkerArray
 from geometry_msgs.msg import PoseStamped
 from nav_msgs.msg import OccupancyGrid, MapMetaData
@@ -73,6 +73,9 @@ class TrajectoryVisualizer(Node):
         self.cost_map_pub = self.create_publisher(OccupancyGrid, f'{self.namespace}/cost_map', 10)
 
         self.reference_path = None 
+        self.kdtree = None
+        self.ref_points = None
+
         self.ego_pose = None
         self.trajectory_counter = 0  # In __init__()
 
@@ -170,7 +173,8 @@ class TrajectoryVisualizer(Node):
 
         # Compute costs
         for path in paths:
-            cost = sum(cost_utils.evaluate_static_path(path, self.reference_path, self.bounds_spread))
+            cost = sum(evaluate_static_path(
+                path, self.kdtree, self.ref_points, self.bounds_spread))
             max_cost = max(max_cost, cost)
             min_cost = min(min_cost, cost)
             data.append(cost)
@@ -210,6 +214,8 @@ class TrajectoryVisualizer(Node):
         if msg != self.reference_path:
             self.reference_path = msg
             self.get_logger().info(f"New reference path received")
+            self.kdtree, self.ref_points = build_kdtree(self.reference_path)
+
 
     def odom_callback(self, msg: Odometry):
         self.ego_pose = msg.pose.pose

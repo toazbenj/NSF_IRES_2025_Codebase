@@ -8,9 +8,19 @@ from std_msgs.msg import Float64, Header
 from rclpy.qos import QoSProfile, QoSDurabilityPolicy
 import numpy as np
 from local_planner.cost_utils import evaluate_static_path, calc_proximity_costs
+from local_planner.cost_utils import build_kdtree, nearest_point, project_point_to_reference_trajectory
+
 from std_msgs.msg import Bool
 from local_planner.cost_adjust_cvx import find_adjusted_costs
 from std_msgs.msg import Float32MultiArray
+
+import cProfile
+import logging
+import os
+import atexit
+
+PROFILE_PATH = os.path.expanduser('~/traj_selecter_test.prof')
+logging.basicConfig(level=logging.INFO)
 
 class TrajectorySelecter(Node):
     def __init__(self):
@@ -74,6 +84,8 @@ class TrajectorySelecter(Node):
 
         self.opponent_path_list = None
         self.reference_path = None
+        self.kdtree = None
+        self.ref_points = None
 
         self.is_vector_cost = self.get_parameter('IS_VECTOR_COST').value
 
@@ -86,6 +98,7 @@ class TrajectorySelecter(Node):
         
         self.reference_path = msg
         self.get_logger().info(f"New reference path received")
+        self.kdtree, self.ref_points = build_kdtree(self.reference_path)
 
     def opponent_cost_callback(self, msg: Float32MultiArray):
         self.opponent_composite_cost_arr = np.array(msg.data, dtype=np.float32)
@@ -100,7 +113,8 @@ class TrajectorySelecter(Node):
         proximity_costs = np.zeros((len(path_list), len(path_list)), dtype=np.float32)
 
         for idx1, path in enumerate(path_list):
-            single_prog_cost, single_bound_cost = evaluate_static_path(path.path, self.reference_path, bounds_spread)
+            single_prog_cost, single_bound_cost = evaluate_static_path(
+                path.path, self.kdtree, self.ref_points, self.bounds_spread)
 
             prog_row = np.full(len(path_list), single_prog_cost, dtype=np.float32)
             bounds_row = np.full(len(path_list), single_bound_cost, dtype=np.float32)
@@ -140,17 +154,15 @@ class TrajectorySelecter(Node):
         # publish cost matrix to the other car
         # msg = Float32MultiArray()
         # arr = self.progress_weight * self.progress_costs + self.bounds_weight * self.bounds_costs + self.proximity_weight * self.proximity_costs
-
         # arr = np.array(arr, dtype=np.float32)  # Ensure float32 type
         # # msg.data = arr.tolist()
         # # msg.data = [float(x) for x in arr]  # Ensure all elements are Python floats
         # msg.data = arr.flatten().astype(np.float32).tolist()  # Flatten and cast
-
         # self.cost_publisher.publish(msg)
 
         if self.is_vector_cost:
             E = find_adjusted_costs(self.progress_costs, self.bounds_costs, self.proximity_costs, opponent_composite_cost_arr)
-
+            
             if E is None:
                 # print("no minima")
                 composite_cost_arr = self.progress_weight * self.progress_costs + self.bounds_weight * self.bounds_costs + self.proximity_weight * self.proximity_costs
@@ -161,8 +173,8 @@ class TrajectorySelecter(Node):
             composite_cost_arr = self.progress_weight * self.progress_costs + self.bounds_weight * self.bounds_costs + self.proximity_weight * self.proximity_costs
 
 
-        # for debugging, force weighted sum
-        composite_cost_arr = self.progress_weight * self.progress_costs + self.bounds_weight * self.bounds_costs + self.proximity_weight * self.proximity_costs
+        # for debugging, force weighted sum, vector cost decisions currently just wrong
+        # composite_cost_arr = self.progress_weight * self.progress_costs + self.bounds_weight * self.bounds_costs + self.proximity_weight * self.proximity_costs
 
 
         self.get_logger().info(f"Costs: {composite_cost_arr}")
@@ -178,14 +190,31 @@ class TrajectorySelecter(Node):
         self.speed_publisher.publish(selected_traj.speed)
 
         self.get_logger().info(f"Published selected trajectory {self.action_index} at speed {selected_traj.speed.data} m/s")
+    
+
+profiler = cProfile.Profile()
+profiler.enable()
 
 def main(args=None):
     rclpy.init(args=args)
     node = TrajectorySelecter()
-    rclpy.spin(node)
-    node.destroy_node()
-    rclpy.shutdown()
+    try:
+        rclpy.spin(node)
+    except KeyboardInterrupt:
+        node.get_logger().warn("KeyboardInterrupt received, shutting down.")
+    finally:
+        node.destroy_node()
+        rclpy.shutdown()
 
+def save_profile():
+    profiler.disable()
+    profiler.dump_stats(PROFILE_PATH)
+    if os.path.exists(PROFILE_PATH):
+        logging.info(f"Profile successfully saved to {PROFILE_PATH}")
+    else:
+        logging.error(f"Profile not saved. Expected at {PROFILE_PATH}")
+
+atexit.register(save_profile)
 
 if __name__ == '__main__':
     main()

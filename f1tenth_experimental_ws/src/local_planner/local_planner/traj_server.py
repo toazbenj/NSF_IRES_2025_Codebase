@@ -12,8 +12,15 @@ from math import cos, sin, atan2, tan, hypot
 from local_planner.constants import *
 from itertools import product
 from std_msgs.msg import Bool
-from local_planner.cost_utils import project_point_to_reference_trajectory
+from local_planner.cost_utils import build_kdtree, nearest_point, project_point_to_reference_trajectory
 
+import cProfile
+import logging
+import os
+import atexit
+
+PROFILE_PATH = os.path.expanduser('~/traj_server2.prof')
+logging.basicConfig(level=logging.INFO)
 
 def generate_combinations(numbers, num_picks):
     """
@@ -141,6 +148,9 @@ class TrajectoryServer(Node):
         self.publisher = self.create_publisher(TrajectoryList, f'{self.namespace}/traj_list', 10)
      
         self.global_path = None
+        self.kdtree = None
+        self.ref_points = None
+
         self.selected_path = None
         self.latest_pose = None
         self.is_first_publish = True
@@ -154,7 +164,7 @@ class TrajectoryServer(Node):
         self.selected_path = msg
         self.get_logger().info("Received selected trajectory.")
         self.is_first_publish = True
-
+        self.kdtree, self.ref_points = build_kdtree(self.selected_path)
 
     def odom_callback(self, msg: Odometry):
         self.latest_pose = msg
@@ -167,7 +177,6 @@ class TrajectoryServer(Node):
         #     return
 
         pose = self.latest_pose.pose.pose
-
 
         x = float(pose.position.x)
         y = float(pose.position.y)
@@ -189,7 +198,12 @@ class TrajectoryServer(Node):
             total_dist += hypot(p2.x - p1.x, p2.y - p1.y)
 
         # Find closest point index
-        _, _, closest_idx = project_point_to_reference_trajectory(pose.position, self.selected_path)
+        # _, _, closest_idx = project_point_to_reference_trajectory(pose.position, self.selected_path)
+        # kdtree, ref_points = build_kdtree(self.selected_path)
+        # _, closest_idx, _ = nearest_point(pose.position, kdtree, ref_points)
+
+        dist, closest_point, closest_idx = nearest_point(pose.position, self.kdtree, self.ref_points)
+
 
         covered_dist = 0.0
         for i in range(closest_idx):
@@ -262,13 +276,29 @@ class TrajectoryServer(Node):
         self.get_logger().info("Trajectory list published")
 
 
+profiler = cProfile.Profile()
+profiler.enable()
+
 def main(args=None):
     rclpy.init(args=args)
     node = TrajectoryServer()
-    rclpy.spin(node)
-    node.destroy_node()
-    rclpy.shutdown()
+    try:
+        rclpy.spin(node)
+    except KeyboardInterrupt:
+        node.get_logger().warn("KeyboardInterrupt received, shutting down.")
+    finally:
+        node.destroy_node()
+        rclpy.shutdown()
 
+def save_profile():
+    profiler.disable()
+    profiler.dump_stats(PROFILE_PATH)
+    if os.path.exists(PROFILE_PATH):
+        logging.info(f"Profile successfully saved to {PROFILE_PATH}")
+    else:
+        logging.error(f"Profile not saved. Expected at {PROFILE_PATH}")
+
+atexit.register(save_profile)
 
 if __name__ == '__main__':
     main()
