@@ -19,7 +19,7 @@ import logging
 import os
 import atexit
 
-PROFILE_PATH = os.path.expanduser('~/traj_server2.prof')
+PROFILE_PATH = os.path.expanduser('/home/bentoaz/NSF_IRES_2025_Codebase/f1tenth_experimental_ws/log/cprofile/traj_server2.prof')
 logging.basicConfig(level=logging.INFO)
 
 def generate_combinations(numbers, num_picks):

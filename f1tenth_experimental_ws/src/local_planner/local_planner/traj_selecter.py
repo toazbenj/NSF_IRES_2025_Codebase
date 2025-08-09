@@ -19,7 +19,7 @@ import logging
 import os
 import atexit
 
-PROFILE_PATH = os.path.expanduser('~/traj_selecter_test.prof')
+PROFILE_PATH = os.path.expanduser('/home/bentoaz/NSF_IRES_2025_Codebase/f1tenth_experimental_ws/log/cprofile/traj_selecter_test.prof')
 logging.basicConfig(level=logging.INFO)
 
 class TrajectorySelecter(Node):
