@@ -198,7 +198,6 @@ class TrajectoryVisualizer(Node):
         # grid.header.frame_id = "map"
         grid.header.frame_id = "odom"
 
-
         grid.info = MapMetaData()
         grid.info.resolution = resolution
         grid.info.width = width
