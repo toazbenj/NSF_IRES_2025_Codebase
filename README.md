@@ -4,6 +4,8 @@
 
 The operations are identical to the steps described in the original University of Waterloo repo, but with some modified settings. The useful scripts are all in the f1tenth_experimental_ws folder. The controls folder is mostly for high level control experiments using Carla. The major differences between this repo and the original are settings within the pure pursuit package, including modified trajectory tracking and new lidar scan maps and waypoints. 
 
+The physical branch holds code specifically modified to operate without the simulation interface on the actual F1 10th car. It has different topic names that are linked specifically to the hardware nodes on the car. The simulation repo is only for running with the f1tenth gym environment.
+
 Modified Source:
 ```bash
 git clone https://github.com/toazbenj/NSF_IRES_2025_Codebase.git
