@@ -1,6 +1,6 @@
 # NSF_IRES_2025_Codebase
 
-[]()
+![image](ROSDemoPolished.gif)
 
 ## Overview
 
