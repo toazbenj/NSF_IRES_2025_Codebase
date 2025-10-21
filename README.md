@@ -1,4 +1,4 @@
-# NSF_IRES_2025_Codebase
+# National Sceince Foundation International Research Experiences for Students - 2025 Codebase
 
 ![image](ROSDemoPolished.gif)
 
