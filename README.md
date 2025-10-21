@@ -1,4 +1,4 @@
-# National Sceince Foundation International Research Experiences for Students - 2025 Codebase
+# National Science Foundation International Research Experiences for Students - 2025 Codebase
 
 ![image](ROSDemoPolished.gif)
 
