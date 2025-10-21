@@ -1,5 +1,11 @@
 # NSF_IRES_2025_Codebase
 
+[]()
+
+## Overview
+
+This repository contains the custom ROS architecture for behavioral planning of autonomous vehicles in competitive scenarios. It builds on the efforts of several other F1 10th car contributors, especially the [University of Waterloo](https://github.com/CL2-UWaterloo/f1tenth_ws). Notable upgrades include game theoretic reasoning that takes the most likely actions of the opponent car into account when executing passes in a race.  
+
 ## Setup
 
 The operations are identical to the steps described in the original University of Waterloo repo, but with some modified settings. The useful scripts are all in the f1tenth_experimental_ws folder. The controls folder is mostly for high level control experiments using Carla. The major differences between this repo and the original are settings within the pure pursuit package, including modified trajectory tracking and new lidar scan maps and waypoints. 
