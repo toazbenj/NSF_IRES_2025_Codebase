@@ -39,6 +39,7 @@ ros2 launch f1tenth_gym_ros gym_bridge_launch.py
 Terminal 2: High Level Control (New)
 ```bash
 cd NSF_IRES_2025_Codebase/f1tenth_experimental_ws/
+colon build
 source install/setup.bash
 ros2 launch local_planner multicar_launch.py
 ```
@@ -46,6 +47,7 @@ ros2 launch local_planner multicar_launch.py
 Terminal 3: Low Level Control
 ```bash
 cd NSF_IRES_2025_Codebase/f1tenth_experimental_ws/
+colcon build
 source install/setup.bash
 ros2 launch pure_pursuit multicar_launch.py 
 ```
