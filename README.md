@@ -31,6 +31,7 @@ git clone https://github.com/toazbenj/f1tenth_sim_ws.git
 Terminal 1: Simulation Environment
 ```bash
 cd f1tenth_sim_ws
+colcon build
 source install/setup.bash
 ros2 launch f1tenth_gym_ros gym_bridge_launch.py
 ```
