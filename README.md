@@ -57,6 +57,14 @@ Note that at times you may have to stop the local planner node in terminal two a
 Download the rosgraph.svg file to see what the nodes look like when it's working.
 
 ### 1 Car
+
+To show only 1 car, you can edit the sim.yaml file in f1tenth_gym_ros.
+
+```
+# opponent parameters
+num_agent: 2
+```
+
 Terminal 1: Simulation Environment
 ```bash
 cd f1tenth_sim_ws
