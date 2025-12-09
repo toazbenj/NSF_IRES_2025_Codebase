@@ -54,6 +54,8 @@ ros2 launch pure_pursuit multicar_launch.py
 
 Note that at times you may have to stop the local planner node in terminal two and rerun it. This is when the threading of the nodes causes one of them to miss a topic and error out, preventing it from meshing with the low level control nodes. Don't panic, just stop the node and rerun. I estimate this happens about 1/3 of the time. In order to fix it, you will have to change the composition of how different nodes subscribe to each other, or the order in which they run.
 
+Download the rosgraph.svg file to see what the nodes look like when it's working.
+
 ### 1 Car
 Terminal 1: Simulation Environment
 ```bash
