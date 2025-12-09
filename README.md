@@ -17,7 +17,7 @@ Modified Source:
 git clone https://github.com/toazbenj/NSF_IRES_2025_Codebase.git
 ```
 
-In addition, I modified the gym_bridge.rviz file in the f1tenth_gym_ros repo to load more visuals related to the decision making of two vehicles at once. Find it at ~/f1tenth_gym_ros/config/sim.yaml.
+In addition, I modified the gym_bridge.rviz file in the f1tenth_gym_ros repo to load more visuals related to the decision making of two vehicles at once. Find it at ~/f1tenth_gym_ros/config/sim.yaml. 
 
 Modified Simulation:
 ```bash
@@ -58,7 +58,7 @@ Download the rosgraph.svg file to see what the nodes look like when it's working
 
 ### 1 Car
 
-To show only 1 car, you can edit the sim.yaml file in f1tenth_gym_ros under ~/f1tenth_gym_ros/config/sim.yaml.
+To show only 1 car, you can edit the sim.yaml file in f1tenth_gym_ros under ~/f1tenth_gym_ros/config/sim.yaml. Note that there might still be topic issues with single-player mode.
 
 ```
 # opponent parameters
